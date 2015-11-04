@@ -1,5 +1,7 @@
 SQweb WordPress Plugin
 ===
+[![Build Status](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin.svg)](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin)
+
 **This plugin enables you to easily install SQweb on your WordPress powered site.**
 
 ##Contributing
