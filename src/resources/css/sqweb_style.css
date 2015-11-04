@@ -1,105 +1,104 @@
 .sqweb-admin-input {
-	height: 30px;
-	border-radius: 5px;
-	font-size: 1.5em;
-	display: block;
-	margin-bottom: 5px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .sqweb-admin-button {
-	height: 50px;
-	border-radius: 5px;
-	font-size: 2.5em;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 2.5em;
 }
 
 .sqweb-popup-right {
-
-	text-align: right;
-	padding-right: 5px;
+    text-align: right;
+    padding-right: 5px;
 }
 
 .sqweb-popup-middle {
-	width: 410px;
-	margin-left: 120px;
+    width: 410px;
+    margin-left: 120px;
 }
 
 .sqweb-title-bloc {
-	text-align: center;
+    text-align: center;
 }
 
 .sqweb-title {
-	margin: auto;
-	display: block;
-	font-family: sans-serif;
-	font-weight: 100;
-	font-size: 1.8em;
-	color: grey;
+    margin: auto;
+    display: block;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.8em;
+    color: grey;
 }
 
 .sqweb-content-bloc {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 .sqweb-content {
-	font-weight: bold;
-	font-size: 1.2em;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .sqweb-popup-button {
-	width: 150px;
-	display: block;
-	background-color: rgb(47, 151, 220);
-	border-radius: 3px;
-	box-shadow: rgb(42, 111, 157) 0px 0px 1px 1px;
-	margin-top: 10px;
+    width: 150px;
+    display: block;
+    background-color: rgb(47, 151, 220);
+    border-radius: 3px;
+    box-shadow: rgb(42, 111, 157) 0px 0px 1px 1px;
+    margin-top: 10px;
 }
 
 .sqweb-popup-button:hover {
-	background-color: rgb(42, 111, 157);
+    background-color: rgb(42, 111, 157);
 }
 
 .sqweb-canvas {
-	display: inline-flex;
+    display: inline-flex;
 }
 
 .sqweb-stats {
-	text-align: center;
+    text-align: center;
 }
 
 .padding-bottom {
-	padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 ul li span.sqweb-red {
-  background: #f50057;
+    background: #f50057;
 }
 
 ul li span.sqweb-blue {
-  background: #4190ff;
+    background: #4190ff;
 }
 
 ul li span.sqweb-yellow {
-  background: #f7bc31;
+    background: #f7bc31;
 }
 
 ul li span.sqweb-col {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
-  -webkit-background-clip: padding;
-  background-clip: padding-box;
-  margin-right: 10px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    margin-right: 10px;
 }
 
 .sqweb-li {
-	display: flex;
+    display: flex;
 }
 
 .sqw-notice-orange {
-	color: orange;
+    color: orange;
 }
