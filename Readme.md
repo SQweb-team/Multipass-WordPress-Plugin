@@ -16,7 +16,9 @@ For more information about JavaScript and CSS, please see our [Coding Style](htt
 
 ###Builds and Releases
 
-Builds are handled with `gulp`. To get a build of the plugin, simply execute `gulp`. This will handle minification and packaging.
+Builds are handled with `gulp`. To get a build of the plugin, simply execute `gulp`. This will handle minification and packaging, and prepare a zip for you in `dist/`.
+
+By default, the `build/` folder is automatically removed. If you want to keep it, say for debugging, you can build the plugin using `gulp keep-build`.
 
 ##Bugs and Security Vulnerabilities
 
@@ -28,7 +30,7 @@ If you discover a security vulnerability within SQweb or this plugin, please sen
 
 Copyright (C) 2015 – SQweb
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation ; either version 2 of the License, or (at your option) any later version.
+This program is free software ; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation ; either version 2 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY ; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
 
