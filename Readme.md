@@ -12,7 +12,7 @@ We welcome contributions and improvements.
 
 ###Coding Style
 
-All PHP code must pass [WordPres-Core](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
+All PHP code must pass [WordPress-Core](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
 For more information about JavaScript and CSS, please see our [Coding Style](https://github.com/SQweb-team/SQweb-Coding-Style) guide. The CSS can be properly formatted using `gulp css-beaut`.
 
