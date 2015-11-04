@@ -1,0 +1,259 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sqweb\n"
+"POT-Creation-Date: 2015-10-22 11:27+0200\n"
+"PO-Revision-Date: 2015-10-22 11:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: SQweb Team <hello@sqweb.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: backoffice/admin-menu.php:36
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: backoffice/admin-menu.php:55
+msgid "Register a new website"
+msgstr "Enregistrer un nouveau site"
+
+#: backoffice/admin-menu.php:56
+msgid "Website name"
+msgstr "Nom du site"
+
+#: backoffice/admin-menu.php:57
+msgid "http://exemple.com"
+msgstr "http://exemple.com"
+
+#: backoffice/admin-menu.php:58
+msgid "Add website"
+msgstr "Ajouter un site"
+
+#: backoffice/admin-menu.php:73
+msgid "Settings"
+msgstr "Options"
+
+#: backoffice/admin-menu.php:75
+msgid "Webmaster ID"
+msgstr "Webmaster ID"
+
+#: backoffice/admin-menu.php:77
+msgid "First step : select your website"
+msgstr "Première étape : Choisir votre site"
+
+#: backoffice/admin-menu.php:88 backoffice/admin-menu.php:127
+msgid "Click here"
+msgstr "Cliquez ici"
+
+#: backoffice/admin-menu.php:88
+msgid "add a new website"
+msgstr "pour ajouter un nouveau site."
+
+#: backoffice/admin-menu.php:92
+msgid "Second step : Enter the message that will be shown to adblockers"
+msgstr "Seconde étape : Entrer un message qui sera montré aux Adblockers"
+
+#: backoffice/admin-menu.php:95
+msgid ""
+"Leave the field above blank if you do not wish the message for adblockers "
+"shown."
+msgstr ""
+"Laisser le champ vide si vous ne souhaitez pas montrer de message aux "
+"Adblockers."
+
+#: backoffice/admin-menu.php:98
+msgid "Third step : Messages you'd like on the button"
+msgstr "Troisième étape : Texte du bouton"
+
+#: backoffice/admin-menu.php:103
+msgid "Remove ads"
+msgstr "Enlever la pub"
+
+#: backoffice/admin-menu.php:109
+msgid "Text for not connected user"
+msgstr "Texte utilisateur non connecté"
+
+#: backoffice/admin-menu.php:110
+msgid "Remove Ads"
+msgstr "Enlever la pub"
+
+#: backoffice/admin-menu.php:111
+msgid "Text for connected user"
+msgstr "Texte utilisateur connecté"
+
+#: backoffice/admin-menu.php:112
+msgid "Connected"
+msgstr "Connecté"
+
+#: backoffice/admin-menu.php:116
+msgid "Fourth step : pick your theme"
+msgstr "Quatrième étape : Choisir votre thème"
+
+#: backoffice/admin-menu.php:118
+msgid "Blue"
+msgstr "Bleu"
+
+#: backoffice/admin-menu.php:119
+msgid "Grey"
+msgstr "Gris"
+
+#: backoffice/admin-menu.php:123
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: backoffice/admin-menu.php:127
+msgid "Woops! It looks like you havent registered your website yet"
+msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
+
+#: backoffice/admin-menu.php:127
+msgid "to start"
+msgstr "pour débuté"
+
+#: backoffice/admin-menu.php:154 backoffice/admin-menu.php:166
+msgid "Sign up"
+msgstr "Inscription"
+
+#: backoffice/admin-menu.php:155 backoffice/admin-menu.php:175
+msgid "You need to fill in all fields"
+msgstr "Vous avez besoin de remplir tout les champs"
+
+#: backoffice/admin-menu.php:158
+msgid "Firstname"
+msgstr "Prénom"
+
+#: backoffice/admin-menu.php:160
+msgid "Lastname"
+msgstr "Nom de famille"
+
+#: backoffice/admin-menu.php:162 backoffice/admin-menu.php:180
+msgid "Email"
+msgstr "Email"
+
+#: backoffice/admin-menu.php:164 backoffice/admin-menu.php:182
+msgid "Password"
+msgstr "Mot de passe"
+
+#: backoffice/admin-menu.php:165 backoffice/admin-menu.php:183
+msgid "password"
+msgstr "Mot de passe"
+
+#: backoffice/admin-menu.php:169
+msgid "Back to sign in"
+msgstr "Retourner à la connexion"
+
+#: backoffice/admin-menu.php:174 backoffice/admin-menu.php:184
+msgid "Sign in"
+msgstr "Connexion"
+
+#: backoffice/admin-menu.php:177
+msgid ""
+"You signed up successfuly, please check your email to activate your account."
+msgstr ""
+"Inscription réussi, veuillez vérifier vos email pour activer votre compte."
+
+#: backoffice/admin-menu.php:188
+msgid "Don't have an account ?"
+msgstr "Vous n’avez pas de compte ?"
+
+#: backoffice/admin-menu.php:189
+msgid "Sign up for free in 30 seconds !"
+msgstr "Inscrivez vous gratuitement en 30 secondes !"
+
+#: backoffice/admin-menu.php:193
+msgid "Forgot your password ?"
+msgstr "Oublie de mot de passe ?"
+
+#: backoffice/admin-menu.php:208
+msgid "Users detected with Adblock"
+msgstr "Utilisateur avec Adblock"
+
+#: backoffice/admin-menu.php:209
+msgid "Users paying with SQweb"
+msgstr "Utilisateur avec Sqweb"
+
+#: backoffice/admin-menu.php:210
+msgid "Users seeing ads"
+msgstr "Utilisateur voyant la publicité"
+
+#: backoffice/admin-menu.php:216
+msgid "Pages seen with ads blocked"
+msgstr "Page vues avec les publicités bloquées."
+
+#: backoffice/admin-menu.php:217
+msgid "Pages seen by SQwebmen"
+msgstr "Page vues par des SQwebmens"
+
+#: backoffice/admin-menu.php:218
+msgid "Pages seen with ads"
+msgstr "Page vues avec la publicité"
+
+#: backoffice/admin-menu.php:247 backoffice/admin-menu.php:267
+msgid "Displayed"
+msgstr "Affichage"
+
+#: backoffice/admin-menu.php:253 backoffice/admin-menu.php:273
+msgid "Blocked"
+msgstr "Bloqué"
+
+#: backoffice/admin-menu.php:300
+msgid "Tutorial"
+msgstr "Tutoriel"
+
+#: class/sqweb-ad-control.class.php:10
+msgid "Put here your advertising code to hide it for SQweb users"
+msgstr ""
+"Mettez ici la publicité qui sera cachée pour les utilisateurs payant SQweb."
+
+#: class/sqweb-ad-control.class.php:12
+msgid "SQweb ad control"
+msgstr "SQweb advertising contrôleur"
+
+#: class/sqweb-ad-control.class.php:51
+msgid "Title:"
+msgstr "Titre:"
+
+#: class/sqweb-ad-control.class.php:54
+msgid "Advertising code here:"
+msgstr "Votre code publicitaire ici:"
+
+#: class/sqweb-ad-control.class.php:57
+msgid "Content for paying users:"
+msgstr "Contenu pour les utilisateurs Sqweb:"
+
+#: class/widget-sqweb-button.class.php:10
+msgid "Button to activate SQweb on your website."
+msgstr "Bouton pour activé SQweb sur votre site."
+
+#: class/widget-sqweb-button.class.php:12
+msgid "SQweb button"
+msgstr "SQweb bouton"
+
+#: class/widget-sqweb-button.class.php:41
+msgid "CLICK HERE TO LOG IN"
+msgstr "Cliquez ici pour vous connectez"
+
+#: class/widget-sqweb-button.class.php:43
+msgid "Edit settings"
+msgstr "Editez les paramètres"
+
+#~ msgid "Put here your ad code to hide it for SQweb users"
+#~ msgstr ""
+#~ "Mettez ici la publicité qui sera cachée pour les utilisateurs payant "
+#~ "SQweb."
+
+#~ msgid "Ad code here:"
+#~ msgstr "Saisissez votre code publicitaire ici:"
+
+#~ msgid "Button to activate SQweb on your website. Use that widget ONCE only"
+#~ msgstr ""
+#~ "Bouton pour activé SQweb sur votre site. Utiliser une fois seulement."
+
+#~ msgid "blue"
+#~ msgstr "blue"

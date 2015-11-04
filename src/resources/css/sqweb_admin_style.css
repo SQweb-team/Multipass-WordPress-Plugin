@@ -1,0 +1,199 @@
+.sqw-container a {
+	text-decoration: none;
+}
+
+.sqw-logo-block {
+	text-align: center;
+	padding: 20px;
+	margin: auto;
+}
+
+.sqw-error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+
+.sqweb-ctr-box {
+	text-align: center;
+}
+
+.sqweb-ctr-box a {
+	text-decoration: none;
+}
+
+.sqweb-ctr-link {
+	display: block;
+	}
+
+.sqw-signup {
+	padding: 10px 0;
+}
+
+.sqweb-admin-auth-input {
+	height: 35px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	display: block;
+	margin: auto;
+	text-align: center;
+	width: 80%;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.sqweb-admin-auth-button {
+	height: 50px;
+	border-radius: 5px;
+	font-size: 2.5em;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+	margin-top: 5px;
+	margin-bottom: 5px!important;
+}
+
+.sqweb-form-div {
+	margin: 15px 0;
+}
+
+.sqweb-form-title {
+	font-size: 1.6em;
+	cursor: default !important;
+	line-height: 50px;
+}
+
+.sqweb-form-labels {
+}
+
+.sqweb-user-text {
+	margin-top: 10px;
+}
+
+.sqweb-admin-input {
+	height: 30px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.sqweb-admin-button {
+	height: 50px;
+	border-radius: 5px;
+	font-size: 2.5em;
+}
+
+.sqweb-admin-button {
+	background-color: #f0f0f0;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	display: block;
+	margin-top: 15px !important;
+	margin-bottom: 5px;
+	width: 40%;
+}
+
+.sqw-auth-box {
+	text-align: center;
+	padding: 20px;
+	background-color: #FAFAFA;
+	max-width: 400px;
+	margin: 20px auto 20px auto;
+	border-radius: 3px;
+	border: 1px solid grey;
+}
+
+.sqw-setting-box {
+	text-align: center;
+	padding: 20px;
+	background-color: #FAFAFA;
+	max-width: 700px;
+	margin: 20px auto 35px auto;
+	border-radius: 3px;
+	border: 1px solid grey;
+}
+
+.sqw-select {
+	width: 100%;
+}
+
+.sqweb-exemple {
+	width: 100%;
+	margin: 0 0 0 calc(50% - 84px);
+	padding-bottom: 25px;
+}
+
+.sqweb-admin-textarea {
+	border-radius: 5px;
+	font-size: 1em;
+	display: block;
+	margin-bottom: 5px;
+	width: 100%;
+	height: 150px;
+}
+
+.sqw-notice {
+	background: rgba(250, 248, 216, 0.71);
+	border-radius: 2px;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 5px;
+	padding: 10px 0px 10px 10px;
+	border: 1px solid #E8E8C5;
+}
+
+.sqweb-canvas {
+	display: inline-flex;
+}
+
+.sqweb-stats {
+	text-align: center;
+}
+
+.padding-bottom {
+	padding-bottom: 20px;
+}
+
+ul li span.sqweb-red {
+  background: #f50057;
+}
+
+ul li span.sqweb-blue {
+  background: #4190ff;
+}
+
+ul li span.sqweb-yellow {
+  background: #f7bc31;
+}
+
+ul li span.sqweb-col {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  margin-right: 10px;
+}
+
+.sqweb-li {
+	display: flex;
+}
+
+#wpfooter {
+	position: initial;
+}
+
+/* Button style below */
+
+.sqweb-wrapper-down,.sqweb-wrapper-shared{border-collapse:collapse!important;margin:0;padding:0}#sqweb-message,.sqweb-btn,.sqweb-wrapper{font-family:'Helvetica Neue',Arial,sans-serif!important}.sqweb-wrapper{width:100%;text-align:center;box-sizing:border-box}.sqweb-wrapper-shared{font-size:9pt;width:100%;border:1px solid #3498DB;vertical-align:middle}.sqweb-wrapper-up{text-transform:uppercase;border-bottom:0;color:#3498DB;width:100%;line-height:18px;background-color:#f7fbfe;border-collapse:collapse!important}.sqweb-wrapper-down{background-color:#3498DB;text-align:center;line-height:22px;text-transform:capitalize}.sqweb-wrapper-link{color:#FFF!important;text-decoration:none;font-weight:700;-webkit-font-smoothing:antialiased}.sqweb-btn,.sqweb-btn-logo{box-sizing:border-box;float:left;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer}.sqweb-btn{padding:0 6px 0 0;background-color:#FFF;border:1px solid #3498db;color:#3498db!important;text-transform:uppercase;border-radius:2px;text-align:left;letter-spacing:0;font-size:9pt;height:21px;line-height:20px}.sqweb-grey>.sqweb-btn{border:1px solid #79848b;color:#9E9E9E!important}.sqweb-btn:focus{outline:0}.sqweb-btn-logo{display:block;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAUCAMAAADhn3AOAAABvFBMVEUlld/////y+f0znOHJ5ffk8vuu2PM3nuLf7/r0+v3R6fi33PQmld+YzfBjs+gql+Ck0/K/4PY6n+IumeC73vWe0PHZ7PlBo+Pu9/zW6/n4/P77/f75/P79/v9OqeX3+/6Awezm8/s9oePn8/vz+f3H5Pf2+v5IpuQtmeCSyu+p1fJptul3ves8oOJAouOo1fLQ6Pgpl+D8/v8umuBZrueQye+v2PMxm+G02vR6v+yNyO5HpuTl8/v1+v3T6fjI5PeWzPAsmOByuuqx2fSazvB2vOsolt/8/f41neE0nOFrt+nw+P3v9/1UrOZotelVrOas1/NNqeWEw+1tuOrD4vYym+HA4PZLqOX+//8+oeOq1fJJpuSf0PHS6fiXzPBdsOfq9fxXrubT6vni8fv2+/7E4vaZzvA/oePd7vqMx+44nuKUy+9QquW63fWBwu2l0/Ls9vxxuurV6/l0u+vO5/i12/SPye+Dw+3c7vpzu+ormOBfseh1vOtgsuhFpeQol+C83/V4veuy2vSw2fPY7Pmh0fGm1PJuuOr6/f42neJRquVmtenU6vmGxO0nlt/f8PrN5/h9wOybzvCJxu7srppLAAABzklEQVR4Xr3OU69dYRSF4THWtm3z2LZV27Zt2+4f7odkn91erTRNn6uZefFm4J952hGzB4sT0HD2yvCuPQeWLsA8tNyjcmI7hK7hfirpQyMwy1KiVncA2LqRDc4yTGqjUK2QZ+QmF5ucG4A5bpKeB3gy+h7wTlPY5Ns5v7CPgg/mVEguQvNTcDsgHD0l5wUwaz0PvzUEhKz+gYuXrVIobFVu3/VCcVLwdEQgtJN0haEUKTxElHZ00gAMdv6gZnRT4wYo7VRcPV1AL8lt0PqqJHf81ogynrAIu0Vj0GLZ6+IQlP0lasmDSJFsg4bDJI/80ajbpLhoHLPZkkwfh7Y2e5JKDacbO/pGYCM5vt6oykbGkCZFY8owspwpo+FSLE0yN3eV5LUIEjOlXHKJwnXRuDEnGwnyZpS3ApBEIw+sTfEOtFYI8xQsWyj0eHE/R6XfgRiZLZCG+GwOirtpR4Z8BGVi8jGAMZLZ5UCFwrM8nlN5AThevrIpveMIL+g7Xtav6dcBKB4y9WZUNFkD3lJ5t0LJ1Q1TPrDhIwAfm3yKwJR8itrKZ0jFOtfVTEa++O1fCwVnsAVaeMidIbPfvi/KSCv+1qplGfD+HBtcxX/xC6AEPwtIJSYkAAAAAElFTkSuQmCC) no-repeat!important;width:72px;height:20px}.sqweb-grey>.sqweb-btn>.sqweb-btn-logo{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAUCAMAAADhn3AOAAABO1BMVEV5hIt7ho2jqq/DyMvN0dPHzM+xt7uNl52Jk5myuLzO0tTa3d/Y297Kz9KqsbaFj5WOmJ7q6+z////k5uiSm6CHkZf9/f37+/vEycyAi5KBjJPv8PH6+vqEjpSWnqT19vfr7O2Ikpi7wcX4+Pjw8fLAxch+iZDi5ObS1th8h46MlpzR1dfj5eelrLGor7TP09X+/v7Bxsmfpqybo6m/xMfe4OK4vsLX2929wsbU2NqGkJazub3JztGcpKrV2dursrf39/ikq7DM0NPn6euKlJqZoaeQmqC6wMT09fbl5+nu7/Dy8/SXoKWCjJPt7u/d3+Hb3d/8/Pz5+fmTnKF9iI/z9PWnrrOpsLXh4+Wiqa6dpauttLl6hYzQ1Nbm6OrFys3IzdCmrbKUnKKhqK20ur7g4uSvtbmDjZO2vMASRj8rAAABvklEQVR4Ab3Qg3YkQQCF4Rtbd9Bj2zZiOxNnjez7P8EW4qP4O2hV/wW8m77+gcGh4RFoGB0bn5icmp7BC8zOUTGZIVjGrVQMmx3P5XBSc7kBeLy84/PjmQIUgiEyLNcU5ANzETxPlGQsjkRSLiNFwRtOZ7I5UmWfJUQyD61AIeqGUHSRDMZRKldQKFeBarkQqdXLUrVRVpJNaD4KsX617BbJYAPKMIU2OhxEl/PAPLt5avOj1LgApUUl2LLofS1C6wuSbD5qdLi07BDsorHicKwGuQbF76S2PosNkgFo6mxKTxquTWlJNLY2N9dpbEPbKe1S2cP+3Tr67NgkWblvBGXjYF5yisbh/LzBPT/uHA0YJHO9IZLHESzvOXPr0xRORGOjJxvL5GmHZ3FIomEGdg65Bq0HIUPBcU6hJZ5yVKxuDJCGi5zPkZ4h0niwjgNyGsqI8wLAJUnjKh6i0DGjS+UL4B7/uqlEK2hk9f2Sf1NJfYtDiZEb35MH6jzwg8qBlVJwFM/yk3d+AQjzAVMEz2LeoGb9DWnYxXt7z4xcFQZ9LpdvaBZaYy16QBp//uZlpIfXunZcAfh3uXKNT/EfP5dWARfk8vUAAAAASUVORK5CYII=) no-repeat!important}@media (-webkit-min-device-pixel-ratio:1.25),(min-resolution:120dpi){.sqweb-btn-logo{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAAAoCAMAAAAMsXI9AAAAYFBMVEUmlt8znOKc0PHg8fsgk98kld/C4vf///8ckt4ZkN223PRcsejp9fz5/f4OjNzS6vl/we1ot+pPquWOye92veut2PNGpuU9ouPu9/283/WWzfAtmuBUrOby+f0qmOCk1PLn4MssAAAD4UlEQVR4Ad2Wh4KEKAxAgwRI7Iwzdp3//8s7dTSDW6651962gSC8pQThX4lBNOa7KBEhGvhJkAkGNSx/8ZMosVF1kiS1kgbXg9SUXaFTre3TN8h4UlT+UaSZcy5Li4dXEr8UUlHrDibrFb5LNH3q3kn75idmhEftQlJPh+LQT+5M1s8EF0Pjx3ESOhQL9xlFzXApqLQ78+Ddwmfuc6bkWg9+fpzzGl+x+9lCyC71wGaSntM2mAxKQouQtiG4DL4fEmWjVF1qlzW4Gao0GFYXOthF3YW5jCP34p4jIvHc9yShnSxO1Axzcy+c4BmuguL9nx1ec7DnBKxlSYobExpjkLF8qwWzPUFktr/rs4a2CkMB+LFCIHtsudyc52mnkzRhOJmCc21UbK1NCLCy1vYIWNtfqRHBPzorlJxYoXuUit40OslZyCgmZj4OcjEjCOyDg41qmZ6St54sAY1LaOSmcAGPvHQBeiTReEh9UdXAZPZj4nZuHE5T/L4qqJbjdWeg+KVxW5/JIxcS53cXYlH6rIJkoJ8jsFkDh7slCKBj00wNfqnB62ToqNrxq8bUVwt23Y5ydy0PhRTeYHiEGAKMKWRzfKlh9FrMD5gWDc1bqZI0Ga6KYBW9148EAYHh9xqPW3JQ86LR+q209D4p0cDBujO6we80ZL3K7zUCHh/2RkkgIPSZO2GNkbsm+RmN1OfwDnIdnZ/xxL2MdbyNMhMh8OP3LsqUCtGmsRUm57LCIwQgD2NVZE6I6XxSZqXq0fePuGbJKOO+Rcv80OA3jQjVwcCLRtoMamHdogo/eeltKpkTPdAo9z4BmCGesi2k/DGvw35greJ80ehyxkg0tOID2k6K2QqRnJQQgzxISlUIWpKlAcAjK+ojYFe/tZh2cbr8ieNiVW94Sw1dvFOui5JtFXofRCBJIioVDX7KlmazBHePt3o58SEFcvWbJyUOTkop75VYHIuC74mtJDp5SBZEFX+0qNEMjywc9Hyn2GZ5XNJoeifaEng97f0YA9i5g+5GTDmGA1abPuJY9pHQVx4IAOkWVHu+BY0Sg3C6YrsEiJnkUnzyKc9ntveJD+ZfH0tLHELmk2oCPDcSOHn1GUdRN73ljaWb3n3K9S9fBq37BD0sqmjCYEjEcBnkXUhwqWK4KUMeiHARZk8OIU/aLQf7kx6CLz6xkP4Rquzv8OD5fpoQ7QmDe69zJ6b0eg/DcxLpbM9I1g8MAYS3fonv6KpRu3mnDFyFIZ7rpIqivhwVMsKZJV4+Y2tt/CzrmZHrdn1xLboE4UIMEi8QfhVnpgVmNGu2eZZjMxhC+EdBYkJj4P/DLzy2Yfa1+7phAAAAAElFTkSuQmCC) no-repeat!important;background-size:67px 20px!important}.sqweb-grey>.sqweb-btn>.sqweb-btn-logo{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAAAoCAMAAAAMsXI9AAAAGFBMVEV5hItzfob////Z3d/DyMulrbLx8vOPmZ+NoN+pAAACe0lEQVR42t2Y23LbMAxEscbt//+4oSkZgpdy2hkp7XTz4BhEyCOAAKnIvyng4+jU3QjYP3Eymu6ecicKkK4aX1LzBPAeJTeNx9BwkJtAIBaPl0Jd0BDnaDlY3gGCjEdXOBoiyQT3UZQcr0F9rKSJqzPCFPai8DJywK4UjNdIEAXLcVdKYv5uRLFSXJMXWspTJD1mMDhdERrNoLgjJ46nxAyLdKkPU7rekxbs84ag9VNBtsIA5qAfrNI6L4bIUGIDY/CzwQ7rocweb+HQLzkEpqoGQQ5Dzt57kMP1IHPBCiO8A0p0iuJohQ2ZQHMmxRbFpI5jcNrjy3pVSwF4tc2dyfW1kRmDGoHCydIxSjFIGgZXBPLwPOcYOud7yeFl0NqObc5WE2h8XBBaQ6cYT7PioImBKZusn7qoCspezvQn32NYuuf+MzE2g/VoCERXDfIjhv8mxvkW5TBDFvGgpFyNwYcjkBYEyhjY9AdJiYMGRpmGL3UqSJr2WlpUSqabaaIeNL/BMGo4kTI0MyBYXHqPMQlBvvUNjX3Iy2vHUMGGAVhhhFClCFcKxUSPC0Rltd3DIlqcpl+oxvwYbtU3WjMflvkl9kVKAN/EBrT1LV2Q3T78SAoyG3fRnrLE6rxFth3LHMOp8PiqatTMyam15nDg7SqmxVQnPaCrKyuQbk0uYLMjyakE3Ro4gNR2dmZjN3c3DsYQ3rU00/dFKwo10+Cs334nrmCwgvo8y66+EbMczMEYF3LE2YP+LIfrx/kh9iMcEA96Lewv9AQaQRyXgFjQfxXoAG73xGovFwqQ2Wk8BcDJuA5tLrmfI1e/UO86HW8ecPPMJ+BfVSH/L/oFkaYZWK0+N8YAAAAASUVORK5CYII=) no-repeat!important;background-size:67px 20px!important}}.sqweb-btn-loggedin{margin-left:4px}.sqweb-btn-link,.sqweb-btn-link:visited{color:#3498db!important}.sqweb-grey>.sqweb-btn>.sqweb-btn-link{color:#9E9E9E!important}.sqweb-btn,.sqweb-btn-link,.sqweb-btn-link:hover,.sqweb-wrapper-link:hover{font-weight:700;text-decoration:none;display:inline-block}.sqweb-btn-link:hover,.sqweb-wrapper-link:hover{color:#79bbe7!important}.sqweb-grey>.sqweb-btn>.sqweb-btn-link:hover,.sqweb-grey>.sqweb-btn>.sqweb-wrapper-link:hover{color:#bcc2c5!important}#sqweb-message{display:block;width:100%;z-index:9999;position:fixed;color:#fff;background:#3498db;text-align:center;bottom:0;left:0;padding:.5rem;box-sizing:border-box}.sqweb-dismiss{padding:0 1em;float:right;text-decoration:none;color:#ededed}.sqweb-dismiss:hover{color:#fff!important;text-decoration:none!important}
