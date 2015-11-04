@@ -4,6 +4,8 @@ SQweb WordPress Plugin
 
 **This plugin enables you to easily install SQweb on your WordPress powered site.**
 
+You can download the latest stable release from [here](https://github.com/SQweb-team/SQweb-WordPress-Plugin/releases).
+
 ##Contributing
 
 We welcome contributions and improvements.
