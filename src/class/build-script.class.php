@@ -51,10 +51,10 @@ class BuildScript
 	 */
 	public static function save() {
 		$script = self::assemble();
-		if ( file_put_contents( SQW_PLUGIN_DIR_U . '/resources/js/sqweb.js', $script ) ) {
-			return (1);
+		if ( file_put_contents( plugin_dir_path( dirname( __FILE__ ) ) . 'resources/js/sqweb.js' , $script ) ) {
+			return ( 1 );
 		} else {
-			return (0);
+			return ( 0 );
 		}
 	}
 
@@ -63,7 +63,7 @@ class BuildScript
 		self::save();
 		wp_enqueue_script(
 			'sqweb-script',
-			SQW_PLUGIN_DIR . '/' . SQW_PLUGIN_NAME . '/resources/js/sqweb.js',
+			plugin_dir_path( dirname( __FILE__ ) ) . 'resources/js/sqweb.js',
 			array(),
 			'1.0.0',
 			true

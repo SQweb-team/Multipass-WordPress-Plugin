@@ -1,7 +1,5 @@
 <?php
 
-ob_start();
-
 /**
  * Declaring and adding widget
  */
@@ -63,7 +61,7 @@ add_action( 'admin_notices', 'check_env_curl' );
  * Add the backoffice link to wordpress admin sidebar
  */
 function sqweb_register_admin_menu() {
-	add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', SQW_PLUGIN_ADMIN_TITLE, 'sqweb_display_admin_menu' );
+	add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
 }
 add_action( 'admin_menu', 'sqweb_register_admin_menu' );
 
@@ -92,7 +90,7 @@ function sqw_enqueue_styles() {
 }
 
 function sqwadmin_enqueue_styles( $hook ) {
-	if ( 'toplevel_page_' . SQW_PLUGIN_ADMIN_TITLE != $hook ) {
+	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
 		return;
 	}
 	wp_enqueue_style( 'sqweb-admin-style',
@@ -110,7 +108,7 @@ function sqw_enqueue_scripts() {
 }
 
 function sqwadmin_enqueue_scripts( $hook ) {
-	if ( 'toplevel_page_' . SQW_PLUGIN_ADMIN_TITLE != $hook ) {
+	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
 		return;
 	}
 	wp_enqueue_script( 'chart',

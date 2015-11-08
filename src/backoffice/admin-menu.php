@@ -1,4 +1,5 @@
 <?php
+
 if ( isset( $_GET['logout'] ) && 1 == $_GET['logout'] ) {
 	setcookie( 'sqw_admin_token', 0, time() - 1 );
 	wp_redirect( remove_query_arg( 'logout' ) );
@@ -154,7 +155,7 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 <h2><?php _e( 'Sign up', 'sqweb' ); ?></h2>
 <?php if ( 1 == $error ) {?><span class="sqw-error"><?php _e( 'You need to fill in all fields', 'sqweb' ); ?></span><?php
 } ?>
-<form action="<?php echo SQW_CURRENT_URL . $_SERVER['REQUEST_URI'] ?>" method="post" name="sqw-auth">
+<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>" method="post" name="sqw-auth">
 	<label for="firstname"><?php _e( 'Firstname', 'sqweb' ); ?></label>
 	<input class="sqweb-admin-auth-input" type="text" name="sqw-firstname" value="" placeholder="firstname" />
 	<label for="lastname"><?php _e( 'Lastname', 'sqweb' ); ?></label>
@@ -226,7 +227,7 @@ function stats_ajax_call() {
 
 	$wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '';
 	$wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '';
-	if ( ! empty( $wmid ) && ! empty( $wsid ) ) {
+	if ( ! empty( $wmid ) && ! empty( $wsid ) && defined( 'SQW_ENDPOINT' ) ) {
 		?>
 	  <script type="text/javascript" >
 	   jQuery(document).ready(function($) {
