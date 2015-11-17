@@ -3,7 +3,7 @@ Contributors: plavaux
 Tags: paywall, subscription, adblock
 Requires at least: 3.3
 Tested up to: 4.3.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -41,8 +41,11 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.0.7 =
+Added support for modal translation.
+
 = 1.0.6 =
-* Fixed a bug that prevented the button from showing if a token was missing.
+Fixed a bug that prevented the button from showing if a token was missing.
 
 = 1.0.5 =
 * Compatibility checks improvements (PHP version + CURL).
@@ -59,6 +62,12 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.0.7 =
+Added support for modal translation.
+
+= 1.0.6 =
+This version fixes a critical bug with the button.
 
 = 1.0.5 =
 This version improves the compatibility checks (PHP version + CURL).

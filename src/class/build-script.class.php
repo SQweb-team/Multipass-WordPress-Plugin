@@ -31,7 +31,8 @@ class BuildScript
 					debug: true,
 					widget: 'Use SQweb to surf without ads',
 					widget_link: 'https://www.sqweb.com',
-					msg: '" . addcslashes( self::$fmes, '\'' ) . "'
+					msg: '" . addcslashes( self::$fmes, '\'' ) . "',
+					i18n: '" . substr( get_locale(), 0, 2 ) . "'
 				};
 				var _sqw_i18n = {
 					login: '" . self::$flogin . "',
