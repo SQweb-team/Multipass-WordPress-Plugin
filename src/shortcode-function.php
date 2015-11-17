@@ -11,20 +11,3 @@ function sqweb_button_short_code() {
 		echo '<div class="sqweb-button"></div>';
 	}
 }
-
-/*
-remove because bugued
-function sqweb_ad_control_short_code( $atts ) {
-	$arg = shortcode_atts( array(
-		'ads' => '',
-		'content' => '',
-		), $atts );
-	$ads = $arg['ads'];
-	$text = $arg['content'];
-	$wsid = get_option( 'wsid' );
-	if ( sqweb_check_credentials( $wsid ) > 0 ) {
-		echo $text;
-	} else {
-		echo $ads;
-	}
-}*/

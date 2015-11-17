@@ -22,7 +22,6 @@ add_action( 'widgets_init', create_function( '', 'return register_widget("widget
  * Declaring SQweb Shortcode
  */
 
-//add_shortcode( 'sqweb_ad_control', 'sqweb_ad_control_short_code' );
 add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
 
 /**
