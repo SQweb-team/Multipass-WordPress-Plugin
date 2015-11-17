@@ -3,7 +3,8 @@ engines:
         enabled: true
     phpmd:
         enabled: true
-        rulesets: ["codesize", "design", "naming", "cleancode", "unusedcode"]
+        config:
+            rulesets: ["codesize", "design", "naming", "cleancode", "unusedcode"]
 ratings:
     paths:
         - "**.css"
