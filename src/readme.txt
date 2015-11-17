@@ -41,6 +41,9 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.0.6 =
+* Fixed a bug that prevented the button from showing if a token was missing.
+
 = 1.0.5 =
 * Compatibility checks improvements (PHP version + CURL).
 * Code cleanup.
