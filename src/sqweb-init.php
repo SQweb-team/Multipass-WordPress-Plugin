@@ -37,26 +37,6 @@ function my_admin_notice() {
 add_action( 'admin_notices', 'my_admin_notice' );
 
 /**
- * Display a notice if the user is running an unsupported version of PHP.
- */
-function check_env_phpv() {
-	if ( current_user_can( 'install_plugins' ) && version_compare( phpversion(), '5.5.9', '<' ) ) {
-		echo '<div class="error"><p><b>Notice : </b>You are using an unsupported version of PHP (' . phpversion() . '). The SQweb plugin may not work as expected.</p></div>';
-	}
-}
-add_action( 'admin_notices', 'check_env_phpv' );
-
-/*
- * Display an error if CURL is missing.
- */
-function check_env_curl() {
-	if ( current_user_can( 'install_plugins' ) && ! function_exists( 'curl_version' ) ) {
-		echo '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing from your system.</p></div>';
-	}
-}
-add_action( 'admin_notices', 'check_env_curl' );
-
-/**
  * Add the backoffice link to wordpress admin sidebar
  */
 function sqweb_register_admin_menu() {

@@ -10,8 +10,6 @@
 function sqweb_check_credentials( $site_id = null ) {
 	if ( isset( $_COOKIE['sqw_z'] ) && null !== $site_id ) {
 		$cookiez = $_COOKIE['sqw_z'];
-	} else {
-		return ( 0 );
 	}
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 		$curl = curl_init();
@@ -32,8 +30,6 @@ function sqweb_check_credentials( $site_id = null ) {
 
 		if ( $response->status === true && $response->credit > 0 ) {
 			return ($response->credit);
-		} else {
-			return ( 0 );
 		}
 	}
 	return ( 0 );
@@ -64,9 +60,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 		$response = curl_exec( $curl );
 		$err = curl_error( $curl );
 		curl_close( $curl );
-		if ( json_decode( $response ) == false ) {
-			return ( 0 );
-		} else {
+		if ( ! json_decode( $response ) == false ) {
 			return ( 1 );
 		}
 	}
@@ -124,8 +118,6 @@ function sqweb_check_token( $token ) {
 		$res = json_decode( $response );
 		if ( isset( $res->id ) ) {
 			return ( $res->id );
-		} else {
-			return ( 0 );
 		}
 	}
 	return ( 0 );
@@ -146,9 +138,7 @@ function sqw_get_sites( $id ) {
 		$err = curl_error( $curl );
 		curl_close( $curl );
 		$response = json_decode( $response );
-		if ( $response->status == false ) {
-			return ( 0 );
-		} else {
+		if ( ! $response->status == false ) {
 			return ( $response->websites );
 		}
 	}
@@ -178,8 +168,7 @@ function sqw_add_website( $data, $token ) {
 		$res = json_decode( $response );
 		if ( $res->status != 0 ) {
 			return ( 1 );
-		} else {
-			return ( 0 );
 		}
 	}
+	return ( 0 );
 }
