@@ -1,10 +1,6 @@
 engines:
-    csslint:
-        enabled: true
     phpmd:
         enabled: true
-        config:
-            rulesets: ["codesize", "design", "naming", "cleancode", "unusedcode"]
 ratings:
     paths:
         - "**.css"
