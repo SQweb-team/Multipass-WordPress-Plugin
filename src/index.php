@@ -17,12 +17,12 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ).'
  */
 function check() {
 
-	if ( version_compare( phpversion(), '5.2.17', '<') ) {
+	if ( version_compare( phpversion(), '5.2.17', '<' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
 		echo '<div class="error"><p><b>Error : </b>You are using an unsupported version of PHP (' . phpversion() . '). The SQweb plugin cannot be activated.</p></div>';
 	}
 
-	if ( ! function_exists('curl_version') ) {
+	if ( ! function_exists( 'curl_version' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
 		echo '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing from your system. The SQweb plugin cannot be activated.</p></div>';
 	}
