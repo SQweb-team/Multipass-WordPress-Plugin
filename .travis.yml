@@ -15,3 +15,6 @@ before_script:
 
 script:
     - phpcs --standard=WordPress-Core . --extensions=php
+
+notifications:
+    slack: sqweb:8N9C4bVLkf7W2NaCkjDahTpv
