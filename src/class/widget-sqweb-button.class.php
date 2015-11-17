@@ -28,8 +28,7 @@ class WidgetSqwebButton extends WP_Widget
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		return $instance;
+		return $old_instance;
 	}
 
 	function form( $instance ) {

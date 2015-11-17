@@ -25,7 +25,6 @@ function sqweb_check_credentials( $site_id = null ) {
 		curl_close( $curl );
 
 		$response = json_decode( $response );
-
 		if ( $response->status === true && $response->credit > 0 ) {
 			return ($response->credit);
 		}
@@ -56,8 +55,8 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			)
 		);
 		$response = curl_exec( $curl );
-		$err = curl_error( $curl );
 		curl_close( $curl );
+
 		if ( ! json_decode( $response ) == false ) {
 			return ( 1 );
 		}
@@ -86,6 +85,7 @@ function sqweb_sign_in( $email, $password ) {
 			) );
 		$response = curl_exec( $curl );
 		curl_close( $curl );
+
 		$response = json_decode( $response );
 		if ( isset( $response->token ) ) {
 			setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
@@ -111,6 +111,7 @@ function sqweb_check_token( $token ) {
 			) );
 		$response = curl_exec( $curl );
 		curl_close( $curl );
+
 		$res = json_decode( $response );
 		if ( isset( $res->id ) ) {
 			return ( $res->id );
@@ -132,6 +133,7 @@ function sqw_get_sites( $id ) {
 			) );
 		$response = curl_exec( $curl );
 		curl_close( $curl );
+
 		$response = json_decode( $response );
 		if ( ! $response->status == false ) {
 			return ( $response->websites );
@@ -159,6 +161,7 @@ function sqw_add_website( $data, $token ) {
 			) );
 		$response = curl_exec( $curl );
 		curl_close( $curl );
+
 		$res = json_decode( $response );
 		if ( $res->status != 0 ) {
 			return ( 1 );
