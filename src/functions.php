@@ -11,7 +11,7 @@ function sqweb_check_credentials( $site_id = null ) {
 	if ( isset( $_COOKIE['sqw_z'] ) && null !== $site_id ) {
 		$cookiez = $_COOKIE['sqw_z'];
 	}
-	if ( defined( 'SQW_ENDPOINT' ) ) {
+	if ( isset( $cookiez ) && defined( 'SQW_ENDPOINT' ) ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'token/check',
