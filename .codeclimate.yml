@@ -1,0 +1,9 @@
+engines:
+    csslint:
+        enabled: true
+    phpmd:
+        enabled: true
+ratings:
+    paths:
+        - "**.css"
+        - "**.php"
