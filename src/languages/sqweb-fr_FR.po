@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2015-10-22 11:27+0200\n"
-"PO-Revision-Date: 2015-10-22 11:30+0200\n"
+"POT-Creation-Date: 2015-11-20 10:51+0100\n"
+"PO-Revision-Date: 2015-11-20 10:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -16,51 +16,51 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backoffice/admin-menu.php:36
+#: backoffice/admin-menu.php:39
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: backoffice/admin-menu.php:55
+#: backoffice/admin-menu.php:58
 msgid "Register a new website"
 msgstr "Enregistrer un nouveau site"
 
-#: backoffice/admin-menu.php:56
+#: backoffice/admin-menu.php:59
 msgid "Website name"
 msgstr "Nom du site"
 
-#: backoffice/admin-menu.php:57
+#: backoffice/admin-menu.php:60
 msgid "http://exemple.com"
 msgstr "http://exemple.com"
 
-#: backoffice/admin-menu.php:58
+#: backoffice/admin-menu.php:61
 msgid "Add website"
 msgstr "Ajouter un site"
 
-#: backoffice/admin-menu.php:73
+#: backoffice/admin-menu.php:90
 msgid "Settings"
 msgstr "Options"
 
-#: backoffice/admin-menu.php:75
+#: backoffice/admin-menu.php:92
 msgid "Webmaster ID"
 msgstr "Webmaster ID"
 
-#: backoffice/admin-menu.php:77
+#: backoffice/admin-menu.php:94
 msgid "First step : select your website"
 msgstr "Première étape : Choisir votre site"
 
-#: backoffice/admin-menu.php:88 backoffice/admin-menu.php:127
+#: backoffice/admin-menu.php:105 backoffice/admin-menu.php:159
 msgid "Click here"
 msgstr "Cliquez ici"
 
-#: backoffice/admin-menu.php:88
+#: backoffice/admin-menu.php:105
 msgid "add a new website"
 msgstr "pour ajouter un nouveau site."
 
-#: backoffice/admin-menu.php:92
+#: backoffice/admin-menu.php:109
 msgid "Second step : Enter the message that will be shown to adblockers"
 msgstr "Seconde étape : Entrer un message qui sera montré aux Adblockers"
 
-#: backoffice/admin-menu.php:95
+#: backoffice/admin-menu.php:112
 msgid ""
 "Leave the field above blank if you do not wish the message for adblockers "
 "shown."
@@ -68,141 +68,169 @@ msgstr ""
 "Laisser le champ vide si vous ne souhaitez pas montrer de message aux "
 "Adblockers."
 
-#: backoffice/admin-menu.php:98
+#: backoffice/admin-menu.php:115
 msgid "Third step : Messages you'd like on the button"
 msgstr "Troisième étape : Texte du bouton"
 
-#: backoffice/admin-menu.php:103
+#: backoffice/admin-menu.php:120
 msgid "Remove ads"
 msgstr "Enlever la pub"
 
-#: backoffice/admin-menu.php:109
+#: backoffice/admin-menu.php:126
 msgid "Text for not connected user"
 msgstr "Texte utilisateur non connecté"
 
-#: backoffice/admin-menu.php:110
+#: backoffice/admin-menu.php:127
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
-#: backoffice/admin-menu.php:111
+#: backoffice/admin-menu.php:128
 msgid "Text for connected user"
 msgstr "Texte utilisateur connecté"
 
-#: backoffice/admin-menu.php:112
+#: backoffice/admin-menu.php:129
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/admin-menu.php:116
+#: backoffice/admin-menu.php:133
 msgid "Fourth step : pick your theme"
 msgstr "Quatrième étape : Choisir votre thème"
 
-#: backoffice/admin-menu.php:118
+#: backoffice/admin-menu.php:135
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/admin-menu.php:119
+#: backoffice/admin-menu.php:136
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/admin-menu.php:123
+#: backoffice/admin-menu.php:140
+msgid "Five step : select lang"
+msgstr "Cinquième étape : Choisir la langue"
+
+#: backoffice/admin-menu.php:142
+msgid "French"
+msgstr "Français"
+
+#: backoffice/admin-menu.php:143
+msgid "English"
+msgstr "Anglais"
+
+#: backoffice/admin-menu.php:147
+msgid "Six step : Mode targeting"
+msgstr "Sixième étape : Mode targeting"
+
+#: backoffice/admin-menu.php:149
+msgid "Yes"
+msgstr "Oui"
+
+#: backoffice/admin-menu.php:150
+msgid "No"
+msgstr "Non"
+
+#: backoffice/admin-menu.php:152
+msgid "Show SQweb button only for Adblockers."
+msgstr "Afficher le bouton SQweb uniquement pour les adblockers."
+
+#: backoffice/admin-menu.php:155
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: backoffice/admin-menu.php:127
+#: backoffice/admin-menu.php:159
 msgid "Woops! It looks like you havent registered your website yet"
 msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
 
-#: backoffice/admin-menu.php:127
+#: backoffice/admin-menu.php:159
 msgid "to start"
 msgstr "pour débuté"
 
-#: backoffice/admin-menu.php:154 backoffice/admin-menu.php:166
+#: backoffice/admin-menu.php:186 backoffice/admin-menu.php:198
 msgid "Sign up"
 msgstr "Inscription"
 
-#: backoffice/admin-menu.php:155 backoffice/admin-menu.php:175
+#: backoffice/admin-menu.php:187 backoffice/admin-menu.php:207
 msgid "You need to fill in all fields"
 msgstr "Vous avez besoin de remplir tout les champs"
 
-#: backoffice/admin-menu.php:158
+#: backoffice/admin-menu.php:190
 msgid "Firstname"
 msgstr "Prénom"
 
-#: backoffice/admin-menu.php:160
+#: backoffice/admin-menu.php:192
 msgid "Lastname"
 msgstr "Nom de famille"
 
-#: backoffice/admin-menu.php:162 backoffice/admin-menu.php:180
+#: backoffice/admin-menu.php:194 backoffice/admin-menu.php:212
 msgid "Email"
 msgstr "Email"
 
-#: backoffice/admin-menu.php:164 backoffice/admin-menu.php:182
+#: backoffice/admin-menu.php:196 backoffice/admin-menu.php:214
 msgid "Password"
 msgstr "Mot de passe"
 
-#: backoffice/admin-menu.php:165 backoffice/admin-menu.php:183
+#: backoffice/admin-menu.php:197 backoffice/admin-menu.php:215
 msgid "password"
 msgstr "Mot de passe"
 
-#: backoffice/admin-menu.php:169
+#: backoffice/admin-menu.php:201
 msgid "Back to sign in"
 msgstr "Retourner à la connexion"
 
-#: backoffice/admin-menu.php:174 backoffice/admin-menu.php:184
+#: backoffice/admin-menu.php:206 backoffice/admin-menu.php:216
 msgid "Sign in"
 msgstr "Connexion"
 
-#: backoffice/admin-menu.php:177
+#: backoffice/admin-menu.php:209
 msgid ""
 "You signed up successfuly, please check your email to activate your account."
 msgstr ""
 "Inscription réussi, veuillez vérifier vos email pour activer votre compte."
 
-#: backoffice/admin-menu.php:188
+#: backoffice/admin-menu.php:220
 msgid "Don't have an account ?"
 msgstr "Vous n’avez pas de compte ?"
 
-#: backoffice/admin-menu.php:189
+#: backoffice/admin-menu.php:221
 msgid "Sign up for free in 30 seconds !"
 msgstr "Inscrivez vous gratuitement en 30 secondes !"
 
-#: backoffice/admin-menu.php:193
+#: backoffice/admin-menu.php:225
 msgid "Forgot your password ?"
 msgstr "Oublie de mot de passe ?"
 
-#: backoffice/admin-menu.php:208
+#: backoffice/admin-menu.php:240
 msgid "Users detected with Adblock"
 msgstr "Utilisateur avec Adblock"
 
-#: backoffice/admin-menu.php:209
+#: backoffice/admin-menu.php:241
 msgid "Users paying with SQweb"
 msgstr "Utilisateur avec Sqweb"
 
-#: backoffice/admin-menu.php:210
+#: backoffice/admin-menu.php:242
 msgid "Users seeing ads"
 msgstr "Utilisateur voyant la publicité"
 
-#: backoffice/admin-menu.php:216
+#: backoffice/admin-menu.php:248
 msgid "Pages seen with ads blocked"
 msgstr "Page vues avec les publicités bloquées."
 
-#: backoffice/admin-menu.php:217
+#: backoffice/admin-menu.php:249
 msgid "Pages seen by SQwebmen"
 msgstr "Page vues par des SQwebmens"
 
-#: backoffice/admin-menu.php:218
+#: backoffice/admin-menu.php:250
 msgid "Pages seen with ads"
 msgstr "Page vues avec la publicité"
 
-#: backoffice/admin-menu.php:247 backoffice/admin-menu.php:267
+#: backoffice/admin-menu.php:279 backoffice/admin-menu.php:299
 msgid "Displayed"
 msgstr "Affichage"
 
-#: backoffice/admin-menu.php:253 backoffice/admin-menu.php:273
+#: backoffice/admin-menu.php:285 backoffice/admin-menu.php:305
 msgid "Blocked"
 msgstr "Bloqué"
 
-#: backoffice/admin-menu.php:300
+#: backoffice/admin-menu.php:332
 msgid "Tutorial"
 msgstr "Tutoriel"
 
@@ -235,11 +263,11 @@ msgstr "Bouton pour activé SQweb sur votre site."
 msgid "SQweb button"
 msgstr "SQweb bouton"
 
-#: class/widget-sqweb-button.class.php:41
+#: class/widget-sqweb-button.class.php:40
 msgid "CLICK HERE TO LOG IN"
 msgstr "Cliquez ici pour vous connectez"
 
-#: class/widget-sqweb-button.class.php:43
+#: class/widget-sqweb-button.class.php:42
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 

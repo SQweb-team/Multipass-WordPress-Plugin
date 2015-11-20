@@ -15,6 +15,8 @@ function sqweb_check_credentials( $site_id = null ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'token/check',
+			CURLOPT_CONNECTTIMEOUT_MS => 1000,
+			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POSTFIELDS => array(
 				'token' => $cookiez,
@@ -44,6 +46,8 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'sqw_auth/new',
+			CURLOPT_CONNECTTIMEOUT_MS => 1000,
+			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POSTFIELDS => array(
 				'role' => '1',
@@ -75,10 +79,11 @@ function sqweb_sign_in( $email, $password ) {
 
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'auth/login',
+			CURLOPT_CONNECTTIMEOUT_MS => 1000,
+			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_TIMEOUT => 30,
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			CURLOPT_HTTPHEADER => array( 'Content-Type: application/x-www-form-urlencoded' ),
 			CURLOPT_POSTFIELDS => 'email=' . $email . '&password=' . $password,
@@ -104,6 +109,8 @@ function sqweb_check_token( $token ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'sqw_auth/is_auth_t',
+			CURLOPT_CONNECTTIMEOUT_MS => 1000,
+			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POSTFIELDS => array(
 				'token' => $token,
@@ -129,6 +136,8 @@ function sqw_get_sites( $id ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'websites/' . $id,
+			CURLOPT_CONNECTTIMEOUT_MS => 1000,
+			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
 			) );
 		$response = curl_exec( $curl );
@@ -152,6 +161,8 @@ function sqw_add_website( $data, $token ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
 			CURLOPT_URL => SQW_ENDPOINT . 'websites/add',
+			CURLOPT_CONNECTTIMEOUT_MS => 1000,
+			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POSTFIELDS => array(
 				'token' => $token,

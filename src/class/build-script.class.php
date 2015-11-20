@@ -11,6 +11,8 @@ class BuildScript
 	private static $flogin;
 	private static $flogout;
 	private static $fmes;
+	private static $lang;
+	private static $targets;
 
 	/**
 	 * Generating script
@@ -23,16 +25,17 @@ class BuildScript
 		self::$flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';
 		self::$flogout = (get_option( 'flogout' ) !== '') ? get_option( 'flogout' ) : 'Connected';
 		self::$fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
+		self::$lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
+		self::$targets = (get_option( 'targets' ) !== '') ? get_option( 'targets' ) : 'false';
 
 		// Assembling
-		$script = 'var _sqw = {
-					id_webmaster: ' . self::$wmid . ',
-					id_site: ' . self::$wsid . ",
-					debug: true,
-					widget: 'Use SQweb to surf without ads',
-					widget_link: 'https://www.sqweb.com',
+		$script = "var _sqw = {
+					id_webmaster: " . self::$wmid . ",
+					id_site: " . self::$wsid . ",
+					debug: false,
+					targeting: " . self::$targets . ",
 					msg: '" . addcslashes( self::$fmes, '\'' ) . "',
-					i18n: '" . substr( get_locale(), 0, 2 ) . "'
+					i18n: '" . self::$lang . "'
 				};
 				var _sqw_i18n = {
 					login: '" . self::$flogin . "',

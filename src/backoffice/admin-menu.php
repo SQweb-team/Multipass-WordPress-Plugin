@@ -15,6 +15,8 @@ $fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
 $fpubg = (get_option( 'fpubg' ) !== '') ? get_option( 'fpubg' ) : '';
 $fpufc = (get_option( 'fpufc' ) !== '') ? get_option( 'fpufc' ) : '';
 $btheme = (get_option( 'btheme' ) !== '') ? get_option( 'btheme' ) : 'blue';
+$lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
+$targeting = (get_option( 'targets' ) !== '') ? get_option( 'targets' ) : 'false';
 
 // Building the form
 $errorc = 0;
@@ -64,10 +66,24 @@ if ( $sqw_webmaster > 0 ) {
 		if ( false != $sqw_sites ) {
 			$selectbtheme = '';
 			$selectgtheme = '';
+			$selectfrlang = '';
+			$selectenlang = '';
+			$selectyestarget = '';
+			$selectnotarget = '';
 			if ( 'grey' == $btheme ) {
 				$selectgtheme = 'selected';
 			} else {
 				$selectbtheme = 'selected';
+			}
+			if ( 'fr' == $lang ) {
+				$selectfrlang = 'selected';
+			} else {
+				$selectenlang = 'selected';
+			}
+			if ( '1' == $targeting ) {
+				$selectyestarget = 'selected';
+			} else {
+				$selectnotarget = 'selected';
 			}
 			?>
 		 <form action="options.php" method="post" name="options">
@@ -119,7 +135,22 @@ if ( $sqw_webmaster > 0 ) {
 			<option value="blue" <?php echo $selectbtheme ?>><?php _e( 'Blue', 'sqweb' ); ?></option>
 			<option value="grey" <?php echo $selectgtheme ?>><?php _e( 'Grey', 'sqweb' ); ?></option>
 		   </select>
-		   <input type="hidden" name="page_options" value="wmid, wsid, flogin, flogout, fmes, btheme" />
+		  </div>
+		  <div class="sqweb-form-div">
+		   <span class="sqweb-form-title"><?php _e( 'Five step : select lang', 'sqweb' ); ?></span>
+		   <select class="sqweb-admin-input sqw-select" name="lang" id="sqweb-color-select">';
+			<option value="fr" <?php echo $selectfrlang ?>><?php _e( 'French', 'sqweb' ); ?></option>
+			<option value="en" <?php echo $selectenlang ?>><?php _e( 'English', 'sqweb' ); ?></option>
+		   </select>
+		   </div>
+		   <div class="sqweb-form-div">
+			<span class="sqweb-form-title"><?php _e( 'Six step : Mode targeting', 'sqweb' ); ?></span>
+			<select class="sqweb-admin-input sqw-select" name="targets" id="sqweb-color-select">';
+			 <option value="true" <?php echo $selectyestarget ?>><?php _e( 'Yes', 'sqweb' ); ?></option>
+			 <option value="false" <?php echo $selectnotarget ?>><?php _e( 'No', 'sqweb' ); ?></option>
+			</select>
+			<span style="color:orange;display: block;margin-bottom: 5px;font-size: 0.8em;"><?php _e( 'Show SQweb button only for Adblockers.', 'sqweb' ); ?></span>
+		   <input type="hidden" name="page_options" value="wmid, wsid, flogin, flogout, fmes, btheme, lang, targets" />
 		  </div>
 		  <input class="button button-primary button-large sqweb-admin-button" type="submit" name="Submit" value="<?php _e( 'Update', 'sqweb' ); ?>" />
 		 </form>

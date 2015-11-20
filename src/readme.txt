@@ -2,8 +2,8 @@
 Contributors: plavaux
 Tags: paywall, subscription, adblock
 Requires at least: 3.3
-Tested up to: 4.3.1
-Stable tag: 1.0.7
+Tested up to: 4.4
+Stable tag: 1.0.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -41,6 +41,9 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.0.8 =
+* Added manual language selection and targeting option.
+
 = 1.0.7 =
 Added support for modal translation.
 
@@ -62,6 +65,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.0.8 =
+
+Added manual language selection, and targeting option.
 
 = 1.0.7 =
 Added support for modal translation.
