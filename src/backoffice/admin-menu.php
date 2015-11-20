@@ -80,7 +80,7 @@ if ( $sqw_webmaster > 0 ) {
 			} else {
 				$selectenlang = 'selected';
 			}
-			if ( '1' == $targeting ) {
+			if ( 'true' == $targeting ) {
 				$selectyestarget = 'selected';
 			} else {
 				$selectnotarget = 'selected';
