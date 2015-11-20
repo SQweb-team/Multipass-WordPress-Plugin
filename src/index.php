@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Solution to adblocking (detection included).
-Version: 1.0.8
+Version: 1.0.9
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb

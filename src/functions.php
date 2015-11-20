@@ -27,7 +27,7 @@ function sqweb_check_credentials( $site_id = null ) {
 		curl_close( $curl );
 
 		$response = json_decode( $response );
-		if ( $response->status === true && $response->credit > 0 ) {
+		if ( $response != false && $response->status === true && $response->credit > 0 ) {
 			return ($response->credit);
 		}
 	}
