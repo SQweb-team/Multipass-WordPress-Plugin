@@ -18,3 +18,4 @@ script:
 
 notifications:
     slack: sqweb:M0hKi2sdzb1VxoxtMeo4F3lh
+    email: false
