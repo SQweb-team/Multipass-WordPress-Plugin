@@ -17,4 +17,4 @@ script:
     - phpcs --standard=WordPress-Core . --extensions=php
 
 notifications:
-    slack: sqweb:8N9C4bVLkf7W2NaCkjDahTpv
+    slack: sqweb:M0hKi2sdzb1VxoxtMeo4F3lh
