@@ -30,6 +30,12 @@ function check() {
 
 add_action( 'admin_init', 'check' );
 
+/**
+ * Ensure compatibility with all installs of WordPress.
+ * https://core.trac.wordpress.org/changeset/15452
+ */
+require_once( ABSPATH . 'wp-includes/pluggable.php' );
+
 // Including classes and dependencies files.
 require_once( 'config.php' );
 require_once( 'class/build-script.class.php' );

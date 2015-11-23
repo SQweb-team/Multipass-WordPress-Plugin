@@ -1,5 +1,5 @@
 === SQweb for WordPress ===
-Contributors: plavaux
+Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.3
 Tested up to: 4.4
@@ -42,7 +42,8 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 == Changelog ==
 
 = 1.0.9 =
-Fix curl response error.
+* Fixed curl response error.
+* Fixed missing include with some WordPress installations.
 
 = 1.0.8 =
 Added manual language selection and targeting option.
@@ -68,6 +69,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.0.9 =
+
+This version fixes a blocking bug that happened with some WordPress installations.
 
 = 1.0.8 =
 
