@@ -7,12 +7,14 @@ class WidgetSqwebButton extends WP_Widget
 {
 
 	function __construct() {
+
 		$widget_ops = array( 'classname' => 'widget_text', 'description' => __( 'Button to activate SQweb on your website.', 'sqweb' ) );
 		$control_ops = array( 'width' => 400, 'height' => 350 );
 		parent::__construct( 'widgetSqwebButton', __( 'SQweb button', 'sqweb' ), $widget_ops, $control_ops );
 	}
 
 	function widget( $args, $instance ) {
+
 		extract( $args );
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
@@ -28,10 +30,12 @@ class WidgetSqwebButton extends WP_Widget
 	}
 
 	function update( $new_instance, $old_instance ) {
+
 		return $old_instance;
 	}
 
 	function form( $instance ) {
+
 		$instance = wp_parse_args( (array) $instance, array( 'flogin' => 'Remove ads', 'flogout' => 'Connected' ) );
 		$get_options['wmid'] = get_option( 'wmid' );
 		$get_options['wsid'] = get_option( 'wsid' );

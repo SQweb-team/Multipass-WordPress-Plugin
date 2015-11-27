@@ -34,13 +34,13 @@ add_action( 'admin_init', 'check' );
  * Ensure compatibility with all installs of WordPress.
  * https://core.trac.wordpress.org/changeset/15452
  */
-require_once( ABSPATH . 'wp-includes/pluggable.php' );
+require_once ABSPATH . 'wp-includes/pluggable.php';
 
 // Including classes and dependencies files.
-require_once( 'config.php' );
-require_once( 'class/build-script.class.php' );
-require_once( 'class/widget-sqweb-button.class.php' );
-require_once( 'class/sqweb-ad-control.class.php' );
-require_once( 'functions.php' );
-require_once( 'shortcode-function.php' );
-require_once( 'sqweb-init.php' );
+require_once 'config.php';
+require_once 'class/build-script.class.php';
+require_once 'class/widget-sqweb-button.class.php';
+require_once 'class/sqweb-ad-control.class.php';
+require_once 'functions.php';
+require_once 'shortcode-function.php';
+require_once 'sqweb-init.php';
