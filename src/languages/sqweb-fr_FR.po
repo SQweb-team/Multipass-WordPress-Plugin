@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2015-11-20 10:51+0100\n"
-"PO-Revision-Date: 2015-11-20 10:53+0100\n"
+"POT-Creation-Date: 2015-11-27 15:34+0100\n"
+"PO-Revision-Date: 2015-11-27 15:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -45,10 +45,10 @@ msgid "Webmaster ID"
 msgstr "Webmaster ID"
 
 #: backoffice/admin-menu.php:94
-msgid "First step : select your website"
-msgstr "Première étape : Choisir votre site"
+msgid "Step 1 : select your website"
+msgstr "Étape 1: Sélectionnez votre site Internet"
 
-#: backoffice/admin-menu.php:105 backoffice/admin-menu.php:159
+#: backoffice/admin-menu.php:105 backoffice/admin-menu.php:158
 msgid "Click here"
 msgstr "Cliquez ici"
 
@@ -57,8 +57,8 @@ msgid "add a new website"
 msgstr "pour ajouter un nouveau site."
 
 #: backoffice/admin-menu.php:109
-msgid "Second step : Enter the message that will be shown to adblockers"
-msgstr "Seconde étape : Entrer un message qui sera montré aux Adblockers"
+msgid "Step 2 : Enter the message that will be shown to adblockers"
+msgstr "Étape 2 : Entrer un message qui sera montré aux Adblockers"
 
 #: backoffice/admin-menu.php:112
 msgid ""
@@ -69,8 +69,8 @@ msgstr ""
 "Adblockers."
 
 #: backoffice/admin-menu.php:115
-msgid "Third step : Messages you'd like on the button"
-msgstr "Troisième étape : Texte du bouton"
+msgid "Step 3 : Messages you'd like on the button"
+msgstr "Étape 3: Messages que vous désirez sur le bouton SQweb"
 
 #: backoffice/admin-menu.php:120
 msgid "Remove ads"
@@ -93,8 +93,8 @@ msgid "Connected"
 msgstr "Connecté"
 
 #: backoffice/admin-menu.php:133
-msgid "Fourth step : pick your theme"
-msgstr "Quatrième étape : Choisir votre thème"
+msgid "Step 4 : pick your theme"
+msgstr "Étape 4: Choisissez votre thème"
 
 #: backoffice/admin-menu.php:135
 msgid "Blue"
@@ -105,8 +105,8 @@ msgid "Grey"
 msgstr "Gris"
 
 #: backoffice/admin-menu.php:140
-msgid "Five step : select lang"
-msgstr "Cinquième étape : Choisir la langue"
+msgid "Step 5 : select lang"
+msgstr "Étape 5 : Choisir la langue"
 
 #: backoffice/admin-menu.php:142
 msgid "French"
@@ -117,120 +117,116 @@ msgid "English"
 msgstr "Anglais"
 
 #: backoffice/admin-menu.php:147
-msgid "Six step : Mode targeting"
-msgstr "Sixième étape : Mode targeting"
+msgid "Step 6 : Display button"
+msgstr "Étape 6: Affichez le bouton"
 
 #: backoffice/admin-menu.php:149
-msgid "Yes"
-msgstr "Oui"
+msgid "Only to adblockers"
+msgstr "Seulement pour les adblockers"
 
 #: backoffice/admin-menu.php:150
-msgid "No"
-msgstr "Non"
+msgid "To everybody"
+msgstr "Pour tout le monde"
 
-#: backoffice/admin-menu.php:152
-msgid "Show SQweb button only for Adblockers."
-msgstr "Afficher le bouton SQweb uniquement pour les adblockers."
-
-#: backoffice/admin-menu.php:155
+#: backoffice/admin-menu.php:154
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: backoffice/admin-menu.php:159
+#: backoffice/admin-menu.php:158
 msgid "Woops! It looks like you havent registered your website yet"
 msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
 
-#: backoffice/admin-menu.php:159
+#: backoffice/admin-menu.php:158
 msgid "to start"
 msgstr "pour débuté"
 
-#: backoffice/admin-menu.php:186 backoffice/admin-menu.php:198
+#: backoffice/admin-menu.php:185 backoffice/admin-menu.php:197
 msgid "Sign up"
 msgstr "Inscription"
 
-#: backoffice/admin-menu.php:187 backoffice/admin-menu.php:207
+#: backoffice/admin-menu.php:186 backoffice/admin-menu.php:206
 msgid "You need to fill in all fields"
 msgstr "Vous avez besoin de remplir tout les champs"
 
-#: backoffice/admin-menu.php:190
+#: backoffice/admin-menu.php:189
 msgid "Firstname"
 msgstr "Prénom"
 
-#: backoffice/admin-menu.php:192
+#: backoffice/admin-menu.php:191
 msgid "Lastname"
 msgstr "Nom de famille"
 
-#: backoffice/admin-menu.php:194 backoffice/admin-menu.php:212
+#: backoffice/admin-menu.php:193 backoffice/admin-menu.php:211
 msgid "Email"
 msgstr "Email"
 
-#: backoffice/admin-menu.php:196 backoffice/admin-menu.php:214
+#: backoffice/admin-menu.php:195 backoffice/admin-menu.php:213
 msgid "Password"
 msgstr "Mot de passe"
 
-#: backoffice/admin-menu.php:197 backoffice/admin-menu.php:215
+#: backoffice/admin-menu.php:196 backoffice/admin-menu.php:214
 msgid "password"
 msgstr "Mot de passe"
 
-#: backoffice/admin-menu.php:201
+#: backoffice/admin-menu.php:200
 msgid "Back to sign in"
 msgstr "Retourner à la connexion"
 
-#: backoffice/admin-menu.php:206 backoffice/admin-menu.php:216
+#: backoffice/admin-menu.php:205 backoffice/admin-menu.php:215
 msgid "Sign in"
 msgstr "Connexion"
 
-#: backoffice/admin-menu.php:209
+#: backoffice/admin-menu.php:208
 msgid ""
 "You signed up successfuly, please check your email to activate your account."
 msgstr ""
 "Inscription réussi, veuillez vérifier vos email pour activer votre compte."
 
-#: backoffice/admin-menu.php:220
+#: backoffice/admin-menu.php:219
 msgid "Don't have an account ?"
 msgstr "Vous n’avez pas de compte ?"
 
-#: backoffice/admin-menu.php:221
+#: backoffice/admin-menu.php:220
 msgid "Sign up for free in 30 seconds !"
 msgstr "Inscrivez vous gratuitement en 30 secondes !"
 
-#: backoffice/admin-menu.php:225
+#: backoffice/admin-menu.php:224
 msgid "Forgot your password ?"
 msgstr "Oublie de mot de passe ?"
 
-#: backoffice/admin-menu.php:240
+#: backoffice/admin-menu.php:239
 msgid "Users detected with Adblock"
 msgstr "Utilisateur avec Adblock"
 
-#: backoffice/admin-menu.php:241
+#: backoffice/admin-menu.php:240
 msgid "Users paying with SQweb"
 msgstr "Utilisateur avec Sqweb"
 
-#: backoffice/admin-menu.php:242
+#: backoffice/admin-menu.php:241
 msgid "Users seeing ads"
 msgstr "Utilisateur voyant la publicité"
 
-#: backoffice/admin-menu.php:248
+#: backoffice/admin-menu.php:247
 msgid "Pages seen with ads blocked"
 msgstr "Page vues avec les publicités bloquées."
 
-#: backoffice/admin-menu.php:249
+#: backoffice/admin-menu.php:248
 msgid "Pages seen by SQwebmen"
 msgstr "Page vues par des SQwebmens"
 
-#: backoffice/admin-menu.php:250
+#: backoffice/admin-menu.php:249
 msgid "Pages seen with ads"
 msgstr "Page vues avec la publicité"
 
-#: backoffice/admin-menu.php:279 backoffice/admin-menu.php:299
+#: backoffice/admin-menu.php:278 backoffice/admin-menu.php:298
 msgid "Displayed"
 msgstr "Affichage"
 
-#: backoffice/admin-menu.php:285 backoffice/admin-menu.php:305
+#: backoffice/admin-menu.php:284 backoffice/admin-menu.php:304
 msgid "Blocked"
 msgstr "Bloqué"
 
-#: backoffice/admin-menu.php:332
+#: backoffice/admin-menu.php:331
 msgid "Tutorial"
 msgstr "Tutoriel"
 
@@ -270,6 +266,36 @@ msgstr "Cliquez ici pour vous connectez"
 #: class/widget-sqweb-button.class.php:42
 msgid "Edit settings"
 msgstr "Editez les paramètres"
+
+#~ msgid "Step 6 : Mode targeting"
+#~ msgstr "Étape 6: Mode targeting"
+
+#~ msgid "Yes"
+#~ msgstr "Oui"
+
+#~ msgid "No"
+#~ msgstr "Non"
+
+#~ msgid "Show SQweb button only for Adblockers."
+#~ msgstr "Afficher le bouton SQweb uniquement pour les adblockers."
+
+#~ msgid "First step : select your website"
+#~ msgstr "Première étape : Choisir votre site"
+
+#~ msgid "Second step : Enter the message that will be shown to adblockers"
+#~ msgstr "Seconde étape : Entrer un message qui sera montré aux Adblockers"
+
+#~ msgid "Third step : Messages you'd like on the button"
+#~ msgstr "Troisième étape : Texte du bouton"
+
+#~ msgid "Fourth step : pick your theme"
+#~ msgstr "Quatrième étape : Choisir votre thème"
+
+#~ msgid "Five step : select lang"
+#~ msgstr "Cinquième étape : Choisir la langue"
+
+#~ msgid "Six step : Mode targeting"
+#~ msgstr "Sixième étape : Mode targeting"
 
 #~ msgid "Put here your ad code to hide it for SQweb users"
 #~ msgstr ""

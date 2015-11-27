@@ -91,7 +91,7 @@ if ( $sqw_webmaster > 0 ) {
 		<?php echo wp_nonce_field( 'update-options' ) ?>
 		<input class="sqweb-admin-input" type="hidden" name="wmid" value="<?php echo $sqw_webmaster ?>" placeholder="<?php _e( 'Webmaster ID', 'sqweb' ); ?>" />
 		<div class="sqweb-form-div">
-		 <span class="sqweb-form-title"><?php _e( 'First step : select your website', 'sqweb' ); ?></span>
+		 <span class="sqweb-form-title"><?php _e( 'Step 1 : select your website', 'sqweb' ); ?></span>
 			<?php
 			echo '<select class="sqweb-admin-input sqw-select" name="wsid">';
 			foreach ( $sqw_sites as $key => $sqw_site ) {
@@ -106,13 +106,13 @@ if ( $sqw_webmaster > 0 ) {
 			?>
 		  </div>
 		  <div class="sqweb-form-div">
-		   <span class="sqweb-form-title"><?php _e( 'Second step : Enter the message that will be shown to adblockers', 'sqweb' ); ?></span>
+		   <span class="sqweb-form-title"><?php _e( 'Step 2 : Enter the message that will be shown to adblockers', 'sqweb' ); ?></span>
 		   <textarea class="sqweb-admin-textarea" placeholder="Message" name="fmes"><?php echo htmlspecialchars( $fmes ) ?></textarea>
 		   <input type="hidden" name="action" value="update" />
 		   <span style="color:orange;display: block;margin-bottom: 5px;font-size: 0.8em;"><?php _e( 'Leave the field above blank if you do not wish the message for adblockers shown.', 'sqweb' ); ?></span>
 		  </div>
 		  <div class="sqweb-form-div">
-		   <span class="sqweb-form-title"><?php _e( 'Third step : Messages you\'d like on the button', 'sqweb' ); ?></span>
+		   <span class="sqweb-form-title"><?php _e( 'Step 3 : Messages you\'d like on the button', 'sqweb' ); ?></span>
 		   <div class="sqweb-exemple">
 		  <div class="sqweb-button sqweb-<?php echo ( ! empty( $selectbtheme ) ? 'blue' : 'grey' ); ?>" id="sqweb-button">
 		   <div class="sqweb-btn">
@@ -130,28 +130,27 @@ if ( $sqw_webmaster > 0 ) {
 		   </div>
 		</div>
 		  <div class="sqweb-form-div">
-		   <span class="sqweb-form-title"><?php _e( 'Fourth step : pick your theme', 'sqweb' ); ?></span>
+		   <span class="sqweb-form-title"><?php _e( 'Step 4 : pick your theme', 'sqweb' ); ?></span>
 		   <select class="sqweb-admin-input sqw-select" name="btheme" id="sqweb-color-select">';
 			<option value="blue" <?php echo $selectbtheme ?>><?php _e( 'Blue', 'sqweb' ); ?></option>
 			<option value="grey" <?php echo $selectgtheme ?>><?php _e( 'Grey', 'sqweb' ); ?></option>
 		   </select>
 		  </div>
 		  <div class="sqweb-form-div">
-		   <span class="sqweb-form-title"><?php _e( 'Five step : select lang', 'sqweb' ); ?></span>
+		   <span class="sqweb-form-title"><?php _e( 'Step 5 : select lang', 'sqweb' ); ?></span>
 		   <select class="sqweb-admin-input sqw-select" name="lang" id="sqweb-color-select">';
 			<option value="fr" <?php echo $selectfrlang ?>><?php _e( 'French', 'sqweb' ); ?></option>
 			<option value="en" <?php echo $selectenlang ?>><?php _e( 'English', 'sqweb' ); ?></option>
 		   </select>
 		   </div>
 		   <div class="sqweb-form-div">
-			<span class="sqweb-form-title"><?php _e( 'Six step : Mode targeting', 'sqweb' ); ?></span>
+			<span class="sqweb-form-title"><?php _e( 'Step 6 : Display button', 'sqweb' ); ?></span>
 			<select class="sqweb-admin-input sqw-select" name="targets" id="sqweb-color-select">';
-			 <option value="true" <?php echo $selectyestarget ?>><?php _e( 'Yes', 'sqweb' ); ?></option>
-			 <option value="false" <?php echo $selectnotarget ?>><?php _e( 'No', 'sqweb' ); ?></option>
+			 <option value="true" <?php echo $selectyestarget ?>><?php _e( 'Only to adblockers', 'sqweb' ); ?></option>
+			 <option value="false" <?php echo $selectnotarget ?>><?php _e( 'To everybody', 'sqweb' ); ?></option>
 			</select>
-			<span style="color:orange;display: block;margin-bottom: 5px;font-size: 0.8em;"><?php _e( 'Show SQweb button only for Adblockers.', 'sqweb' ); ?></span>
-		   <input type="hidden" name="page_options" value="wmid, wsid, flogin, flogout, fmes, btheme, lang, targets" />
-		  </div>
+		   </div>
+		  <input type="hidden" name="page_options" value="wmid, wsid, flogin, flogout, fmes, btheme, lang, targets" />
 		  <input class="button button-primary button-large sqweb-admin-button" type="submit" name="Submit" value="<?php _e( 'Update', 'sqweb' ); ?>" />
 		 </form>
 			<?php
