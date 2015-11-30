@@ -172,14 +172,14 @@ if ( isset( $_COOKIE['sqw_admin_token'] ) && 0 == $sqw_webmaster ) {
 <?php
 if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 	if ( isset( $_POST ) && ( ! empty( $_POST['sqw-firstname'] ) || ! empty( $_POST['sqw-lastname'] ) || ! empty( $_POST['sqw-email'] ) || ! empty( $_POST['sqw-password'] ) ) ) {
-		$error = 1;
+		$error = 0;
 		$r = sqweb_sign_up( $_POST['sqw-firstname'], $_POST['sqw-lastname'], $_POST['sqw-email'], $_POST['sqw-password'] );
 		if ( 1 == $r ) {
 			wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
 			exit;
 		}
 	} else {
-		$error = 0;
+		$error = 1;
 	}
 ?>
 <h2><?php _e( 'Sign up', 'sqweb' ); ?></h2>
