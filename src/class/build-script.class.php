@@ -19,6 +19,7 @@ class BuildScript
 	 * @return string
 	 */
 	private static function assemble() {
+
 		// Getting the options
 		self::$wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '';
 		self::$wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '';
@@ -53,8 +54,9 @@ class BuildScript
 	 * @return int
 	 */
 	public static function save() {
+
 		$script = self::assemble();
-		if ( file_put_contents( plugin_dir_path( dirname( __FILE__ ) ) . 'resources/js/sqweb.js' , $script ) ) {
+		if ( file_put_contents( plugin_dir_path( dirname( __FILE__ ) ) . 'resources/js/sqweb.js', $script ) ) {
 			return ( 1 );
 		}
 		return ( 0 );
@@ -62,6 +64,7 @@ class BuildScript
 
 	// Adding script to the page
 	public static function add_script() {
+
 		self::save();
 		wp_enqueue_script(
 			'sqweb-script',

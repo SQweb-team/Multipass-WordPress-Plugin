@@ -1,10 +1,10 @@
 var _sqw = {
-                    id_webmaster: 86161,
-                    id_site: 55054,
-                    debug: true,
-                    widget: 'Use SQweb to surf without ads',
-                    widget_link: 'https://www.sqweb.com',
-                    msg: 'COucou !'
+    id_webmaster: 86161,
+    id_site: 55054,
+    debug: true,
+    widget: 'Use SQweb to surf without ads',
+    widget_link: 'https://www.sqweb.com',
+    msg: 'COucou !'
                 };
                 var _sqw_i18n = {
                     login: 'Enlever la pub',
