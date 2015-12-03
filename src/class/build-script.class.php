@@ -24,17 +24,17 @@ class BuildScript
 		self::$wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '0';
 		self::$wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '0';
 		self::$targets = (get_option( 'targets' ) !== '') ? get_option( 'targets' ) : 'false';
-		self::$fmes = addcslashes( ((get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : ''), '\'' );
+		self::$fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
 		self::$lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
 		self::$flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';
 		self::$flogout = (get_option( 'flogout' ) !== '') ? get_option( 'flogout' ) : 'Connected';
 		// Assembling
-		echo '<script>var _sqw = {
+		echo '<script data-cfasync="false">var _sqw = {
 					id_webmaster: ' . self::$wmid . ',
 					id_site: ' . self::$wsid . ',
 					debug: false,
 					targeting: ' . self::$targets . ',
-					msg: "' . self::$fmes . '",
+					msg: "' . addslashes( self::$fmes ) . '",
 					i18n: "' . self::$lang . '"
 				};
 				var _sqw_i18n = {
