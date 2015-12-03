@@ -86,17 +86,6 @@ function sqwadmin_enqueue_styles( $hook ) {
 	);
 }
 
-function sqw_enqueue_scripts() {
-
-	wp_enqueue_script(
-		'sqweb-script',
-		plugins_url( '/resources/js/sqweb.js', __FILE__ ),
-		array(),
-		'1.0.0',
-		true
-	);
-}
-
 function sqwadmin_enqueue_scripts( $hook ) {
 
 	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
@@ -114,4 +103,3 @@ function sqwadmin_enqueue_scripts( $hook ) {
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_styles' );
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'sqw_enqueue_styles' );
-add_action( 'wp_enqueue_scripts', 'sqw_enqueue_scripts' );
