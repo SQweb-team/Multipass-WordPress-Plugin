@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.3
 Tested up to: 4.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -41,6 +41,10 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.1.1 =
+
+Improved script loading method.
+
 = 1.1.0 =
 
 Bugfix (sign up bug for new users.).
@@ -73,6 +77,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= v1.1.1 =
+
+Improved script loading method.
 
 = 1.1.0 =
 
