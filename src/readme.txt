@@ -41,6 +41,10 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.1.2 =
+
+Improved custom message handling.
+
 = 1.1.1 =
 
 Improved script loading method.
@@ -77,6 +81,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.1.2 =
+
+Improved custom message handling.
 
 = v1.1.1 =
 
