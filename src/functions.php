@@ -34,11 +34,11 @@ function sqweb_check_credentials( $site_id = null ) {
 			$response = json_decode( $response );
 			if ( false !== $response && true === $response->status && $response->credit > 0 ) {
 				$credentials = $response->credit;
-				return ($response->credit);
+				return $response->credit;
 			}
 		}
 	} else {
-		return ($credentials);
+		return $credentials;
 	}
 	return ( 0 );
 }
@@ -106,7 +106,7 @@ function sqweb_sign_in( $email, $password ) {
 		$response = json_decode( $response );
 		if ( isset( $response->token ) ) {
 			setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
-			return ( $response->token );
+			return $response->token;
 		}
 	}
 	return ( 0 );
@@ -137,7 +137,7 @@ function sqweb_check_token( $token ) {
 
 		$res = json_decode( $response );
 		if ( isset( $res->id ) ) {
-			return ( $res->id );
+			return $res->id;
 		}
 	}
 	return ( 0 );
@@ -165,7 +165,7 @@ function sqw_get_sites( $id ) {
 
 		$response = json_decode( $response );
 		if ( ! $response->status == false ) {
-			return ( $response->websites );
+			return $response->websites;
 		}
 	}
 	return ( 0 );

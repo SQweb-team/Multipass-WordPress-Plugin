@@ -9,7 +9,7 @@ function filter_get_option( $value ) {
 	if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 		return ('');
 	}
-	return ($value);
+	return $value;
 }
 
 $array_option = [
