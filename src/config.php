@@ -22,4 +22,4 @@ function sqw_site_url() {
 }
 
 // Self-Explanatory
-define( 'SQW_ENDPOINT', 'https://api.sqweb.com/' );
+define( 'SQW_ENDPOINT', 'https://api.sqweb.fr/' );

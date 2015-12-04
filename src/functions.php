@@ -9,30 +9,36 @@
 
 function sqweb_check_credentials( $site_id = null ) {
 
-	if ( isset( $_COOKIE['sqw_z'] ) && null !== $site_id ) {
-		$cookiez = $_COOKIE['sqw_z'];
-	}
-	if ( isset( $cookiez ) && defined( 'SQW_ENDPOINT' ) ) {
-		$curl = curl_init();
-		curl_setopt_array(
-			$curl, array(
-			CURLOPT_URL => SQW_ENDPOINT . 'token/check',
-			CURLOPT_CONNECTTIMEOUT_MS => 1000,
-			CURLOPT_TIMEOUT_MS => 1000,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_POSTFIELDS => array(
-			'token' => $cookiez,
-			'site_id' => $site_id,
-			),
-			)
-		);
-		$response = curl_exec( $curl );
-		curl_close( $curl );
-
-		$response = json_decode( $response );
-		if ( false !== $response && true === $response->status && $response->credit > 0 ) {
-			return ($response->credit);
+	static $credentials;
+	if ( ! isset( $credentials ) ) {
+		if ( isset( $_COOKIE['sqw_z'] ) && null !== $site_id ) {
+			$cookiez = $_COOKIE['sqw_z'];
 		}
+		if ( isset( $cookiez ) && defined( 'SQW_ENDPOINT' ) ) {
+			$curl = curl_init();
+			curl_setopt_array(
+				$curl, array(
+				CURLOPT_URL => SQW_ENDPOINT . 'token/check',
+				CURLOPT_CONNECTTIMEOUT_MS => 1000,
+				CURLOPT_TIMEOUT_MS => 1000,
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
+				CURLOPT_POSTFIELDS => array(
+				'token' => $cookiez,
+				'site_id' => $site_id,
+				),
+				)
+			);
+			$response = curl_exec( $curl );
+			curl_close( $curl );
+			$response = json_decode( $response );
+			if ( false !== $response && true === $response->status && $response->credit > 0 ) {
+				$credentials = $response->credit;
+				return ($response->credit);
+			}
+		}
+	} else {
+		return ($credentials);
 	}
 	return ( 0 );
 }
@@ -54,6 +60,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			CURLOPT_CONNECTTIMEOUT_MS => 1000,
 			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
 			CURLOPT_POSTFIELDS => array(
 			'role' => '1',
 			'first_name' => $first_name,
@@ -89,10 +96,7 @@ function sqweb_sign_in( $email, $password ) {
 			CURLOPT_CONNECTTIMEOUT_MS => 1000,
 			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_ENCODING => '',
-			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_HTTPHEADER => array( 'Content-Type: application/x-www-form-urlencoded' ),
+			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
 			CURLOPT_POSTFIELDS => 'email=' . $email . '&password=' . $password,
 			)
 		);
@@ -122,6 +126,7 @@ function sqweb_check_token( $token ) {
 			CURLOPT_CONNECTTIMEOUT_MS => 1000,
 			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
 			CURLOPT_POSTFIELDS => array(
 			'token' => $token,
 			),
@@ -152,6 +157,7 @@ function sqw_get_sites( $id ) {
 			CURLOPT_CONNECTTIMEOUT_MS => 1000,
 			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
 			)
 		);
 		$response = curl_exec( $curl );
@@ -180,6 +186,7 @@ function sqw_add_website( $data, $token ) {
 			CURLOPT_CONNECTTIMEOUT_MS => 1000,
 			CURLOPT_TIMEOUT_MS => 1000,
 			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
 			CURLOPT_POSTFIELDS => array(
 			'token' => $token,
 			'name' => $data['sqw-ws-name'],
