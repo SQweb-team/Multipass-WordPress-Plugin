@@ -12,13 +12,13 @@ function filter_get_option( $value ) {
 	return $value;
 }
 
-$array_option = [
+$array_option = array(
 					'ads',
 					'ads_under_post_title_320',
 					'ads_post_footer_700',
 					'ads_post_footer_320',
 					'ads_header_320',
-				];
+				);
 
 foreach ( $array_option as $value ) {
 	add_filter( 'option_'.$value, 'filter_get_option', 100 );
