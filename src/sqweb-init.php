@@ -45,7 +45,7 @@ add_action( 'admin_notices', 'my_admin_notice' );
 function sqweb_register_admin_menu() {
 
 	add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
-	if ( defined('DEBUG_MODE') && DEBUG_MODE ) {
+	if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 		add_menu_page( 'Debug info', 'Debug info', 'manage_options', 'sqweb_debug', 'sqweb_display_php_info' );
 	}
 

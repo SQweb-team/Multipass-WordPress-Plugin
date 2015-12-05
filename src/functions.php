@@ -23,16 +23,16 @@ function sqweb_check_credentials( $site_id = null ) {
 				'httpversion' => '1.0',
 				'blocking' => true,
 				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . (!empty($curl_version['ssl_version']) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 				'body' => array(
-							'token' => $cookiez,
-							'site_id' => $site_id,
-							),
-				'cookies' => array()
+				'token' => $cookiez,
+				'site_id' => $site_id,
+				),
+				'cookies' => array(),
 			    )
 			);
 			if ( is_wp_error( $return ) ) {
-				if ( defined('DEBUG_MODE') && DEBUG_MODE ) {
+				if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 					$error_message = $return->get_error_message();
 					echo 'Something went wrong: ' . $error_message;
 				}
@@ -42,7 +42,7 @@ function sqweb_check_credentials( $site_id = null ) {
 				if ( false !== $response && true === $response->status && $response->credit > 0 ) {
 					$credentials = $response->credit;
 					return $response->credit;
-				}				
+				}
 			}
 		}
 	} else {
@@ -63,25 +63,25 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 		$curl_version = curl_version();
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/new', array(
-				'method' => 'POST',
-				'timeout' => 1,
-				'redirection' => 3,
-				'httpversion' => '1.0',
-				'blocking' => true,
-				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . (!empty($curl_version['ssl_version']) ? '; SSL ' . $curl_version['ssl_version'] : ''),
-				'body' => array(
-							'role' => '1',
-							'first_name' => $first_name,
-							'last_name' => $last_name,
-							'email' => $email,
-							'password' => $newpass,
-							),
-				'cookies' => array()
-			    )
-			);
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => array(
+			'role' => '1',
+			'first_name' => $first_name,
+			'last_name' => $last_name,
+			'email' => $email,
+			'password' => $newpass,
+			),
+			'cookies' => array(),
+			)
+		);
 		if ( is_wp_error( $return ) ) {
-			if ( defined('DEBUG_MODE') && DEBUG_MODE ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
@@ -103,20 +103,20 @@ function sqweb_sign_in( $email, $password ) {
 
 		$curl_version = curl_version();
 		$return = wp_remote_post( SQW_ENDPOINT . 'auth/login', array(
-				'method' => 'POST',
-				'timeout' => 1,
-				'redirection' => 3,
-				'httpversion' => '1.0',
-				'blocking' => true,
-				'headers' => 'Content-Type: application/x-www-form-urlencoded',
-				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . (!empty($curl_version['ssl_version']) ? '; SSL ' . $curl_version['ssl_version'] : ''),
-				'body' => 'email=' . $email . '&password=' . $password,
-				'cookies' => array()
-			    )
-			);
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => 'Content-Type: application/x-www-form-urlencoded',
+			'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => 'email=' . $email . '&password=' . $password,
+			'cookies' => array(),
+			)
+		);
 
 		if ( is_wp_error( $return ) ) {
-			if ( defined('DEBUG_MODE') && DEBUG_MODE ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
@@ -142,22 +142,22 @@ function sqweb_check_token( $token ) {
 
 		$curl_version = curl_version();
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t', array(
-				'method' => 'POST',
-				'timeout' => 1,
-				'redirection' => 3,
-				'httpversion' => '1.0',
-				'blocking' => true,
-				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . (!empty($curl_version['ssl_version']) ? '; SSL ' . $curl_version['ssl_version'] : ''),
-				'body' => array(
-							'token' => $token,
-							),
-				'cookies' => array()
-			    )
-			);
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => array(
+			'token' => $token,
+			),
+			'cookies' => array(),
+			)
+		);
 
 		if ( is_wp_error( $return ) ) {
-			if ( defined('DEBUG_MODE') && DEBUG_MODE ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
@@ -181,24 +181,24 @@ function sqw_get_sites( $id ) {
 
 		$curl_version = curl_version();
 		$return = wp_remote_get( SQW_ENDPOINT . 'websites/' . $id, array(
-				'timeout' => 1,
-				'redirection' => 3,
-				'httpversion' => '1.0',
-				'blocking' => true,
-				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . (!empty($curl_version['ssl_version']) ? '; SSL ' . $curl_version['ssl_version'] : ''),
-				'body' => null,
-				'cookies' => array(),
-				'compress'    => false,
-			    'decompress'  => true,
-			    'sslverify'   => true,
-			    'stream'      => false,
-			    'filename'    => null
-			    )
-			);
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => null,
+			'cookies' => array(),
+			'compress'    => false,
+			'decompress'  => true,
+			'sslverify'   => true,
+			'stream'      => false,
+			'filename'    => null,
+			)
+		);
 
 		if ( is_wp_error( $return ) ) {
-			if ( defined('DEBUG_MODE') && DEBUG_MODE ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
@@ -223,21 +223,21 @@ function sqw_add_website( $data, $token ) {
 
 		$curl_version = curl_version();
 		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add', array(
-				'method' => 'POST',
-				'timeout' => 1,
-				'redirection' => 3,
-				'httpversion' => '1.0',
-				'blocking' => true,
-				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . (!empty($curl_version['ssl_version']) ? '; SSL ' . $curl_version['ssl_version'] : ''),
-				'body' => array(
-								'token' => $token,
-								'name' => $data['sqw-ws-name'],
-								'url' => $data['sqw-ws-url'],
-								),
-				'cookies' => array()
-			    )
-			);
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.1.4; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => array(
+			'token' => $token,
+			'name' => $data['sqw-ws-name'],
+			'url' => $data['sqw-ws-url'],
+			),
+			'cookies' => array(),
+			)
+		);
 
 		if ( is_wp_error( $return ) ) {
 			return ( 0 );
