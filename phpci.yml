@@ -1,8 +1,0 @@
-build_settings:
-    clone_depth: 1
-test:
-    php_loc:
-        directory: "src"
-    php_code_sniffer:
-        path: "src"
-        standard: "WordPress-Core"
