@@ -328,7 +328,7 @@ function stats_ajax_call() {
 	<div class="sqweb-ctr-box" style="text-decoration: none;">
     <?php
 	if ( isset( $_COOKIE['sqw_admin_token'] ) || '0' != $signinr ) {
-		echo '<a href="https://www.sqweb.com/websites" target="_blank">', __( 'Tutorial', 'sqweb' ), '</a>';
+		echo '<a href="https://www.sqweb.com/websites/' . get_option( 'wsid' ) . '/config/setup_wordpress#install" target="_blank">', __( 'Tutorial', 'sqweb' ), '</a>';
 	}
 	?>
 		<a href="https://www.sqweb.com/contact" target="_blank" class="sqweb-ctr-link">Contact</a>

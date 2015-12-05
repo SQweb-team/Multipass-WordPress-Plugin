@@ -45,6 +45,10 @@ add_action( 'admin_notices', 'my_admin_notice' );
 function sqweb_register_admin_menu() {
 
 	add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
+	if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
+		add_menu_page( 'Debug info', 'Debug info', 'manage_options', 'sqweb_debug', 'sqweb_display_php_info' );
+	}
+
 }
 add_action( 'admin_menu', 'sqweb_register_admin_menu' );
 
@@ -57,6 +61,10 @@ function sqweb_display_admin_menu() {
 	echo '<h2>Administration SQweb</h2>';
 	include 'backoffice/admin-menu.php';
 	echo '</div>';
+}
+
+function sqweb_display_php_info() {
+		phpinfo();
 }
 
 /**

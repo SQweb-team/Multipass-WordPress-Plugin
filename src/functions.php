@@ -15,26 +15,34 @@ function sqweb_check_credentials( $site_id = null ) {
 			$cookiez = $_COOKIE['sqw_z'];
 		}
 		if ( isset( $cookiez ) && defined( 'SQW_ENDPOINT' ) ) {
-			$curl = curl_init();
-			curl_setopt_array(
-				$curl, array(
-				CURLOPT_URL => SQW_ENDPOINT . 'token/check',
-				CURLOPT_CONNECTTIMEOUT_MS => 1000,
-				CURLOPT_TIMEOUT_MS => 1000,
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
-				CURLOPT_POSTFIELDS => array(
+			$curl_version = curl_version();
+			$return = wp_remote_post( SQW_ENDPOINT . 'token/check', array(
+				'method' => 'POST',
+				'timeout' => 1,
+				'redirection' => 3,
+				'httpversion' => '1.0',
+				'blocking' => true,
+				'headers' => array(),
+				'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+				'body' => array(
 				'token' => $cookiez,
 				'site_id' => $site_id,
 				),
-				)
+				'cookies' => array(),
+			    )
 			);
-			$response = curl_exec( $curl );
-			curl_close( $curl );
-			$response = json_decode( $response );
-			if ( false !== $response && true === $response->status && $response->credit > 0 ) {
-				$credentials = $response->credit;
-				return $response->credit;
+			if ( is_wp_error( $return ) ) {
+				if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
+					$error_message = $return->get_error_message();
+					echo 'Something went wrong: ' . $error_message;
+				}
+				$credentials = 0;
+			} else {
+				$response = json_decode( $return['body'] );
+				if ( false !== $response && true === $response->status && $response->credit > 0 ) {
+					$credentials = $response->credit;
+					return $response->credit;
+				}
 			}
 		}
 	} else {
@@ -53,27 +61,31 @@ function sqweb_check_credentials( $site_id = null ) {
 function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
-		$curl = curl_init();
-		curl_setopt_array(
-			$curl, array(
-			CURLOPT_URL => SQW_ENDPOINT . 'sqw_auth/new',
-			CURLOPT_CONNECTTIMEOUT_MS => 1000,
-			CURLOPT_TIMEOUT_MS => 1000,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
-			CURLOPT_POSTFIELDS => array(
+		$curl_version = curl_version();
+		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/new', array(
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => array(
 			'role' => '1',
 			'first_name' => $first_name,
 			'last_name' => $last_name,
 			'email' => $email,
 			'password' => $newpass,
 			),
+			'cookies' => array(),
 			)
 		);
-		$response = curl_exec( $curl );
-		curl_close( $curl );
-
-		if ( ! json_decode( $response ) == false ) {
+		if ( is_wp_error( $return ) ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
+				$error_message = $return->get_error_message();
+				echo 'Something went wrong: ' . $error_message;
+			}
+		} else if ( ! json_decode( $return['body'] ) == false ) {
 			return ( 1 );
 		}
 	}
@@ -88,25 +100,33 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 function sqweb_sign_in( $email, $password ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
-		$curl = curl_init();
 
-		curl_setopt_array(
-			$curl, array(
-			CURLOPT_URL => SQW_ENDPOINT . 'auth/login',
-			CURLOPT_CONNECTTIMEOUT_MS => 1000,
-			CURLOPT_TIMEOUT_MS => 1000,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
-			CURLOPT_POSTFIELDS => 'email=' . $email . '&password=' . $password,
+		$curl_version = curl_version();
+		$return = wp_remote_post( SQW_ENDPOINT . 'auth/login', array(
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => 'Content-Type: application/x-www-form-urlencoded',
+			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => 'email=' . $email . '&password=' . $password,
+			'cookies' => array(),
 			)
 		);
-		$response = curl_exec( $curl );
-		curl_close( $curl );
 
-		$response = json_decode( $response );
-		if ( isset( $response->token ) ) {
-			setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
-			return $response->token;
+		if ( is_wp_error( $return ) ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
+				$error_message = $return->get_error_message();
+				echo 'Something went wrong: ' . $error_message;
+			}
+		} else {
+			$response = json_decode( $return['body'] );
+
+			if ( isset( $response->token ) ) {
+				setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
+				return $response->token;
+			}
 		}
 	}
 	return ( 0 );
@@ -119,25 +139,33 @@ function sqweb_sign_in( $email, $password ) {
 function sqweb_check_token( $token ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
-		$curl = curl_init();
-		curl_setopt_array(
-			$curl, array(
-			CURLOPT_URL => SQW_ENDPOINT . 'sqw_auth/is_auth_t',
-			CURLOPT_CONNECTTIMEOUT_MS => 1000,
-			CURLOPT_TIMEOUT_MS => 1000,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
-			CURLOPT_POSTFIELDS => array(
+
+		$curl_version = curl_version();
+		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t', array(
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => array(
 			'token' => $token,
 			),
+			'cookies' => array(),
 			)
 		);
-		$response = curl_exec( $curl );
-		curl_close( $curl );
 
-		$res = json_decode( $response );
-		if ( isset( $res->id ) ) {
-			return $res->id;
+		if ( is_wp_error( $return ) ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
+				$error_message = $return->get_error_message();
+				echo 'Something went wrong: ' . $error_message;
+			}
+		} else {
+			$res = json_decode( $return['body'] );
+			if ( isset( $res->id ) ) {
+				return $res->id;
+			}
 		}
 	}
 	return ( 0 );
@@ -150,22 +178,35 @@ function sqweb_check_token( $token ) {
 function sqw_get_sites( $id ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
-		$curl = curl_init();
-		curl_setopt_array(
-			$curl, array(
-			CURLOPT_URL => SQW_ENDPOINT . 'websites/' . $id,
-			CURLOPT_CONNECTTIMEOUT_MS => 1000,
-			CURLOPT_TIMEOUT_MS => 1000,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
+
+		$curl_version = curl_version();
+		$return = wp_remote_get( SQW_ENDPOINT . 'websites/' . $id, array(
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => null,
+			'cookies' => array(),
+			'compress'    => false,
+			'decompress'  => true,
+			'sslverify'   => true,
+			'stream'      => false,
+			'filename'    => null,
 			)
 		);
-		$response = curl_exec( $curl );
-		curl_close( $curl );
 
-		$response = json_decode( $response );
-		if ( ! $response->status == false ) {
-			return $response->websites;
+		if ( is_wp_error( $return ) ) {
+			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
+				$error_message = $return->get_error_message();
+				echo 'Something went wrong: ' . $error_message;
+			}
+		} else {
+			$response = json_decode( $return['body'] );
+			if ( ! $response->status == false ) {
+				return $response->websites;
+			}
 		}
 	}
 	return ( 0 );
@@ -179,27 +220,33 @@ function sqw_get_sites( $id ) {
 function sqw_add_website( $data, $token ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
-		$curl = curl_init();
-		curl_setopt_array(
-			$curl, array(
-			CURLOPT_URL => SQW_ENDPOINT . 'websites/add',
-			CURLOPT_CONNECTTIMEOUT_MS => 1000,
-			CURLOPT_TIMEOUT_MS => 1000,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_USERAGENT => 'SQweb/WordPress 1.1.2',
-			CURLOPT_POSTFIELDS => array(
+
+		$curl_version = curl_version();
+		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add', array(
+			'method' => 'POST',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'body' => array(
 			'token' => $token,
 			'name' => $data['sqw-ws-name'],
 			'url' => $data['sqw-ws-url'],
 			),
+			'cookies' => array(),
 			)
 		);
-		$response = curl_exec( $curl );
-		curl_close( $curl );
 
-		$res = json_decode( $response );
-		if ( $res->status != 0 ) {
-			return ( 1 );
+		if ( is_wp_error( $return ) ) {
+			return ( 0 );
+		} else {
+			$res = json_decode( $return['body'] );
+
+			if ( $res->status != 0 ) {
+				return ( 1 );
+			}
 		}
 	}
 	return ( 0 );

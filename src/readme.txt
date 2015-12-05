@@ -1,9 +1,9 @@
 === SQweb for WordPress ===
 Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
-Requires at least: 3.3
+Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -40,6 +40,17 @@ We believe the RPM will be two to three times greater than regular advertisement
 No, SQweb lets you to keep your current adverting network(s). We're compatible with networks such as Adsense and Criteo.
 
 == Changelog ==
+
+= 1.2.0 =
+
+* Refactored curl calls to use the WordPress HTTP API instead.
+* Major performance improvements.
+* Changed file naming to be WordPress compliant.
+* Fixed broken link.
+* Fixed license in headers.
+* Added WordPress version check.
+* Added configation shortcut.
+* Added debug mode.
 
 = 1.1.3 =
 
@@ -86,6 +97,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.2.0 =
+
+This is a major update (improved performance and handling of remote calls).
 
 = 1.1.3 =
 
