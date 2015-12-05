@@ -26,9 +26,29 @@ function check() {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
 		echo '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing from your system. The SQweb plugin cannot be activated.</p></div>';
 	}
+
+	if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
+		deactivate_plugins( __FILE__ );
+		if ( isset( $_GET['action'] ) && ( $_GET['action'] == 'activate' || $_GET['action'] == 'error_scrape' ) ) {
+			echo '<div class="error"><p><b>Error : </b>SQweb requires Wordpress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>';
+		}
+	}
 }
 
 add_action( 'admin_init', 'check' );
+
+/**
+ * Add settings option in plugins panel
+ */
+
+function add_action_links_sqweb ( $links ) {
+	$mylinks = array(
+		'<a href="' . admin_url( 'admin.php?page=SQwebAdmin' ) . '">' . __('Settings', 'sqweb') . '</a>',
+	);
+	return array_merge( $links, $mylinks );
+}
+
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links_sqweb' );
 
 /**
  * Ensure compatibility with all installs of WordPress.

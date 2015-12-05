@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2015-11-27 15:34+0100\n"
-"PO-Revision-Date: 2015-11-27 15:35+0100\n"
+"POT-Creation-Date: 2015-12-05 16:12+0100\n"
+"PO-Revision-Date: 2015-12-05 16:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -36,9 +36,9 @@ msgstr "http://exemple.com"
 msgid "Add website"
 msgstr "Ajouter un site"
 
-#: backoffice/admin-menu.php:90
+#: backoffice/admin-menu.php:90 index.php:46
 msgid "Settings"
-msgstr "Options"
+msgstr "Configuration"
 
 #: backoffice/admin-menu.php:92
 msgid "Webmaster ID"
@@ -230,40 +230,40 @@ msgstr "Bloqué"
 msgid "Tutorial"
 msgstr "Tutoriel"
 
-#: class/sqweb-ad-control.class.php:10
+#: class/sqweb-ad-control.class.php:11
 msgid "Put here your advertising code to hide it for SQweb users"
 msgstr ""
 "Mettez ici la publicité qui sera cachée pour les utilisateurs payant SQweb."
 
-#: class/sqweb-ad-control.class.php:12
+#: class/sqweb-ad-control.class.php:13
 msgid "SQweb ad control"
 msgstr "SQweb advertising contrôleur"
 
-#: class/sqweb-ad-control.class.php:51
+#: class/sqweb-ad-control.class.php:55
 msgid "Title:"
 msgstr "Titre:"
 
-#: class/sqweb-ad-control.class.php:54
+#: class/sqweb-ad-control.class.php:58
 msgid "Advertising code here:"
 msgstr "Votre code publicitaire ici:"
 
-#: class/sqweb-ad-control.class.php:57
+#: class/sqweb-ad-control.class.php:61
 msgid "Content for paying users:"
 msgstr "Contenu pour les utilisateurs Sqweb:"
 
-#: class/widget-sqweb-button.class.php:10
+#: class/widget-sqweb-button.class.php:11
 msgid "Button to activate SQweb on your website."
 msgstr "Bouton pour activé SQweb sur votre site."
 
-#: class/widget-sqweb-button.class.php:12
+#: class/widget-sqweb-button.class.php:13
 msgid "SQweb button"
 msgstr "SQweb bouton"
 
-#: class/widget-sqweb-button.class.php:40
+#: class/widget-sqweb-button.class.php:44
 msgid "CLICK HERE TO LOG IN"
 msgstr "Cliquez ici pour vous connectez"
 
-#: class/widget-sqweb-button.class.php:42
+#: class/widget-sqweb-button.class.php:46
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
