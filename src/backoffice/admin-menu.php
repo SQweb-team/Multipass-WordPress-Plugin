@@ -130,7 +130,7 @@ if ( $sqw_webmaster > 0 ) {
         </div>
         </div>
        <div class="sqweb-form-div">
-        <span class="sqweb-form-title"><?php _e( 'Step 4 : pick your theme', 'sqweb' ); ?></span>
+        <span class="sqweb-form-title"><?php _e( 'Step 4 : choose the button color', 'sqweb' ); ?></span>
         <select class="sqweb-admin-input sqw-select" name="btheme" id="sqweb-color-select">';
          <option value="blue" <?php echo $selectbtheme ?>><?php _e( 'Blue', 'sqweb' ); ?></option>
          <option value="grey" <?php echo $selectgtheme ?>><?php _e( 'Grey', 'sqweb' ); ?></option>
@@ -205,7 +205,7 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 <h2><?php _e( 'Sign in', 'sqweb' ); ?></h2>
 				<?php if ( 1 == $errorc ) {?><span class="sqw-error"><?php _e( 'You need to fill in all fields', 'sqweb' ); ?></span><?php
 } ?>
-				<?php if ( isset( $_GET['success'] ) && 'true' == $_GET['success'] ) {?><span class="sqw-success"><?php _e( 'You signed up successfuly, please check your email to activate your account.', 'sqweb' ); ?></span><?php
+				<?php if ( isset( $_GET['success'] ) && 'true' == $_GET['success'] ) {?><span class="sqw-success"><?php _e( 'You signed up successfuly.', 'sqweb' ); ?></span><?php
 } ?>
 				<form action="<?php echo remove_query_arg( 'success' ) ?>" method="post" name="sqw-auth">
  <label for="email"><?php _e( 'Email', 'sqweb' ); ?></label>

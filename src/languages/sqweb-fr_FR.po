@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2015-12-05 16:12+0100\n"
-"PO-Revision-Date: 2015-12-05 16:15+0100\n"
+"POT-Creation-Date: 2015-12-16 15:03+0100\n"
+"PO-Revision-Date: 2015-12-16 15:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -36,7 +36,7 @@ msgstr "http://exemple.com"
 msgid "Add website"
 msgstr "Ajouter un site"
 
-#: backoffice/admin-menu.php:90 index.php:46
+#: backoffice/admin-menu.php:90 sqweb.php:44
 msgid "Settings"
 msgstr "Configuration"
 
@@ -58,7 +58,7 @@ msgstr "pour ajouter un nouveau site."
 
 #: backoffice/admin-menu.php:109
 msgid "Step 2 : Enter the message that will be shown to adblockers"
-msgstr "Étape 2 : Entrer un message qui sera montré aux Adblockers"
+msgstr "Étape 2 : Message pour les adblockers"
 
 #: backoffice/admin-menu.php:112
 msgid ""
@@ -93,8 +93,8 @@ msgid "Connected"
 msgstr "Connecté"
 
 #: backoffice/admin-menu.php:133
-msgid "Step 4 : pick your theme"
-msgstr "Étape 4: Choisissez votre thème"
+msgid "Step 4 : choose the button color"
+msgstr "Étape 4: choisissez la couleur du bouton"
 
 #: backoffice/admin-menu.php:135
 msgid "Blue"
@@ -177,10 +177,8 @@ msgid "Sign in"
 msgstr "Connexion"
 
 #: backoffice/admin-menu.php:208
-msgid ""
-"You signed up successfuly, please check your email to activate your account."
-msgstr ""
-"Inscription réussi, veuillez vérifier vos email pour activer votre compte."
+msgid "You signed up successfuly."
+msgstr "Votre inscription est réussie."
 
 #: backoffice/admin-menu.php:219
 msgid "Don't have an account ?"
@@ -266,6 +264,15 @@ msgstr "Cliquez ici pour vous connectez"
 #: class/widget-sqweb-button.class.php:46
 msgid "Edit settings"
 msgstr "Editez les paramètres"
+
+#~ msgid "Step 4 : pick your theme"
+#~ msgstr "Étape 4: Choisissez votre thème"
+
+#~ msgid ""
+#~ "You signed up successfuly, please check your email to activate your "
+#~ "account."
+#~ msgstr ""
+#~ "Inscription réussi, veuillez vérifier vos email pour activer votre compte."
 
 #~ msgid "Step 6 : Mode targeting"
 #~ msgstr "Étape 6: Mode targeting"
