@@ -23,7 +23,7 @@ function sqweb_check_credentials( $site_id = null ) {
 				'httpversion' => '1.0',
 				'blocking' => true,
 				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+				'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 				'body' => array(
 				'token' => $cookiez,
 				'site_id' => $site_id,
@@ -69,7 +69,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 			'body' => array(
 			'role' => '1',
 			'first_name' => $first_name,
@@ -109,7 +109,7 @@ function sqweb_sign_in( $email, $password ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => 'Content-Type: application/x-www-form-urlencoded',
-			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 			'body' => 'email=' . $email . '&password=' . $password,
 			'cookies' => array(),
 			)
@@ -148,7 +148,7 @@ function sqweb_check_token( $token ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 			'body' => array(
 			'token' => $token,
 			),
@@ -186,7 +186,7 @@ function sqw_get_sites( $id ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 			'body' => null,
 			'cookies' => array(),
 			'compress'    => false,
@@ -229,7 +229,7 @@ function sqw_add_website( $data, $token ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.0; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
 			'body' => array(
 			'token' => $token,
 			'name' => $data['sqw-ws-name'],
