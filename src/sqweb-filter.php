@@ -24,11 +24,16 @@ function filter_page_builder( $data = null, $object_id, $meta_key, $single ) {
 		if ( isset( $meta_cache[ $meta_key ] ) ) {
 			$meta_cache[ $meta_key ]['0'] = str_replace( '[wpi_ads_code_1]', '', $meta_cache[ $meta_key ]['0'] );
 			if ( $single ) {
-				return maybe_unserialize( $meta_cache[ $meta_key ][0] ); } else { 				return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] ); }
+				return maybe_unserialize( $meta_cache[ $meta_key ][0] );
+			} else {
+				return array_map( 'maybe_unserialize', $meta_cache[ $meta_key ] ); }
 		}
 
 		if ( $single ) {
-			return ''; } else { 			return array(); }
+			return '';
+		} else {
+			return array();
+		}
 		return ('');
 	}
 	return null;
