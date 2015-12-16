@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 1.2.2
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -40,6 +40,12 @@ We believe the RPM will be two to three times greater than regular advertisement
 No, SQweb lets you to keep your current adverting network(s). We're compatible with networks such as Adsense and Criteo.
 
 == Changelog ==
+
+= 1.2.2 =
+
+* Added new post meta filter.
+* Fixed misleading wording in the signup process.
+* Minor optimizations.
 
 = 1.2.1 =
 
@@ -101,6 +107,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.2.2 =
+
+Improved filtering options.
 
 = 1.2.1 =
 
