@@ -6,13 +6,13 @@
 
 class BuildScript
 {
-	private static $wmid;
-	private static $wsid;
-	private static $flogin;
-	private static $flogout;
-	private static $fmes;
-	private static $lang;
-	private static $targets;
+	private static $_wmid;
+	private static $_wsid;
+	private static $_flogin;
+	private static $_flogout;
+	private static $_fmes;
+	private static $_lang;
+	private static $_targets;
 
 	/**
 	 * Generating script
@@ -21,26 +21,26 @@ class BuildScript
 	public function generate() {
 
 		// Getting the options
-		self::$wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '0';
-		self::$wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '0';
-		self::$targets = (get_option( 'targets' ) !== '') ? get_option( 'targets' ) : 'false';
-		self::$fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
-		self::$lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
-		self::$flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';
-		self::$flogout = (get_option( 'flogout' ) !== '') ? get_option( 'flogout' ) : 'Connected';
+		self::$_wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '0';
+		self::$_wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '0';
+		self::$_targets = (get_option( 'targets' ) !== '') ? get_option( 'targets' ) : 'false';
+		self::$_fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
+		self::$_lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
+		self::$_flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';
+		self::$_flogout = (get_option( 'flogout' ) !== '') ? get_option( 'flogout' ) : 'Connected';
 		// Assembling
 		echo '<script data-cfasync="false">var _sqw = {
-					id_webmaster: ' . self::$wmid . ',
-					id_site: ' . self::$wsid . ',
+					id_webmaster: ' . self::$_wmid . ',
+					id_site: ' . self::$_wsid . ',
 					debug: false,
-					targeting: ' . self::$targets . ',
-					msg: "' . addslashes( self::$fmes ) . '",
-					i18n: "' . self::$lang . '"
+					targeting: ' . self::$_targets . ',
+					msg: "' . addslashes( self::$_fmes ) . '",
+					i18n: "' . self::$_lang . '"
 				};
 				var _sqw_i18n = {
-					login: "' . self::$flogin . '",
+					login: "' . self::$_flogin . '",
 					register: "Signup",
-					logout: "' . self::$flogout . '"
+					logout: "' . self::$_flogout . '"
 				};
 				var script = document.createElement("script");
 				script.type = "text/javascript";
@@ -56,18 +56,5 @@ class BuildScript
 		$t = new BuildScript;
 		add_action( 'wp_footer', array( $t, 'generate' ) );
 		return ( 0 );
-	}
-
-	// Adding script to the page
-	public static function add_script() {
-
-		self::save();
-		wp_enqueue_script(
-			'sqweb-script',
-			plugin_dir_path( dirname( __FILE__ ) ) . 'resources/js/sqweb.js',
-			array(),
-			'1.0.0',
-			true
-		);
 	}
 }
