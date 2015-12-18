@@ -16,6 +16,11 @@ function sqweb_check_credentials( $site_id = null ) {
 		}
 		if ( isset( $cookiez ) && defined( 'SQW_ENDPOINT' ) ) {
 			$curl_version = curl_version();
+			if ( defined( 'SQW_VERSION' ) ) {
+				$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+			} else {
+				$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+			}
 			$return = wp_remote_post( SQW_ENDPOINT . 'token/check', array(
 				'method' => 'POST',
 				'timeout' => 1,
@@ -23,7 +28,7 @@ function sqweb_check_credentials( $site_id = null ) {
 				'httpversion' => '1.0',
 				'blocking' => true,
 				'headers' => array(),
-				'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+				'user-agent' => $user_agent,
 				'body' => array(
 				'token' => $cookiez,
 				'site_id' => $site_id,
@@ -62,6 +67,11 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 		$curl_version = curl_version();
+		if ( defined( 'SQW_VERSION' ) ) {
+			$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		} else {
+			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/new', array(
 			'method' => 'POST',
 			'timeout' => 1,
@@ -69,7 +79,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => $user_agent,
 			'body' => array(
 			'role' => '1',
 			'first_name' => $first_name,
@@ -102,6 +112,11 @@ function sqweb_sign_in( $email, $password ) {
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 
 		$curl_version = curl_version();
+		if ( defined( 'SQW_VERSION' ) ) {
+			$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		} else {
+			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'auth/login', array(
 			'method' => 'POST',
 			'timeout' => 1,
@@ -109,7 +124,7 @@ function sqweb_sign_in( $email, $password ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => 'Content-Type: application/x-www-form-urlencoded',
-			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => $user_agent,
 			'body' => 'email=' . $email . '&password=' . $password,
 			'cookies' => array(),
 			)
@@ -141,6 +156,11 @@ function sqweb_check_token( $token ) {
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 
 		$curl_version = curl_version();
+		if ( defined( 'SQW_VERSION' ) ) {
+			$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		} else {
+			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t', array(
 			'method' => 'POST',
 			'timeout' => 1,
@@ -148,7 +168,7 @@ function sqweb_check_token( $token ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => $user_agent,
 			'body' => array(
 			'token' => $token,
 			),
@@ -180,13 +200,18 @@ function sqw_get_sites( $id ) {
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 
 		$curl_version = curl_version();
+		if ( defined( 'SQW_VERSION' ) ) {
+			$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		} else {
+			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		}
 		$return = wp_remote_get( SQW_ENDPOINT . 'websites/' . $id, array(
 			'timeout' => 1,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => $user_agent,
 			'body' => null,
 			'cookies' => array(),
 			'compress'    => false,
@@ -222,6 +247,11 @@ function sqw_add_website( $data, $token ) {
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 
 		$curl_version = curl_version();
+		if ( defined( 'SQW_VERSION' ) ) {
+			$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		} else {
+			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add', array(
 			'method' => 'POST',
 			'timeout' => 1,
@@ -229,7 +259,7 @@ function sqw_add_website( $data, $token ) {
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
-			'user-agent' => 'SQweb/WordPress 1.2.2; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : ''),
+			'user-agent' => $user_agent,
 			'body' => array(
 			'token' => $token,
 			'name' => $data['sqw-ws-name'],
