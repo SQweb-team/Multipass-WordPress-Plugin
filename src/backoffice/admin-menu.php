@@ -178,7 +178,7 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 			wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
 			exit;
 		}
-	} elseif ( isset( $_POST ) ) {
+	} elseif ( ! empty( $_POST ) ) {
 		$error = 1;
 	}
 ?>

@@ -74,7 +74,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/new', array(
 			'method' => 'POST',
-			'timeout' => 1,
+			'timeout' => 5,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
@@ -138,8 +138,9 @@ function sqweb_sign_in( $email, $password ) {
 		} else {
 			$response = json_decode( $return['body'] );
 
-			if ( false != $response ) {
-				return 1;
+			if ( isset( $response->token ) ) {
+				setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
+				return $response->token;
 			}
 		}
 	}
