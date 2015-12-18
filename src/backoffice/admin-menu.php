@@ -178,12 +178,12 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 			wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
 			exit;
 		}
-	} else {
+	} elseif ( ! empty( $_POST ) ) {
 		$error = 1;
 	}
 ?>
 <h2><?php _e( 'Sign up', 'sqweb' ); ?></h2>
-<?php if ( 1 == $error ) {?><span class="sqw-error"><?php _e( 'You need to fill in all fields', 'sqweb' ); ?></span><?php
+<?php if ( isset( $error ) && 1 == $error ) {?><span class="sqw-error"><?php _e( 'You need to fill in all fields', 'sqweb' ); ?></span><?php
 } ?>
 <form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>" method="post" name="sqw-auth">
 	<label for="firstname"><?php _e( 'Firstname', 'sqweb' ); ?></label>
@@ -328,7 +328,7 @@ function stats_ajax_call() {
 	<div class="sqweb-ctr-box" style="text-decoration: none;">
     <?php
 	if ( isset( $_COOKIE['sqw_admin_token'] ) || '0' != $signinr ) {
-		echo '<a href="https://www.sqweb.com/websites/' . get_option( 'wsid' ) . '/config/setup_wordpress#install" target="_blank">', __( 'Tutorial', 'sqweb' ), '</a>';
+		echo '<a href="https://www.sqweb.com/dashboard/support" target="_blank">', __( 'Help', 'sqweb' ), '</a>';
 	}
 	?>
 		<a href="https://www.sqweb.com/contact" target="_blank" class="sqweb-ctr-link">Contact</a>

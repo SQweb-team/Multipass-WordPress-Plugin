@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 1.2.1
+Stable tag: 1.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -162,12 +162,17 @@ This version includes a significant cleanup of the plugin.
 `[sqweb_button]`
 
 = The Manual Way =
+
+`do_shortcode('sqweb_button')`
+
 `
-$wsid = get_option( 'wsid' );
-if ( !sqweb_check_credentials( $wsid ) > 0 ) {
-	echo "ads";
-} else {
-	echo "content";
+if (function_exists('sqweb_check_credentials')) {
+	$wsid = get_option( 'wsid' );
+	if ( !sqweb_check_credentials( $wsid ) > 0 ) {
+		echo "ads";
+	} else {
+		echo "content";
+	}
 }
 `
 

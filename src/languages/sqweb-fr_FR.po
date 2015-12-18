@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2015-12-16 15:03+0100\n"
-"PO-Revision-Date: 2015-12-16 15:03+0100\n"
+"POT-Creation-Date: 2015-12-18 11:22+0100\n"
+"PO-Revision-Date: 2015-12-18 11:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -225,8 +225,8 @@ msgid "Blocked"
 msgstr "Bloqué"
 
 #: backoffice/admin-menu.php:331
-msgid "Tutorial"
-msgstr "Tutoriel"
+msgid "Help"
+msgstr "Aide"
 
 #: class/sqweb-ad-control.class.php:11
 msgid "Put here your advertising code to hide it for SQweb users"
@@ -264,6 +264,9 @@ msgstr "Cliquez ici pour vous connectez"
 #: class/widget-sqweb-button.class.php:46
 msgid "Edit settings"
 msgstr "Editez les paramètres"
+
+#~ msgid "Tutorial"
+#~ msgstr "Tutoriel"
 
 #~ msgid "Step 4 : pick your theme"
 #~ msgstr "Étape 4: Choisissez votre thème"
