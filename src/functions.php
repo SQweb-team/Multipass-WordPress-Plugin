@@ -138,9 +138,8 @@ function sqweb_sign_in( $email, $password ) {
 		} else {
 			$response = json_decode( $return['body'] );
 
-			if ( isset( $response->token ) ) {
-				setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
-				return $response->token;
+			if ( false != $response ) {
+				return 1;
 			}
 		}
 	}

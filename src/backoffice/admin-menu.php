@@ -178,12 +178,12 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 			wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
 			exit;
 		}
-	} else {
+	} elseif ( isset( $_POST ) ) {
 		$error = 1;
 	}
 ?>
 <h2><?php _e( 'Sign up', 'sqweb' ); ?></h2>
-<?php if ( 1 == $error ) {?><span class="sqw-error"><?php _e( 'You need to fill in all fields', 'sqweb' ); ?></span><?php
+<?php if ( isset( $error ) && 1 == $error ) {?><span class="sqw-error"><?php _e( 'You need to fill in all fields', 'sqweb' ); ?></span><?php
 } ?>
 <form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>" method="post" name="sqw-auth">
 	<label for="firstname"><?php _e( 'Firstname', 'sqweb' ); ?></label>
