@@ -41,6 +41,10 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.2.3 =
+
+Bugfix (timeout) and documentation update.
+
 = 1.2.2 =
 
 * Added new post meta filter.
@@ -107,6 +111,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.2.3 =
+
+Bugfix (timeout) and documentation update.
 
 = 1.2.2 =
 
