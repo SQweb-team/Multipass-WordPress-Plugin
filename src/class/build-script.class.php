@@ -53,8 +53,8 @@ class BuildScript
 	 * @return int
 	 */
 	public static function save() {
-		$t = new BuildScript;
-		add_action( 'wp_footer', array( $t, 'generate' ) );
+		$script = new BuildScript;
+		add_action( 'wp_footer', array( $script, 'generate' ) );
 		return ( 0 );
 	}
 }
