@@ -13,7 +13,7 @@ before_script:
     - phpenv rehash
     - phpcs --config-set installed_paths $(pear config-get php_dir)/PHP/CodeSniffer/Standards/WordPress
     - phpcs -i
-    - npm install npm@'>=3.3.12'
+    - npm install -g npm@'>=3.3.12'
     - npm install
 
 script:
