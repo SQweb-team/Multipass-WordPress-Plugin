@@ -13,9 +13,11 @@ before_script:
     - phpenv rehash
     - phpcs --config-set installed_paths $(pear config-get php_dir)/PHP/CodeSniffer/Standards/WordPress
     - phpcs -i
+    - npm install
 
 script:
     - phpcs --standard=WordPress-Core . --extensions=php
+    - gulp
 
 notifications:
     slack: sqweb:M0hKi2sdzb1VxoxtMeo4F3lh
