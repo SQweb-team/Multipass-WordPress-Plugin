@@ -41,9 +41,9 @@ function filter_page_builder( $data = null, $object_id, $meta_key, $single ) {
 
 if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 
-/**
- * Compatibility with most ads plugins
- */
+	/**
+	 * Compatibility with most ads plugins
+	 */
 
 	$array_option = [
 						'ads_under_post_title_320',
@@ -58,9 +58,9 @@ if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 		add_filter( 'option_'.$value, 'filter_get_option', 100 );
 	}
 
-/**
- * Compatibility with Page Builder
- */
+	/**
+	 * Compatibility with Page Builder
+	 */
 
 	add_filter( 'get_post_metadata', 'filter_page_builder', true, 4 );
 }
