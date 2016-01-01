@@ -11,6 +11,7 @@ php:
 matrix:
     allow_failures:
         - php: hhvm
+    fast_finish: true
 
 before_script:
     - export PATH=~/.composer/vendor/bin:$PATH
