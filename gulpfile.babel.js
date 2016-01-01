@@ -2,6 +2,7 @@
 
 import gulp from 'gulp';
 import cssmini from 'gulp-minify-css';
+import nano from 'gulp-cssnano';
 import sequence from 'gulp-sequence';
 import zip from 'gulp-zip';
 import del from 'del';
@@ -25,7 +26,7 @@ gulp.task('css-minify', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(cssmini())
+    .pipe(nano())
     .pipe(gulp.dest('./build/sqweb-wordpress-plugin/resources/css'))
 });
 
