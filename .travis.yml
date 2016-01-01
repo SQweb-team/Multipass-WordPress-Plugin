@@ -13,6 +13,10 @@ matrix:
         - php: hhvm
     fast_finish: true
 
+cache:
+    directories:
+        - node_modules
+
 before_script:
     - export PATH=~/.composer/vendor/bin:$PATH
     - composer self-update
