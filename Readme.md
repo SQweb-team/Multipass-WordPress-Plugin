@@ -3,8 +3,8 @@ SQweb WordPress Plugin
 [![Build Status](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin.svg?branch=master)](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin)
 [![Code Climate](https://codeclimate.com/github/SQweb-team/SQweb-WordPress-Plugin/badges/gpa.svg)](https://codeclimate.com/github/SQweb-team/SQweb-WordPress-Plugin)
 [![WordPress Rating](https://img.shields.io/wordpress/plugin/r/sqweb.svg)](https://wordpress.org/plugins/sqweb/)
+[![Dependency Status](https://www.versioneye.com/user/projects/5686b2d4eb4f470030000ab7/badge.svg)](https://www.versioneye.com/user/projects/5686b2d4eb4f470030000ab7)
 [![License](https://img.shields.io/badge/license-GPL%20v3-428F7E.svg)](http://opensource.org/licenses/GPL-3.0)
-
 
 **This plugin enables you to easily install SQweb on your WordPress powered site.**
 
