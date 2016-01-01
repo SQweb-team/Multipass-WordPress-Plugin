@@ -1,7 +1,6 @@
 'use strict';
 
 import gulp from 'gulp';
-import cssmini from 'gulp-minify-css';
 import nano from 'gulp-cssnano';
 import sequence from 'gulp-sequence';
 import zip from 'gulp-zip';
