@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Try apply_filter to adsense
+ * Try apply_filter with AdSense
  */
 
 function filter_get_option( $value ) {
@@ -42,8 +42,8 @@ function filter_page_builder( $data = null, $object_id, $meta_key, $single ) {
 if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 
 	/**
- * Compatibility with major part of ads plugins
- */
+	 * Compatibility with most ads plugins
+	 */
 
 	$array_option = [
 						'ads_under_post_title_320',
@@ -59,8 +59,8 @@ if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 	}
 
 	/**
- * Compatibility with Page Builder ADS
- */
+	 * Compatibility with Page Builder
+	 */
 
 	add_filter( 'get_post_metadata', 'filter_page_builder', true, 4 );
 }

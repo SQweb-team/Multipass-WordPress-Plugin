@@ -1,10 +1,10 @@
 SQweb WordPress Plugin
 ===
-[![Build Status](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin.svg)](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin)
+[![Build Status](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin.svg?branch=master)](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin)
 [![Code Climate](https://codeclimate.com/github/SQweb-team/SQweb-WordPress-Plugin/badges/gpa.svg)](https://codeclimate.com/github/SQweb-team/SQweb-WordPress-Plugin)
 [![WordPress Rating](https://img.shields.io/wordpress/plugin/r/sqweb.svg)](https://wordpress.org/plugins/sqweb/)
+[![Dependency Status](https://www.versioneye.com/user/projects/5686b2d4eb4f470030000ab7/badge.svg)](https://www.versioneye.com/user/projects/5686b2d4eb4f470030000ab7)
 [![License](https://img.shields.io/badge/license-GPL%20v3-428F7E.svg)](http://opensource.org/licenses/GPL-3.0)
-
 
 **This plugin enables you to easily install SQweb on your WordPress powered site.**
 
@@ -18,7 +18,7 @@ We welcome contributions and improvements.
 
 All PHP code must pass [WordPress-Core](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
-For more information about JavaScript and CSS, please see our [Coding Style](https://github.com/SQweb-team/SQweb-Coding-Style) guide. The CSS can be properly formatted using `gulp css-beaut`.
+For more information about JavaScript and CSS, please see our [Coding Style](https://github.com/SQweb-team/SQweb-Coding-Style) guide.
 
 ###Builds and Releases
 

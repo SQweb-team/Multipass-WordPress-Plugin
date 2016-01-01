@@ -15,6 +15,9 @@ if ( ! empty( $_GET['page'] ) && is_admin() && 'SQwebAdmin' == $_GET['page'] ) {
 	ob_start();
 }
 
+/**
+ * @SuppressWarnings(PHPMD.Superglobals)
+ */
 function sqw_site_url() {
 
 	$protocol = ( ! empty( $_SERVER['HTTPS'] ) && 'off' !== $_SERVER['HTTPS'] || 443 == $_SERVER['SERVER_PORT'] ) ? 'https://' : 'http://';
