@@ -1,12 +1,13 @@
 <?php
 
 if ( isset( $_GET['logout'] ) && 1 == $_GET['logout'] ) {
-	setcookie( 'sqw_admin_token', 0, time() - 1 );
+	delete_option( 'sqw_token' );
 	wp_redirect( remove_query_arg( 'logout' ) );
 	exit;
 }
 
 // Checking if options have yet been set
+$sqw_token = (get_option( 'sqw_token' ) !== '') ? get_option( 'sqw_token' ) : '';
 $wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '';
 $wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '';
 $flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';
@@ -35,21 +36,21 @@ if ( isset( $_POST['sqw-emailc'] ) && isset( $_POST['sqw-passwordc'] ) ) {
 	</a>
 	<div class="sqw-admin-b-right">
     <?php
-	if ( isset( $_COOKIE['sqw_admin_token'] )  || '0' != $signinr ) {
+	if ( ! empty( $sqw_token )  || '0' != $signinr ) {
 		echo '<a href="' . add_query_arg( 'logout', '1' ) . '">'. __( 'Logout', 'sqweb' ) .'</a>';
 	}
 	?>
 	</div>
 </div>
 <?php
-if ( isset( $_COOKIE['sqw_admin_token'] ) || '0' != $signinr ) {
+if ( ! empty( $sqw_token ) || '0' != $signinr ) {
 ?>
 <div class="sqw-setting-box">
 <?php
 if ( isset( $_POST['sqw-ws-name'] ) && isset( $_POST['sqw-ws-name'] ) ) {
-	$add_ws = sqw_add_website( $_POST, $_COOKIE['sqw_admin_token'] );
+	$add_ws = sqw_add_website( $_POST, $sqw_token );
 }
-	$token = $signinr ? $signinr : $_COOKIE['sqw_admin_token'];
+	$token = $signinr ? $signinr : $sqw_token;
 	$sqw_webmaster = sqweb_check_token( $token );
 if ( $sqw_webmaster > 0 ) {
 	if ( isset( $_GET['website'] ) && 'add' == $_GET['website'] ) {
@@ -162,8 +163,8 @@ if ( $sqw_webmaster > 0 ) {
    </div>
     <?php
 }
-if ( isset( $_COOKIE['sqw_admin_token'] ) && 0 == $sqw_webmaster ) {
-	setcookie( 'sqw_admin_token', 0, time() - 1 );
+if ( ! empty( $sqw_token ) && 0 == $sqw_webmaster ) {
+	delete_option( 'sqw_token' );
 	wp_redirect( sqw_site_url() . $_SERVER['REQUEST_URI'] );
 }
 } else {
@@ -230,7 +231,7 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 }
 	?>
 <?php
-if ( isset( $_COOKIE['sqw_admin_token'] )  || '0' != $signinr ) {
+if ( ! empty( $sqw_token )  || '0' != $signinr ) {
 ?>
 	<div class="sqweb-stats">
 		<div class="sqweb-canvas" id="canvas-holder">
@@ -262,7 +263,7 @@ function stats_ajax_call() {
       <script type="text/javascript" >
        jQuery(document).ready(function($) {
      var data = {
-      token:'<?php echo $_COOKIE['sqw_admin_token'] ?>',
+      token:'<?php echo $sqw_token ?>',
 						webmaster_id: <?php echo ( ! empty( $wmid ) ? $wmid : "''"); ?>,
 						website_id: <?php echo ( ! empty( $wsid ) ? $wsid : "''"); ?>
 					};
@@ -327,7 +328,7 @@ function stats_ajax_call() {
 	</div>
 	<div class="sqweb-ctr-box" style="text-decoration: none;">
     <?php
-	if ( isset( $_COOKIE['sqw_admin_token'] ) || '0' != $signinr ) {
+	if ( ! empty( $sqw_token ) || '0' != $signinr ) {
 		echo '<a href="https://www.sqweb.com/dashboard/support" target="_blank">', __( 'Help', 'sqweb' ), '</a>';
 	}
 	?>
