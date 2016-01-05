@@ -41,6 +41,12 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 
 == Changelog ==
 
+= 1.3.0 =
+
+* Permanent backoffice login.
+* Updated timeout threshold.
+* Introduced unit tests.
+
 = 1.2.3 =
 
 Bugfix (timeout) and documentation update.
@@ -111,6 +117,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.3.0 =
+
+Permanent backoffice login and longer timeout threshold.
 
 = 1.2.3 =
 
