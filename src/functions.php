@@ -219,7 +219,7 @@ function sqw_get_sites( $id ) {
 			'headers' => array(),
 			'user-agent' => $user_agent,
 			'body' => array(
-				'token' => $token,
+			'token' => $token,
 			),
 			'cookies' => array(),
 			)

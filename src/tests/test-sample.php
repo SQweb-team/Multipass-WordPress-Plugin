@@ -14,6 +14,5 @@ class SampleTest extends WP_UnitTestCase {
 		$result = sqweb_sign_in( 'FalseEmail', 'FalsePassword' );
 		$this->assertEquals( $result, 0 );
 	}
-
 }
 
