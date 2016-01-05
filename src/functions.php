@@ -209,20 +209,19 @@ function sqw_get_sites( $id ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		$return = wp_remote_get( SQW_ENDPOINT . 'websites/' . $id, array(
-			'timeout' => 2,
+		$token = get_option( 'sqw_token' );
+		$return = wp_remote_post( SQW_ENDPOINT . 'websites', array(
+			'method' => 'POST',
+			'timeout' => 3,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
 			'user-agent' => $user_agent,
-			'body' => null,
+			'body' => array(
+				'token' => $token,
+			),
 			'cookies' => array(),
-			'compress'    => false,
-			'decompress'  => true,
-			'sslverify'   => true,
-			'stream'      => false,
-			'filename'    => null,
 			)
 		);
 
