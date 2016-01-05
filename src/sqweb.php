@@ -16,12 +16,12 @@ function sqw_install() {
 	sqw_send_data( 'enabled' );
 }
 
-function sqw_uninstall() {
+function sqw_deactivation() {
 	sqw_send_data( 'disabled' );
 }
 
 register_activation_hook( __FILE__, 'sqw_install' );
-register_uninstall_hook( __FILE__, 'sqw_uninstall' );
+register_deactivation_hook( __FILE__, 'sqw_deactivation' );
 
 /**
  * Check curl install
