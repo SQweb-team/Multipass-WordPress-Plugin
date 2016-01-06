@@ -22,7 +22,7 @@ cache:
 before_script:
     - export PATH=~/.composer/vendor/bin:$PATH
     - composer self-update
-    - composer global require "phpunit/phpunit=*"
+    - composer global require "phpunit/phpunit=>4"
     - composer global require "squizlabs/php_codesniffer=*"
     - git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
     - phpenv rehash
