@@ -34,7 +34,7 @@ before_script:
 script:
     - phpcs --standard=WordPress-Core . --extensions=php
     - gulp
-    - phpunit
+    - "cd src && phpunit"
 
 notifications:
     slack: sqweb:M0hKi2sdzb1VxoxtMeo4F3lh
