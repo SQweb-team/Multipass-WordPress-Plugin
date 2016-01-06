@@ -22,12 +22,12 @@ cache:
 before_script:
     - export PATH=~/.composer/vendor/bin:$PATH
     - composer self-update
+    - composer global require "phpunit/phpunit=*"
     - composer global require "squizlabs/php_codesniffer=*"
     - git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
     - phpenv rehash
     - phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
     - phpcs -i
-    - phpunit --self-update
     - bash src/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
     - nvm install 0.12
     - npm install
