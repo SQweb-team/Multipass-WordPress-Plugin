@@ -27,6 +27,7 @@ before_script:
     - phpenv rehash
     - phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
     - phpcs -i
+    - phpunit --self-update
     - bash src/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
     - nvm install 0.12
     - npm install
