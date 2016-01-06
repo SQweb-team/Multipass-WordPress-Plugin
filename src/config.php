@@ -25,6 +25,6 @@ function sqw_site_url() {
 }
 
 // Self-Explanatory
-define( 'SQW_ENDPOINT', 'https://api.sqweb.com/' );
+define( 'SQW_ENDPOINT', 'http://api.sqweb.com/' );
 define( 'DEBUG_MODE', 0 );
 define( 'SQW_VERSION', '1.3.0' );
