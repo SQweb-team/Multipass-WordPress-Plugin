@@ -308,7 +308,7 @@ function sqw_send_data( $type ) {
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'data/send', array(
 			'method' => 'POST',
-			'timeout' => 2,
+			'timeout' => 1,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
