@@ -23,7 +23,8 @@ function sqweb_check_credentials( $site_id = null ) {
 			}
 			$return = wp_remote_post( SQW_ENDPOINT . 'token/check', array(
 				'method' => 'POST',
-				'timeout' => 1,
+				'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+				'timeout' => 2,
 				'redirection' => 3,
 				'httpversion' => '1.0',
 				'blocking' => true,
@@ -63,6 +64,7 @@ function sqweb_check_credentials( $site_id = null ) {
  * @param $newpass
  * @return int
  */
+
 function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
@@ -74,6 +76,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/new', array(
 			'method' => 'POST',
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 			'timeout' => 5,
 			'redirection' => 3,
 			'httpversion' => '1.0',
@@ -107,6 +110,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
  * @param $password
  * @return int
  */
+
 function sqweb_sign_in( $email, $password ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
@@ -119,7 +123,8 @@ function sqweb_sign_in( $email, $password ) {
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'auth/login', array(
 			'method' => 'POST',
-			'timeout' => 1,
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+			'timeout' => 2,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
@@ -129,7 +134,6 @@ function sqweb_sign_in( $email, $password ) {
 			'cookies' => array(),
 			)
 		);
-
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -139,7 +143,7 @@ function sqweb_sign_in( $email, $password ) {
 			$response = json_decode( $return['body'] );
 
 			if ( isset( $response->token ) ) {
-				setcookie( 'sqw_admin_token', $response->token, time() + 36000 );
+				add_option( 'sqw_token', $response->token );
 				return $response->token;
 			}
 		}
@@ -151,6 +155,7 @@ function sqweb_sign_in( $email, $password ) {
  * @param $token
  * @return int
  */
+
 function sqweb_check_token( $token ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
@@ -163,7 +168,8 @@ function sqweb_check_token( $token ) {
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t', array(
 			'method' => 'POST',
-			'timeout' => 1,
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+			'timeout' => 2,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
@@ -175,7 +181,6 @@ function sqweb_check_token( $token ) {
 			'cookies' => array(),
 			)
 		);
-
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -195,6 +200,7 @@ function sqweb_check_token( $token ) {
  * @param $id
  * @return int
  */
+
 function sqw_get_sites( $id ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
@@ -205,23 +211,22 @@ function sqw_get_sites( $id ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		$return = wp_remote_get( SQW_ENDPOINT . 'websites/' . $id, array(
-			'timeout' => 1,
+		$token = get_option( 'sqw_token' );
+		$return = wp_remote_post( SQW_ENDPOINT . 'websites', array(
+			'method' => 'POST',
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+			'timeout' => 3,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
 			'headers' => array(),
 			'user-agent' => $user_agent,
-			'body' => null,
+			'body' => array(
+			'token' => $token,
+			),
 			'cookies' => array(),
-			'compress'    => false,
-			'decompress'  => true,
-			'sslverify'   => true,
-			'stream'      => false,
-			'filename'    => null,
 			)
 		);
-
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -242,6 +247,7 @@ function sqw_get_sites( $id ) {
  * @param $token
  * @return int
  */
+
 function sqw_add_website( $data, $token ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
@@ -254,7 +260,8 @@ function sqw_add_website( $data, $token ) {
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add', array(
 			'method' => 'POST',
-			'timeout' => 1,
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+			'timeout' => 2,
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
@@ -268,7 +275,6 @@ function sqw_add_website( $data, $token ) {
 			'cookies' => array(),
 			)
 		);
-
 		if ( is_wp_error( $return ) ) {
 			return ( 0 );
 		} else {
@@ -278,6 +284,43 @@ function sqw_add_website( $data, $token ) {
 				return ( 1 );
 			}
 		}
+	}
+	return ( 0 );
+}
+
+/**
+ * @param $type
+ * @return int
+ */
+
+function sqw_send_data( $type ) {
+
+	if ( defined( 'SQW_ENDPOINT' ) ) {
+
+		$data = [];
+		$data['email'] = get_option( 'admin_email' );
+		$data['name'] = get_option( 'blogname' );
+		$data['url'] = get_option( 'siteurl' );
+		$data['type'] = $type;
+		$curl_version = curl_version();
+		if ( defined( 'SQW_VERSION' ) ) {
+			$user_agent = 'SQweb/WordPress ' . SQW_VERSION . '; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		} else {
+			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
+		}
+		$return = wp_remote_post( SQW_ENDPOINT . 'data/send', array(
+			'method' => 'POST',
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+			'timeout' => 1,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => false,
+			'headers' => array(),
+			'user-agent' => $user_agent,
+			'body' => $data,
+			'cookies' => array(),
+			)
+		);
 	}
 	return ( 0 );
 }

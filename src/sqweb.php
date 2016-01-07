@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Solution to adblocking (detection included).
-Version: 1.2.3
+Version: 1.3.0
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -11,6 +11,17 @@ License: GPL3
  */
 
 load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ).'/languages/' );
+
+function sqw_install() {
+	sqw_send_data( 'enabled' );
+}
+
+function sqw_deactivation() {
+	sqw_send_data( 'disabled' );
+}
+
+register_activation_hook( __FILE__, 'sqw_install' );
+register_deactivation_hook( __FILE__, 'sqw_deactivation' );
 
 /**
  * Check curl install
