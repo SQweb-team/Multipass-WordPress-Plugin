@@ -258,7 +258,7 @@ function stats_ajax_call() {
 
 	$wmid = ( ! empty( get_option( 'wmid' ) ) ) ? get_option( 'wmid' ) : null;
 	$wsid = ( ! empty( get_option( 'wsid' ) ) ) ? get_option( 'wsid' ) : null;
-	if ( $wsid !== null && $wmid !== null ) {
+	if ( null !== $wsid && null !== $wmid ) {
 		if ( ! empty( $wmid ) && ! empty( $wsid ) && defined( 'SQW_ENDPOINT' ) ) {
 			?>
 	      <script type="text/javascript" >
