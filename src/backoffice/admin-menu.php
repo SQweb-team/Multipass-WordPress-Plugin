@@ -261,9 +261,11 @@ if ( ( ! empty( $workaround_wmid ) && ! empty( $workaround_wsid ) ) && ! empty( 
 add_action( 'admin_footer', 'stats_ajax_call' );
 
 function stats_ajax_call() {
+	$workaround_wmid = get_option( 'wmid' );
+	$workaround_wsid = get_option( 'wsid' );
 
-	$wmid = ( ! empty( get_option( 'wmid' ) ) ) ? get_option( 'wmid' ) : null;
-	$wsid = ( ! empty( get_option( 'wsid' ) ) ) ? get_option( 'wsid' ) : null;
+	$wmid = ( ! empty( $workaround_wmid ) ) ? get_option( 'wmid' ) : null;
+	$wsid = ( ! empty( $workaround_wsid ) ) ? get_option( 'wsid' ) : null;
 	if ( null !== $wsid && null !== $wmid ) {
 		if ( ! empty( $wmid ) && ! empty( $wsid ) && defined( 'SQW_ENDPOINT' ) ) {
 			?>
