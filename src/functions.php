@@ -27,7 +27,6 @@ function sqweb_check_credentials( $site_id = null ) {
 				'timeout' => 2,
 				'redirection' => 3,
 				'httpversion' => '1.0',
-				'sslverify' => false,
 				'blocking' => true,
 				'headers' => array(),
 				'user-agent' => $user_agent,
@@ -38,7 +37,6 @@ function sqweb_check_credentials( $site_id = null ) {
 				'cookies' => array(),
 			    )
 			);
-			var_dump( $return );
 			if ( is_wp_error( $return ) ) {
 				if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 					$error_message = $return->get_error_message();
@@ -82,7 +80,6 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'timeout' => 5,
 			'redirection' => 3,
 			'httpversion' => '1.0',
-			'sslverify' => false,
 			'blocking' => true,
 			'headers' => array(),
 			'user-agent' => $user_agent,
@@ -96,7 +93,6 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'cookies' => array(),
 			)
 		);
-		var_dump( $return );
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -131,7 +127,6 @@ function sqweb_sign_in( $email, $password ) {
 			'timeout' => 2,
 			'redirection' => 3,
 			'httpversion' => '1.0',
-			'sslverify' => false,
 			'blocking' => true,
 			'headers' => 'Content-Type: application/x-www-form-urlencoded',
 			'user-agent' => $user_agent,
@@ -139,7 +134,6 @@ function sqweb_sign_in( $email, $password ) {
 			'cookies' => array(),
 			)
 		);
-		var_dump( $return );
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -178,7 +172,6 @@ function sqweb_check_token( $token ) {
 			'timeout' => 2,
 			'redirection' => 3,
 			'httpversion' => '1.0',
-			'sslverify' => false,
 			'blocking' => true,
 			'headers' => array(),
 			'user-agent' => $user_agent,
@@ -188,7 +181,6 @@ function sqweb_check_token( $token ) {
 			'cookies' => array(),
 			)
 		);
-		var_dump( $return );
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -226,7 +218,6 @@ function sqw_get_sites( $id ) {
 			'timeout' => 3,
 			'redirection' => 3,
 			'httpversion' => '1.0',
-			'sslverify' => false,
 			'blocking' => true,
 			'headers' => array(),
 			'user-agent' => $user_agent,
@@ -236,7 +227,6 @@ function sqw_get_sites( $id ) {
 			'cookies' => array(),
 			)
 		);
-		var_dump( $return );
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -274,7 +264,6 @@ function sqw_add_website( $data, $token ) {
 			'timeout' => 2,
 			'redirection' => 3,
 			'httpversion' => '1.0',
-			'sslverify' => false,
 			'blocking' => true,
 			'headers' => array(),
 			'user-agent' => $user_agent,
@@ -286,7 +275,6 @@ function sqw_add_website( $data, $token ) {
 			'cookies' => array(),
 			)
 		);
-		var_dump( $return );
 		if ( is_wp_error( $return ) ) {
 			return ( 0 );
 		} else {
@@ -326,7 +314,6 @@ function sqw_send_data( $type ) {
 			'timeout' => 1,
 			'redirection' => 3,
 			'httpversion' => '1.0',
-			'sslverify' => false,
 			'blocking' => false,
 			'headers' => array(),
 			'user-agent' => $user_agent,
@@ -334,7 +321,6 @@ function sqw_send_data( $type ) {
 			'cookies' => array(),
 			)
 		);
-		var_dump( $return );
 	}
 	return ( 0 );
 }
