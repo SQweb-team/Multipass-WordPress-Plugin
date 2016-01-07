@@ -8,6 +8,7 @@ import del from 'del';
 import autoprefixer from 'gulp-autoprefixer';
 import stylelint from 'gulp-stylelint';
 import stylelintReporter from 'gulp-stylelint-console-reporter';
+import gulpIgnore from 'gulp-ignore';
 
 gulp.task('css-lint', function() {
   gulp.src('src/resources/css/*.css')
@@ -34,6 +35,11 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('build/sqweb-wordpress-plugin'));
 });
 
+gulp.task('cleanup', function() {
+  const base = 'build/sqweb-wordpress-plugin';
+  return del([base + '/phpunit.xml', base + '/bin', base + '/tests']);
+});
+
 gulp.task('zip', function() {
   return gulp.src(['./build/sqweb-wordpress-plugin/**/*'], {base : "./build"})
     .pipe(zip('sqweb-wordpress-plugin.zip'))
@@ -46,4 +52,4 @@ gulp.task('clean', function() {
 
 gulp.task('keep-build', sequence('css-lint', 'copy', 'css-minify', 'zip'));
 
-gulp.task('default', sequence('css-lint', 'copy', 'css-minify', 'zip', 'clean'));
+gulp.task('default', sequence('css-lint', 'copy', 'css-minify', 'cleanup', 'zip', 'clean'));
