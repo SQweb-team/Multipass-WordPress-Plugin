@@ -256,15 +256,15 @@ add_action( 'admin_footer', 'stats_ajax_call' );
 
 function stats_ajax_call() {
 
-	$wmid = ( ! empty( get_option( 'wmid' ) ) ) ? get_option( 'wmid' ) : NULL;
-	$wsid = ( ! empty( get_option( 'wsid' ) ) ) ? get_option( 'wsid' ) : NULL;
-	if ($wsid !== NULL && $wmid !== NULL) {
+	$wmid = ( ! empty( get_option( 'wmid' ) ) ) ? get_option( 'wmid' ) : null;
+	$wsid = ( ! empty( get_option( 'wsid' ) ) ) ? get_option( 'wsid' ) : null;
+	if ( $wsid !== null && $wmid !== null ) {
 		if ( ! empty( $wmid ) && ! empty( $wsid ) && defined( 'SQW_ENDPOINT' ) ) {
 			?>
 	      <script type="text/javascript" >
 	       jQuery(document).ready(function($) {
 	     var data = {
-	      token: "<?php echo get_option('sqw_token'); ?>",
+	      token: "<?php echo get_option( 'sqw_token' ); ?>",
 							webmaster_id: <?php echo ( ! empty( $wmid ) ? $wmid : "''"); ?>,
 							website_id: <?php echo ( ! empty( $wsid ) ? $wsid : "''"); ?>
 						};
