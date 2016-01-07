@@ -44,6 +44,7 @@ No, SQweb lets you to keep your current adverting network(s). We're compatible w
 = 1.3.0 =
 
 * Permanent backoffice login.
+* Included up-to-date SSL certificates.
 * Updated timeout threshold.
 * Introduced unit tests.
 
