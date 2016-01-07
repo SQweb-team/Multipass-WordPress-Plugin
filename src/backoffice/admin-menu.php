@@ -231,7 +231,13 @@ if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
 }
 	?>
 <?php
-if ( ( ! empty( get_option( 'wmid' ) ) && ! empty( get_option( 'wsid' ) ) ) && ! empty( $sqw_token )  || '0' != $signinr ) {
+
+// These two are need for PHP pre 5.5 compatibility
+// See http://php.net/manual/en/function.empty.php
+$workaround_wmid = get_option( 'wmid' );
+$workaround_wsid = get_option( 'wsid' );
+
+if ( ( ! empty( $workaround_wmid ) && ! empty( $workaround_wsid ) ) && ! empty( $sqw_token )  || '0' != $signinr ) {
 ?>
 	<div class="sqweb-stats">
 		<div class="sqweb-canvas" id="canvas-holder">
