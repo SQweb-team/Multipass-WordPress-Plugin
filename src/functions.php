@@ -37,7 +37,6 @@ function sqweb_check_credentials( $site_id = null ) {
 				'cookies' => array(),
 			    )
 			);
-			var_dump($return);
 			if ( is_wp_error( $return ) ) {
 				if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 					$error_message = $return->get_error_message();
@@ -93,8 +92,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			),
 			'cookies' => array(),
 			)
-		);
-		var_dump($return);
+		)
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -135,8 +133,7 @@ function sqweb_sign_in( $email, $password ) {
 			'body' => 'email=' . $email . '&password=' . $password,
 			'cookies' => array(),
 			)
-		);
-		var_dump($return);
+		)
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -183,8 +180,7 @@ function sqweb_check_token( $token ) {
 			),
 			'cookies' => array(),
 			)
-		);
-		var_dump($return);
+		)
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -230,8 +226,7 @@ function sqw_get_sites( $id ) {
 			),
 			'cookies' => array(),
 			)
-		);
-		var_dump($return);
+		)
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
@@ -279,8 +274,7 @@ function sqw_add_website( $data, $token ) {
 			),
 			'cookies' => array(),
 			)
-		);
-		var_dump($return);
+		)
 		if ( is_wp_error( $return ) ) {
 			return ( 0 );
 		} else {
@@ -326,8 +320,7 @@ function sqw_send_data( $type ) {
 			'body' => $data,
 			'cookies' => array(),
 			)
-		);
-		var_dump($return);
+		)
 	}
 	return ( 0 );
 }
