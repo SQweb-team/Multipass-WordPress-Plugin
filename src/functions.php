@@ -297,7 +297,7 @@ function sqw_send_data( $type ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 
-		$data = [];
+		$data = array();
 		$data['email'] = get_option( 'admin_email' );
 		$data['name'] = get_option( 'blogname' );
 		$data['url'] = get_option( 'siteurl' );
