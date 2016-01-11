@@ -11,9 +11,23 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
 == Description ==
 
-[SQweb]("https://www.sqweb.com") is a subscription to access the premium ad free version of all partner websites. Every partner publisher has a plugin to identify SQweb users and to manage ads display. The subscription is shared between visited websites, on a time based ratio.
+**[SQweb]("https://www.sqweb.com") makes it easy to earn money from your readers, rather than ads.**
 
-The SQweb plugin also detects Adblock users, so that you can target blockers and non blockers, and show them the message(s) of your choice.
+With SQweb you can:
+
+- **Find out how much revenue you're losing from adblocking**, with detailed analytics per browser and device ;
+- **Detect adblockers and show them the message of your choice**, to tell them that you're offering an alternative ;
+- **Set up a simple subscription system, and/or paywall**, so that your readers can access the ad-free version of your site, and premium content if you have any.
+
+Our plugin allows you to be fully set up within minutes. All SQweb users will then be able to enjoy the premium version of your website.
+
+SQweb-enabled websites need this plugin to manage the display of ads and premium content. Installing the plugin is also required for subscribers signin, signup and tracking.
+
+Their monthly subscriptions are then shared between visited websites, on a time based ratio.
+
+For more information, see the **Frequently Asked Questions**.
+
+If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in touch!
 
 == Installation ==
 
