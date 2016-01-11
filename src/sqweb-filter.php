@@ -45,14 +45,14 @@ if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 	 * Compatibility with most ads plugins
 	 */
 
-	$array_option = [
+	$array_option = array(
 						'ads_under_post_title_320',
 						'ads_post_footer_700',
 						'ads_post_footer_320',
 						'ads_header_320',
 						'ads_header_468',
 						'ads_header_700',
-					];
+					);
 
 	foreach ( $array_option as $value ) {
 		add_filter( 'option_'.$value, 'filter_get_option', 100 );
