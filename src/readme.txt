@@ -7,7 +7,7 @@ Stable tag: 1.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
-This plugin enables you to easily install SQweb, a friendly subscription system, on your WordPress powered site.
+**The friendly alternative to adblock and paywalls.** Set up a simple universal subscription on your site with just a few clicks.
 
 == Description ==
 
@@ -18,26 +18,45 @@ The SQweb plugin also detects Adblock users, so that you can target blockers and
 == Installation ==
 
 1. Upload the plugin to the '/wp-content/plugins/' directory, or download it through the official WordPress plugin repository.
-2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. If you don't already have one, create an account on SQweb. Then, login via the SQweb interface.
-4. Add your website, and customise your preferences.
-5. Add the widget or shortcode on your site (ref: A brief Markdown Example).
+2. Activate the plugin via the 'Plugins' menu. You will be prompted to login on SQweb, with the option to create an account if you need to.
+3. Add your website, and customize the preferences to your liking.
+4. Add the widget or shortcode on your site :
 
-That's it! If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
+= The Shortcode Way =
+`[sqweb_button]`
+
+= The Manual Way =
+
+In your theme, add the following :
+
+`do_shortcode('sqweb_button')`
+
+`
+if (function_exists('sqweb_check_credentials')) {
+	$wsid = get_option( 'wsid' );
+	if ( !sqweb_check_credentials( $wsid ) > 0 ) {
+		// ADS
+	} else {
+		// PREMIUM CONTENT
+	}
+}
+`
+
+If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
 
 == Frequently asked questions ==
 
 = How much does SQweb cost ? =
-SQweb is free for publishers. Users pay 9€ per month, with an early adopter price of 2€.
+SQweb is completely free for publishers and website owners. We're currently offering a special early adopter price of 2€ for suscribers, instead of 9€.
 
 = How do users register ? =
-With the SQweb, button they can login and subscribe without leaving your website.
+Users can register on SQweb without ever leaving your website : when they click on the button, they will be shown a modal window to login or register. They can also register via SQweb.com, or any other SQweb-enabled website.
 
-= How much will i earn ? =
-We believe the RPM will be two to three times greater than regular advertisement.
+= How much will I earn ? =
+Your earnings are based on the time SQwebers spend on your website, rather than individual clicks or impressions. We expect your earnings per subscriber to be 2-3x greater than regular advertisement, because your SQwebers are highly engaged users.
 
 = Do I have to change my advertising solution ? =
-No, SQweb lets you to keep your current adverting network(s). We're compatible with networks such as Adsense and Criteo.
+You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
 
@@ -190,26 +209,6 @@ This version improves the compatibility checks (PHP version + CURL).
 
 = 1.0.4 =
 This version includes a significant cleanup of the plugin.
-
-== Using the Plugin ==
-
-= The Shortcode Way =
-`[sqweb_button]`
-
-= The Manual Way =
-
-`do_shortcode('sqweb_button')`
-
-`
-if (function_exists('sqweb_check_credentials')) {
-	$wsid = get_option( 'wsid' );
-	if ( !sqweb_check_credentials( $wsid ) > 0 ) {
-		echo "ads";
-	} else {
-		echo "content";
-	}
-}
-`
 
 == Privacy Policy ==
 
