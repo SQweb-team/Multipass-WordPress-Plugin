@@ -3,11 +3,11 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 1.3.3
+Stable tag: 1.4.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
-**The friendly alternative to adblock and paywalls.** Set up a simple universal subscription on your site with just a few clicks.
+The friendly alternative to adblock and paywalls. Set up a simple universal subscription on your site with just a few clicks.
 
 == Description ==
 
@@ -73,6 +73,13 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v1.4.0 =
+
+* Improved the installation and activation notice.
+* Improved the French translation.
+* Misc. UI improvements.
+* Significant refactoring of internal functions.
 
 = 1.3.3 =
 
@@ -165,6 +172,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= 1.4.0 =
+
+This version includes general improvements (UI, translation) and a significant code refactoring.
 
 = 1.3.3 =
 
