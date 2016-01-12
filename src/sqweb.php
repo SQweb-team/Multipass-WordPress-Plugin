@@ -26,9 +26,9 @@ if ( get_option( 'sqw_activation' ) == 'true' ) {
 	delete_option( 'sqw_activation' );
 }
 
-function custom_user_message($translation, $text) {
-	if ( $text == 'Plugin <strong>activated</strong>.' )
-		return __( 'SQweb activated. <b>Notice : </b>You need to sign in and select your domain in order to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.</p>', 'sqweb' );
+function custom_user_message( $translation, $text ) {
+	if ( 'Plugin <strong>activated</strong>.' == $text ) {
+		return __( 'SQweb activated. <b>Notice : </b>You need to sign in and select your domain in order to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.</p>', 'sqweb' ); }
 	return ( $text );
 }
 

@@ -8,11 +8,20 @@
     margin: auto;
 }
 
+.sqw-logo-block a:active {
+    box-shadow: none;
+}
+
+.sqw-logo {
+    width: 48px;
+    height: auto;
+}
+
 .sqw-error {
     color: red;
 }
 
-.success {
+.sqw-success {
     color: green;
 }
 

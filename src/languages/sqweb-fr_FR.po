@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-01-11 17:02+0100\n"
-"PO-Revision-Date: 2016-01-11 17:54+0100\n"
+"POT-Creation-Date: 2016-01-12 15:03+0100\n"
+"PO-Revision-Date: 2016-01-12 15:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -16,52 +16,51 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backoffice/head.php:8 backoffice/init-tmp.php:40
+#: backoffice/head.php:8
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: backoffice/init-tmp.php:59 backoffice/setting.php:12
+#: backoffice/setting.php:12
 msgid "Register a new website"
 msgstr "Enregistrer un nouveau site"
 
-#: backoffice/init-tmp.php:60 backoffice/setting.php:13
+#: backoffice/setting.php:13
 msgid "Website name"
 msgstr "Nom du site"
 
-#: backoffice/init-tmp.php:61 backoffice/setting.php:14
+#: backoffice/setting.php:14
 msgid "http://exemple.com"
 msgstr "http://exemple.com"
 
-#: backoffice/init-tmp.php:62 backoffice/setting.php:15
+#: backoffice/setting.php:15
 msgid "Add website"
 msgstr "Ajouter un site"
 
-#: backoffice/init-tmp.php:91 backoffice/setting.php:49 sqweb.php:55
+#: backoffice/setting.php:49 sqweb.php:67
 msgid "Settings"
 msgstr "Configuration"
 
-#: backoffice/init-tmp.php:93 backoffice/setting.php:51
+#: backoffice/setting.php:51
 msgid "Webmaster ID"
 msgstr "Webmaster ID"
 
-#: backoffice/init-tmp.php:95 backoffice/setting.php:53
+#: backoffice/setting.php:53
 msgid "Step 1 : select your website"
 msgstr "Étape 1: Sélectionnez votre site Internet"
 
-#: backoffice/init-tmp.php:106 backoffice/init-tmp.php:159
 #: backoffice/setting.php:64 backoffice/setting.php:119
 msgid "Click here"
 msgstr "Cliquez ici"
 
-#: backoffice/init-tmp.php:106 backoffice/setting.php:64
+#: backoffice/setting.php:64
 msgid "add a new website"
 msgstr "pour ajouter un nouveau site."
 
-#: backoffice/init-tmp.php:110 backoffice/setting.php:68
+#: backoffice/setting.php:68
 msgid "Step 2 : Enter the message that will be shown to adblockers"
 msgstr "Étape 2 : Message pour les adblockers"
 
-#: backoffice/init-tmp.php:113 backoffice/setting.php:71
+#: backoffice/setting.php:71
 msgid ""
 "Leave the field above blank if you do not wish the message for adblockers "
 "shown."
@@ -69,177 +68,17 @@ msgstr ""
 "Laisser le champ vide si vous ne souhaitez pas montrer de message aux "
 "Adblockers."
 
-#: backoffice/init-tmp.php:116
-msgid "Step 3 : Messages you'd like on the button"
-msgstr "Étape 3: Messages que vous désirez sur le bouton SQweb"
-
-#: backoffice/init-tmp.php:121 backoffice/setting.php:87
-msgid "Remove ads"
-msgstr "Enlever la pub"
-
-#: backoffice/init-tmp.php:127 backoffice/setting.php:93
-msgid "Text for not connected user"
-msgstr "Texte utilisateur non connecté"
-
-#: backoffice/init-tmp.php:128 backoffice/setting.php:94
-msgid "Remove Ads"
-msgstr "Enlever la pub"
-
-#: backoffice/init-tmp.php:129 backoffice/setting.php:95
-msgid "Text for connected user"
-msgstr "Texte utilisateur connecté"
-
-#: backoffice/init-tmp.php:130 backoffice/setting.php:96
-msgid "Connected"
-msgstr "Connecté"
-
-#: backoffice/init-tmp.php:134
-msgid "Step 4 : choose the button color"
-msgstr "Étape 4: choisissez la couleur du bouton"
-
-#: backoffice/init-tmp.php:136 backoffice/setting.php:102
-msgid "Blue"
-msgstr "Bleu"
-
-#: backoffice/init-tmp.php:137 backoffice/setting.php:103
-msgid "Grey"
-msgstr "Gris"
-
-#: backoffice/init-tmp.php:141
-msgid "Step 5 : select lang"
-msgstr "Étape 5 : Choisir la langue"
-
-#: backoffice/init-tmp.php:143 backoffice/setting.php:109
-msgid "French"
-msgstr "Français"
-
-#: backoffice/init-tmp.php:144 backoffice/setting.php:110
-msgid "English"
-msgstr "Anglais"
-
-#: backoffice/init-tmp.php:148
-msgid "Step 6 : Display button"
-msgstr "Étape 6: Affichez le bouton"
-
-#: backoffice/init-tmp.php:150 backoffice/setting.php:76
-msgid "Only to adblockers"
-msgstr "Seulement pour les adblockers"
-
-#: backoffice/init-tmp.php:151 backoffice/setting.php:77
-msgid "To everybody"
-msgstr "Pour tout le monde"
-
-#: backoffice/init-tmp.php:155 backoffice/setting.php:115
-msgid "Update"
-msgstr "Mettre à jour"
-
-#: backoffice/init-tmp.php:159 backoffice/setting.php:119
-msgid "Woops! It looks like you havent registered your website yet"
-msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
-
-#: backoffice/init-tmp.php:159 backoffice/setting.php:119
-msgid "to start"
-msgstr "pour débuté"
-
-#: backoffice/init-tmp.php:186 backoffice/init-tmp.php:198
-#: backoffice/signup.php:3 backoffice/signup.php:29
-msgid "Sign up"
-msgstr "Inscription"
-
-#: backoffice/init-tmp.php:187 backoffice/init-tmp.php:207
-#: backoffice/signin.php:9 backoffice/signup.php:9
-msgid "You need to fill in all fields"
-msgstr "Vous avez besoin de remplir tout les champs"
-
-#: backoffice/init-tmp.php:190 backoffice/signup.php:14
-msgid "Firstname"
-msgstr "Prénom"
-
-#: backoffice/init-tmp.php:192 backoffice/signup.php:18
-msgid "Lastname"
-msgstr "Nom de famille"
-
-#: backoffice/init-tmp.php:194 backoffice/init-tmp.php:212
-#: backoffice/signin.php:21 backoffice/signup.php:22
-msgid "Email"
-msgstr "Email"
-
-#: backoffice/init-tmp.php:196 backoffice/init-tmp.php:214
-#: backoffice/signin.php:25 backoffice/signup.php:26
-msgid "Password"
-msgstr "Mot de passe"
-
-#: backoffice/init-tmp.php:197 backoffice/init-tmp.php:215
-#: backoffice/signin.php:27 backoffice/signup.php:28
-msgid "password"
-msgstr "Mot de passe"
-
-#: backoffice/init-tmp.php:201 backoffice/signup.php:32
-msgid "Back to sign in"
-msgstr "Retourner à la connexion"
-
-#: backoffice/init-tmp.php:206 backoffice/init-tmp.php:216
-#: backoffice/signin.php:3 backoffice/signin.php:28
-msgid "Sign in"
-msgstr "Connexion"
-
-#: backoffice/init-tmp.php:209 backoffice/signin.php:16
-msgid "You signed up successfuly."
-msgstr "Votre inscription est réussie."
-
-#: backoffice/init-tmp.php:220 backoffice/signin.php:33
-msgid "Don't have an account ?"
-msgstr "Vous n’avez pas de compte ?"
-
-#: backoffice/init-tmp.php:221 backoffice/signin.php:36
-msgid "Sign up for free in 30 seconds !"
-msgstr "Inscrivez vous gratuitement en 30 secondes !"
-
-#: backoffice/init-tmp.php:225 backoffice/signin.php:42
-msgid "Forgot your password ?"
-msgstr "Oublie de mot de passe ?"
-
-#: backoffice/init-tmp.php:246 backoffice/stats.php:9
-msgid "Users detected with Adblock"
-msgstr "Utilisateur avec Adblock"
-
-#: backoffice/init-tmp.php:247 backoffice/stats.php:10
-msgid "Users paying with SQweb"
-msgstr "Utilisateur avec Sqweb"
-
-#: backoffice/init-tmp.php:248 backoffice/stats.php:11
-msgid "Users seeing ads"
-msgstr "Utilisateur voyant la publicité"
-
-#: backoffice/init-tmp.php:254 backoffice/stats.php:17
-msgid "Pages seen with ads blocked"
-msgstr "Page vues avec les publicités bloquées."
-
-#: backoffice/init-tmp.php:255 backoffice/stats.php:18
-msgid "Pages seen by SQwebmen"
-msgstr "Page vues par des SQwebmens"
-
-#: backoffice/init-tmp.php:256 backoffice/stats.php:19
-msgid "Pages seen with ads"
-msgstr "Page vues avec la publicité"
-
-#: backoffice/init-tmp.php:285 backoffice/init-tmp.php:305
-#: backoffice/stats.php:48 backoffice/stats.php:68
-msgid "Displayed"
-msgstr "Affichage"
-
-#: backoffice/init-tmp.php:291 backoffice/init-tmp.php:311
-#: backoffice/stats.php:54 backoffice/stats.php:74
-msgid "Blocked"
-msgstr "Bloqué"
-
-#: backoffice/init-tmp.php:339 backoffice/stats.php:102
-msgid "Help"
-msgstr "Aide"
-
 #: backoffice/setting.php:74
 msgid "Step 3 : Display button"
 msgstr "Étape 3: Affichez le bouton"
+
+#: backoffice/setting.php:76
+msgid "Only to adblockers"
+msgstr "Seulement pour les adblockers"
+
+#: backoffice/setting.php:77
+msgid "To everybody"
+msgstr "Pour tout le monde"
 
 #: backoffice/setting.php:78
 msgid "Analytics only"
@@ -249,21 +88,153 @@ msgstr "Stats uniquement"
 msgid "Step 4 : Messages you'd like on the button"
 msgstr "Étape 4: Messages que vous désirez sur le bouton SQweb"
 
+#: backoffice/setting.php:87
+msgid "Remove ads"
+msgstr "Enlever la pub"
+
+#: backoffice/setting.php:93
+msgid "Text for not connected user"
+msgstr "Texte utilisateur non connecté"
+
+#: backoffice/setting.php:94
+msgid "Remove Ads"
+msgstr "Enlever la pub"
+
+#: backoffice/setting.php:95
+msgid "Text for connected user"
+msgstr "Texte utilisateur connecté"
+
+#: backoffice/setting.php:96
+msgid "Connected"
+msgstr "Connecté"
+
 #: backoffice/setting.php:100
 msgid "Step 5 : choose the button color"
 msgstr "Étape 5: choisissez la couleur du bouton"
 
+#: backoffice/setting.php:102
+msgid "Blue"
+msgstr "Bleu"
+
+#: backoffice/setting.php:103
+msgid "Grey"
+msgstr "Gris"
+
 #: backoffice/setting.php:107
 msgid "Step 6 : select lang"
 msgstr "Étape 6 : Choisir la langue"
+
+#: backoffice/setting.php:109
+msgid "French"
+msgstr "Français"
+
+#: backoffice/setting.php:110
+msgid "English"
+msgstr "Anglais"
 
 #: backoffice/setting.php:111
 msgid "Español"
 msgstr "Espagnol"
 
 #: backoffice/setting.php:115
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: backoffice/setting.php:115
 msgid "register"
 msgstr "Sauvegarder"
+
+#: backoffice/setting.php:119
+msgid "Woops! It looks like you havent registered your website yet"
+msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
+
+#: backoffice/setting.php:119
+msgid "to start"
+msgstr "pour débuté"
+
+#: backoffice/signin.php:3 backoffice/signin.php:32
+msgid "Sign in"
+msgstr "Connexion"
+
+#: backoffice/signin.php:9 backoffice/signup.php:9
+msgid "You need to fill in all fields"
+msgstr "Vous avez besoin de remplir tout les champs"
+
+#: backoffice/signin.php:16
+msgid "You signed up successfuly."
+msgstr "Votre inscription est réussie."
+
+#: backoffice/signin.php:22 backoffice/signup.php:22
+msgid "Email"
+msgstr "Email"
+
+#: backoffice/signin.php:28 backoffice/signup.php:26
+msgid "Password"
+msgstr "Mot de passe"
+
+#: backoffice/signin.php:30 backoffice/signup.php:28
+msgid "password"
+msgstr "Mot de passe"
+
+#: backoffice/signin.php:37
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: backoffice/signin.php:43
+msgid "Forgot your password ?"
+msgstr "Mot de passe oublié ?"
+
+#: backoffice/signup.php:3 backoffice/signup.php:29
+msgid "Sign up"
+msgstr "Inscription"
+
+#: backoffice/signup.php:14
+msgid "Firstname"
+msgstr "Prénom"
+
+#: backoffice/signup.php:18
+msgid "Lastname"
+msgstr "Nom de famille"
+
+#: backoffice/signup.php:32
+msgid "Back to sign in"
+msgstr "Retourner à la connexion"
+
+#: backoffice/stats.php:9
+msgid "Users detected with Adblock"
+msgstr "Utilisateur avec Adblock"
+
+#: backoffice/stats.php:10
+msgid "Users paying with SQweb"
+msgstr "Utilisateur avec Sqweb"
+
+#: backoffice/stats.php:11
+msgid "Users seeing ads"
+msgstr "Utilisateur voyant la publicité"
+
+#: backoffice/stats.php:17
+msgid "Pages seen with ads blocked"
+msgstr "Page vues avec les publicités bloquées."
+
+#: backoffice/stats.php:18
+msgid "Pages seen by SQwebmen"
+msgstr "Page vues par des SQwebmens"
+
+#: backoffice/stats.php:19
+msgid "Pages seen with ads"
+msgstr "Page vues avec la publicité"
+
+#: backoffice/stats.php:48 backoffice/stats.php:68
+msgid "Displayed"
+msgstr "Affichage"
+
+#: backoffice/stats.php:54 backoffice/stats.php:74
+msgid "Blocked"
+msgstr "Bloqué"
+
+#: backoffice/stats.php:102
+msgid "Help"
+msgstr "Aide"
 
 #: class/sqweb-ad-control.class.php:11
 msgid "Put here your advertising code to hide it for SQweb users"
@@ -301,6 +272,34 @@ msgstr "Cliquez ici pour vous connectez"
 #: class/widget-sqweb-button.class.php:46
 msgid "Edit settings"
 msgstr "Editez les paramètres"
+
+#: sqweb.php:31
+msgid ""
+"SQweb activated. <b>Notice : </b>You need to sign in and select your domain "
+"in order to use SQweb. <a href=\"admin.php?page=SQwebAdmin\">Click here to "
+"proceed</a>.</p>"
+msgstr ""
+"SQweb activé. <b>Notice :</b> Veuillez vous connecter et sélectionnez votre "
+"site web afin d’utiliser SQweb. <a href=« admin.php?"
+"page=SQwebAdmin »>Cliquez ici pour continuer</a>.<p>"
+
+#~ msgid "Step 3 : Messages you'd like on the button"
+#~ msgstr "Étape 3: Messages que vous désirez sur le bouton SQweb"
+
+#~ msgid "Step 4 : choose the button color"
+#~ msgstr "Étape 4: choisissez la couleur du bouton"
+
+#~ msgid "Step 5 : select lang"
+#~ msgstr "Étape 5 : Choisir la langue"
+
+#~ msgid "Step 6 : Display button"
+#~ msgstr "Étape 6: Affichez le bouton"
+
+#~ msgid "Don't have an account ?"
+#~ msgstr "Vous n’avez pas de compte ?"
+
+#~ msgid "Sign up for free in 30 seconds !"
+#~ msgstr "Inscrivez vous gratuitement en 30 secondes !"
 
 #~ msgid "Tutorial"
 #~ msgstr "Tutoriel"

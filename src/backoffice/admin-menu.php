@@ -58,3 +58,4 @@ if ( ! empty( $sqw_token ) || '0' != $signinr ) {
 		include_once 'signin.php';
 	}
 }
+include_once 'footer.php';
