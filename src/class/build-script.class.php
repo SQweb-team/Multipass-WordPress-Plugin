@@ -23,7 +23,7 @@ class BuildScript
 		// Getting the options
 		self::$_wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '0';
 		self::$_wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '0';
-		self::$_targets = (get_option( 'targets' ) !== '') ? get_option( 'targets' ) : 'false';
+		self::$_targets = (get_option( 'targets' ) !== '' && get_option( 'targets' ) != 'oa') ? get_option( 'targets' ) : 'false';
 		self::$_fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
 		self::$_lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
 		self::$_flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';

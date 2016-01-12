@@ -14,10 +14,22 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ).'
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
+	add_option( 'sqw_activation', 'true' );
 }
 
 function sqw_deactivation() {
 	sqw_send_data( 'disabled' );
+}
+
+if ( get_option( 'sqw_activation' ) == 'true' ) {
+	add_filter( 'gettext', 'custom_user_message', 10, 2 );
+	delete_option( 'sqw_activation' );
+}
+
+function custom_user_message( $translation, $text ) {
+	if ( 'Plugin <strong>activated</strong>.' == $text ) {
+		return __( 'SQweb activated. <b>Notice : </b>You need to sign in and select your domain in order to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.</p>', 'sqweb' ); }
+	return ( $text );
 }
 
 register_activation_hook( __FILE__, 'sqw_install' );

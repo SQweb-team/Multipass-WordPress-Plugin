@@ -27,19 +27,6 @@ add_action( 'widgets_init', create_function( '', 'return register_widget("widget
 add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
 
 /**
- * Display a notice if the user has not submitted his website or webmaster id
- */
-function my_admin_notice() {
-
-	$wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '';
-	$wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '';
-	if ( '' == $wsid || '' == $wmid ) {
-		echo '<div class="error"><p><b>Notice : </b>You need to sign in and select your domain in order to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.</p></div>';
-	}
-}
-add_action( 'admin_notices', 'my_admin_notice' );
-
-/**
  * Add the backoffice link to wordpress admin sidebar
  */
 function sqweb_register_admin_menu() {

@@ -8,11 +8,20 @@
     margin: auto;
 }
 
+.sqw-logo-block a:active {
+    box-shadow: none;
+}
+
+.sqw-logo {
+    width: 48px;
+    height: auto;
+}
+
 .sqw-error {
     color: red;
 }
 
-.success {
+.sqw-success {
     color: green;
 }
 
@@ -26,6 +35,10 @@
 
 .sqweb-ctr-link {
     display: block;
+}
+
+.sqweb-color-white {
+    color: white;
 }
 
 .sqw-signup {
@@ -348,4 +361,12 @@ ul li span.sqweb-col {
 .sqweb-dismiss:hover {
     color: #fff !important;
     text-decoration: none !important;
+}
+
+.sqweb-signin-mail {
+    margin-bottom: 15px;
+}
+
+.sqweb-signin-password {
+    margin-bottom: 15px;
 }
