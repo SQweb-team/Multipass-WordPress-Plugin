@@ -28,6 +28,10 @@
     display: block;
 }
 
+.sqweb-color-white {
+    color: white;
+}
+
 .sqw-signup {
     padding: 10px 0;
 }
@@ -348,4 +352,12 @@ ul li span.sqweb-col {
 .sqweb-dismiss:hover {
     color: #fff !important;
     text-decoration: none !important;
+}
+
+.sqweb-signin-mail {
+    margin-bottom: 15px;
+}
+
+.sqweb-signin-password {
+    margin-bottom: 15px;
 }
