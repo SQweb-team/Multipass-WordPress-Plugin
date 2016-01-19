@@ -74,6 +74,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v1.4.1 =
+Fixed permanent admin connection.
+
 = v1.4.0 =
 
 * Improved the installation and activation notice.
@@ -172,6 +175,10 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= v1.4.1 =
+
+Admins no longer have to re-connect to update the settings in the back office.
 
 = 1.4.0 =
 
