@@ -188,8 +188,11 @@ function sqweb_check_token( $token ) {
 			}
 		} else {
 			$res = json_decode( $return['body'] );
-			if ( isset( $res->id ) ) {
-				return $res->id;
+			if ( isset( $res->token ) ) {
+				update_option( 'sqw_token', $res->token );
+			}
+			if ( isset( $res->user->id ) ) {
+				return $res->user->id;
 			}
 		}
 	}
