@@ -2,7 +2,7 @@
 	<?php
 	if ( ! empty( $sqw_token )  || '0' != $signinr ) {
 		?>
-		<div class="sqweb-stats">
+		<div class="sqweb-stats" style="display: none;">
 			<div class="sqweb-canvas" id="canvas-holder">
 				<canvas id="chart01-area" width="200" height="200"/></canvas>
 				<ul class="sqweb-ulle">
@@ -37,7 +37,7 @@
 							website_id: <?php echo ( ! empty( $wsid ) ? $wsid : "''"); ?>
 						};
 						$.post('<?php echo SQW_ENDPOINT; ?>apistats', data, function(response) {
-							console.log(response);
+							$('.sqweb-stats').show();
 							if (response[0])
 							{
 								var doughnutData1 = [
@@ -95,14 +95,6 @@
 		}
 	}
 ?>
-</div>
-<div class="sqweb-ctr-box" style="text-decoration: none;">
-	<?php
-	if ( ! empty( $sqw_token ) || '0' != $signinr ) {
-		echo '<a href="https://www.sqweb.com/dashboard/support" target="_blank">', __( 'Help', 'sqweb' ), '</a>';
-	}
-	?>
-	<a href="https://www.sqweb.com/contact" target="_blank" class="sqweb-ctr-link">Contact</a>
 </div>
 </div>
 <script type="text/javascript">
