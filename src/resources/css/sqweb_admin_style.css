@@ -381,6 +381,7 @@ ul li span.sqweb-col {
     margin-right: 2%;
 }
 
-.sqw-admin-b-right a, a:hover {
+.sqw-admin-b-right a,
+a:hover {
     text-decoration: none;
 }
