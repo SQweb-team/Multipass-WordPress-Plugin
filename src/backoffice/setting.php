@@ -43,7 +43,7 @@
 				} else {
 					$selectnobutton = 'selected';
 				}
-				if ($_GET['settings-updated'] == true) {
+				if ( true == $_GET['settings-updated'] ) {
 				?>
 					<span class="sqw-success">
 						<?php _e( 'Settings updated.', 'sqweb' ); ?>
