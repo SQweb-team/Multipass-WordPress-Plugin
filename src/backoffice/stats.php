@@ -37,9 +37,11 @@
 							website_id: <?php echo ( ! empty( $wsid ) ? $wsid : "''"); ?>
 						};
 						$.post('<?php echo SQW_ENDPOINT; ?>apistats', data, function(response) {
-							$('.sqweb-stats').show();
 							if (response[0])
 							{
+								if (response[0]["visiteurs"]) {
+								$('.sqweb-stats').show();
+								}
 								var doughnutData1 = [
 								{
 									value: response[0]["visiteurs"] - response[0]["bloqueurs"] - response[0]["sqwebers"],

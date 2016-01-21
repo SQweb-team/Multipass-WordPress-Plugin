@@ -3,8 +3,7 @@
 	if ( isset( $_POST['sqw-ws-name'] ) && isset( $_POST['sqw-ws-name'] ) ) {
 		$add_ws = sqw_add_website( $_POST, $sqw_token );
 	}
-	$token = $signinr ? $signinr : $sqw_token;
-	$sqw_webmaster = sqweb_check_token( $token );
+	$sqw_webmaster = $signinr > 0 ? $signinr : sqweb_check_token( $sqw_token );
 	if ( $sqw_webmaster > 0 ) {
 		if ( isset( $_GET['website'] ) && 'add' == $_GET['website'] ) {
 			?>
@@ -44,7 +43,12 @@
 				} else {
 					$selectnobutton = 'selected';
 				}
+				if ($_GET['settings-updated'] == true) {
 				?>
+					<span class="sqw-success">
+						<?php _e( 'Settings updated.', 'sqweb' ); ?>
+					</span>
+				<?php } ?>
 				<form action="options.php" method="post" name="options">
 					<h2><?php _e( 'Settings', 'sqweb' ); ?></h2>
 					<?php echo wp_nonce_field( 'update-options' ) ?>

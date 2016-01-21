@@ -144,7 +144,7 @@ function sqweb_sign_in( $email, $password ) {
 
 			if ( isset( $response->token ) ) {
 				add_option( 'sqw_token', $response->token );
-				return $response->token;
+				return $response->user->id;
 			}
 		}
 	}

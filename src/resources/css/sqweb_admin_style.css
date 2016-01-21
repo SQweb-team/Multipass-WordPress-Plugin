@@ -380,3 +380,7 @@ ul li span.sqweb-col {
 .sqweb-right {
     margin-right: 2%;
 }
+
+.sqw-admin-b-right a, a:hover {
+    text-decoration: none;
+}
