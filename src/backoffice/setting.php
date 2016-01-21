@@ -3,8 +3,7 @@
 	if ( isset( $_POST['sqw-ws-name'] ) && isset( $_POST['sqw-ws-name'] ) ) {
 		$add_ws = sqw_add_website( $_POST, $sqw_token );
 	}
-	$token = $signinr ? $signinr : $sqw_token;
-	$sqw_webmaster = sqweb_check_token( $token );
+	$sqw_webmaster = $signinr > 0 ? $signinr : sqweb_check_token( $sqw_token );
 	if ( $sqw_webmaster > 0 ) {
 		if ( isset( $_GET['website'] ) && 'add' == $_GET['website'] ) {
 			?>
@@ -44,13 +43,18 @@
 				} else {
 					$selectnobutton = 'selected';
 				}
+				if ( true == $_GET['settings-updated'] ) {
 				?>
+					<span class="sqw-success">
+						<?php _e( 'Settings updated.', 'sqweb' ); ?>
+					</span>
+				<?php } ?>
 				<form action="options.php" method="post" name="options">
-					<h3><?php _e( 'Settings', 'sqweb' ); ?></h3>
+					<h2><?php _e( 'Settings', 'sqweb' ); ?></h2>
 					<?php echo wp_nonce_field( 'update-options' ) ?>
 					<input class="sqweb-admin-input" type="hidden" name="wmid" value="<?php echo $sqw_webmaster ?>" placeholder="<?php _e( 'Webmaster ID', 'sqweb' ); ?>" />
 					<div class="sqweb-form-div">
-						<span class="sqweb-form-title"><?php _e( 'Step 1 : select your website', 'sqweb' ); ?></span>
+						<span class="sqweb-form-title"><?php _e( 'Step 1 : Select your website', 'sqweb' ); ?></span>
 						<?php
 						echo '<select class="sqweb-admin-input sqw-select" name="wsid">';
 						foreach ( $sqw_sites as $key => $sqw_site ) {
@@ -72,7 +76,7 @@
 					</div>
 					<div class="sqweb-form-div">
 						<span class="sqweb-form-title"><?php _e( 'Step 3 : Display button', 'sqweb' ); ?></span>
-						<select class="sqweb-admin-input sqw-select" name="targets" id="sqweb-color-select">';
+						<select class="sqweb-admin-input sqw-select" name="targets" id="sqweb-view-select">';
 							<option value="true" <?php echo $selectyestarget ?>><?php _e( 'Only to adblockers', 'sqweb' ); ?></option>
 							<option value="false" <?php echo $selectnotarget ?>><?php _e( 'To everybody', 'sqweb' ); ?></option>
 							<option value="oa" <?php echo $selectnobutton ?>><?php _e( 'Analytics only', 'sqweb' ); ?></option>
@@ -90,26 +94,32 @@
 							</div>
 						</div>
 						<div class="sqweb-user-text">
-							<label class="sqweb-form-labels" for "flogin"><?php _e( 'Text for not connected user', 'sqweb' ); ?></label>
-							<input class="sqweb-admin-input" id="sqweb-message-input1" type="text" name="flogin" value="<?php echo $flogin ?>" placeholder="<?php _e( 'Remove Ads', 'sqweb' ); ?>" />
-							<label class="sqweb-form-labels" for "flogout"><?php _e( 'Text for connected user', 'sqweb' ); ?></label>
-							<input class="sqweb-admin-input" id="sqweb-message-input2" type="text" name="flogout" value="<?php echo $flogout ?>" placeholder="<?php _e( 'Connected', 'sqweb' ); ?>" />
+							<div class="sqweb-half-pipe sqweb-right">
+								<label class="sqweb-form-labels" for="sqweb-message-input1"><?php _e( 'Not connected user', 'sqweb' ); ?></label>
+								<input class="sqweb-admin-input" id="sqweb-message-input1" type="text" name="flogin" value="<?php echo $flogin ?>" placeholder="<?php _e( 'Remove Ads', 'sqweb' ); ?>" />
+							</div>
+							<div class="sqweb-half-pipe">
+								<label class="sqweb-form-labels" for="sqweb-message-input2"><?php _e( 'Connected user', 'sqweb' ); ?></label>
+								<input class="sqweb-admin-input" id="sqweb-message-input2" type="text" name="flogout" value="<?php echo $flogout ?>" placeholder="<?php _e( 'Connected', 'sqweb' ); ?>" />
+							</div>
 						</div>
 					</div>
+					<div style="clear: both;"></div>
 					<div class="sqweb-form-div">
-						<span class="sqweb-form-title"><?php _e( 'Step 5 : choose the button color', 'sqweb' ); ?></span>
-						<select class="sqweb-admin-input sqw-select" name="btheme" id="sqweb-color-select">';
-							<option value="blue" <?php echo $selectbtheme ?>><?php _e( 'Blue', 'sqweb' ); ?></option>
-							<option value="grey" <?php echo $selectgtheme ?>><?php _e( 'Grey', 'sqweb' ); ?></option>
-						</select>
-					</div>
-					<div class="sqweb-form-div">
-						<span class="sqweb-form-title"><?php _e( 'Step 6 : select lang', 'sqweb' ); ?></span>
-						<select class="sqweb-admin-input sqw-select" name="lang" id="sqweb-color-select">';
-							<option value="fr" <?php echo $selectlang['fr'] ?>><?php _e( 'French', 'sqweb' ); ?></option>
-							<option value="en" <?php echo $selectlang['en'] ?>><?php _e( 'English', 'sqweb' ); ?></option>
-							<option value="es" <?php echo $selectlang['es'] ?>><?php _e( 'Español', 'sqweb' ); ?></option>
-						</select>
+						<span class="sqweb-form-title"><?php _e( 'Step 5 : Choose options', 'sqweb' ); ?></span>
+						<div class="sqweb-half-pipe sqweb-right">
+							<select class="sqweb-admin-input sqw-select" name="btheme" id="sqweb-color-select">';
+								<option value="blue" <?php echo $selectbtheme ?>><?php _e( 'Blue', 'sqweb' ); ?></option>
+								<option value="grey" <?php echo $selectgtheme ?>><?php _e( 'Grey', 'sqweb' ); ?></option>
+							</select>
+						</div>
+						<div class="sqweb-half-pipe">
+							<select class="sqweb-admin-input sqw-select" name="lang" id="sqweb-lang-select">';
+								<option value="fr" <?php echo $selectlang['fr'] ?>><?php _e( 'French', 'sqweb' ); ?></option>
+								<option value="en" <?php echo $selectlang['en'] ?>><?php _e( 'English', 'sqweb' ); ?></option>
+								<option value="es" <?php echo $selectlang['es'] ?>><?php _e( 'Español', 'sqweb' ); ?></option>
+							</select>
+						</div>
 					</div>
 					<input type="hidden" name="page_options" value="wmid, wsid, flogin, flogout, fmes, btheme, lang, targets" />
 					<input class="button button-primary button-large sqweb-admin-button" type="submit" name="Submit" value="<?php if ( ! empty( $wsid ) ) { _e( 'Update', 'sqweb' ); } else { _e( 'register', 'sqweb' ); } ?>" />
@@ -122,3 +132,27 @@
 	}
 	?>
 </div>
+<script type="text/javascript">
+var input1 = document.getElementById("sqweb-message-input1");
+var input2 = document.getElementById("sqweb-message-input2");
+var select = document.getElementById("sqweb-color-select");
+var exemple = document.getElementById("sqweb_exemple");
+if (exemple) {
+	if (input1) {
+		input1.addEventListener('keyup', function(event) {
+			document.getElementById("sqweb_exemple").innerHTML = input1.value;
+		});
+	}
+	if (input2) {
+		input2.addEventListener('keyup', function(event) {
+			document.getElementById("sqweb_exemple").innerHTML = input2.value;
+		});
+	}
+	if (select)
+	{
+		select.addEventListener('change', function(event) {
+			document.getElementById("sqweb-button").className = "sqweb-button sqweb-"+select.value;
+		});
+	}
+}
+</script>

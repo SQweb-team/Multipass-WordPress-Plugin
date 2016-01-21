@@ -1,6 +1,6 @@
 <div class="sqw-admin-b-right" style="text-align: center;">
 	<a href="https://www.sqweb.com/dashboard/support">
-		<?php _e( 'Besoin d\'aide ?', 'sqweb' ) ?>
+		<?php _e( 'Need help ?', 'sqweb' ) ?>
 	</a>
 	<?php
 	if ( ! empty( $sqw_token )  || '0' != $signinr ) {

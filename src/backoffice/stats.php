@@ -2,7 +2,7 @@
 	<?php
 	if ( ! empty( $sqw_token )  || '0' != $signinr ) {
 		?>
-		<div class="sqweb-stats">
+		<div class="sqweb-stats" style="display: none;">
 			<div class="sqweb-canvas" id="canvas-holder">
 				<canvas id="chart01-area" width="200" height="200"/></canvas>
 				<ul class="sqweb-ulle">
@@ -37,9 +37,11 @@
 							website_id: <?php echo ( ! empty( $wsid ) ? $wsid : "''"); ?>
 						};
 						$.post('<?php echo SQW_ENDPOINT; ?>apistats', data, function(response) {
-							console.log(response);
 							if (response[0])
 							{
+								if (response[0]["visiteurs"]) {
+								$('.sqweb-stats').show();
+								}
 								var doughnutData1 = [
 								{
 									value: response[0]["visiteurs"] - response[0]["bloqueurs"] - response[0]["sqwebers"],
@@ -96,34 +98,4 @@
 	}
 ?>
 </div>
-<div class="sqweb-ctr-box" style="text-decoration: none;">
-	<?php
-	if ( ! empty( $sqw_token ) || '0' != $signinr ) {
-		echo '<a href="https://www.sqweb.com/dashboard/support" target="_blank">', __( 'Help', 'sqweb' ), '</a>';
-	}
-	?>
-	<a href="https://www.sqweb.com/contact" target="_blank" class="sqweb-ctr-link">Contact</a>
 </div>
-</div>
-<script type="text/javascript">
-var input1 = document.getElementById("sqweb-message-input1");
-var input2 = document.getElementById("sqweb-message-input2");
-var select = document.getElementById("sqweb-color-select");
-document.getElementById("sqweb_exemple");
-if (input1) {
-	input1.addEventListener('keyup', function(event) {
-		document.getElementById("sqweb_exemple").innerHTML = input1.value;
-	});
-}
-if (input2) {
-	input2.addEventListener('keyup', function(event) {
-		document.getElementById("sqweb_exemple").innerHTML = input2.value;
-	});
-}
-if (select)
-{
-	select.addEventListener('change', function(event) {
-		document.getElementById("sqweb-button").className = "sqweb-button sqweb-"+select.value;
-	});
-}
-</script>

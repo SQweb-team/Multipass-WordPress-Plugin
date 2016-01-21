@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-01-12 15:03+0100\n"
-"PO-Revision-Date: 2016-01-12 15:42+0100\n"
+"POT-Creation-Date: 2016-01-21 11:33+0100\n"
+"PO-Revision-Date: 2016-01-21 11:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -16,7 +16,11 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backoffice/head.php:8
+#: backoffice/footer.php:3
+msgid "Need help ?"
+msgstr "Besoin d’aide ?"
+
+#: backoffice/footer.php:8
 msgid "Logout"
 msgstr "Déconnexion"
 
@@ -45,10 +49,10 @@ msgid "Webmaster ID"
 msgstr "Webmaster ID"
 
 #: backoffice/setting.php:53
-msgid "Step 1 : select your website"
-msgstr "Étape 1: Sélectionnez votre site Internet"
+msgid "Step 1 : Select your website"
+msgstr "Etape 1 : Choisir votre site."
 
-#: backoffice/setting.php:64 backoffice/setting.php:119
+#: backoffice/setting.php:64 backoffice/setting.php:125
 msgid "Click here"
 msgstr "Cliquez ici"
 
@@ -92,77 +96,73 @@ msgstr "Étape 4: Messages que vous désirez sur le bouton SQweb"
 msgid "Remove ads"
 msgstr "Enlever la pub"
 
-#: backoffice/setting.php:93
-msgid "Text for not connected user"
-msgstr "Texte utilisateur non connecté"
-
 #: backoffice/setting.php:94
+msgid "Not connected user"
+msgstr "Utilisateur non connecté"
+
+#: backoffice/setting.php:95
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
-#: backoffice/setting.php:95
-msgid "Text for connected user"
-msgstr "Texte utilisateur connecté"
+#: backoffice/setting.php:98
+msgid "Connected user"
+msgstr "Utilisateur connecté"
 
-#: backoffice/setting.php:96
+#: backoffice/setting.php:99
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/setting.php:100
-msgid "Step 5 : choose the button color"
-msgstr "Étape 5: choisissez la couleur du bouton"
+#: backoffice/setting.php:105
+msgid "Step 5 : Choose options"
+msgstr "Étape 5: Choisissez les options"
 
-#: backoffice/setting.php:102
+#: backoffice/setting.php:108
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/setting.php:103
+#: backoffice/setting.php:109
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/setting.php:107
-msgid "Step 6 : select lang"
-msgstr "Étape 6 : Choisir la langue"
-
-#: backoffice/setting.php:109
+#: backoffice/setting.php:114
 msgid "French"
 msgstr "Français"
 
-#: backoffice/setting.php:110
+#: backoffice/setting.php:115
 msgid "English"
 msgstr "Anglais"
 
-#: backoffice/setting.php:111
+#: backoffice/setting.php:116
 msgid "Español"
 msgstr "Espagnol"
 
-#: backoffice/setting.php:115
+#: backoffice/setting.php:121
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: backoffice/setting.php:115
+#: backoffice/setting.php:121
 msgid "register"
 msgstr "Sauvegarder"
 
-#: backoffice/setting.php:119
+#: backoffice/setting.php:125
 msgid "Woops! It looks like you havent registered your website yet"
 msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
 
-#: backoffice/setting.php:119
+#: backoffice/setting.php:125
 msgid "to start"
 msgstr "pour débuté"
 
-#: backoffice/signin.php:3 backoffice/signin.php:32
+#: backoffice/signin.php:6
+msgid "You signed up successfuly."
+msgstr "Votre inscription est réussie."
+
+#: backoffice/signin.php:10 backoffice/signin.php:32
 msgid "Sign in"
 msgstr "Connexion"
 
-#: backoffice/signin.php:9 backoffice/signup.php:9
+#: backoffice/signin.php:16 backoffice/signup.php:9
 msgid "You need to fill in all fields"
 msgstr "Vous avez besoin de remplir tout les champs"
-
-#: backoffice/signin.php:16
-msgid "You signed up successfuly."
-msgstr "Votre inscription est réussie."
 
 #: backoffice/signin.php:22 backoffice/signup.php:22
 msgid "Email"
@@ -176,11 +176,11 @@ msgstr "Mot de passe"
 msgid "password"
 msgstr "Mot de passe"
 
-#: backoffice/signin.php:37
+#: backoffice/signin.php:38
 msgid "Create an account"
 msgstr "Créer un compte"
 
-#: backoffice/signin.php:43
+#: backoffice/signin.php:44
 msgid "Forgot your password ?"
 msgstr "Mot de passe oublié ?"
 
@@ -232,10 +232,6 @@ msgstr "Affichage"
 msgid "Blocked"
 msgstr "Bloqué"
 
-#: backoffice/stats.php:102
-msgid "Help"
-msgstr "Aide"
-
 #: class/sqweb-ad-control.class.php:11
 msgid "Put here your advertising code to hide it for SQweb users"
 msgstr ""
@@ -282,6 +278,24 @@ msgstr ""
 "SQweb activé. <b>Notice :</b> Veuillez vous connecter et sélectionnez votre "
 "site web afin d’utiliser SQweb. <a href=« admin.php?"
 "page=SQwebAdmin »>Cliquez ici pour continuer</a>.<p>"
+
+#~ msgid "Step 1 : select your website"
+#~ msgstr "Étape 1: Sélectionnez votre site Internet"
+
+#~ msgid "Text for not connected user"
+#~ msgstr "Texte utilisateur non connecté"
+
+#~ msgid "Text for connected user"
+#~ msgstr "Texte utilisateur connecté"
+
+#~ msgid "Step 5 : choose the button color"
+#~ msgstr "Étape 5: choisissez la couleur du bouton"
+
+#~ msgid "Step 6 : select lang"
+#~ msgstr "Étape 6 : Choisir la langue"
+
+#~ msgid "Help"
+#~ msgstr "Aide"
 
 #~ msgid "Step 3 : Messages you'd like on the button"
 #~ msgstr "Étape 3: Messages que vous désirez sur le bouton SQweb"

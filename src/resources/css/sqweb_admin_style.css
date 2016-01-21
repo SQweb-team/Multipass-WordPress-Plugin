@@ -73,7 +73,8 @@
 }
 
 .sqweb-form-title {
-    font-size: 1.6em;
+    display: block;
+    font-size: 1.4em;
     cursor: default !important;
     line-height: 50px;
 }
@@ -145,7 +146,7 @@
     display: block;
     margin-bottom: 5px;
     width: 100%;
-    height: 150px;
+    height: 75px;
 }
 
 .sqw-notice {
@@ -369,4 +370,18 @@ ul li span.sqweb-col {
 
 .sqweb-signin-password {
     margin-bottom: 15px;
+}
+
+.sqweb-half-pipe {
+    width: 49%;
+    float: left;
+}
+
+.sqweb-right {
+    margin-right: 2%;
+}
+
+.sqw-admin-b-right a,
+a:hover {
+    text-decoration: none;
 }
