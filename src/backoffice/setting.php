@@ -39,12 +39,12 @@
 										'false',
 										'oa',
 										'tpw',
-										'ppw'
+										'ppw',
 									);
-					foreach ( $arraytargeting as $value) {
-						$selecttargeting[$value] = '';
+					foreach ( $arraytargeting as $value ) {
+						$selecttargeting[ $value ] = '';
 					}
-					$selecttargeting[$targeting] = 'selected';
+					$selecttargeting[ $targeting ] = 'selected';
 					$categorie = get_categories();
 					if ( isset( $updated ) && true == $updated ) {
 					?>
@@ -90,7 +90,7 @@
 								<option value="ppw" <?php echo $selecttargeting['ppw'] ?>><?php _e( 'Go to partial Paywall', 'sqweb' ); ?></option>
 							</select>
 						</div>
-						<div id="div_settings" <?php if ( $targeting != 'true' && $targeting != 'false' ) { echo 'style="display: none;"'; } ?>>
+						<div id="div_settings" <?php if ( 'true' != $targeting && 'true' != $targeting ) { echo 'style="display: none;"'; } ?>>
 							<div id="div_button">
 								<div class="sqweb-form-div">
 									<span class="sqweb-form-title"><?php _e( 'SQweb button', 'sqweb' ); ?></span>
@@ -132,13 +132,13 @@
 							</div>
 						</div>
 						<div class="clear"></div>
-						<div id="div_partial_paywall" <?php if ( $targeting != 'ppw' ) { echo 'style="display: none;"'; } ?>>
+						<div id="div_partial_paywall" <?php if ( 'ppw' != $targeting ) { echo 'style="display: none;"'; } ?>>
 							<span class="sqweb-form-title"><?php _e( 'Partial Paywall', 'sqweb' ); ?></span>
 							<div class="sqweb-half-pipe sqweb-right" style="margin-top: 16px;">
 								<?php
-									foreach ($categorie as $value) {
-										echo '<div class="sqweb-right" style="float: left;"><input type="checkbox" name="categorie" value="'. $value->slug .'">'. $value->name .'</input></div>';
-									}
+								foreach ( $categorie as $value ) {
+									echo '<div class="sqweb-right" style="float: left;"><input type="checkbox" name="categorie" value="'. $value->slug .'">'. $value->name .'</input></div>';
+								}
 								?>
 							</div>
 							<div class="sqweb-half-pipe">

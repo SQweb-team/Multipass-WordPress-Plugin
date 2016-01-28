@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-01-28 17:31+0100\n"
-"PO-Revision-Date: 2016-01-28 17:35+0100\n"
+"POT-Creation-Date: 2016-01-28 18:07+0100\n"
+"PO-Revision-Date: 2016-01-28 18:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -269,8 +269,8 @@ msgid "I want to use SQweb subscription"
 msgstr "Je souhaite utiliser l’abonnement SQweb"
 
 #: backoffice/tutoriel.php:34
-msgid "I want to measure adblock rate<br> and communicate with adblocker"
-msgstr ""
+msgid "I want to measure adblock rate and communicate with adblocker"
+msgstr "Je veut mesurer mon taux d’adblockeurs et communiquer avec eux"
 
 #: backoffice/tutoriel.php:37 backoffice/tutoriel.php:51
 #: backoffice/tutoriel.php:54

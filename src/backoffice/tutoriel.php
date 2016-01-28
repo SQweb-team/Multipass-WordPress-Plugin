@@ -2,10 +2,10 @@
 	<div id="step1">
 		<div>text</div>
 		<div class="sqweb-right sqweb-half-pipe">
-			<button class="button-primary" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2a').style.display = 'initial';"><?php _e('Login with existing account', 'sqweb') ?></button>
+			<button class="button-primary" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2a').style.display = 'initial';"><?php _e( 'Login with existing account', 'sqweb' ) ?></button>
 		</div>
 		<div class="sqweb-half-pipe">
-			<button class="button-primary" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2b').style.display = 'initial';"><?php _e('I\'m a new user without account', 'sqweb') ?></button>
+			<button class="button-primary" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2b').style.display = 'initial';"><?php _e( 'I\'m a new user without account', 'sqweb' ) ?></button>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -28,13 +28,13 @@
 	</div>
 	<div id="step2b" style="display: none;">
 		<div class="sqweb-tiers-pipe sqweb-right">
-			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3a').style.display = 'initial';"><?php _e('I want to use SQweb subscription', 'sqweb') ?></button>
+			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3a').style.display = 'initial';"><?php _e( 'I want to use SQweb subscription', 'sqweb' ) ?></button>
 		</div>
 		<div class="sqweb-tiers-pipe sqweb-right">
-			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3b').style.display = 'initial';"><?php _e('I want to measure adblock rate<br> and communicate with adblocker', 'sqweb') ?></button>
+			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3b').style.display = 'initial';"><?php _e( 'I want to measure adblock rate and communicate with adblocker', 'sqweb' ) ?></button>
 		</div>
 		<div class="sqweb-tiers-pipe">
-			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3a').style.display = 'initial';"><span><?php _e('I want adblock analytics and SQweb subscription', 'sqweb') ?><span></button>
+			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3a').style.display = 'initial';"><span><?php _e( 'I want adblock analytics and SQweb subscription', 'sqweb' ) ?><span></button>
 		</div>
 		<div class="clear"></div>
 		<div style="margin-top: 30px">
@@ -48,12 +48,13 @@
 	</div>
 	<div id="step3a" style="display: none;">
 		<div class="sqweb-half-pipe sqweb-right">
-			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3c').style.display = 'initial';"><span><?php _e('I want adblock analytics and SQweb subscription', 'sqweb') ?><span></button>
+			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3c').style.display = 'initial';"><span><?php _e( 'I want adblock analytics and SQweb subscription', 'sqweb' ) ?><span></button>
 		</div>
 		<div class="sqweb-half-pipe sqweb-right">
-			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3c').style.display = 'initial';"><span><?php _e('I want adblock analytics and SQweb subscription', 'sqweb') ?><span></button>
+			<button class="button-primary sqw-full-width" onClick="document.getElementById('step2b').style.display = 'none'; document.getElementById('step3c').style.display = 'initial';"><span><?php _e( 'I want adblock analytics and SQweb subscription', 'sqweb' ) ?><span></button>
 		</div>
 	</div>
 	<div id="step3b" style="display: none;">
+
 	</div>
 </div>

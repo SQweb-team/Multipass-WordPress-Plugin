@@ -41,7 +41,7 @@ if ( isset( $_POST['sqw-emailc'] ) && isset( $_POST['sqw-passwordc'] ) ) {
 
 include_once 'head.php';
 
-if ( !empty( $wsid ) ) {
+if ( ! empty( $wsid ) ) {
 	include_once 'tutoriel.php';
 } elseif ( ! empty( $sqw_token ) || '0' != $signinr ) {
 	include_once 'setting.php';
