@@ -98,3 +98,25 @@ function sqwadmin_enqueue_scripts( $hook ) {
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_styles' );
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'sqw_enqueue_styles' );
+
+function sqw_login_content() {
+	$wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '0';
+	$lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
+	$return = '
+	<iframe frameBorder="0" style="height: 500px; width: 100%;" src="https://www.sqweb.com/iframe/'. $lang .'/login/'. $wsid .'"></iframe>
+	';
+	return $return;
+}
+
+function sqw_login_template() {
+	include( TEMPLATEPATH.'/page.php' );
+	exit;
+}
+
+if ( get_option( 'targets' ) == 'tpw' ) {
+	$wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '0';
+	if ( sqweb_check_credentials( $wsid ) == 0 ) {
+		add_filter( 'the_content','sqw_login_content' );
+		add_action( 'template_redirect', 'sqw_login_template' );
+	}
+}

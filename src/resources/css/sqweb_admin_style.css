@@ -89,7 +89,6 @@
     font-size: 1.5em;
     display: block;
     width: 100%;
-    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -131,7 +130,12 @@
 }
 
 .sqw-select {
+    height: 30px !important;
     width: 100%;
+}
+
+.sqw-select-color {
+    margin-top: -4px;
 }
 
 .sqweb-exemple {
@@ -144,9 +148,10 @@
     border-radius: 5px;
     font-size: 1em;
     display: block;
+    margin-top: 1px;
     margin-bottom: 5px;
     width: 100%;
-    height: 75px;
+    height: 30px;
 }
 
 .sqw-notice {
@@ -377,11 +382,35 @@ ul li span.sqweb-col {
     float: left;
 }
 
+.sqweb-tiers-pipe {
+    width: 31%;
+    float: left;
+}
+
+.sqweb-quarter-pipe {
+    width: 24%;
+    float: left;
+}
+
+.sqweb-3quarter-pipe {
+    width: 74%;
+    float: left;
+}
+
 .sqweb-right {
     margin-right: 2%;
 }
 
-.sqw-admin-b-right a,
-a:hover {
+.sqw-admin-b-right a, a:hover {
     text-decoration: none;
+}
+
+.sqw-full-width {
+    width: 100%;
+    height: 90px !important;
+    white-space: inherit !important;
+}
+
+h2 {
+    font-size: 1.5em;
 }

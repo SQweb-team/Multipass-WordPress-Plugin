@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-01-21 11:33+0100\n"
-"PO-Revision-Date: 2016-01-21 11:33+0100\n"
+"POT-Creation-Date: 2016-01-26 14:39+0100\n"
+"PO-Revision-Date: 2016-01-26 15:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -40,31 +40,35 @@ msgstr "http://exemple.com"
 msgid "Add website"
 msgstr "Ajouter un site"
 
-#: backoffice/setting.php:49 sqweb.php:67
+#: backoffice/setting.php:50
+msgid "Settings updated."
+msgstr "Paramètres mis a jours."
+
+#: backoffice/setting.php:54 sqweb.php:67
 msgid "Settings"
 msgstr "Configuration"
 
-#: backoffice/setting.php:51
+#: backoffice/setting.php:56
 msgid "Webmaster ID"
 msgstr "Webmaster ID"
 
-#: backoffice/setting.php:53
+#: backoffice/setting.php:58
 msgid "Step 1 : Select your website"
 msgstr "Etape 1 : Choisir votre site."
 
-#: backoffice/setting.php:64 backoffice/setting.php:125
+#: backoffice/setting.php:69 backoffice/setting.php:131
 msgid "Click here"
 msgstr "Cliquez ici"
 
-#: backoffice/setting.php:64
+#: backoffice/setting.php:69
 msgid "add a new website"
 msgstr "pour ajouter un nouveau site."
 
-#: backoffice/setting.php:68
+#: backoffice/setting.php:73
 msgid "Step 2 : Enter the message that will be shown to adblockers"
 msgstr "Étape 2 : Message pour les adblockers"
 
-#: backoffice/setting.php:71
+#: backoffice/setting.php:76
 msgid ""
 "Leave the field above blank if you do not wish the message for adblockers "
 "shown."
@@ -72,85 +76,93 @@ msgstr ""
 "Laisser le champ vide si vous ne souhaitez pas montrer de message aux "
 "Adblockers."
 
-#: backoffice/setting.php:74
+#: backoffice/setting.php:79
 msgid "Step 3 : Display button"
 msgstr "Étape 3: Affichez le bouton"
 
-#: backoffice/setting.php:76
+#: backoffice/setting.php:81
 msgid "Only to adblockers"
 msgstr "Seulement pour les adblockers"
 
-#: backoffice/setting.php:77
+#: backoffice/setting.php:82
 msgid "To everybody"
 msgstr "Pour tout le monde"
 
-#: backoffice/setting.php:78
+#: backoffice/setting.php:83
 msgid "Analytics only"
 msgstr "Stats uniquement"
 
-#: backoffice/setting.php:82
+#: backoffice/setting.php:87
 msgid "Step 4 : Messages you'd like on the button"
 msgstr "Étape 4: Messages que vous désirez sur le bouton SQweb"
 
-#: backoffice/setting.php:87
+#: backoffice/setting.php:92
 msgid "Remove ads"
 msgstr "Enlever la pub"
 
-#: backoffice/setting.php:94
+#: backoffice/setting.php:99
 msgid "Not connected user"
 msgstr "Utilisateur non connecté"
 
-#: backoffice/setting.php:95
+#: backoffice/setting.php:100
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
-#: backoffice/setting.php:98
+#: backoffice/setting.php:103
 msgid "Connected user"
 msgstr "Utilisateur connecté"
 
-#: backoffice/setting.php:99
+#: backoffice/setting.php:104
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/setting.php:105
+#: backoffice/setting.php:110
 msgid "Step 5 : Choose options"
 msgstr "Étape 5: Choisissez les options"
 
-#: backoffice/setting.php:108
+#: backoffice/setting.php:113
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/setting.php:109
+#: backoffice/setting.php:114
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/setting.php:114
+#: backoffice/setting.php:119
 msgid "French"
 msgstr "Français"
 
-#: backoffice/setting.php:115
+#: backoffice/setting.php:120
 msgid "English"
 msgstr "Anglais"
 
-#: backoffice/setting.php:116
+#: backoffice/setting.php:121
 msgid "Español"
 msgstr "Espagnol"
 
-#: backoffice/setting.php:121
+#: backoffice/setting.php:126
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: backoffice/setting.php:121
+#: backoffice/setting.php:126
 msgid "register"
 msgstr "Sauvegarder"
 
-#: backoffice/setting.php:125
+#: backoffice/setting.php:128
+msgid "How use button and Adsense filters ?"
+msgstr "Comment utiliser le bouton et le filtre pub SQweb ?"
+
+#: backoffice/setting.php:131
 msgid "Woops! It looks like you havent registered your website yet"
 msgstr "Oups ! Vous n’avez pas encore paramétré de site web."
 
-#: backoffice/setting.php:125
+#: backoffice/setting.php:131
 msgid "to start"
 msgstr "pour débuté"
+
+#: backoffice/setting.php:138
+msgid "Return to settings"
+msgstr "Retourner au paramètres"
 
 #: backoffice/signin.php:6
 msgid "You signed up successfuly."
@@ -224,11 +236,11 @@ msgstr "Page vues par des SQwebmens"
 msgid "Pages seen with ads"
 msgstr "Page vues avec la publicité"
 
-#: backoffice/stats.php:48 backoffice/stats.php:68
+#: backoffice/stats.php:50 backoffice/stats.php:70
 msgid "Displayed"
 msgstr "Affichage"
 
-#: backoffice/stats.php:54 backoffice/stats.php:74
+#: backoffice/stats.php:56 backoffice/stats.php:76
 msgid "Blocked"
 msgstr "Bloqué"
 
