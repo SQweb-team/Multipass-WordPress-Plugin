@@ -10,6 +10,12 @@ Text Domain: sqweb
 License: GPL3
  */
 
+/**
+ * Ensure compatibility with all installs of WordPress.
+ * https://core.trac.wordpress.org/changeset/15452
+ */
+require_once ABSPATH . 'wp-includes/pluggable.php';
+
 load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ).'/languages/' );
 
 function sqw_install() {
@@ -70,12 +76,6 @@ function add_action_links_sqweb( $links ) {
 }
 
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'add_action_links_sqweb' );
-
-/**
- * Ensure compatibility with all installs of WordPress.
- * https://core.trac.wordpress.org/changeset/15452
- */
-require_once ABSPATH . 'wp-includes/pluggable.php';
 
 // Including classes and dependencies files.
 require_once 'config.php';

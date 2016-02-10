@@ -31,6 +31,44 @@ add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
  */
 function sqweb_register_admin_menu() {
 
+	if ( isset( $_GET['logout'] ) && 1 == $_GET['logout'] ) {
+		delete_option( 'sqw_token' );
+		wp_redirect( remove_query_arg( 'logout' ) );
+		exit;
+	}
+
+	if ( isset( $_POST['flogin'], $_POST['flogout'], $_POST['btheme'], $_POST['lang'] ) ) {
+		update_option( 'flogin', $_POST['flogin'] );
+		update_option( 'flogout', $_POST['flogout'] );
+		update_option( 'btheme', $_POST['btheme'] );
+		update_option( 'lang', $_POST['lang'] );
+	}
+
+	if ( isset( $_POST['msgadblck'] ) && isset( $_POST['fmes'] ) ) {
+		update_option( 'fmes', $_POST['fmes'] );
+	}
+
+	if ( isset( $_POST ) && ( ! empty( $_POST['sqw-firstname'] ) || ! empty( $_POST['sqw-lastname'] ) || ! empty( $_POST['sqw-email'] ) || ! empty( $_POST['sqw-password'] ) ) ) {
+		$error = 0;
+		$r = sqweb_sign_up( $_POST['sqw-firstname'], $_POST['sqw-lastname'], $_POST['sqw-email'], $_POST['sqw-password'] );
+		if ( 1 == $r ) {
+			if ( function_exists( 'get_blog_details' ) ) {
+				$current_site = get_blog_details();
+				$blogname = $current_site->blogname;
+				$siteurl = $current_site->siteurl;
+			} else {
+				$blogname = get_option( 'blogname' );
+				$siteurl = get_option( 'siteurl' );
+			}
+			$website = sqw_add_website( [ 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ], get_option( 'sqw_token' ) );
+			update_option( 'wsid', $website->id );
+			wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
+			exit;
+		}
+	} elseif ( ! empty( $_POST ) ) {
+		$error = 1;
+	}
+
 	add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
 	if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 		add_menu_page( 'Debug info', 'Debug info', 'manage_options', 'sqweb_debug', 'sqweb_display_php_info' );

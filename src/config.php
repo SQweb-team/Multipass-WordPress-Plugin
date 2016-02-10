@@ -15,12 +15,11 @@ global $wpdb;
  * @SuppressWarnings(PHPMD.Superglobals)
  */
 function sqw_site_url() {
-
 	$protocol = ( ! empty( $_SERVER['HTTPS'] ) && 'off' !== $_SERVER['HTTPS'] || 443 == $_SERVER['SERVER_PORT'] ) ? 'https://' : 'http://';
 	return $protocol . $_SERVER['HTTP_HOST'];
 }
 
 // Self-Explanatory
 define( 'SQW_ENDPOINT', 'https://api.sqweb.com/' );
-define( 'DEBUG_MODE', 0 );
+define( 'DEBUG_MODE', 1 );
 define( 'SQW_VERSION', '1.4.3' );

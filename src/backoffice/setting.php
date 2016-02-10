@@ -4,7 +4,6 @@
 		if ( isset( $_POST['sqw-ws-name'] ) && isset( $_POST['sqw-ws-name'] ) ) {
 			$add_ws = sqw_add_website( $_POST, $sqw_token );
 		}
-		$sqw_webmaster = $signinr > 0 ? $signinr : sqweb_check_token( $sqw_token );
 		if ( $sqw_webmaster > 0 ) {
 			if ( isset( $_GET['website'] ) && 'add' == $_GET['website'] ) {
 				?>
@@ -16,7 +15,7 @@
 				</form>
 				<?php
 			} else {
-				$sqw_sites = sqw_get_sites( $sqw_webmaster );
+				$sqw_sites = sqw_get_sites();
 				if ( false != $sqw_sites ) {
 					$selectbtheme = '';
 					$selectgtheme = '';

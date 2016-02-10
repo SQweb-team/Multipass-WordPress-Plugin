@@ -93,12 +93,14 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'cookies' => array(),
 			)
 		);
+		$response = json_decode( $return['body'] );
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
-		} else if ( ! json_decode( $return['body'] ) == false ) {
+		} else if ( ! $response  == false ) {
+			update_option( 'sqw_token', $response->token );
 			return ( 1 );
 		}
 	}
@@ -143,8 +145,8 @@ function sqweb_sign_in( $email, $password ) {
 			$response = json_decode( $return['body'] );
 
 			if ( isset( $response->token ) ) {
-				add_option( 'sqw_token', $response->token );
-				return $response->user->id;
+				update_option( 'sqw_token', $response->token );
+				return ( 1 );
 			}
 		}
 	}
@@ -204,7 +206,7 @@ function sqweb_check_token( $token ) {
  * @return int
  */
 
-function sqw_get_sites( $id ) {
+function sqw_get_sites() {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
 
@@ -214,7 +216,6 @@ function sqw_get_sites( $id ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		$token = get_option( 'sqw_token' );
 		$return = wp_remote_post( SQW_ENDPOINT . 'websites', array(
 			'method' => 'POST',
 			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
@@ -225,7 +226,7 @@ function sqw_get_sites( $id ) {
 			'headers' => array(),
 			'user-agent' => $user_agent,
 			'body' => array(
-			'token' => $token,
+			'token' => get_option( 'sqw_token' ),
 			),
 			'cookies' => array(),
 			)
@@ -283,8 +284,8 @@ function sqw_add_website( $data, $token ) {
 		} else {
 			$res = json_decode( $return['body'] );
 
-			if ( $res->status != 0 ) {
-				return ( 1 );
+			if ( $res->status == 1 ) {
+				return ( $res->website );
 			}
 		}
 	}
