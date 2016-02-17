@@ -1,6 +1,4 @@
 <?php
-
-// Building the form
 $errorc = 0;
 if ( ! empty( $_POST['sqw-emailc'] ) || ! empty( $_POST['sqw-passwordc'] ) ) {
 	if ( sqweb_sign_in( $_POST['sqw-emailc'], $_POST['sqw-passwordc'] ) ) {
@@ -12,8 +10,7 @@ if ( ! empty( $_POST['sqw-emailc'] ) || ! empty( $_POST['sqw-passwordc'] ) ) {
 			$blogname = get_option( 'blogname' );
 			$siteurl = get_option( 'siteurl' );
 		}
-		if ( $websites = sqw_get_sites() )
-		{
+		if ( $websites = sqw_get_sites() ) {
 			foreach ( $websites as $key => $value ) {
 				if ( $value->url == $siteurl ) {
 					update_option( 'wsid', $value->id );
@@ -21,7 +18,7 @@ if ( ! empty( $_POST['sqw-emailc'] ) || ! empty( $_POST['sqw-passwordc'] ) ) {
 				}
 			}
 		}
-		if ( $value->url != $current_site->siteurl ) {
+		if ( ! get_option( 'wsid' ) ) {
 			sqw_add_website( [ 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ], get_option( 'sqw_token' ) );
 		}
 	}
@@ -31,8 +28,8 @@ if ( ! empty( $_POST['sqw-emailc'] ) || ! empty( $_POST['sqw-passwordc'] ) ) {
 
 $sqw_token = (get_option( 'sqw_token' ) != false) ? get_option( 'sqw_token' ) : '';
 $wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '';
-$flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : 'Remove ads';
-$flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : 'Connected';
+$flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : '';
+$flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : '';
 $fmes = (get_option( 'fmes' ) != false) ? get_option( 'fmes' ) : '';
 $btheme = (get_option( 'btheme' ) != false) ? get_option( 'btheme' ) : 'blue';
 $lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
@@ -46,7 +43,7 @@ if ( ! empty( $sqw_token ) ) {
 
 include_once 'head.php';
 include_once 'tutoriel.php';
-/*} elseif ( ! empty( $sqw_token ) ) {
+/*if ( ! empty( $sqw_token ) ) {
 	include_once 'setting.php';
 	if ( ! empty( $wsid ) && ! empty( $wmid ) ) {
 		include_once 'stats.php';

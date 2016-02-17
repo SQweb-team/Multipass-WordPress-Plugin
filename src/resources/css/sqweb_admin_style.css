@@ -377,6 +377,13 @@ ul li span.sqweb-col {
     margin-bottom: 15px;
 }
 
+.sqweb-button-small {
+    min-width: 70%;
+    height: 60px !important;
+    padding: 5% 10px;
+    margin: 12.5% auto;
+}
+
 .sqweb-half-pipe {
     width: 49%;
     float: left;
@@ -459,12 +466,16 @@ h2 {
 }
 
 .sqweb-choice {
-    margin-top: -20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     padding: 0 35px;
 }
 
 .sqw-connect {
+    margin-bottom: 20px;
+}
+
+.sqw-propal {
     margin-bottom: 20px;
 }
 
