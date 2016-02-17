@@ -1,6 +1,6 @@
 <?php
 
-include_once ('transpartext.php');
+include_once( 'transpartext.php' );
 
 /**
  * Declaring and adding widget
@@ -62,10 +62,10 @@ function sqweb_register_admin_menu() {
 
 			if ( isset( $_POST['squarednbart'], $_POST['artbyday'] ) ) {
 				update_option( 'artbyday', $_POST['artbyday'] );
-				$wpdb->query("CREATE TABLE IF NOT EXISTS {$wpdb->prefix}sqw_limit (id INT AUTO_INCREMENT PRIMARY KEY, ip VARCHAR(255) NOT NULL, nbarticles INT NOT NULL, seeingart TEXT NOT NULL, time BIGINT NOT NULL)");
+				$wpdb->query( "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}sqw_limit (id INT AUTO_INCREMENT PRIMARY KEY, ip VARCHAR(255) NOT NULL, nbarticles INT NOT NULL, seeingart TEXT NOT NULL, time BIGINT NOT NULL)" );
 			} else {
 				delete_option( 'artbyday' );
-				$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}sqw_limit");
+				$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sqw_limit" );
 			}
 
 			if ( isset( $_POST['squareddateart'], $_POST['dateart'] ) ) {
@@ -171,22 +171,22 @@ add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_styles' );
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'sqw_enqueue_styles' );
 
-function sqw_login_content($content) {
+function sqw_login_content( $content ) {
 	global $wpdb;
 	$wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '0';
 	$lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
-	$connectsqw = '<div><button onClick="sqw.modal_first()">'. __('Content restricted to subscribers, Click here to activate your account.', 'sqweb') .'</button></div>';
+	$connectsqw = '<div><button onClick="sqw.modal_first()">'. __( 'Content restricted to subscribers, Click here to activate your account.', 'sqweb' ) .'</button></div>';
 	if ( get_option( 'categorie' ) ) {
 		$categorie = unserialize( get_option( 'categorie' ) );
-		$categorie = is_array($categorie) ? $categorie : array();
+		$categorie = is_array( $categorie ) ? $categorie : array();
 		$category = get_the_category();
-		foreach ($category as $value) {
-			foreach ($categorie as $cat) {
-				if ($value->slug == $cat) {
+		foreach ( $category as $value ) {
+			foreach ( $categorie as $cat ) {
+				if ( $value->slug == $cat ) {
 					if ( get_option( 'dateart' ) !== false ) {
 						if ( get_post_time( 'U', true ) > time() - get_option( 'dateart' ) * 86400 ) {
 							if ( get_option( 'cutartperc' ) !== false ) {
-								return transparent($content, get_option( 'cutartperc' )) . $connectsqw;
+								return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
 							} else {
 								return $connectsqw;
 							}
@@ -194,14 +194,14 @@ function sqw_login_content($content) {
 					}
 					if ( get_option( 'artbyday' ) !== false ) {
 						$id = get_the_ID();
-						$count = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '" . $_SERVER['REMOTE_ADDR'] . "' AND time > '" . (time() - 86400) . "' ORDER BY id DESC");
+						$count = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '" . $_SERVER['REMOTE_ADDR'] . "' AND time > '" . (time() - 86400) . "' ORDER BY id DESC" );
 						if ( empty( $count ) ) {
-							$wpdb->query("INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('" . $_SERVER['REMOTE_ADDR'] . "', 1, '" . serialize(array($id)) . "', " . time() . ")");
+							$wpdb->query( "INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('" . $_SERVER['REMOTE_ADDR'] . "', 1, '" . serialize( array( $id ) ) . "', " . time() . ')' );
 						} elseif ( ! empty( $count['0'] ) && $count['0']->nbarticles >= get_option( 'artbyday' ) ) {
 							$newseeing = unserialize( $count['0']->seeingart );
 							if ( ! in_array( $id, $newseeing ) ) {
 								if ( get_option( 'cutartperc' ) !== false ) {
-									return transparent($content, get_option( 'cutartperc' )) . $connectsqw;
+									return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
 								} else {
 									return $connectsqw;
 								}
@@ -210,13 +210,13 @@ function sqw_login_content($content) {
 							$newseeing = unserialize( $count['0']->seeingart );
 							if ( ! in_array( $id, $newseeing ) ) {
 								$newseeing = serialize( array_merge( $newseeing, array( $id ) ) );
-								$wpdb->query("UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '" . $newseeing . "' WHERE id = " . $count['0']->id);
+								$wpdb->query( "UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '" . $newseeing . "' WHERE id = " . $count['0']->id );
 							}
 						}
 						break;
 					}
 					if ( get_option( 'cutartperc' ) !== false ) {
-						return transparent($content, get_option( 'cutartperc' )) . $connectsqw;
+						return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
 					}
 				}
 			}
