@@ -238,7 +238,7 @@ function sqw_get_sites() {
 			}
 		} else {
 			$response = json_decode( $return['body'] );
-			if ( ! $response->status == false ) {
+			if ( ! false == $response->status ) {
 				return $response->websites;
 			}
 		}
@@ -284,7 +284,7 @@ function sqw_add_website( $data, $token ) {
 		} else {
 			$res = json_decode( $return['body'] );
 
-			if ( $res->status == 1 ) {
+			if ( 1 == $res->status ) {
 				return ( $res->website );
 			}
 		}
