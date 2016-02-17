@@ -448,7 +448,7 @@ h2 {
 .sqw-li li {
     font-size: 10px;
     text-align: left;
-    list-style-type: disc; 
+    list-style-type: disc;
 }
 
 .sqw-p {
@@ -496,12 +496,12 @@ h2 {
     background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0 );
     margin: 20px auto;
     margin-top: -5px;
-    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
@@ -520,16 +520,16 @@ h2 {
     left: 4px;
     top: 4px;
 
-    -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
 
     background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
     background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
     background: -o-linear-gradient(top, #222 0%, #45484d 100%);
     background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
     background: linear-gradient(top, #222 0%, #45484d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0 );
 }
 
 .squared label:after {
@@ -540,20 +540,20 @@ h2 {
     position: absolute;
     width: 16px;
     height: 16px;
-    background: #00BFFE;
+    background: #00bffe;
 
-    background: -webkit-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: -moz-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: -o-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: -ms-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: linear-gradient(top, #00BFFE 0%, #0094C5 100%);
+    background: -webkit-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: -moz-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: -o-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: -ms-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: linear-gradient(top, #00bffe 0%, #0094c5 100%);
 
     top: 2px;
     left: 2px;
 
-    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .squared input[type=checkbox]:checked:before {
@@ -588,16 +588,16 @@ h2 {
     background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
     background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0 );
     margin: 20px auto;
 
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
 
-    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
@@ -613,16 +613,16 @@ h2 {
     left: 4px;
     top: 4px;
 
-    -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
 
     background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
     background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
     background: -o-linear-gradient(top, #222 0%, #45484d 100%);
     background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
     background: linear-gradient(top, #222 0%, #45484d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0 );
 }
 
 .rounded label:after {
@@ -633,13 +633,13 @@ h2 {
     position: absolute;
     width: 16px;
     height: 16px;
-    background: #00BFFE;
+    background: #00bffe;
 
-    background: -webkit-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: -moz-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: -o-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: -ms-linear-gradient(top, #00BFFE 0%, #0094C5 100%);
-    background: linear-gradient(top, #00BFFE 0%, #0094C5 100%);
+    background: -webkit-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: -moz-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: -o-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: -ms-linear-gradient(top, #00bffe 0%, #0094c5 100%);
+    background: linear-gradient(top, #00bffe 0%, #0094c5 100%);
 
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -647,9 +647,9 @@ h2 {
     top: 2px;
     left: 2px;
 
-    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .rounded label:hover::after {
