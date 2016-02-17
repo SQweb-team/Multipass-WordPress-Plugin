@@ -11,15 +11,10 @@
 
 global $wpdb;
 
-if ( ! empty( $_GET['page'] ) && is_admin() && 'SQwebAdmin' == $_GET['page'] ) {
-	ob_start();
-}
-
 /**
  * @SuppressWarnings(PHPMD.Superglobals)
  */
 function sqw_site_url() {
-
 	$protocol = ( ! empty( $_SERVER['HTTPS'] ) && 'off' !== $_SERVER['HTTPS'] || 443 == $_SERVER['SERVER_PORT'] ) ? 'https://' : 'http://';
 	return $protocol . $_SERVER['HTTP_HOST'];
 }
@@ -27,4 +22,4 @@ function sqw_site_url() {
 // Self-Explanatory
 define( 'SQW_ENDPOINT', 'https://api.sqweb.com/' );
 define( 'DEBUG_MODE', 0 );
-define( 'SQW_VERSION', '1.4.2' );
+define( 'SQW_VERSION', '1.4.3' );

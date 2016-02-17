@@ -6,7 +6,6 @@
 
 class BuildScript
 {
-	private static $_wmid;
 	private static $_wsid;
 	private static $_flogin;
 	private static $_flogout;
@@ -21,16 +20,14 @@ class BuildScript
 	public function generate() {
 
 		// Getting the options
-		self::$_wmid = (get_option( 'wmid' ) !== '') ? get_option( 'wmid' ) : '0';
-		self::$_wsid = (get_option( 'wsid' ) !== '') ? get_option( 'wsid' ) : '0';
-		self::$_targets = (get_option( 'targets' ) !== '' && get_option( 'targets' ) != 'oa') ? get_option( 'targets' ) : 'false';
-		self::$_fmes = (get_option( 'fmes' ) !== '') ? get_option( 'fmes' ) : '';
-		self::$_lang = (get_option( 'lang' ) !== '') ? get_option( 'lang' ) : 'en';
-		self::$_flogin = (get_option( 'flogin' ) !== '') ? get_option( 'flogin' ) : 'Remove ads';
-		self::$_flogout = (get_option( 'flogout' ) !== '') ? get_option( 'flogout' ) : 'Connected';
+		self::$_wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '0';
+		self::$_targets = (get_option( 'targets' ) == true) ? 'true' : 'false';
+		self::$_fmes = (get_option( 'fmes' ) != false) ? get_option( 'fmes' ) : '';
+		self::$_lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
+		self::$_flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : 'Remove ads';
+		self::$_flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : 'Connected';
 		// Assembling
 		echo '<script data-cfasync="false">var _sqw = {
-					id_webmaster: ' . self::$_wmid . ',
 					id_site: ' . self::$_wsid . ',
 					debug: false,
 					targeting: ' . self::$_targets . ',
