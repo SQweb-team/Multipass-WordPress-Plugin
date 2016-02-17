@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 1.4.2
+Stable tag: 1.5.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -73,6 +73,10 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v1.5.0 =
+* Major overhaul of the configuration panel.
+* Introduced new options, including a fully customizable paywall.
 
 = v1.4.2 =
 Fixed permanent admin connection (again).
@@ -178,6 +182,9 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= v1.5.0 =
+Major overhaul of the configuration panel. Introduced new options, including a fully customizable paywall.
 
 = v1.4.2 =
 Fixed admin connection.
