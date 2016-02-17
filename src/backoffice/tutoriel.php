@@ -6,7 +6,7 @@
 					<h4><?php _e( 'SQweb is a multisite membership plugin', 'sqweb' ); ?></h4>
 					<p class="text-left sqw-p">
 						<?php _e( 'Users subscribe to SQweb for a premium surf on partners websites.', 'sqweb' ); ?>
-						<?php _e( 'By joining our network, you’ll get a share of our users subscription whenever they visit your website.', 'sqweb' ); ?> <a id="moreinfo1" href="#"><?php _e('More info', 'sqweb'); ?></a>
+						<?php _e( 'By joining our network, you’ll get a share of our users subscription whenever they visit your website.', 'sqweb' ); ?> <a id="moreinfo1" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
 					</p>
 					<div id="more1" style="display: none;">
 						<ul class="text-left sqw-li">
@@ -22,7 +22,7 @@
 				<div class="text-center">
 					<h4><?php _e( 'SQweb is the solution to adblock', 'sqweb' ); ?></h4>
 					<p class="text-left sqw-p">
-						<?php _e( 'If you have ads on your website, the SQweb plugin allows you to resolve the adblocking problem. SQweb is accepted by users and work with all advertising networks.', 'sqweb' ); ?>  <a id="moreinfo2" href="#"><?php _e('More info', 'sqweb'); ?></a>
+						<?php _e( 'If you have ads on your website, the SQweb plugin allows you to resolve the adblocking problem. SQweb is accepted by users and work with all advertising networks.', 'sqweb' ); ?>  <a id="moreinfo2" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
 					</p>
 					<div id="more2" style="display: none;">
 						<ul class="text-left sqw-li"> 
@@ -93,13 +93,13 @@
 					<div class="sqweb-choice">
 						<?php
 							$scategorie = unserialize( get_option( 'categorie' ) );
-							if ( ! $scategorie ) {
-								$scategorie = [];
-							}
+						if ( ! $scategorie ) {
+							$scategorie = [];
+						}
 							$categorie = get_categories();
-							foreach ( $categorie as $value ) {
-								echo '<div class="sqweb-right" style="float: left;"><input type="checkbox" name="categorie[]" value="'. $value->slug .'" '. ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) .'>'. $value->name .'</input></div>';
-							}
+						foreach ( $categorie as $value ) {
+							echo '<div class="sqweb-right" style="float: left;"><input type="checkbox" name="categorie[]" value="'. $value->slug .'" '. ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) .'>'. $value->name .'</input></div>';
+						}
 						?>
 						<div class="clear"></div>
 					</div>
@@ -110,11 +110,11 @@
 							<input type="checkbox" id="squared%art" name="squared%art" <?php echo ( get_option( 'cutartperc' ) !== false ? 'checked' : '' ); ?>/>
 							<label for="squared%art"></label>
 						</div>
-						<span class="squaredalign text-left" style="margin-left: 40px; margin-top: -50px;"><?php _e('I want a part of my content to be displayed for non paying users. If you use this option only the beginning of the post will be displayed.', 'sqweb'); ?></span>
+						<span class="squaredalign text-left" style="margin-left: 40px; margin-top: -50px;"><?php _e( 'I want a part of my content to be displayed for non paying users. If you use this option only the beginning of the post will be displayed.', 'sqweb' ); ?></span>
 					</div>
 					<div class="clear"></div>
 					<div class="sqweb-choice" id="%art" <?php echo ( get_option( 'cutartperc' ) !== false ? '' : 'style="display: none;"' ); ?>>
-						<p><?php _e('How much % of the articles do you want to show free users, free users and search engines will see this ?', 'sqweb'); ?></p>
+						<p><?php _e( 'How much % of the articles do you want to show free users, free users and search engines will see this ?', 'sqweb' ); ?></p>
 						<input type="number" name="perctart" min="0" max="100" value="<?php echo ( get_option( 'cutartperc' ) !== false ? get_option( 'cutartperc' ) : '15' ); ?>"/>%
 					</div>
 				</div>
@@ -124,12 +124,12 @@
 							<input type="checkbox" id="squarednbart" name="squarednbart" <?php echo ( get_option( 'artbyday' ) !== false ? 'checked' : '' ); ?>/>
 							<label for="squarednbart"></label>
 						</div>
-						<span class="squaredalign text-left" style="margin-left: 40px; margin-top: -50px;"><?php _e('Start restricting content after a number of page views this mean any user will see part of your content and they will be blocked.', 'sqweb'); ?></span>
+						<span class="squaredalign text-left" style="margin-left: 40px; margin-top: -50px;"><?php _e( 'Start restricting content after a number of page views this mean any user will see part of your content and they will be blocked.', 'sqweb' ); ?></span>
 					</div>
 					<div class="clear"></div>
 					<div class="sqweb-choice" id="nbart" <?php echo ( get_option( 'artbyday' ) !== false ? '' : 'style="display: none;"' ); ?>>
-						<p><?php _e('How many articles free users can see daily before being blocked ?', 'sqweb'); ?></p>
-						<input type="number" min="0" max="100" value="<?php echo ( get_option( 'artbyday' ) !== false ? get_option( 'artbyday' ) : '5' ); ?>" name="artbyday"/> <?php _e('Articles per day', 'sqweb'); ?>
+						<p><?php _e( 'How many articles free users can see daily before being blocked ?', 'sqweb' ); ?></p>
+						<input type="number" min="0" max="100" value="<?php echo ( get_option( 'artbyday' ) !== false ? get_option( 'artbyday' ) : '5' ); ?>" name="artbyday"/> <?php _e( 'Articles per day', 'sqweb' ); ?>
 					</div>
 				</div>
 				<div class="sqw-propal">
@@ -142,14 +142,14 @@
 					</div>
 					<div class="clear"></div>
 					<div class="sqweb-choice" id="dateart" style="<?php echo ( get_option( 'dateart' ) !== false ? '' : 'display: none;' ); ?> margin-top: -10px;">
-						<p><?php _e('How many days will the posts remain restricted ?', 'sqweb'); ?></p>
+						<p><?php _e( 'How many days will the posts remain restricted ?', 'sqweb' ); ?></p>
 						<input type="number" min="0" max="365" value="<?php echo ( get_option( 'dateart' ) !== false ? get_option( 'dateart' ) : '1' ); ?>" name="dateart"/> <?php _e( 'days before end of restriction', 'sqweb' ); ?>
 					</div>
 				</div>
 			</div>
 			<div id="af" style="display: none;">
 				<div class="sqw-propal">
-					<?php _e('SQweb Users must navigate without ADS on my website.', 'sqweb'); ?>
+					<?php _e( 'SQweb Users must navigate without ADS on my website.', 'sqweb' ); ?>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -166,7 +166,7 @@
 			<div class="clear"></div>
 			<div class="sqweb-user-text" style="margin-bottom: 100px;">
 				<div class="sqweb-tiers-pipe sqweb-more-right" style="margin-top: 2px">
-					<span><?php _e('Language of your website', 'sqweb'); ?></span>
+					<span><?php _e( 'Language of your website', 'sqweb' ); ?></span>
 					<select class="sqweb-admin-input sqw-select" name="lang" id="sqweb-lang-select">';
 						<option value="fr"><?php _e( 'French', 'sqweb' ); ?></option>
 						<option value="en"><?php _e( 'English', 'sqweb' ); ?></option>
@@ -209,7 +209,7 @@
 			</div>
 			<h4><?php _e( 'ADBLOCK MANAGER', 'sqweb' ); ?></h4>
 			<p>
-				<?php _e( 'Since 2013 we developped an expertise about ad-blocking by working with hundreds of publishers. Our Adblock Manager ables you to measure the impact of adblockers on your websites, target your audience, and deploy an efficient response.', 'sqweb' ); ?> <a id="moreinfo3" href="#"><?php _e('More info', 'sqweb'); ?></a>
+				<?php _e( 'Since 2013 we developped an expertise about ad-blocking by working with hundreds of publishers. Our Adblock Manager ables you to measure the impact of adblockers on your websites, target your audience, and deploy an efficient response.', 'sqweb' ); ?> <a id="moreinfo3" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
 			<p>
 			<div id="more3" style="display: none;">
 				<div class="sqweb-half-pipe sqweb-right">
