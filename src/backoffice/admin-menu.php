@@ -19,7 +19,7 @@ if ( ! empty( $_POST['sqw-emailc'] ) || ! empty( $_POST['sqw-passwordc'] ) ) {
 			}
 		}
 		if ( ! get_option( 'wsid' ) ) {
-			sqw_add_website( [ 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ], get_option( 'sqw_token' ) );
+			sqw_add_website( array( 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ), get_option( 'sqw_token' ) );
 		}
 	}
 } else {
@@ -37,22 +37,15 @@ $targeting = (get_option( 'targets' ) != false) ? get_option( 'targets' ) : 'fal
 
 if ( ! empty( $sqw_token ) ) {
 	$sqw_webmaster = sqweb_check_token( $sqw_token );
+	if ( ! sqweb_check_token( $sqw_token ) ) {
+		delete_option( 'sqw_token' );
+		wp_redirect( remove_query_arg( 'logout' ) );
+		exit;
+	}
 } else {
 	$sqw_webmaster = 0;
 }
 
 include_once 'head.php';
 include_once 'tutoriel.php';
-/*if ( ! empty( $sqw_token ) ) {
-	include_once 'setting.php';
-	if ( ! empty( $wsid ) && ! empty( $wmid ) ) {
-		include_once 'stats.php';
-	}
-} else {
-	if ( isset( $_GET['action'] ) && 'signup' == $_GET['action'] ) {
-		include_once 'signup.php';
-	} else {
-		include_once 'signin.php';
-	}
-}*/
 include_once 'footer.php';
