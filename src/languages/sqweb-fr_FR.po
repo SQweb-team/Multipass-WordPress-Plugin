@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
 "POT-Creation-Date: 2016-02-17 16:30+0100\n"
-"PO-Revision-Date: 2016-02-17 16:39+0100\n"
+"PO-Revision-Date: 2016-02-17 16:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -337,11 +337,11 @@ msgstr ""
 
 #: backoffice/tutoriel.php:42
 msgid "Adblock analytics<br> and SQweb subscription"
-msgstr "Je veut les statistiques Adblocks<br> et l’abonnement sqweb"
+msgstr "Les statistiques Adblocks<br> et l’abonnement sqweb"
 
 #: backoffice/tutoriel.php:45
 msgid "Adblock analytics"
-msgstr "Statistiques Adblocks"
+msgstr "Les statistiques Adblocks"
 
 #: backoffice/tutoriel.php:51 backoffice/tutoriel.php:57
 #: backoffice/tutoriel.php:162 backoffice/tutoriel.php:208
