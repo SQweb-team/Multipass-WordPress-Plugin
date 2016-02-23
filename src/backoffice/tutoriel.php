@@ -3,7 +3,7 @@
 		<div id="step1">
 			<?php if ( isset( $_GET['save'] ) && ! get_option( 'sqw_error' ) ) { ?>
 			<span class="sqw-success">
-				<?php _e( 'The configuration of SQweb is over, you can consult your stats on your dashboard on ', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
+				<?php _e( 'The configuration of SQweb is over, to display the SQweb button on your pages, go to your Widget page and search for "SQweb button". You can also consult your stats on your dashboard on ', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
 			</span>
 			<?php } elseif ( get_option( 'sqw_error' ) ) { ?>
 			<span class="sqw-error">
@@ -271,7 +271,7 @@
 			<div class="text-left">
 				<div class="button-primary sqw-back" onClick="document.getElementById('step3').style.display = 'none'; document.getElementById('step2c').style.display = 'initial';"><?php _e( 'Back', 'sqweb' ) ?></div>
 			</div>
-			<h4><?php _e( 'Finish installation', 'sqweb' ); ?></h4>
+			<h4><?php _e( 'You finished the installation, to display the SQweb button, go to your Widget menu and search for the widget called "SQweb Button"', 'sqweb' ); ?></h4>
 			<?php if ( ! $sqw_webmaster > 0 ) { ?>
 			<div class="sqw-connect">
 				<div class="button-primary sqw-button" onClick="document.getElementById('haveaccount').style.display = 'none'; document.getElementById('noaccount').style.display = 'initial';"><?php _e( 'I don\'t have account', 'sqweb' ) ?></div>
