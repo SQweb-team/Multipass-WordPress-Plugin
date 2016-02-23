@@ -75,7 +75,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v1.5.1 =
-* Improved the end of the installation guidance
+* Improved end of the installation guidance.
 
 = v1.5.0 =
 * Major overhaul of the configuration panel.
@@ -187,7 +187,7 @@ Fixed Trench translations.
 == Upgrade notice ==
 
 = v1.5.1 =
-* Improved the end of the installation guidance
+* Improved end of the installation guidance.
 
 = v1.5.0 =
 Major overhaul of the configuration panel. Introduced new options, including a fully customizable paywall.
