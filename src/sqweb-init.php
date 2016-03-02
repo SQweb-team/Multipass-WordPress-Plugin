@@ -136,6 +136,9 @@ buildScript::save();
 */
 function sqw_enqueue_styles() {
 
+	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
+		return;
+	}
 	wp_enqueue_style(
 		'sqweb-style',
 		plugins_url( '/resources/css/sqweb_style.css', __FILE__ )
@@ -225,13 +228,9 @@ function sqw_login_content( $content ) {
 	return $content;
 }
 
-function sqw_login_template() {
-	include( TEMPLATEPATH.'/page.php' );
-	exit;
-}
-
-$wsid = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
-if ( sqweb_check_credentials( $wsid ) == 0 ) {
-	add_filter( 'the_content', 'sqw_login_content' );
-	add_action( 'template_redirect', 'sqw_login_template' );
+if ( get_option( 'categorie' ) ) {
+	$wsid = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
+	if ( sqweb_check_credentials( $wsid ) == 0 ) {
+		add_filter( 'the_content', 'sqw_login_content' );
+	}
 }
