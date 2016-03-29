@@ -55,7 +55,7 @@ if ( sqweb_check_credentials( get_option( 'wsid' ) ) > 0 ) {
 					);
 
 	foreach ( $array_option as $value ) {
-		add_filter( 'option_'.$value, 'filter_get_option', 100 );
+		add_filter( 'option_' . $value, 'filter_get_option', 100 );
 	}
 
 	/**

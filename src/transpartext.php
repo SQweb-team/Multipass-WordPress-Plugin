@@ -12,7 +12,7 @@ function transparent( $text, $percent ) {
 	$alpha = 1;
 	$begin = 0;
 	while ( $begin < $nbr ) {
-		$final[ $begin ] = '<span style="opacity: '. $alpha .'">'. $array_text[ $begin ] .'</span>';
+		$final[ $begin ] = '<span style="opacity: ' . $alpha . '">' . $array_text[ $begin ] . '</span>';
 		$begin++;
 		$alpha -= $lambda;
 	}

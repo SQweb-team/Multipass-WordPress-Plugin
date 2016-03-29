@@ -19,8 +19,13 @@ if ( ! empty( $_POST['sqw-emailc'] ) || ! empty( $_POST['sqw-passwordc'] ) ) {
 			}
 		}
 		if ( ! get_option( 'wsid' ) ) {
-			sqw_add_website( array( 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ), get_option( 'sqw_token' ) );
+			$website = sqw_add_website( array( 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ), get_option( 'sqw_token' ) );
+			if ( $website ) {
+				update_option( 'wsid', $website->id );
+			}
 		}
+	} else {
+		update_option( 'sqw_error', 1 );
 	}
 } else {
 	$errorc = 1;

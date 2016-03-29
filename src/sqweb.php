@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Solution to adblocking (detection included).
-Version: 1.6.0
+Version: 1.7.0
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -16,26 +16,26 @@ License: GPL3
  */
 require_once ABSPATH . 'wp-includes/pluggable.php';
 
-load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ).'/languages/' );
+load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
-	add_option( 'sqw_activation', 'true' );
 }
 
 function sqw_deactivation() {
 	sqw_send_data( 'disabled' );
 }
 
-if ( get_option( 'sqw_activation' ) == 'true' ) {
-	add_filter( 'gettext', 'custom_user_message', 10, 2 );
-	delete_option( 'sqw_activation' );
+function sqw_notice_install() {
+	?>
+    <div class="notice notice-success is-dismissible">
+        <p><?php _e( '<b>SQweb notice : </b>You need to log in to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.', 'sample-text-domain' ); ?></p>
+    </div>
+    <?php
 }
 
-function custom_user_message( $translation, $text ) {
-	if ( 'Plugin <strong>activated</strong>.' == $text ) {
-		return __( 'SQweb activated. <b>Notice : </b>You need to sign in and select your domain in order to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.</p>', 'sqweb' ); }
-	return ( $text );
+if ( ! get_option( 'wsid' ) ) {
+	add_action( 'admin_notices', 'sqw_notice_install' );
 }
 
 register_activation_hook( __FILE__, 'sqw_install' );

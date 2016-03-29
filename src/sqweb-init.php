@@ -131,20 +131,6 @@ function sqweb_display_php_info() {
 */
 buildScript::save();
 
-/**
-* CSS + JS
-*/
-function sqw_enqueue_styles() {
-
-	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
-		return;
-	}
-	wp_enqueue_style(
-		'sqweb-style',
-		plugins_url( '/resources/css/sqweb_style.css', __FILE__ )
-	);
-}
-
 function sqwadmin_enqueue_styles( $hook ) {
 
 	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
@@ -172,13 +158,12 @@ function sqwadmin_enqueue_scripts( $hook ) {
 
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_styles' );
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_scripts' );
-add_action( 'wp_enqueue_scripts', 'sqw_enqueue_styles' );
 
 function sqw_login_content( $content ) {
 	global $wpdb;
 	$wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '0';
 	$lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
-	$connectsqw = '<div><button onClick="sqw.modal_first()">'. __( 'Content restricted to subscribers, Click here to activate your account.', 'sqweb' ) .'</button></div>';
+	$connectsqw = '<div><button onClick="sqw.modal_first()">' . __( 'Content restricted to subscribers, Click here to activate your account.', 'sqweb' ) . '</button></div>';
 	if ( get_option( 'categorie' ) ) {
 		$categorie = unserialize( get_option( 'categorie' ) );
 		$categorie = is_array( $categorie ) ? $categorie : array();
