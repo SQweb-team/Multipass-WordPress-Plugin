@@ -1,60 +1,66 @@
 <form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&save=true" method="post">
 	<div class="sqw-setting-box">
 		<div id="step1">
-			<?php if ( isset( $_GET['save'] ) && ! get_option( 'sqw_error' ) ) { ?>
-			<span class="sqw-success">
+			<?php if ( get_option( 'wsid' ) ) { ?>
+			<p class="sqw-success">
 				<?php _e( 'The configuration of SQweb is over, to display the SQweb button on your pages, go to your Widget page and search for "SQweb button". You can also consult your stats on your dashboard on ', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
-			</span>
-			<?php } elseif ( get_option( 'sqw_error' ) ) { ?>
-			<span class="sqw-error">
-				<?php _e( 'A error has appeared, please check you correctly followed the installation.', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
-			</span>
-			<?php
-				delete_option( 'sqw_error' );
-}
-			?>
-			<div class="sqweb-right sqweb-half-pipe">
-				<div class="text-center">
-					<h4><?php _e( 'SQweb is a multisite membership plugin', 'sqweb' ); ?></h4>
-					<p class="text-left sqw-p">
-						<?php _e( 'Users subscribe to SQweb for a premium surf on partners websites.', 'sqweb' ); ?>
-						<?php _e( 'By joining our network, you’ll get a share of our users subscription whenever they visit your website.', 'sqweb' ); ?> <a id="moreinfo1" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
-					</p>
-					<div id="more1" style="display: none;">
-						<ul class="text-left sqw-li">
-							<li><?php _e( 'Fair share of income', 'sqweb' ); ?></li>
-							<li><?php _e( 'Outsoucing of subscribers management', 'sqweb' ); ?></li>
-							<li><?php _e( 'Secured payment (PCI DSS)', 'sqweb' ); ?></li>
-							<li><?php _e( 'Cross platform (PC, tablet, mobile).', 'sqweb' ); ?></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="sqweb-half-pipe">
-				<div class="text-center">
-					<h4><?php _e( 'SQweb is the solution to adblock', 'sqweb' ); ?></h4>
-					<p class="text-left sqw-p">
-						<?php _e( 'If you have ads on your website, the SQweb plugin allows you to resolve the adblocking problem. SQweb is accepted by users and work with all advertising networks.', 'sqweb' ); ?>  <a id="moreinfo2" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
-					</p>
-					<div id="more2" style="display: none;">
-						<ul class="text-left sqw-li"> 
-							<li><?php _e( 'Adblocking statistics', 'sqweb' ); ?></li>
-							<li><?php _e( 'Estimate your losses', 'sqweb' ); ?></li>
-							<li><?php _e( 'Communicate with people using adblock', 'sqweb' ); ?></li>
-							<li><?php _e( 'Global solution to a global problem', 'sqweb' ); ?></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<p class="text-center sqw-p">
-				<?php _e( 'All features are free, select the one you want.', 'sqweb' ); ?>
 			</p>
-			<div class="sqweb-half-pipe sqweb-right">
-				<div class="button-primary sqweb-button-small" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2b').style.display = 'initial';"><?php _e( 'Adblock analytics<br> and SQweb subscription', 'sqweb' ) ?></div>
+			<?php } elseif ( get_option( 'sqw_error' ) ) { ?>
+			<p class="sqw-error">
+				<?php _e( 'A error has appeared, please check you correctly followed the installation.', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
+			</p>
+			<?php
+					delete_option( 'sqw_error' );
+				}
+			?>
+			<div id="basicview" <?php echo get_option( 'wsid' ) ? 'style="display: none;"' : ''; ?>>
+				<div class="sqweb-right sqweb-half-pipe">
+					<div class="text-center">
+						<h4><?php _e( 'SQweb is a multisite membership plugin', 'sqweb' ); ?></h4>
+						<p class="text-left sqw-p">
+							<?php _e( 'Users subscribe to SQweb for a premium surf on partners websites.', 'sqweb' ); ?>
+							<?php _e( 'By joining our network, you’ll get a share of our users subscription whenever they visit your website.', 'sqweb' ); ?> <a id="moreinfo1" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
+						</p>
+						<div id="more1" style="display: none;">
+							<ul class="text-left sqw-li">
+								<li><?php _e( 'Fair share of income', 'sqweb' ); ?></li>
+								<li><?php _e( 'Outsoucing of subscribers management', 'sqweb' ); ?></li>
+								<li><?php _e( 'Secured payment (PCI DSS)', 'sqweb' ); ?></li>
+								<li><?php _e( 'Cross platform (PC, tablet, mobile).', 'sqweb' ); ?></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sqweb-half-pipe">
+					<div class="text-center">
+						<h4><?php _e( 'SQweb is the solution to adblock', 'sqweb' ); ?></h4>
+						<p class="text-left sqw-p">
+							<?php _e( 'If you have ads on your website, the SQweb plugin allows you to resolve the adblocking problem. SQweb is accepted by users and work with all advertising networks.', 'sqweb' ); ?>  <a id="moreinfo2" href="#"><?php _e( 'More info', 'sqweb' ); ?></a>
+						</p>
+						<div id="more2" style="display: none;">
+							<ul class="text-left sqw-li"> 
+								<li><?php _e( 'Adblocking statistics', 'sqweb' ); ?></li>
+								<li><?php _e( 'Estimate your losses', 'sqweb' ); ?></li>
+								<li><?php _e( 'Communicate with people using adblock', 'sqweb' ); ?></li>
+								<li><?php _e( 'Global solution to a global problem', 'sqweb' ); ?></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<p class="text-center sqw-p">
+					<?php _e( 'All features are free, select the one you want.', 'sqweb' ); ?>
+				</p>
+				<div class="sqweb-half-pipe sqweb-right">
+					<div class="button-primary sqweb-button-small" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2b').style.display = 'initial';"><?php _e( 'Adblock analytics<br> and SQweb subscription', 'sqweb' ) ?></div>
+				</div>
+				<div class="sqweb-half-pipe">
+					<div class="button-primary sqweb-button-small" style="padding-top: 13px;" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2c').style.display = 'initial';"><?php _e( 'Adblock analytics', 'sqweb' ) ?></div>
+				</div>
 			</div>
-			<div class="sqweb-half-pipe">
-				<div class="button-primary sqweb-button-small" style="padding-top: 13px;" onClick="document.getElementById('step1').style.display = 'none'; document.getElementById('step2c').style.display = 'initial';"><?php _e( 'Adblock analytics', 'sqweb' ) ?></div>
+			<div id="editconfig" <?php echo get_option( 'wsid' ) ? '' : 'style="display: none;"'; ?>>
+				<div class="padding-bottom"><?php _e('To edit the display of adsense, you need to use the widget SQweb ad control', 'sqweb') ?></div>
+				<div class="button-primary" onClick="document.getElementById('basicview').style.display = 'initial'; document.getElementById('editconfig').style.display = 'none';"><?php _e( 'Restart config', 'sqweb' ) ?></div>
 			</div>
 			<div class="clear"></div>
 		</div>

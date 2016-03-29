@@ -31,7 +31,7 @@ class BuildScript
 					id_site: ' . self::$_wsid . ',
 					debug: false,
 					targeting: ' . self::$_targets . ',
-					msg: "' . addslashes( self::$_fmes ) . '",
+					msg: "' . self::$_fmes . '",
 					i18n: "' . self::$_lang . '"
 				};
 				var _sqw_i18n = {
@@ -50,8 +50,10 @@ class BuildScript
 	 * @return int
 	 */
 	public static function save() {
-		$script = new BuildScript;
-		add_action( 'wp_footer', array( $script, 'generate' ) );
+		if ( get_option( 'wsid' ) ) {
+			$script = new BuildScript;
+			add_action( 'wp_footer', array( $script, 'generate' ) );
+		}
 		return ( 0 );
 	}
 }

@@ -1,4 +1,9 @@
 <div class="sqw-admin-b-right" style="text-align: center;">
+	<div>
+		<?php if ( ! empty( $sqw_token ) ) {
+			_e( 'You are connected', 'sqweb' );
+		} ?>
+	</div>
 	<a href="https://www.sqweb.com/dashboard/support">
 		<?php _e( 'Need help ?', 'sqweb' ) ?>
 	</a>
