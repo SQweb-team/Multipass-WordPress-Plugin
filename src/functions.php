@@ -99,7 +99,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
-		} else if ( ! false == $response ) {
+		} elseif ( ! false == $response ) {
 			update_option( 'sqw_token', $response->token );
 			return ( 1 );
 		}

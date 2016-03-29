@@ -163,7 +163,7 @@ function sqw_login_content( $content ) {
 	global $wpdb;
 	$wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '0';
 	$lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
-	$connectsqw = '<div><button onClick="sqw.modal_first()">'. __( 'Content restricted to subscribers, Click here to activate your account.', 'sqweb' ) .'</button></div>';
+	$connectsqw = '<div><button onClick="sqw.modal_first()">' . __( 'Content restricted to subscribers, Click here to activate your account.', 'sqweb' ) . '</button></div>';
 	if ( get_option( 'categorie' ) ) {
 		$categorie = unserialize( get_option( 'categorie' ) );
 		$categorie = is_array( $categorie ) ? $categorie : array();

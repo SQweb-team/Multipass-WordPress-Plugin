@@ -116,7 +116,7 @@
 						}
 							$categorie = get_categories();
 						foreach ( $categorie as $value ) {
-							echo '<div class="sqweb-right" style="float: left;"><input type="checkbox" name="categorie[]" value="'. $value->slug .'" '. ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) .'>'. $value->name .'</input></div>';
+							echo '<div class="sqweb-right" style="float: left;"><input type="checkbox" name="categorie[]" value="' . $value->slug . '" ' . ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) . '>' . $value->name . '</input></div>';
 						}
 						?>
 						<div class="clear"></div>

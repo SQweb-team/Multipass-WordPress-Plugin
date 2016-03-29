@@ -16,7 +16,7 @@ License: GPL3
  */
 require_once ABSPATH . 'wp-includes/pluggable.php';
 
-load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ).'/languages/' );
+load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
