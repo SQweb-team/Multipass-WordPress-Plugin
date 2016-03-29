@@ -11,7 +11,7 @@
 			</p>
 			<?php
 					delete_option( 'sqw_error' );
-				}
+}
 			?>
 			<div id="basicview" <?php echo get_option( 'wsid' ) ? 'style="display: none;"' : ''; ?>>
 				<div class="sqweb-right sqweb-half-pipe">
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div id="editconfig" <?php echo get_option( 'wsid' ) ? '' : 'style="display: none;"'; ?>>
-				<div class="padding-bottom"><?php _e('To edit the display of adsense, you need to use the widget SQweb ad control', 'sqweb') ?></div>
+				<div class="padding-bottom"><?php _e( 'To edit the display of adsense, you need to use the widget SQweb ad control', 'sqweb' ) ?></div>
 				<div class="button-primary" onClick="document.getElementById('basicview').style.display = 'initial'; document.getElementById('editconfig').style.display = 'none';"><?php _e( 'Restart config', 'sqweb' ) ?></div>
 			</div>
 			<div class="clear"></div>

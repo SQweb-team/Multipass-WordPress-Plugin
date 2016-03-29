@@ -27,14 +27,14 @@ function sqw_deactivation() {
 }
 
 function sqw_notice_install() {
-    ?>
+	?>
     <div class="notice notice-success is-dismissible">
         <p><?php _e( '<b>SQweb notice : </b>You need to log in to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.', 'sample-text-domain' ); ?></p>
     </div>
     <?php
 }
 
-if ( ! get_option('wsid') ) {
+if ( ! get_option( 'wsid' ) ) {
 	add_action( 'admin_notices', 'sqw_notice_install' );
 }
 
