@@ -10,7 +10,7 @@ class SQweb_filter
 
 	public function __construct() {
 
-		if ( defined( 'WPCACHEHOME' ) ) {
+		if ( defined( 'WPCACHEHOME' ) && function_exists( 'add_cacheaction' ) ) {
 			if ( ! file_exists( WPCACHEHOME . '/plugins/sqweb.php' ) ) {
 				file_put_contents( WPCACHEHOME . '/plugins/sqweb.php', '<?php $wp_super_cache_late_init = 1; ?>' );
 			}
@@ -56,7 +56,7 @@ class SQweb_filter
 
 	private function display_ads( $key ) {
 
-		if ( defined( 'WPCACHEHOME' ) ) {
+		if ( defined( 'WPCACHEHOME' ) && function_exists( 'add_cacheaction' ) ) {
 			echo $key;
 		} else {
 			if ( sqweb_check_credentials() > 0 ) {
