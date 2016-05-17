@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
-Version: 1.7.1
+Version: 1.8.0
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -82,8 +82,9 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'add_action_li
 require_once 'config.php';
 require_once 'class/build-script.class.php';
 require_once 'class/widget-sqweb-button.class.php';
-require_once 'class/sqweb-ad-control.class.php';
 require_once 'functions.php';
 require_once 'shortcode-function.php';
 require_once 'sqweb-init.php';
 require_once 'sqweb-filter.php';
+require_once 'sqweb-wsc-filter.php';
+require_once 'class/sqweb-ad-control.class.php';

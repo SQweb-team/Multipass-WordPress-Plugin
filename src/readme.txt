@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.5.1
-Stable tag: 1.7.1
+Stable tag: 1.8.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -46,14 +46,9 @@ In your theme, add the following :
 `do_shortcode('sqweb_button')`
 
 `
-if (function_exists('sqweb_check_credentials')) {
-	$wsid = get_option( 'wsid' );
-	if ( !sqweb_check_credentials( $wsid ) > 0 ) {
-		// ADS
-	} else {
-		// PREMIUM CONTENT
-	}
-}
+<?php
+	SQweb_filter::get_instance()->add_ads('ads');
+?>
 `
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
@@ -74,7 +69,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
-= v1.7.1 =
+= v1.8.0 =
+* Add compatibility with Wordpress Super Cache plugin.
+* Improve ads display method.
 * WordPress 4.5 compatibility.
 * Improved translation.
 

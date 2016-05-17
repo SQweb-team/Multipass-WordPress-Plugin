@@ -21,7 +21,7 @@ class BuildScript
 
 		// Getting the options
 		self::$_wsid = (get_option( 'wsid' ) != false) ? get_option( 'wsid' ) : '0';
-		self::$_targets = (get_option( 'targets' ) == true) ? 'true' : 'false';
+		self::$_targets = 'false';
 		self::$_fmes = (get_option( 'fmes' ) != false) ? get_option( 'fmes' ) : '';
 		self::$_lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
 		self::$_flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : 'Remove ads';

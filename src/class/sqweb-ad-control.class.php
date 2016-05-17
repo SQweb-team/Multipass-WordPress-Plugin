@@ -22,7 +22,7 @@ class SqwebAdControl extends WP_Widget
 		echo $before_widget;
 		echo '<div class="textwidget">';
 		$wsid = get_option( 'wsid' );
-		echo ( sqweb_check_credentials( $wsid ) > 0 ) ? $text : $adblock;
+		SQweb_filter::get_instance()->add_ads( $adblock, $text );
 		echo '</div>';
 		echo $after_widget;
 	}

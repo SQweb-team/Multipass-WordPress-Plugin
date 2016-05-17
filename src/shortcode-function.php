@@ -12,3 +12,5 @@ function sqweb_button_short_code() {
 		echo '<div class="sqweb-button"></div>';
 	}
 }
+
+add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
