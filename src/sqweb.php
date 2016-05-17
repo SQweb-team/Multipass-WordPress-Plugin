@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Solution to adblocking (detection included).
-Version: 1.7.0
+Version: 1.8.0
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -28,10 +28,10 @@ function sqw_deactivation() {
 
 function sqw_notice_install() {
 	?>
-    <div class="notice notice-success is-dismissible">
-        <p><?php _e( '<b>SQweb notice : </b>You need to log in to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.', 'sample-text-domain' ); ?></p>
-    </div>
-    <?php
+	<div class="notice notice-success is-dismissible">
+		<p><?php _e( '<b>SQweb notice : </b>You need to log in to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.', 'sample-text-domain' ); ?></p>
+	</div>
+	<?php
 }
 
 if ( ! get_option( 'wsid' ) ) {
@@ -86,3 +86,4 @@ require_once 'functions.php';
 require_once 'shortcode-function.php';
 require_once 'sqweb-init.php';
 require_once 'sqweb-filter.php';
+require_once 'sqweb-wsc-filter.php';

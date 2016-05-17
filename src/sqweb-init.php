@@ -10,8 +10,6 @@ function register_sqweb_ad_control_widget() {
 	register_widget( 'sqwebAdControl' );
 }
 
-add_action( 'widgets_init', create_function( '', 'return register_widget("sqwebAdControl");' ) );
-
 /**
  * Declaring SQweb Button widget
  */
@@ -20,13 +18,8 @@ function register_widget_sqweb_button() {
 	register_widget( 'widgetSqwebButton' );
 }
 
-add_action( 'widgets_init', create_function( '', 'return register_widget("widgetSqwebButton");' ) );
-
-/**
- * Declaring SQweb Shortcode
- */
-
-add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
+add_action( 'widgets_init', 'register_sqweb_ad_control_widget' );
+add_action( 'widgets_init', 'register_widget_sqweb_button' );
 
 /**
  * Add the backoffice link to wordpress admin sidebar
