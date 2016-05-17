@@ -46,14 +46,9 @@ In your theme, add the following :
 `do_shortcode('sqweb_button')`
 
 `
-if (function_exists('sqweb_check_credentials')) {
-	$wsid = get_option( 'wsid' );
-	if ( !sqweb_check_credentials( $wsid ) > 0 ) {
-		// ADS
-	} else {
-		// PREMIUM CONTENT
-	}
-}
+<?php 
+	SQweb_filter::get_instance()->add_ads('ads');
+?>
 `
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
