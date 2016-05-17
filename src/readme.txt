@@ -41,15 +41,19 @@ If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in 
 
 = The Manual Way =
 
-In your theme, add the following :
+In your theme, to display the button, add the following :
 
 `do_shortcode('sqweb_button')`
+
+To manage your advertisement blocks, use the following function :
 
 `
 <?php
 	SQweb_filter::get_instance()->add_ads('ads');
 ?>
 `
+
+**If you're using Wordpress SuperCache, you must enable "Dynamic Content" under "Advanced Settings".**
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
 
