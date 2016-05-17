@@ -7,7 +7,7 @@
 			</p>
 			<?php } elseif ( get_option( 'sqw_error' ) ) { ?>
 			<p class="sqw-error">
-				<?php _e( 'A error has appeared, please check you correctly followed the installation.', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
+				<?php _e( 'An error has occured. Please check the installation instructions.', 'sqweb' ); ?> <a href="www.sqweb.com">www.sqweb.com</a>
 			</p>
 			<?php
 					delete_option( 'sqw_error' );
@@ -132,7 +132,7 @@
 					</div>
 					<div class="clear"></div>
 					<div class="sqweb-choice" id="%art" <?php echo ( get_option( 'cutartperc' ) !== false ? '' : 'style="display: none;"' ); ?>>
-						<p><?php _e( 'How much % of the articles do you want to show free users, free users and search engines will see this ?', 'sqweb' ); ?></p>
+						<p><?php _e( 'Which percentage of each article would you like to show to regular users and search engines ?', 'sqweb' ); ?></p>
 						<input type="number" name="perctart" min="0" max="100" value="<?php echo ( get_option( 'cutartperc' ) !== false ? get_option( 'cutartperc' ) : '15' ); ?>"/>%
 					</div>
 				</div>
@@ -300,7 +300,7 @@
 					<label for="password">
 						<?php _e( 'Password', 'sqweb' ); ?>
 					</label>
-					<input class="sqweb-admin-auth-input" type="password" name="sqw-password" value="" placeholder="<?php _e( 'password', 'sqweb' ); ?>" />
+					<input class="sqweb-admin-auth-input" type="password" name="sqw-password" value="" placeholder="<?php _e( 'Password', 'sqweb' ); ?>" />
 				</div>
 				<input class="button button-primary button-large sqweb-admin-auth-button" type="submit" name="Submit" value="<?php _e( 'Sign up', 'sqweb' ); ?>" />
 			</div>
@@ -315,7 +315,7 @@
 					<label for="password">
 						<?php _e( 'Password', 'sqweb' ); ?>
 					</label>
-					<input class="sqweb-admin-auth-input" type="password" id="password" name="sqw-passwordc" value="" placeholder="<?php _e( 'password', 'sqweb' ); ?>" />
+					<input class="sqweb-admin-auth-input" type="password" id="password" name="sqw-passwordc" value="" placeholder="<?php _e( 'Password', 'sqweb' ); ?>" />
 				</div>
 				<input class="button button-primary button-large sqweb-admin-auth-button" type="submit" name="Submit" value="<?php _e( 'Sign in', 'sqweb' ); ?>" />
 			</div>

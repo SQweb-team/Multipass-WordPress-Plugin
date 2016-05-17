@@ -2,8 +2,8 @@
 Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
-Tested up to: 4.4
-Stable tag: 1.7.0
+Tested up to: 4.5.1
+Stable tag: 1.7.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -74,6 +74,10 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v1.7.1 =
+* WordPress 4.5 compatibility.
+* Improved translation.
+
 = v1.7.0 =
 * Fixed bad config for existing users.
 * Fixed no error message when failing connection.
@@ -84,7 +88,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 * Fixed including unused CSS.
 
 = v1.5.2 =
-* Improved traduction.
+* Improved translation.
 
 = v1.5.1 =
 * Improved end of the installation guidance.

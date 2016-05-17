@@ -29,6 +29,7 @@ before_script:
     - phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
     - phpcs -i
     - bash src/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+    - git clone git://github.com/SQweb-team/SQweb-Coding-Style.git ~/build/SQweb-team/SQweb-Coding-Style
     - nvm install 0.12
     - npm install
 
@@ -38,7 +39,7 @@ script:
 #    - "cd src && phpunit"
 
 notifications:
-    slack: sqweb:M0hKi2sdzb1VxoxtMeo4F3lh
+    slack: nwork:uXpjfOLXGLjDDxjthLtphsrz
     email: false
 
 git:

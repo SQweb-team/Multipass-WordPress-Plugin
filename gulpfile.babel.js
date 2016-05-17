@@ -14,8 +14,9 @@ gulp.task('css-lint', function() {
   gulp.src('src/resources/css/*.css')
     .pipe(stylelint({
       reporters: [
-        stylelintReporter()
+        {formatter: 'verbose', console: true},
       ],
+      configFile: '../SQweb-Coding-Style/css/stylelint.config.js',
       debug: true
     }));
 });

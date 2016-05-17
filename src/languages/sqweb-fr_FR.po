@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-03-29 16:46+0200\n"
-"PO-Revision-Date: 2016-03-29 16:50+0200\n"
+"POT-Creation-Date: 2016-05-03 18:21+0200\n"
+"PO-Revision-Date: 2016-05-03 18:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -30,15 +30,15 @@ msgstr "Déconnexion"
 
 #: backoffice/stats.php:9
 msgid "Users detected with Adblock"
-msgstr "Utilisateur avec Adblock"
+msgstr "Utilisateurs avec Adblock"
 
 #: backoffice/stats.php:10
 msgid "Users paying with SQweb"
-msgstr "Utilisateur avec Sqweb"
+msgstr "Utilisateurs avec SQweb"
 
 #: backoffice/stats.php:11
 msgid "Users seeing ads"
-msgstr "Utilisateur voyant la publicité"
+msgstr "Utilisateurs voyant la publicité"
 
 #: backoffice/stats.php:17
 msgid "Pages seen with ads blocked"
@@ -67,15 +67,12 @@ msgid ""
 "consult your stats on your dashboard on "
 msgstr ""
 "La configuration de SQweb est terminée, pour afficher le bouton SQweb sur "
-"vos pages, allez dans votre menu Widget et cherchez le bouton SQweb. vous "
+"vos pages, allez dans votre menu Widget et cherchez le bouton SQweb. Vous "
 "pouvez consulter vos stats sur votre panneau de bord sur "
 
 #: backoffice/tutoriel.php:10
-msgid ""
-"A error has appeared, please check you correctly followed the installation."
-msgstr ""
-"Une erreur est apparu, veuillez vérifier que vous avez correctement suivi "
-"l’installation."
+msgid "An error has occured. Please check the installation instructions."
+msgstr "Une erreur est survenue. Vérifiez les instructions d’installation."
 
 #: backoffice/tutoriel.php:19
 msgid "SQweb is a multisite membership plugin"
@@ -248,13 +245,12 @@ msgstr ""
 "contenus sera affichez."
 
 #: backoffice/tutoriel.php:135
-#, php-format
 msgid ""
-"How much % of the articles do you want to show free users, free users and "
-"search engines will see this ?"
+"Which percentage of each article would you like to show to regular users and "
+"search engines ?"
 msgstr ""
-"Combien de % des articles voulez vous affichez aux utilisateurs normaux, les "
-"utilisateurs normaux et les moteurs de recherche verront cela.s"
+"Quel pourcentage de chaque article voulez-vous montrer aux utilisateurs "
+"normaux et aux moteurs de recherche ?"
 
 #: backoffice/tutoriel.php:145
 msgid ""
@@ -424,7 +420,7 @@ msgstr ""
 
 #: backoffice/tutoriel.php:260
 msgid "Would you like to display a message to your adblockers ?"
-msgstr "Voulez vous affichez un message à vos adblockers ?"
+msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
 #: backoffice/tutoriel.php:263
 msgid "Enter message to show at adblockers"
@@ -466,12 +462,9 @@ msgstr "Nom de famille"
 msgid "Email"
 msgstr "Email"
 
-#: backoffice/tutoriel.php:301 backoffice/tutoriel.php:316
+#: backoffice/tutoriel.php:301 backoffice/tutoriel.php:303
+#: backoffice/tutoriel.php:316 backoffice/tutoriel.php:318
 msgid "Password"
-msgstr "Mot de passe"
-
-#: backoffice/tutoriel.php:303 backoffice/tutoriel.php:318
-msgid "password"
 msgstr "Mot de passe"
 
 #: backoffice/tutoriel.php:305
@@ -492,20 +485,20 @@ msgid "SQweb ad control"
 msgstr "SQweb advertising contrôleur"
 
 #: class/sqweb-ad-control.class.php:51
-msgid "Title:"
-msgstr "Titre:"
+msgid "Title"
+msgstr "Titre"
 
 #: class/sqweb-ad-control.class.php:54
-msgid "Advertising code here:"
-msgstr "Votre code publicitaire ici:"
+msgid "Advertising code"
+msgstr "Code publicitaire"
 
 #: class/sqweb-ad-control.class.php:57
-msgid "Content for paying users:"
-msgstr "Contenu pour les utilisateurs Sqweb:"
+msgid "Content for paying users"
+msgstr "Contenu pour les abonnés"
 
 #: class/widget-sqweb-button.class.php:11
 msgid "Button to activate SQweb on your website."
-msgstr "Bouton pour activé SQweb sur votre site."
+msgstr "Bouton pour activer SQweb sur votre site."
 
 #: class/widget-sqweb-button.class.php:13
 msgid "SQweb button"
@@ -513,7 +506,7 @@ msgstr "SQweb bouton"
 
 #: class/widget-sqweb-button.class.php:44
 msgid "CLICK HERE TO LOG IN"
-msgstr "Cliquez ici pour vous connectez"
+msgstr "Cliquez ici pour vous connecter"
 
 #: class/widget-sqweb-button.class.php:46
 msgid "Edit settings"
@@ -525,17 +518,79 @@ msgstr ""
 "Le contenu est restreint aux abonnées, cliquer ici pour activer votre "
 "compte !"
 
-#: sqweb.php:32
+#: sqweb.php:33
 msgid ""
 "<b>SQweb notice : </b>You need to log in to use SQweb. <a href=\"admin.php?"
 "page=SQwebAdmin\">Click here to proceed</a>."
 msgstr ""
-"<b>SQweb notice : </b>Vous devez vous connectez pour utiliser SQweb <a href="
-"\"admin.php?page=SQwebAdmin\">Cliquez ici pour vous connectez</a>."
+"<b>SQweb info : </b>Vous devez vous connectez pour utiliser SQweb <a href="
+"\"admin.php?page=SQwebAdmin\">Cliquez ici pour vous connecter</a>."
 
-#: sqweb.php:73
+#: sqweb.php:57
+msgid ""
+"<div class=\"error\"><p><b>Error : </b>SQweb requires the curl extension, "
+"which is currently disabled or missing from your system. The SQweb plugin "
+"cannot be activated.</p></div>"
+msgstr ""
+"<div class=\"error\"><p><b>Erreur : </b>SQweb requiert l’extension curl, qui "
+"est actuellement manquante ou désactivée sur votre système. Le plugin SQweb "
+"ne peut pas être activé.</p></div>"
+
+#: sqweb.php:62
+msgid ""
+"<div class=\"error\"><p><b>Error : </b>SQweb requires Wordpress 3.6 or "
+"greater. The SQweb plugin cannot be activated.</p></div>"
+msgstr ""
+"<div class=\"error\"><p><b>Erreur : </b>SQweb requiert Wordpress 3.6 ou "
+"plus. Le plugin SQweb ne peut pas être activé.</p></div>"
+
+#: sqweb.php:74
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid ""
+#~ "A error has appeared, please check you correctly followed the "
+#~ "installation."
+#~ msgstr ""
+#~ "Une erreur est apparu, veuillez vérifier que vous avez correctement suivi "
+#~ "l’installation."
+
+#, fuzzy
+#~ msgid ""
+#~ "How much % of the articles do you want to show free users, free users and "
+#~ "search engines will see this ?"
+#~ msgstr ""
+#~ "Quel pourcentage de chaque article voulez-vous afficher aux utilisateurs "
+#~ "normaux et aux moteurs de recherche ?"
+
+#~ msgid "password"
+#~ msgstr "Mot de passe"
+
+#~ msgid ""
+#~ "An error has occurred. Please check you correctly followed the "
+#~ "installation."
+#~ msgstr ""
+#~ "Une erreur est survenue. Veuillez vérifier les instructions "
+#~ "d’installation."
+
+#~ msgid ""
+#~ "Which percentage of each article would you like to show to free users and "
+#~ "search engines ?"
+#~ msgstr ""
+#~ "Quel pourcentage de chaque article voulez-vous afficher aux utilisateurs "
+#~ "normaux et aux moteurs de recherche ?"
+
+#~ msgid "Advertising code here"
+#~ msgstr "Code publicitaire"
+
+#~ msgid "Title:"
+#~ msgstr "Titre :"
+
+#~ msgid "Advertising code here:"
+#~ msgstr "Votre code publicitaire ici :"
+
+#~ msgid "Content for paying users:"
+#~ msgstr "Contenu pour les utilisateurs SQweb :"
 
 #~ msgid ""
 #~ "SQweb activated. <b>Notice : </b>You need to sign in and select your "

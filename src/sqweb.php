@@ -2,11 +2,12 @@
 /**
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
-Description: Earn money with user subscriptions instead of advertising. Solution to adblocking (detection included).
-Version: 1.7.0
+Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
+Version: 1.7.1
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
+Domain Path: /languages
 License: GPL3
  */
 
@@ -28,10 +29,10 @@ function sqw_deactivation() {
 
 function sqw_notice_install() {
 	?>
-    <div class="notice notice-success is-dismissible">
-        <p><?php _e( '<b>SQweb notice : </b>You need to log in to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.', 'sample-text-domain' ); ?></p>
-    </div>
-    <?php
+	<div class="notice notice-success is-dismissible">
+		<p><?php _e( '<b>SQweb notice : </b>You need to log in to use SQweb. <a href="admin.php?page=SQwebAdmin">Click here to proceed</a>.', 'sqweb' ); ?></p>
+	</div>
+	<?php
 }
 
 if ( ! get_option( 'wsid' ) ) {
@@ -53,12 +54,12 @@ function check() {
 
 	if ( ! function_exists( 'curl_version' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
-		echo '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing from your system. The SQweb plugin cannot be activated.</p></div>';
+		_e( '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing from your system. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
 	}
 
 	if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
-		echo '<div class="error"><p><b>Error : </b>SQweb requires Wordpress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>';
+		_e( '<div class="error"><p><b>Error : </b>SQweb requires Wordpress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
 	}
 }
 
