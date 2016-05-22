@@ -36,7 +36,7 @@ before_script:
 
 script:
     - phpcs --standard=WordPress-Core . --extensions=php
-    - phpmd ./ text phpmd.xml
+    - phpmd ./src/ text phpmd.xml --exclude=bin,languages
     - gulp
 #    - "cd src && phpunit"
 
