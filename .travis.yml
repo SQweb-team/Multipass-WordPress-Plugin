@@ -24,6 +24,7 @@ before_script:
     - composer self-update
     - composer global require "phpunit/phpunit=>4"
     - composer global require "squizlabs/php_codesniffer=*"
+    - composer global require "phpmd/phpmd=dev-master"
     - git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
     - phpenv rehash
     - phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
@@ -35,6 +36,7 @@ before_script:
 
 script:
     - phpcs --standard=WordPress-Core . --extensions=php
+    - phpmd ./ phpmd.xml
     - gulp
 #    - "cd src && phpunit"
 
