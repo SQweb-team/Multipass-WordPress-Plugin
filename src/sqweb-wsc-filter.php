@@ -2,6 +2,7 @@
 /**
 * SQweb special filter
 */
+
 class SQweb_filter
 {
 	private static $_instance = null;
@@ -32,8 +33,8 @@ class SQweb_filter
 	public function set_data() {
 		$this->_ads = unserialize( get_option( 'sqw_ads' ) );
 		$this->_text = unserialize( get_option( ' sqw_text' ) );
-		$this->_ads = $this->_ads ? $this->_ads : [];
-		$this->_text = $this->_text ? $this->_text : [];
+		$this->_ads = $this->_ads ? $this->_ads : array();
+		$this->_text = $this->_text ? $this->_text : array();
 	}
 
 	public function initialize_cache_sqweb() {
