@@ -119,7 +119,8 @@
     border-color: #2cc990 !important;
 }
 
-.sqw-form input[type=text], input[type=password] {
+.sqw-form input[type=text], input[type=password]
+{
     border: none;
     box-shadow: none;
     display: block;
