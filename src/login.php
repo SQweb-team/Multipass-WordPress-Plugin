@@ -1,5 +1,5 @@
 <?php
-if ( ! empty( $_GET['type'] ) && $_GET['type'] === 'login' && ! empty( $_POST['sqw-emailc'] ) && ! empty( $_POST['sqw-passwordc'] ) ) {
+if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['sqw-emailc'] ) && ! empty( $_POST['sqw-passwordc'] ) ) {
 	if ( sqweb_sign_in( $_POST['sqw-emailc'], $_POST['sqw-passwordc'] ) ) {
 		if ( function_exists( 'get_blog_details' ) ) {
 			$current_site = get_blog_details();
@@ -24,7 +24,7 @@ if ( ! empty( $_GET['type'] ) && $_GET['type'] === 'login' && ! empty( $_POST['s
 			}
 		}
 	} else {
-		add_notice_event('error', __('Sorry, a error is appared, please try again.', 'sqweb'));
+		add_notice_event( 'error', __( 'Sorry, a error is appared, please try again.', 'sqweb' ) );
 	}
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
@@ -47,7 +47,7 @@ if ( isset( $_POST ) && ( ! empty( $_POST['sqw-firstname'] ) || ! empty( $_POST[
 		wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
 		exit;
 	} else {
-		add_notice_event('error', __('Sorry, a error is appared, please try again.', 'sqweb'));
+		add_notice_event( 'error', __( 'Sorry, a error is appared, please try again.', 'sqweb' ) );
 	}
 }
 ?>

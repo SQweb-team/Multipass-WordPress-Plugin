@@ -1,13 +1,13 @@
 <?php
 
-if ( ! empty( $_GET['type'] ) && $_GET['type'] == 'save' && ! empty( $_POST ) ) {
+if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) {
 
 	if ( isset( $_POST['sqw_multipass'] ) ) {
-		update_option('sqw_multipass', $_POST['sqw_multipass']);
+		update_option( 'sqw_multipass', $_POST['sqw_multipass'] );
 	}
 
 	if ( isset( $_POST['sqw_analytics'] ) ) {
-		update_option('sqw_analytics', $_POST['sqw_analytics']);
+		update_option( 'sqw_analytics', $_POST['sqw_analytics'] );
 	}
 
 	if ( isset( $_POST['flogin'], $_POST['flogout'], $_POST['btheme'], $_POST['lang'] ) ) {
@@ -48,7 +48,7 @@ if ( ! empty( $_GET['type'] ) && $_GET['type'] == 'save' && ! empty( $_POST ) ) 
 	} else {
 		delete_option( 'fmes' );
 	}
-	add_notice_event('success', __('Your modification has been saved.', 'sqweb'));
+	add_notice_event( 'success', __( 'Your modification has been saved.', 'sqweb' ) );
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
 }

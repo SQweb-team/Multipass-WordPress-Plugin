@@ -16,7 +16,7 @@ class SQweb_filter
 			if ( ! file_exists( WPCACHEHOME . '/plugins/sqweb.php' ) ) {
 				file_put_contents( WPCACHEHOME . '/plugins/sqweb.php', '<?php $wp_super_cache_late_init = 1; ?>' );
 			}
-			if ($wp_cache_mfunc_enabled == 0) {
+			if ( 0 == $wp_cache_mfunc_enabled ) {
 				$this->enable_dynamic_cache();
 			}
 			add_cacheaction( 'add_cacheaction', array( $this, 'initialize_cache_sqweb' ) );
@@ -44,14 +44,14 @@ class SQweb_filter
 
 	public function enable_dynamic_cache() {
 		global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite;
-		if (!$wp_cache_mod_rewrite) {
+		if ( ! $wp_cache_mod_rewrite ) {
 			$wp_cache_config_file = WP_CONTENT_DIR . '/wp-cache-config.php';
 			$wp_cache_mfunc_enabled = 1;
-			$file = file_get_contents($wp_cache_config_file);
-			$file = str_replace('$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Modify by SQweb', $file);
-			file_put_contents($wp_cache_config_file, $file);
+			$file = file_get_contents( $wp_cache_config_file );
+			$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Modify by SQweb', $file );
+			file_put_contents( $wp_cache_config_file, $file );
 		} else {
-			add_action( 'admin_notices', array($this, 'notice') );
+			add_action( 'admin_notices', array( $this, 'notice' ) );
 		}
 	}
 

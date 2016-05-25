@@ -5,29 +5,29 @@ include_once( 'transpartext.php' );
 /**
  * Add notice
  */
-if ( isset($_GET['page']) && $_GET['page'] == 'SQwebAdmin') {
+if ( isset( $_GET['page'] ) && 'SQwebAdmin' == $_GET['page'] ) {
 	function notice_event() {
-		$message = unserialize(get_option('sqw_message'));
-		foreach ($message as $value) {
+		$message = unserialize( get_option( 'sqw_message' ) );
+		foreach ( $message as $value ) {
 			?>
 			<div class="notice notice-<?php echo $value['type']; ?> is-dismissible">
 			<p><?php _e( '<b>SQweb notice : </b>', 'sqweb' ); ?><?php echo $value['message']; ?></p>
 			</div>
 			<?php
 		}
-		delete_option('sqw_message');
+		delete_option( 'sqw_message' );
 	}
 
-	function add_notice_event($type, $message) {
-		$messages = unserialize(get_option('sqw_message'));
-		if (empty($messages)) {
+	function add_notice_event( $type, $message ) {
+		$messages = unserialize( get_option( 'sqw_message' ) );
+		if ( empty( $messages ) ) {
 			$messages = array();
 		}
-		array_push($messages, array('type' => $type, 'message' => $message));
-		update_option('sqw_message', serialize($messages));
+		array_push( $messages, array( 'type' => $type, 'message' => $message ) );
+		update_option( 'sqw_message', serialize( $messages ) );
 	}
 
-	if ( unserialize(get_option('sqw_message')) ) {
+	if ( unserialize( get_option( 'sqw_message' ) ) ) {
 		add_action( 'admin_notices', 'notice_event' );
 	}
 }
@@ -62,7 +62,7 @@ function sqweb_register_admin_menu() {
 			delete_option( 'sqw_token' );
 			wp_redirect( remove_query_arg( 'logout' ) );
 			exit;
-		} elseif (get_option( 'sqw_token' )) {
+		} elseif ( get_option( 'sqw_token' ) ) {
 			include_once 'logout.php';
 		}
 		include_once 'save.php';
