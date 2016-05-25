@@ -3,6 +3,35 @@
 include_once( 'transpartext.php' );
 
 /**
+ * Add notice
+ */
+if ( isset($_GET['page']) && $_GET['page'] == 'SQwebAdmin') {
+	function notice_event() {
+		$message = unserialize(get_option('sqw_message'));
+		foreach ($message as $value) {
+			?>
+			<div class="notice notice-<?php echo $value['type']; ?> is-dismissible">
+			<p><?php _e( '<b>SQweb notice : </b>', 'sqweb' ); ?><?php echo $value['message']; ?></p>
+			</div>
+			<?php
+		}
+		delete_option('sqw_message');
+	}
+
+	function add_notice_event($type, $message) {
+		$messages = unserialize(get_option('sqw_message'));
+		if (empty($messages)) {
+			$messages = array();
+		}
+		array_push($messages, array('type' => $type, 'message' => $message));
+		update_option('sqw_message', serialize($messages));
+	}
+
+	if ( unserialize(get_option('sqw_message')) ) {
+		add_action( 'admin_notices', 'notice_event' );
+	}
+}
+/**
  * Declaring and adding widget
  */
 function register_sqweb_ad_control_widget() {
@@ -28,74 +57,16 @@ function sqweb_register_admin_menu() {
 
 	global $wpdb;
 	if ( isset( $_GET['page'] ) && 'SQwebAdmin' == $_GET['page'] ) {
+		include_once 'login.php';
 		if ( isset( $_GET['logout'] ) && 1 == $_GET['logout'] ) {
 			delete_option( 'sqw_token' );
 			wp_redirect( remove_query_arg( 'logout' ) );
 			exit;
+		} elseif (get_option( 'sqw_token' )) {
+			include_once 'logout.php';
 		}
-		if ( isset( $_GET['save'] ) && ! empty( $_POST ) ) {
-			if ( isset( $_POST['flogin'], $_POST['flogout'], $_POST['btheme'], $_POST['lang'] ) ) {
-				update_option( 'flogin', $_POST['flogin'] );
-				update_option( 'flogout', $_POST['flogout'] );
-				update_option( 'btheme', $_POST['btheme'] );
-				update_option( 'lang', $_POST['lang'] );
-			}
-
-			if ( isset( $_POST['categorie'] ) && ( isset( $_POST['squared%art'] ) || isset( $_POST['squarednbart'] ) || isset( $_POST['squareddateart'] ) ) ) {
-				update_option( 'categorie', serialize( $_POST['categorie'] ) );
-			} else {
-				delete_option( 'categorie' );
-			}
-
-			if ( isset( $_POST['squared%art'], $_POST['perctart'] ) ) {
-				update_option( 'cutartperc', $_POST['perctart'] );
-			} else {
-				delete_option( 'cutartperc' );
-			}
-
-			if ( isset( $_POST['squarednbart'], $_POST['artbyday'] ) ) {
-				update_option( 'artbyday', $_POST['artbyday'] );
-				$wpdb->query( "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}sqw_limit (id INT AUTO_INCREMENT PRIMARY KEY, ip VARCHAR(255) NOT NULL, nbarticles INT NOT NULL, seeingart TEXT NOT NULL, time BIGINT NOT NULL)" );
-			} else {
-				delete_option( 'artbyday' );
-				$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sqw_limit" );
-			}
-
-			if ( isset( $_POST['squareddateart'], $_POST['dateart'] ) ) {
-				update_option( 'dateart', $_POST['dateart'] );
-			} else {
-				delete_option( 'dateart' );
-			}
-
-			if ( isset( $_POST['msgadblck'] ) && isset( $_POST['fmes'] ) ) {
-				update_option( 'fmes', $_POST['fmes'] );
-			} else {
-				delete_option( 'fmes' );
-			}
-		}
-
-		if ( isset( $_POST ) && ( ! empty( $_POST['sqw-firstname'] ) || ! empty( $_POST['sqw-lastname'] ) || ! empty( $_POST['sqw-email'] ) || ! empty( $_POST['sqw-password'] ) ) ) {
-			$error = 0;
-			$r = sqweb_sign_up( $_POST['sqw-firstname'], $_POST['sqw-lastname'], $_POST['sqw-email'], $_POST['sqw-password'] );
-			if ( 1 == $r ) {
-				if ( function_exists( 'get_blog_details' ) ) {
-					$current_site = get_blog_details();
-					$blogname = $current_site->blogname;
-					$siteurl = $current_site->siteurl;
-				} else {
-					$blogname = get_option( 'blogname' );
-					$siteurl = get_option( 'siteurl' );
-				}
-				$website = sqw_add_website( array( 'sqw-ws-name' => $blogname, 'sqw-ws-url' => $siteurl ), get_option( 'sqw_token' ) );
-				update_option( 'wsid', $website->id );
-				wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
-				exit;
-			}
-		} elseif ( ! empty( $_POST ) ) {
-			$error = 1;
-		}
+		include_once 'save.php';
 	}
-
 	add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
 	if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 		add_menu_page( 'Debug info', 'Debug info', 'manage_options', 'sqweb_debug', 'sqweb_display_php_info' );
@@ -109,10 +80,10 @@ add_action( 'admin_menu', 'sqweb_register_admin_menu' );
  */
 function sqweb_display_admin_menu() {
 
-	echo '<div class="wrap sqw-container"><div id="icon-tools" class="icon32"></div>';
-	echo '<h2>Administration SQweb</h2>';
+	//echo '<div class="wrap sqw-container"><div id="icon-tools" class="icon32"></div>';
+	//echo '<h2>Administration SQweb</h2>';
 	include 'backoffice/admin-menu.php';
-	echo '</div>';
+	//echo '</div>';
 }
 
 function sqweb_display_php_info() {
@@ -132,6 +103,14 @@ function sqwadmin_enqueue_styles( $hook ) {
 	wp_enqueue_style(
 		'sqweb-admin-style',
 		plugins_url( '/resources/css/sqweb_admin_style.css', __FILE__ )
+	);
+	wp_enqueue_script(
+		'sqweb-jquery',
+		'https://code.jquery.com/jquery-2.2.3.min.js'
+	);
+	wp_enqueue_script(
+		'sqweb-admin-script',
+		plugins_url( '/resources/js/sqweb.js', __FILE__ )
 	);
 }
 
