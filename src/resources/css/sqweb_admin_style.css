@@ -119,7 +119,7 @@
     border-color: #2cc990 !important;
 }
 
-.sqw-form input[type=text], 
+.sqw-form input[type=text],
 input[type=password] {
     border: none;
     box-shadow: none;
@@ -157,7 +157,8 @@ input[type=password] {
 
 @media (-webkit-min-device-pixel-ratio: 2) {
     .sqw-logo {
-        /* Not defined */
+
+        /* Undefined */
     }
 }
 
@@ -277,7 +278,7 @@ input[type=password] {
     background-color: white;
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGVJREFUeNpi1Lf2SWBgYJjPQBhsYASRQA33gZQCAcWOTFBGIwGFBy4e3XIArBjIWACkHuBRDDaMCV0Al6koivGYDjeECZcEuqkYirGYjqKZCY+1KKZiVYxkeiMDMQAYSVgjCCDAAOJNJ5x80mVPAAAAAElFTkSuQmCC');
     background-size: 8px 8px;
-    background-position: calc(100% - 5px) 9px; 
+    background-position: calc(100% - 5px) 9px;
     background-repeat: no-repeat;
     box-shadow: none !important;
     margin-top: 8px;
@@ -292,7 +293,7 @@ input[type=password] {
     margin-top: 8px;
 }
 
-.sqw-input::-webkit-input-placeholder {
+.sqw-input:-webkit-input-placeholder {
     color: #d1d1d1;
 }
 
@@ -305,7 +306,7 @@ input[type=password] {
     background-color: #2cc990;
 }
 
-.sqw-radio:checked:before {
+.sqw-radio:checked::before {
     background-color: white !important;
 }
 
