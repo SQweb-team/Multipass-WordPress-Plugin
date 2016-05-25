@@ -2,6 +2,7 @@
 /**
 * SQweb special filter
 */
+
 class SQweb_filter
 {
 	private static $_instance = null;

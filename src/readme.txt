@@ -78,6 +78,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 * Improve UX.
 * Improve compatibility with Wordpress Super Cache plugin.
 
+= v1.8.1 =
+* Fixed regression with older PHP versions, due to modern array syntax.
+
 = v1.8.0 =
 * Add compatibility with Wordpress Super Cache plugin.
 * Improve ads display method.
