@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-05-03 18:21+0200\n"
-"PO-Revision-Date: 2016-05-03 18:22+0200\n"
+"POT-Creation-Date: 2016-05-26 09:52+0200\n"
+"PO-Revision-Date: 2016-05-26 10:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -16,464 +16,215 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backoffice/footer.php:4
-msgid "You are connected"
-msgstr "Vous êtes connecté"
+#: backoffice/sqweb.php:12 backoffice/sqweb.php:23
+msgid "Log in"
+msgstr "Connexion"
 
-#: backoffice/footer.php:8
-msgid "Need help ?"
-msgstr "Besoin d’aide ?"
+#: backoffice/sqweb.php:15 backoffice/sqweb.php:33
+msgid "Subscribe"
+msgstr "Inscription"
 
-#: backoffice/footer.php:13
-msgid "Logout"
-msgstr "Déconnexion"
+#: backoffice/sqweb.php:21 backoffice/sqweb.php:30
+msgid "Email"
+msgstr "Email"
 
-#: backoffice/stats.php:9
-msgid "Users detected with Adblock"
-msgstr "Utilisateurs avec Adblock"
+#: backoffice/sqweb.php:22 backoffice/sqweb.php:31
+msgid "Password"
+msgstr "Mot de passe"
 
-#: backoffice/stats.php:10
-msgid "Users paying with SQweb"
-msgstr "Utilisateurs avec SQweb"
+#: backoffice/sqweb.php:28
+msgid "First name"
+msgstr "Prénom"
 
-#: backoffice/stats.php:11
-msgid "Users seeing ads"
-msgstr "Utilisateurs voyant la publicité"
+#: backoffice/sqweb.php:29
+msgid "Last name"
+msgstr "Nom"
 
-#: backoffice/stats.php:17
-msgid "Pages seen with ads blocked"
-msgstr "Page vues avec les publicités bloquées."
+#: backoffice/sqweb.php:32
+msgid "Confirm password"
+msgstr "Confirmer le mot de passe"
 
-#: backoffice/stats.php:18
-msgid "Pages seen by SQwebmen"
-msgstr "Page vues par des SQwebmens"
+#: backoffice/sqweb.php:46
+msgid "Activate Multipass"
+msgstr "Activer Multipass"
 
-#: backoffice/stats.php:19
-msgid "Pages seen with ads"
-msgstr "Page vues avec la publicité"
-
-#: backoffice/stats.php:50 backoffice/stats.php:70
-msgid "Displayed"
-msgstr "Affichage"
-
-#: backoffice/stats.php:56 backoffice/stats.php:76
-msgid "Blocked"
-msgstr "Bloqué"
-
-#: backoffice/tutoriel.php:6
-msgid ""
-"The configuration of SQweb is over, to display the SQweb button on your "
-"pages, go to your Widget page and search for \"SQweb button\". You can also "
-"consult your stats on your dashboard on "
-msgstr ""
-"La configuration de SQweb est terminée, pour afficher le bouton SQweb sur "
-"vos pages, allez dans votre menu Widget et cherchez le bouton SQweb. Vous "
-"pouvez consulter vos stats sur votre panneau de bord sur "
-
-#: backoffice/tutoriel.php:10
-msgid "An error has occured. Please check the installation instructions."
-msgstr "Une erreur est survenue. Vérifiez les instructions d’installation."
-
-#: backoffice/tutoriel.php:19
-msgid "SQweb is a multisite membership plugin"
-msgstr "SQweb est un plugin d’abonnement multisite"
-
-#: backoffice/tutoriel.php:21
-msgid "Users subscribe to SQweb for a premium surf on partners websites."
-msgstr ""
-"Les internautes s’abonnent à SQweb pour surfer en premium sur tous les sites "
-"partenaires."
-
-#: backoffice/tutoriel.php:22
-msgid ""
-"By joining our network, you’ll get a share of our users subscription "
-"whenever they visit your website."
-msgstr ""
-"En rejoignant notre réseau vous toucherez une partie de l’abonnement "
-"utilisateur dès qu'un abonné visitera votre site."
-
-#: backoffice/tutoriel.php:22 backoffice/tutoriel.php:38
-#: backoffice/tutoriel.php:230
-msgid "More info"
-msgstr "Plus d’info"
-
-#: backoffice/tutoriel.php:26
-msgid "Fair share of income"
-msgstr "Partage des revenus équitable"
-
-#: backoffice/tutoriel.php:27
-msgid "Outsoucing of subscribers management"
-msgstr "Gestion des abonnés externalisé"
-
-#: backoffice/tutoriel.php:28
-msgid "Secured payment (PCI DSS)"
-msgstr "Paiement sécurisé (PCI DSS)"
-
-#: backoffice/tutoriel.php:29
-msgid "Cross platform (PC, tablet, mobile)."
-msgstr "Compatible PC, tablettes, mobiles."
-
-#: backoffice/tutoriel.php:36
-msgid "SQweb is the solution to adblock"
-msgstr "SQweb est la solution à Adblock"
-
-#: backoffice/tutoriel.php:38
-msgid ""
-"If you have ads on your website, the SQweb plugin allows you to resolve the "
-"adblocking problem. SQweb is accepted by users and work with all advertising "
-"networks."
-msgstr ""
-"Si vous avez de la publicité sur votre site, le plugin SQweb vous permet "
-"aussi de résoudre le problème du blocage de la publicité. SQweb est une "
-"solution acceptée par les utilisateurs et fonctionne avec toutes les régies."
-
-#: backoffice/tutoriel.php:42
-msgid "Adblocking statistics"
-msgstr "Statistiques sur les bloqueurs de publicités"
-
-#: backoffice/tutoriel.php:43
-msgid "Estimate your losses"
-msgstr "Estimation des pertes de revenus"
-
-#: backoffice/tutoriel.php:44
-msgid "Communicate with people using adblock"
-msgstr "Outil de communication avec les adbloqueurs"
-
-#: backoffice/tutoriel.php:45
-msgid "Global solution to a global problem"
-msgstr "Solution globale à un problème global"
-
-#: backoffice/tutoriel.php:52
-msgid "All features are free, select the one you want."
-msgstr ""
-"Toutes les fonctionnalités sont gratuites, sélectionnez celles que vous "
-"voulez."
-
-#: backoffice/tutoriel.php:55
-msgid "Adblock analytics<br> and SQweb subscription"
-msgstr "Les statistiques Adblocks<br> et l’abonnement sqweb"
-
-#: backoffice/tutoriel.php:58
-msgid "Adblock analytics"
-msgstr "Les statistiques Adblocks"
-
-#: backoffice/tutoriel.php:62
-msgid ""
-"To edit the display of adsense, you need to use the widget SQweb ad control"
-msgstr "Pour gérer l’affichage de vos pub utilisez le widget SQweb ad control"
-
-#: backoffice/tutoriel.php:63
-msgid "Restart config"
-msgstr "Redémarrer la configuration"
-
-#: backoffice/tutoriel.php:69 backoffice/tutoriel.php:75
-#: backoffice/tutoriel.php:180 backoffice/tutoriel.php:226
-#: backoffice/tutoriel.php:278
-msgid "Back"
-msgstr "Retour"
-
-#: backoffice/tutoriel.php:77
-msgid "Multisite Membership"
-msgstr "Abonnement multisite"
-
-#: backoffice/tutoriel.php:78
-msgid ""
-"SQweb is a subscription where users pay 9$ per month to surf without ad and "
-"to access the premium content of all websites with a SQweb plugin"
-msgstr ""
-"SQweb est un abonnement où les utilisateurs paient 9$ par mois pour surfer "
-"sans annonce et accéder au contenu premium de tous les sites qui ont plugin "
-"SQweb"
-
-#: backoffice/tutoriel.php:80
+#: backoffice/sqweb.php:51
 msgid ""
 "By joining our network, you’ll get a part of the membership fee whenever a "
-"subscriber visit your website: our subscribers are your subscribers. The "
-"more time an user spend on your website, the more income you will get.\n"
-"\tTo register, pay or activate the premium navigation, the user does not "
-"need to leave your website, he just has to click on the SQweb button, that "
-"will open window in your website (Iframe)."
+"subscriber visit your website."
 msgstr ""
-"En rejoignant notre réseau, Chaque fois qu’un abonné visitent votre site "
-"Web, vous obtiendrez une partie de leur abonnement : nos abonnés sont vos "
-"abonnés. Plus un utilisateur passe de temps sur votre site Internet, plus "
-"vos revenu seront important .\n"
-"\tPour s’inscrire, payer ou activer la navigation premium, l’utilisateur n’a "
-"pas besoin de quitter votre site Web, il a juste à cliquer sur le bouton "
-"SQweb, ce qui ouvrira une fenêtre sur votre site (Iframe)."
+"En rejoignant notre réseau, vous aurez une partie de la cotisation à chaque "
+"fois qu’un abonné visite votre site Web."
 
-#: backoffice/tutoriel.php:81
-msgid "DEMO"
-msgstr "DEMO"
+#: backoffice/sqweb.php:51 backoffice/sqweb.php:167
+msgid "More infos"
+msgstr "Plus d’infos"
 
-#: backoffice/tutoriel.php:84
+#: backoffice/sqweb.php:53
+msgid "Do you want to restrict some content for free users ?"
+msgstr ""
+"Voulez-vous de restreindre certains contenus pour les utilisateurs gratuits?"
+
+#: backoffice/sqweb.php:56
+msgid "Setup content restrictions :"
+msgstr "Configurer la restriction de contenu :"
+
+#: backoffice/sqweb.php:76
+msgid "I want a part of my content to be displayed for non paying users."
+msgstr ""
+"Je souhaite qu’une partie de mon contenu sois affichez pour les utilisateurs "
+"normaux."
+
+#: backoffice/sqweb.php:78
 msgid ""
-"You are free to choose the content to display to SQweb subscribers. The only "
-"rule is to not expose them to advertising tracking on them."
+"(if you use this option only the beginning of the post will be displayed)"
 msgstr ""
-"Vous êtes libre de choisir le contenu à afficher pour les abonnés de SQweb. "
-"La seule règle est de ne pas les exposer à la publicité."
+"(Si vous utilisez cette option, seul le début des articles seront affichez)"
 
-#: backoffice/tutoriel.php:87
-msgid "Do you have content restricted for paying user ?"
-msgstr "Avez vous du contenu premium pour les utilisateurs qui payent ?"
+#: backoffice/sqweb.php:80
+#, php-format
+msgid "How much % of the articles do you want to show free users ?"
+msgstr "Combien de % des articles souhaitez vous affichez ?"
 
-#: backoffice/tutoriel.php:90
-msgid "Yes, I want to restrict some content for free user."
-msgstr "Oui, je souhaite restreindre le contenu pour mes utilisateurs normal."
+#: backoffice/sqweb.php:81
+msgid "(Free users and search engines will see this)"
+msgstr "(Les utilisateurs gratuits et les moteurs de recherche verront ceci)"
 
-#: backoffice/tutoriel.php:97
-msgid "No, I just want to hide ads for paying users."
+#: backoffice/sqweb.php:86
+msgid "Start restricting content after a number of page views."
 msgstr ""
-"Non, je souhaite juste cacher les pubs pour les utilisateurs qui payent."
+"Démarrer la restriction de contenu après un certain nombre d’articles vue."
 
-#: backoffice/tutoriel.php:106
-msgid "Setup content restrictions"
-msgstr "Configurer les restrictions de contenu"
-
-#: backoffice/tutoriel.php:107
-msgid "Select the categories affected by the restriction."
-msgstr "Choisissez les catégories affectées par les restrictions."
-
-#: backoffice/tutoriel.php:131
+#: backoffice/sqweb.php:88
 msgid ""
-"I want a part of my content to be displayed for non paying users. If you use "
-"this option only the beginning of the post will be displayed."
+"(This means any user will see part of your content and they will be blocked)"
 msgstr ""
-"Je souhaite que seulement une parti de mon continus sois affichez aux "
-"utilisateurs normaux. Si vous utilisez cette option, seul une parti du "
-"contenus sera affichez."
+"(Cela veut dire que les utilisateurs pourront voir quelques articles, "
+"ensuite il seront bloqué."
 
-#: backoffice/tutoriel.php:135
-msgid ""
-"Which percentage of each article would you like to show to regular users and "
-"search engines ?"
-msgstr ""
-"Quel pourcentage de chaque article voulez-vous montrer aux utilisateurs "
-"normaux et aux moteurs de recherche ?"
-
-#: backoffice/tutoriel.php:145
-msgid ""
-"Start restricting content after a number of page views this mean any user "
-"will see part of your content and they will be blocked."
-msgstr ""
-"Démarrer les restrictions après un certain nombre de page vues, cela veut "
-"dire que les utilisateurs verrons une partie de votre contenu et seront "
-"ensuite bloquer."
-
-#: backoffice/tutoriel.php:149
+#: backoffice/sqweb.php:90
 msgid "How many articles free users can see daily before being blocked ?"
 msgstr ""
 "Combien d’articles gratuit l’utilisateur peut voir par jours avant d’être "
 "bloquer ?"
 
-#: backoffice/tutoriel.php:150
+#: backoffice/sqweb.php:91
 msgid "Articles per day"
 msgstr "Articles par jours"
 
-#: backoffice/tutoriel.php:159
+#: backoffice/sqweb.php:95
 msgid "I want the posts to be available to non paying users after some days."
 msgstr ""
 "Je souhaite que les articles sois disponible gratuitement après un certain "
 "nombre de jours."
 
-#: backoffice/tutoriel.php:163
+#: backoffice/sqweb.php:98
 msgid "How many days will the posts remain restricted ?"
 msgstr "Combien de jours un articles reste restreint ?"
 
-#: backoffice/tutoriel.php:164
+#: backoffice/sqweb.php:99
 msgid "days before end of restriction"
 msgstr "jours avant la fin de la restriction"
 
-#: backoffice/tutoriel.php:170
-msgid "SQweb Users must navigate without ADS on my website."
-msgstr "Les utilisateurs peuvent naviguer sans pub sur votre site internet."
+#: backoffice/sqweb.php:105
+msgid "SQweb users must navigate without ADS on your website"
+msgstr "Les utilisateurs SQweb doivent naviguer sur votre site sans publicité"
 
-#: backoffice/tutoriel.php:175
-msgid "Continue install"
-msgstr "Continuer l’installation"
-
-#: backoffice/tutoriel.php:182
+#: backoffice/sqweb.php:107
 msgid ""
-"This will be used for the iframe that visitors will use to register, "
-"payement and login."
+"This will be used for the iframe that visitors will use to register, payment "
+"and login."
 msgstr ""
-"Il sera utilisé par les visiteurs pour utiliser l’inscription, le payement "
-"et la connexion."
+"Ceci sera utiliser pour l’iframe qui permet à vos visiteurs de "
+"s’enregistrer, payer et ce connectez."
 
-#: backoffice/tutoriel.php:183
-msgid "Setup SQweb"
-msgstr "Configurer SQweb"
+#: backoffice/sqweb.php:111
+msgid "Language of your website :"
+msgstr "Langue de votre site :"
 
-#: backoffice/tutoriel.php:187
-msgid "Language of your website"
-msgstr "Langue de votre site"
-
-#: backoffice/tutoriel.php:189
+#: backoffice/sqweb.php:113
 msgid "French"
 msgstr "Français"
 
-#: backoffice/tutoriel.php:190
+#: backoffice/sqweb.php:114
 msgid "English"
 msgstr "Anglais"
 
-#: backoffice/tutoriel.php:191
+#: backoffice/sqweb.php:115
 msgid "Español"
 msgstr "Espagnol"
 
-#: backoffice/tutoriel.php:195
-msgid "Text for not connected user"
-msgstr "Texte utilisateur non connecté"
+#: backoffice/sqweb.php:119
+msgid "Text for not connected users"
+msgstr "Texte pour visiteur"
 
-#: backoffice/tutoriel.php:196
+#: backoffice/sqweb.php:120
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
-#: backoffice/tutoriel.php:199
+#: backoffice/sqweb.php:123
 msgid "Text for connected user"
-msgstr "Texte utilisateur connecté"
+msgstr "Texte pour SQweber"
 
-#: backoffice/tutoriel.php:200
+#: backoffice/sqweb.php:124
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/tutoriel.php:205
+#: backoffice/sqweb.php:129
+msgid "Select the color :"
+msgstr "Choisissez la couleur :"
+
+#: backoffice/sqweb.php:131
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/tutoriel.php:206
+#: backoffice/sqweb.php:134
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/tutoriel.php:213
-msgid "Remove ads"
-msgstr "Enlever la pub"
+#: backoffice/sqweb.php:137
+msgid "Red"
+msgstr "Rouge"
 
-#: backoffice/tutoriel.php:221
-msgid "Go to Adblock Manager"
-msgstr "Configurer l’Adblock Manager"
+#: backoffice/sqweb.php:140
+msgid "Purple"
+msgstr "Violet"
 
-#: backoffice/tutoriel.php:228
-msgid "ADBLOCK MANAGER"
-msgstr "ADBLOCK MANAGER"
+#: backoffice/sqweb.php:143
+msgid "Green"
+msgstr "Vert"
 
-#: backoffice/tutoriel.php:230
+#: backoffice/sqweb.php:148
+msgid "Preview :"
+msgstr "Prévisualisation"
+
+#: backoffice/sqweb.php:163
+msgid "Activate Adblockers Manager"
+msgstr "Activer l’Adblockers Manager"
+
+#: backoffice/sqweb.php:167
 msgid ""
-"Since 2013 we developped an expertise about ad-blocking by working with "
-"hundreds of publishers. Our Adblock Manager ables you to measure the impact "
-"of adblockers on your websites, target your audience, and deploy an "
-"efficient response."
+"If you have ads on your website, the SQweb plugin allows you to resolve the "
+"adblocking problem."
 msgstr ""
-"Depuis 2013 nous avons développé une expertise autour des bloqueurs de "
-"publicités en partenariat avec des centaines d'éditeurs. Notre adblock "
-"manager vous permet d'analyser l'impact d'adblock sur votre site, de mieux "
-"connaître votre audience et d'apporter une réponse efficace."
+"Si vous avez de la publicité sur votre site, le plugin SQweb vous aide à "
+"résoudre les problèmes d’adblock."
 
-#: backoffice/tutoriel.php:234
-msgid "ANALYSIS"
-msgstr "ANALYSE"
-
-#: backoffice/tutoriel.php:236
-msgid "Adblock rate on visitors and page views"
-msgstr "Taux visiteurs et pages vues avec adblock"
-
-#: backoffice/tutoriel.php:237
-msgid "Revenu loss estimate"
-msgstr "Estimation des pertes de revenu"
-
-#: backoffice/tutoriel.php:238
-msgid "Platform, browsers and audience segmentation"
-msgstr "Segmentation par plateformes, navigateurs et audience"
-
-#: backoffice/tutoriel.php:239
-msgid "Personalized reports and benchmarking from other websites"
-msgstr "Rapport personnalisé et positionnement par rapport aux autres sites"
-
-#: backoffice/tutoriel.php:243
-msgid "RESPONSE"
-msgstr "RÉPONSE"
-
-#: backoffice/tutoriel.php:245
-msgid "Custom message to adblockers"
-msgstr "Message totalement personnalisable"
-
-#: backoffice/tutoriel.php:246
-msgid "A/B testing and performance reports"
-msgstr "A/B testing et statistiques sur l’efficacité des messages"
-
-#: backoffice/tutoriel.php:247
-msgid "Experience sharing with other publishers"
-msgstr "Partage d'expériences avec d'autres éditeurs"
-
-#: backoffice/tutoriel.php:248
-msgid "Alternative to ads offers with SQwbe or other paywalls"
-msgstr "Alternatives comme l'abonnement SQweb ou d'autres paywall"
-
-#: backoffice/tutoriel.php:254
-msgid ""
-"The Adblock manager will automatically record adblocking statistics when "
-"sqweb plugin is active, find the results on your dashboard on"
-msgstr ""
-"L’Adblock manager va automatiquement enregistrer les statistiques d’adblocks "
-"une fois le plugin sqweb actif, vous pouvez trouvez le résultat sur votre "
-"tableau de bord sur"
-
-#: backoffice/tutoriel.php:260
+#: backoffice/sqweb.php:169
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/tutoriel.php:263
+#: backoffice/sqweb.php:171
 msgid "Enter message to show at adblockers"
 msgstr "Entrer le message à afficher aux adblockers"
 
-#: backoffice/tutoriel.php:265
+#: backoffice/sqweb.php:173
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/tutoriel.php:269 backoffice/tutoriel.php:271
-msgid "Confirm install"
-msgstr "Terminer l’installation"
-
-#: backoffice/tutoriel.php:280
-msgid ""
-"You finished the installation, to display the SQweb button, go to your "
-"Widget menu and search for the widget called \"SQweb Button\""
-msgstr ""
-"Vous avez terminé l’installation, pour afficher le bouton SQweb, rendez vous "
-"dans votre menu widget et cherchez le widget appelé « SQweb button »."
-
-#: backoffice/tutoriel.php:283
-msgid "I don't have account"
-msgstr "Je n’ai pas de compte"
-
-#: backoffice/tutoriel.php:284
-msgid "I have an account"
-msgstr "J’ai un compte"
-
-#: backoffice/tutoriel.php:289
-msgid "Firstname"
-msgstr "Prénom"
-
-#: backoffice/tutoriel.php:293
-msgid "Lastname"
-msgstr "Nom de famille"
-
-#: backoffice/tutoriel.php:297 backoffice/tutoriel.php:310
-msgid "Email"
-msgstr "Email"
-
-#: backoffice/tutoriel.php:301 backoffice/tutoriel.php:303
-#: backoffice/tutoriel.php:316 backoffice/tutoriel.php:318
-msgid "Password"
-msgstr "Mot de passe"
-
-#: backoffice/tutoriel.php:305
-msgid "Sign up"
-msgstr "Inscription"
-
-#: backoffice/tutoriel.php:320
-msgid "Sign in"
-msgstr "Connexion"
+#: backoffice/sqweb.php:181
+msgid "Save"
+msgstr "Sauvegarder"
 
 #: class/sqweb-ad-control.class.php:11
 msgid "Put here your advertising code to hide it for SQweb users"
@@ -512,11 +263,35 @@ msgstr "Cliquez ici pour vous connecter"
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
-#: sqweb-init.php:166
+#: login.php:27 login.php:50
+msgid "Sorry, a error is appared, please try again."
+msgstr "Désolé une erreur est survenue."
+
+#: logout.php:3
+msgid "Logout from SQweb"
+msgstr "Ce déconnecté de SQweb"
+
+#: save.php:51
+msgid "Your modification has been saved."
+msgstr "Vos modification ont bien était sauvegarder."
+
+#: sqweb-init.php:14
+msgid "<b>SQweb notice : </b>"
+msgstr "<b>SQweb notice : </b>"
+
+#: sqweb-init.php:138
 msgid "Content restricted to subscribers, Click here to activate your account."
 msgstr ""
 "Le contenu est restreint aux abonnées, cliquer ici pour activer votre "
 "compte !"
+
+#: sqweb-wsc-filter.php:40
+msgid ""
+"<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to PHP "
+"cache or Legacy cache thanks."
+msgstr ""
+"<b>SQweb notice : </b>Cache avec mod_rewrite détecté, s’il vous plait "
+"changer pour PHP cache ou Legacy cache, merci."
 
 #: sqweb.php:33
 msgid ""
@@ -547,6 +322,315 @@ msgstr ""
 #: sqweb.php:74
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "You are connected"
+#~ msgstr "Vous êtes connecté"
+
+#~ msgid "Need help ?"
+#~ msgstr "Besoin d’aide ?"
+
+#~ msgid "Logout"
+#~ msgstr "Déconnexion"
+
+#~ msgid "Users detected with Adblock"
+#~ msgstr "Utilisateurs avec Adblock"
+
+#~ msgid "Users paying with SQweb"
+#~ msgstr "Utilisateurs avec SQweb"
+
+#~ msgid "Users seeing ads"
+#~ msgstr "Utilisateurs voyant la publicité"
+
+#~ msgid "Pages seen with ads blocked"
+#~ msgstr "Page vues avec les publicités bloquées."
+
+#~ msgid "Pages seen by SQwebmen"
+#~ msgstr "Page vues par des SQwebmens"
+
+#~ msgid "Pages seen with ads"
+#~ msgstr "Page vues avec la publicité"
+
+#~ msgid "Displayed"
+#~ msgstr "Affichage"
+
+#~ msgid "Blocked"
+#~ msgstr "Bloqué"
+
+#~ msgid ""
+#~ "The configuration of SQweb is over, to display the SQweb button on your "
+#~ "pages, go to your Widget page and search for \"SQweb button\". You can "
+#~ "also consult your stats on your dashboard on "
+#~ msgstr ""
+#~ "La configuration de SQweb est terminée, pour afficher le bouton SQweb sur "
+#~ "vos pages, allez dans votre menu Widget et cherchez le bouton SQweb. Vous "
+#~ "pouvez consulter vos stats sur votre panneau de bord sur "
+
+#~ msgid "An error has occured. Please check the installation instructions."
+#~ msgstr "Une erreur est survenue. Vérifiez les instructions d’installation."
+
+#~ msgid "SQweb is a multisite membership plugin"
+#~ msgstr "SQweb est un plugin d’abonnement multisite"
+
+#~ msgid "Users subscribe to SQweb for a premium surf on partners websites."
+#~ msgstr ""
+#~ "Les internautes s’abonnent à SQweb pour surfer en premium sur tous les "
+#~ "sites partenaires."
+
+#~ msgid ""
+#~ "By joining our network, you’ll get a share of our users subscription "
+#~ "whenever they visit your website."
+#~ msgstr ""
+#~ "En rejoignant notre réseau vous toucherez une partie de l’abonnement "
+#~ "utilisateur dès qu'un abonné visitera votre site."
+
+#~ msgid "More info"
+#~ msgstr "Plus d’info"
+
+#~ msgid "Fair share of income"
+#~ msgstr "Partage des revenus équitable"
+
+#~ msgid "Outsoucing of subscribers management"
+#~ msgstr "Gestion des abonnés externalisé"
+
+#~ msgid "Secured payment (PCI DSS)"
+#~ msgstr "Paiement sécurisé (PCI DSS)"
+
+#~ msgid "Cross platform (PC, tablet, mobile)."
+#~ msgstr "Compatible PC, tablettes, mobiles."
+
+#~ msgid "SQweb is the solution to adblock"
+#~ msgstr "SQweb est la solution à Adblock"
+
+#~ msgid ""
+#~ "If you have ads on your website, the SQweb plugin allows you to resolve "
+#~ "the adblocking problem. SQweb is accepted by users and work with all "
+#~ "advertising networks."
+#~ msgstr ""
+#~ "Si vous avez de la publicité sur votre site, le plugin SQweb vous permet "
+#~ "aussi de résoudre le problème du blocage de la publicité. SQweb est une "
+#~ "solution acceptée par les utilisateurs et fonctionne avec toutes les "
+#~ "régies."
+
+#~ msgid "Adblocking statistics"
+#~ msgstr "Statistiques sur les bloqueurs de publicités"
+
+#~ msgid "Estimate your losses"
+#~ msgstr "Estimation des pertes de revenus"
+
+#~ msgid "Communicate with people using adblock"
+#~ msgstr "Outil de communication avec les adbloqueurs"
+
+#~ msgid "Global solution to a global problem"
+#~ msgstr "Solution globale à un problème global"
+
+#~ msgid "All features are free, select the one you want."
+#~ msgstr ""
+#~ "Toutes les fonctionnalités sont gratuites, sélectionnez celles que vous "
+#~ "voulez."
+
+#~ msgid "Adblock analytics<br> and SQweb subscription"
+#~ msgstr "Les statistiques Adblocks<br> et l’abonnement sqweb"
+
+#~ msgid "Adblock analytics"
+#~ msgstr "Les statistiques Adblocks"
+
+#~ msgid ""
+#~ "To edit the display of adsense, you need to use the widget SQweb ad "
+#~ "control"
+#~ msgstr ""
+#~ "Pour gérer l’affichage de vos pub utilisez le widget SQweb ad control"
+
+#~ msgid "Restart config"
+#~ msgstr "Redémarrer la configuration"
+
+#~ msgid "Back"
+#~ msgstr "Retour"
+
+#~ msgid "Multisite Membership"
+#~ msgstr "Abonnement multisite"
+
+#~ msgid ""
+#~ "SQweb is a subscription where users pay 9$ per month to surf without ad "
+#~ "and to access the premium content of all websites with a SQweb plugin"
+#~ msgstr ""
+#~ "SQweb est un abonnement où les utilisateurs paient 9$ par mois pour "
+#~ "surfer sans annonce et accéder au contenu premium de tous les sites qui "
+#~ "ont plugin SQweb"
+
+#~ msgid ""
+#~ "By joining our network, you’ll get a part of the membership fee whenever "
+#~ "a subscriber visit your website: our subscribers are your subscribers. "
+#~ "The more time an user spend on your website, the more income you will "
+#~ "get.\n"
+#~ "\tTo register, pay or activate the premium navigation, the user does not "
+#~ "need to leave your website, he just has to click on the SQweb button, "
+#~ "that will open window in your website (Iframe)."
+#~ msgstr ""
+#~ "En rejoignant notre réseau, Chaque fois qu’un abonné visitent votre site "
+#~ "Web, vous obtiendrez une partie de leur abonnement : nos abonnés sont vos "
+#~ "abonnés. Plus un utilisateur passe de temps sur votre site Internet, plus "
+#~ "vos revenu seront important .\n"
+#~ "\tPour s’inscrire, payer ou activer la navigation premium, l’utilisateur "
+#~ "n’a pas besoin de quitter votre site Web, il a juste à cliquer sur le "
+#~ "bouton SQweb, ce qui ouvrira une fenêtre sur votre site (Iframe)."
+
+#~ msgid "DEMO"
+#~ msgstr "DEMO"
+
+#~ msgid ""
+#~ "You are free to choose the content to display to SQweb subscribers. The "
+#~ "only rule is to not expose them to advertising tracking on them."
+#~ msgstr ""
+#~ "Vous êtes libre de choisir le contenu à afficher pour les abonnés de "
+#~ "SQweb. La seule règle est de ne pas les exposer à la publicité."
+
+#~ msgid "Do you have content restricted for paying user ?"
+#~ msgstr "Avez vous du contenu premium pour les utilisateurs qui payent ?"
+
+#~ msgid "Yes, I want to restrict some content for free user."
+#~ msgstr ""
+#~ "Oui, je souhaite restreindre le contenu pour mes utilisateurs normal."
+
+#~ msgid "No, I just want to hide ads for paying users."
+#~ msgstr ""
+#~ "Non, je souhaite juste cacher les pubs pour les utilisateurs qui payent."
+
+#~ msgid "Setup content restrictions"
+#~ msgstr "Configurer les restrictions de contenu"
+
+#~ msgid "Select the categories affected by the restriction."
+#~ msgstr "Choisissez les catégories affectées par les restrictions."
+
+#~ msgid ""
+#~ "I want a part of my content to be displayed for non paying users. If you "
+#~ "use this option only the beginning of the post will be displayed."
+#~ msgstr ""
+#~ "Je souhaite que seulement une parti de mon continus sois affichez aux "
+#~ "utilisateurs normaux. Si vous utilisez cette option, seul une parti du "
+#~ "contenus sera affichez."
+
+#~ msgid ""
+#~ "Which percentage of each article would you like to show to regular users "
+#~ "and search engines ?"
+#~ msgstr ""
+#~ "Quel pourcentage de chaque article voulez-vous montrer aux utilisateurs "
+#~ "normaux et aux moteurs de recherche ?"
+
+#~ msgid ""
+#~ "Start restricting content after a number of page views this mean any user "
+#~ "will see part of your content and they will be blocked."
+#~ msgstr ""
+#~ "Démarrer les restrictions après un certain nombre de page vues, cela veut "
+#~ "dire que les utilisateurs verrons une partie de votre contenu et seront "
+#~ "ensuite bloquer."
+
+#~ msgid "SQweb Users must navigate without ADS on my website."
+#~ msgstr "Les utilisateurs peuvent naviguer sans pub sur votre site internet."
+
+#~ msgid "Continue install"
+#~ msgstr "Continuer l’installation"
+
+#~ msgid ""
+#~ "This will be used for the iframe that visitors will use to register, "
+#~ "payement and login."
+#~ msgstr ""
+#~ "Il sera utilisé par les visiteurs pour utiliser l’inscription, le "
+#~ "payement et la connexion."
+
+#~ msgid "Setup SQweb"
+#~ msgstr "Configurer SQweb"
+
+#~ msgid "Language of your website"
+#~ msgstr "Langue de votre site"
+
+#~ msgid "Text for not connected user"
+#~ msgstr "Texte utilisateur non connecté"
+
+#~ msgid "Remove ads"
+#~ msgstr "Enlever la pub"
+
+#~ msgid "Go to Adblock Manager"
+#~ msgstr "Configurer l’Adblock Manager"
+
+#~ msgid "ADBLOCK MANAGER"
+#~ msgstr "ADBLOCK MANAGER"
+
+#~ msgid ""
+#~ "Since 2013 we developped an expertise about ad-blocking by working with "
+#~ "hundreds of publishers. Our Adblock Manager ables you to measure the "
+#~ "impact of adblockers on your websites, target your audience, and deploy "
+#~ "an efficient response."
+#~ msgstr ""
+#~ "Depuis 2013 nous avons développé une expertise autour des bloqueurs de "
+#~ "publicités en partenariat avec des centaines d'éditeurs. Notre adblock "
+#~ "manager vous permet d'analyser l'impact d'adblock sur votre site, de "
+#~ "mieux connaître votre audience et d'apporter une réponse efficace."
+
+#~ msgid "ANALYSIS"
+#~ msgstr "ANALYSE"
+
+#~ msgid "Adblock rate on visitors and page views"
+#~ msgstr "Taux visiteurs et pages vues avec adblock"
+
+#~ msgid "Revenu loss estimate"
+#~ msgstr "Estimation des pertes de revenu"
+
+#~ msgid "Platform, browsers and audience segmentation"
+#~ msgstr "Segmentation par plateformes, navigateurs et audience"
+
+#~ msgid "Personalized reports and benchmarking from other websites"
+#~ msgstr "Rapport personnalisé et positionnement par rapport aux autres sites"
+
+#~ msgid "RESPONSE"
+#~ msgstr "RÉPONSE"
+
+#~ msgid "Custom message to adblockers"
+#~ msgstr "Message totalement personnalisable"
+
+#~ msgid "A/B testing and performance reports"
+#~ msgstr "A/B testing et statistiques sur l’efficacité des messages"
+
+#~ msgid "Experience sharing with other publishers"
+#~ msgstr "Partage d'expériences avec d'autres éditeurs"
+
+#~ msgid "Alternative to ads offers with SQwbe or other paywalls"
+#~ msgstr "Alternatives comme l'abonnement SQweb ou d'autres paywall"
+
+#~ msgid ""
+#~ "The Adblock manager will automatically record adblocking statistics when "
+#~ "sqweb plugin is active, find the results on your dashboard on"
+#~ msgstr ""
+#~ "L’Adblock manager va automatiquement enregistrer les statistiques "
+#~ "d’adblocks une fois le plugin sqweb actif, vous pouvez trouvez le "
+#~ "résultat sur votre tableau de bord sur"
+
+#~ msgid "Confirm install"
+#~ msgstr "Terminer l’installation"
+
+#~ msgid ""
+#~ "You finished the installation, to display the SQweb button, go to your "
+#~ "Widget menu and search for the widget called \"SQweb Button\""
+#~ msgstr ""
+#~ "Vous avez terminé l’installation, pour afficher le bouton SQweb, rendez "
+#~ "vous dans votre menu widget et cherchez le widget appelé « SQweb button »."
+
+#~ msgid "I don't have account"
+#~ msgstr "Je n’ai pas de compte"
+
+#~ msgid "I have an account"
+#~ msgstr "J’ai un compte"
+
+#~ msgid "Firstname"
+#~ msgstr "Prénom"
+
+#~ msgid "Lastname"
+#~ msgstr "Nom de famille"
+
+#~ msgid "Sign up"
+#~ msgstr "Inscription"
+
+#~ msgid "Sign in"
+#~ msgstr "Connexion"
 
 #~ msgid ""
 #~ "A error has appeared, please check you correctly followed the "
