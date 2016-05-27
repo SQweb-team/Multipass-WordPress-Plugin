@@ -41,7 +41,9 @@ script:
 
 notifications:
     slack: nwork:uXpjfOLXGLjDDxjthLtphsrz
+        - on_success: change
+        - on_failure: always
     email: false
 
 git:
-  depth: 5
+  depth: 2
