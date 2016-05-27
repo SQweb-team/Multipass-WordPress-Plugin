@@ -12,7 +12,7 @@
 					<?php _e( 'Log in' ); ?>
 				</div>
 				<div class="sqw-tab-select sqw-tab-subscribe">
-					<?php _e( 'Subscribe' ); ?>
+					<?php _e( 'Register' ); ?>
 				</div>
 			</div>
 			<div class="sqw-clear"></div>
