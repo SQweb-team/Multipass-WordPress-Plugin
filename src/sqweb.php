@@ -54,7 +54,7 @@ function check() {
 
 	if ( ! function_exists( 'curl_version' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
-		_e( '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing from your system. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
+		_e( '<div class="error"><p><b>Error : </b>SQweb requires the curl extension, which is currently disabled or missing on your server. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
 	}
 
 	if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {

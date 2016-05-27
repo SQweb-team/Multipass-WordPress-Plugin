@@ -101,7 +101,7 @@
 								</div>
 							</div>
 							<div class="sqw-config-button">
-								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'SQweb users must navigate without ADS on your website', 'sqweb' ); ?></p>
+								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'SQweb users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>
 								<p class="sqw-center basic-font-12"><?php _e( 'This will be used for the iframe that visitors will use to register, payment and login.', 'sqweb' ); ?> <a href="https://www.sqweb.com/users/">DEMO</a></p>
 								<div class="sqw-full-width">
@@ -163,11 +163,11 @@
 							</h3><div class="sqw-tack sqw-tack-big <?php echo ( get_option( 'sqw_analytics' ) ? 'sqw-tack-big-check sqw-red' : '' ); ?>" name="analytics" data-color="red"><div></div></div>
 							<input type="hidden" class="sqw-analytics-input" name="sqw_analytics" value="<?php echo get_option( 'sqw_analytics' ); ?>"/>
 						</div>
-						<p class="sqw-body basic-font-10"><?php _e( 'If you have ads on your website, the SQweb plugin allows you to resolve the adblocking problem.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos' ); ?></a></p>
+						<p class="sqw-body basic-font-10"><?php _e( 'The Adblock Manager gives you tools to mitigate adblocking.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos' ); ?></a></p>
 						<div class="sqw-analytics-body sqw-body <?php echo ( get_option( 'sqw_analytics' ) ? '' : 'sqw-hide' ); ?>">
 							<h4><?php _e( 'Would you like to display a message to your adblockers ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( ! empty( $fmes ) ? 'sqw-tack-basic-check sqw-red' : '' ); ?>" name="sqw-message" data-color="red"><div></div></div>
 							<div class="sqw-message sqw-center <?php echo ( ! empty( $fmes ) ? '' : 'sqw-hide' ); ?>">
-								<h5><?php _e( 'Enter message to show at adblockers', 'sqweb' ); ?></h4>
+								<h5><?php _e( 'Message shown to your adblockers', 'sqweb' ); ?></h4>
 								<textarea class="sqw-textarea" placeholder="Message" name="fmes"><?php echo stripslashes( $fmes ); ?></textarea>
 								<span class="sqw-info sqw-title-analytics"><?php _e( 'The message will be shown in a banner at the bottom of the window.', 'sqweb' ); ?></span>
 							</div>

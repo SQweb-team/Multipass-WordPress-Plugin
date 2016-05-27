@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-05-26 09:52+0200\n"
-"PO-Revision-Date: 2016-05-26 10:05+0200\n"
+"POT-Creation-Date: 2016-05-27 15:27+0200\n"
+"PO-Revision-Date: 2016-05-27 15:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -16,39 +16,43 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backoffice/sqweb.php:12 backoffice/sqweb.php:23
+#: backoffice/sqweb.php:11 backoffice/sqweb.php:22
 msgid "Log in"
 msgstr "Connexion"
 
-#: backoffice/sqweb.php:15 backoffice/sqweb.php:33
-msgid "Subscribe"
-msgstr "Inscription"
+#: backoffice/sqweb.php:14
+msgid "Register"
+msgstr "Enregistrer"
 
-#: backoffice/sqweb.php:21 backoffice/sqweb.php:30
+#: backoffice/sqweb.php:20 backoffice/sqweb.php:29
 msgid "Email"
 msgstr "Email"
 
-#: backoffice/sqweb.php:22 backoffice/sqweb.php:31
+#: backoffice/sqweb.php:21 backoffice/sqweb.php:30
 msgid "Password"
 msgstr "Mot de passe"
 
-#: backoffice/sqweb.php:28
+#: backoffice/sqweb.php:27
 msgid "First name"
 msgstr "Prénom"
 
-#: backoffice/sqweb.php:29
+#: backoffice/sqweb.php:28
 msgid "Last name"
 msgstr "Nom"
 
-#: backoffice/sqweb.php:32
+#: backoffice/sqweb.php:31
 msgid "Confirm password"
 msgstr "Confirmer le mot de passe"
 
-#: backoffice/sqweb.php:46
+#: backoffice/sqweb.php:32
+msgid "Subscribe"
+msgstr "Inscription"
+
+#: backoffice/sqweb.php:45
 msgid "Activate Multipass"
 msgstr "Activer Multipass"
 
-#: backoffice/sqweb.php:51
+#: backoffice/sqweb.php:50
 msgid ""
 "By joining our network, you’ll get a part of the membership fee whenever a "
 "subscriber visit your website."
@@ -56,81 +60,81 @@ msgstr ""
 "En rejoignant notre réseau, vous aurez une partie de la cotisation à chaque "
 "fois qu’un abonné visite votre site Web."
 
-#: backoffice/sqweb.php:51 backoffice/sqweb.php:167
+#: backoffice/sqweb.php:50 backoffice/sqweb.php:166
 msgid "More infos"
 msgstr "Plus d’infos"
 
-#: backoffice/sqweb.php:53
+#: backoffice/sqweb.php:52
 msgid "Do you want to restrict some content for free users ?"
 msgstr ""
 "Voulez-vous de restreindre certains contenus pour les utilisateurs gratuits?"
 
-#: backoffice/sqweb.php:56
+#: backoffice/sqweb.php:55
 msgid "Setup content restrictions :"
 msgstr "Configurer la restriction de contenu :"
 
-#: backoffice/sqweb.php:76
+#: backoffice/sqweb.php:75
 msgid "I want a part of my content to be displayed for non paying users."
 msgstr ""
 "Je souhaite qu’une partie de mon contenu sois affichez pour les utilisateurs "
 "normaux."
 
-#: backoffice/sqweb.php:78
+#: backoffice/sqweb.php:77
 msgid ""
 "(if you use this option only the beginning of the post will be displayed)"
 msgstr ""
 "(Si vous utilisez cette option, seul le début des articles seront affichez)"
 
-#: backoffice/sqweb.php:80
+#: backoffice/sqweb.php:79
 #, php-format
 msgid "How much % of the articles do you want to show free users ?"
 msgstr "Combien de % des articles souhaitez vous affichez ?"
 
-#: backoffice/sqweb.php:81
+#: backoffice/sqweb.php:80
 msgid "(Free users and search engines will see this)"
 msgstr "(Les utilisateurs gratuits et les moteurs de recherche verront ceci)"
 
-#: backoffice/sqweb.php:86
+#: backoffice/sqweb.php:85
 msgid "Start restricting content after a number of page views."
 msgstr ""
 "Démarrer la restriction de contenu après un certain nombre d’articles vue."
 
-#: backoffice/sqweb.php:88
+#: backoffice/sqweb.php:87
 msgid ""
 "(This means any user will see part of your content and they will be blocked)"
 msgstr ""
 "(Cela veut dire que les utilisateurs pourront voir quelques articles, "
 "ensuite il seront bloqué."
 
-#: backoffice/sqweb.php:90
+#: backoffice/sqweb.php:89
 msgid "How many articles free users can see daily before being blocked ?"
 msgstr ""
 "Combien d’articles gratuit l’utilisateur peut voir par jours avant d’être "
 "bloquer ?"
 
-#: backoffice/sqweb.php:91
+#: backoffice/sqweb.php:90
 msgid "Articles per day"
 msgstr "Articles par jours"
 
-#: backoffice/sqweb.php:95
+#: backoffice/sqweb.php:94
 msgid "I want the posts to be available to non paying users after some days."
 msgstr ""
 "Je souhaite que les articles sois disponible gratuitement après un certain "
 "nombre de jours."
 
-#: backoffice/sqweb.php:98
+#: backoffice/sqweb.php:97
 msgid "How many days will the posts remain restricted ?"
 msgstr "Combien de jours un articles reste restreint ?"
 
-#: backoffice/sqweb.php:99
+#: backoffice/sqweb.php:98
 msgid "days before end of restriction"
 msgstr "jours avant la fin de la restriction"
 
-#: backoffice/sqweb.php:105
-msgid "SQweb users must navigate without ADS on your website"
-msgstr "Les utilisateurs SQweb doivent naviguer sur votre site sans publicité"
+#: backoffice/sqweb.php:104
+msgid "SQweb users must browse without ads on your website"
+msgstr "Les abonnés SQweb doivent naviguer sans publicité sur votre site."
 
-#: backoffice/sqweb.php:107
+#: backoffice/sqweb.php:106
 msgid ""
 "This will be used for the iframe that visitors will use to register, payment "
 "and login."
@@ -138,91 +142,75 @@ msgstr ""
 "Ceci sera utiliser pour l’iframe qui permet à vos visiteurs de "
 "s’enregistrer, payer et ce connectez."
 
-#: backoffice/sqweb.php:111
+#: backoffice/sqweb.php:110
 msgid "Language of your website :"
 msgstr "Langue de votre site :"
 
-#: backoffice/sqweb.php:113
+#: backoffice/sqweb.php:112
 msgid "French"
 msgstr "Français"
 
-#: backoffice/sqweb.php:114
+#: backoffice/sqweb.php:113
 msgid "English"
 msgstr "Anglais"
 
-#: backoffice/sqweb.php:115
+#: backoffice/sqweb.php:114
 msgid "Español"
 msgstr "Espagnol"
 
-#: backoffice/sqweb.php:119
+#: backoffice/sqweb.php:118
 msgid "Text for not connected users"
 msgstr "Texte pour visiteur"
 
-#: backoffice/sqweb.php:120
+#: backoffice/sqweb.php:119 backoffice/sqweb.php:144
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
-#: backoffice/sqweb.php:123
+#: backoffice/sqweb.php:122
 msgid "Text for connected user"
 msgstr "Texte pour SQweber"
 
-#: backoffice/sqweb.php:124
+#: backoffice/sqweb.php:123
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/sqweb.php:129
+#: backoffice/sqweb.php:128
 msgid "Select the color :"
 msgstr "Choisissez la couleur :"
 
-#: backoffice/sqweb.php:131
+#: backoffice/sqweb.php:130
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/sqweb.php:134
+#: backoffice/sqweb.php:133
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/sqweb.php:137
-msgid "Red"
-msgstr "Rouge"
-
-#: backoffice/sqweb.php:140
-msgid "Purple"
-msgstr "Violet"
-
-#: backoffice/sqweb.php:143
-msgid "Green"
-msgstr "Vert"
-
-#: backoffice/sqweb.php:148
+#: backoffice/sqweb.php:138
 msgid "Preview :"
 msgstr "Prévisualisation"
 
-#: backoffice/sqweb.php:163
+#: backoffice/sqweb.php:162
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:167
-msgid ""
-"If you have ads on your website, the SQweb plugin allows you to resolve the "
-"adblocking problem."
-msgstr ""
-"Si vous avez de la publicité sur votre site, le plugin SQweb vous aide à "
-"résoudre les problèmes d’adblock."
+#: backoffice/sqweb.php:166
+msgid "The Adblock Manager gives you tools to mitigate adblocking."
+msgstr "L’Adblock Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:169
+#: backoffice/sqweb.php:168
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:171
-msgid "Enter message to show at adblockers"
-msgstr "Entrer le message à afficher aux adblockers"
+#: backoffice/sqweb.php:170
+msgid "Message shown to your adblockers"
+msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:173
+#: backoffice/sqweb.php:172
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:181
+#: backoffice/sqweb.php:180
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -264,16 +252,16 @@ msgid "Edit settings"
 msgstr "Editez les paramètres"
 
 #: login.php:27 login.php:50
-msgid "Sorry, a error is appared, please try again."
-msgstr "Désolé une erreur est survenue."
+msgid "Sorry, an error occurred. Please try again."
+msgstr "Une erreur est survenue. Veuillez re-essayer."
 
 #: logout.php:3
 msgid "Logout from SQweb"
 msgstr "Ce déconnecté de SQweb"
 
 #: save.php:51
-msgid "Your modification has been saved."
-msgstr "Vos modification ont bien était sauvegarder."
+msgid "Your changes have been saved."
+msgstr "Vos modifications ont été enregistrées."
 
 #: sqweb-init.php:14
 msgid "<b>SQweb notice : </b>"
@@ -288,10 +276,10 @@ msgstr ""
 #: sqweb-wsc-filter.php:40
 msgid ""
 "<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to PHP "
-"cache or Legacy cache thanks."
+"cache or Legacy cache."
 msgstr ""
-"<b>SQweb notice : </b>Cache avec mod_rewrite détecté, s’il vous plait "
-"changer pour PHP cache ou Legacy cache, merci."
+"<b>SQweb notice : </b>Cache avec mod_rewrite détecté, merci de changer pour "
+"le cache PHP ou Legacy."
 
 #: sqweb.php:33
 msgid ""
@@ -304,12 +292,12 @@ msgstr ""
 #: sqweb.php:57
 msgid ""
 "<div class=\"error\"><p><b>Error : </b>SQweb requires the curl extension, "
-"which is currently disabled or missing from your system. The SQweb plugin "
+"which is currently disabled or missing on your server. The SQweb plugin "
 "cannot be activated.</p></div>"
 msgstr ""
-"<div class=\"error\"><p><b>Erreur : </b>SQweb requiert l’extension curl, qui "
-"est actuellement manquante ou désactivée sur votre système. Le plugin SQweb "
-"ne peut pas être activé.</p></div>"
+"<div class=\"error\"><p><b>Error : </b>SQweb requiert l’extension curl, qui "
+"est manquante ou désactivée sur votre serveur. Le plugin SQweb ne peut pas "
+"être activé.</p></div>"
 
 #: sqweb.php:62
 msgid ""
@@ -322,6 +310,51 @@ msgstr ""
 #: sqweb.php:74
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "SQweb users must navigate without ADS on your website"
+#~ msgstr ""
+#~ "Les utilisateurs SQweb doivent naviguer sur votre site sans publicité"
+
+#~ msgid "Red"
+#~ msgstr "Rouge"
+
+#~ msgid "Purple"
+#~ msgstr "Violet"
+
+#~ msgid "Green"
+#~ msgstr "Vert"
+
+#~ msgid ""
+#~ "If you have ads on your website, the SQweb plugin allows you to resolve "
+#~ "the adblocking problem."
+#~ msgstr ""
+#~ "Si vous avez de la publicité sur votre site, le plugin SQweb vous aide à "
+#~ "résoudre les problèmes d’adblock."
+
+#~ msgid "Enter message to show at adblockers"
+#~ msgstr "Entrer le message à afficher aux adblockers"
+
+#~ msgid "Sorry, a error is appared, please try again."
+#~ msgstr "Désolé une erreur est survenue."
+
+#~ msgid "Your modification has been saved."
+#~ msgstr "Vos modification ont bien était sauvegarder."
+
+#~ msgid ""
+#~ "<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to "
+#~ "PHP cache or Legacy cache thanks."
+#~ msgstr ""
+#~ "<b>SQweb notice : </b>Cache avec mod_rewrite détecté, s’il vous plait "
+#~ "changer pour PHP cache ou Legacy cache, merci."
+
+#~ msgid ""
+#~ "<div class=\"error\"><p><b>Error : </b>SQweb requires the curl extension, "
+#~ "which is currently disabled or missing from your system. The SQweb plugin "
+#~ "cannot be activated.</p></div>"
+#~ msgstr ""
+#~ "<div class=\"error\"><p><b>Erreur : </b>SQweb requiert l’extension curl, "
+#~ "qui est actuellement manquante ou désactivée sur votre système. Le plugin "
+#~ "SQweb ne peut pas être activé.</p></div>"
 
 #~ msgid "You are connected"
 #~ msgstr "Vous êtes connecté"
@@ -751,9 +784,6 @@ msgstr "Configuration"
 
 #~ msgid "Update"
 #~ msgstr "Mettre à jour"
-
-#~ msgid "Register"
-#~ msgstr "Enregistrer"
 
 #~ msgid "How use button and Adsense filters ?"
 #~ msgstr "Comment utiliser le bouton et le filtre pub SQweb ?"

@@ -37,7 +37,7 @@ class SQweb_filter
 	public function notice() {
 	?>
 	<div class="notice notice-error is-dismissible">
-		<p><?php _e( '<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to PHP cache or Legacy cache thanks.', 'sqweb' ); ?></p>
+		<p><?php _e( '<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to PHP cache or Legacy cache.', 'sqweb' ); ?></p>
 	</div>
 	<?php
 	}
@@ -48,7 +48,7 @@ class SQweb_filter
 			$wp_cache_config_file = WP_CONTENT_DIR . '/wp-cache-config.php';
 			$wp_cache_mfunc_enabled = 1;
 			$file = file_get_contents( $wp_cache_config_file );
-			$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Modify by SQweb', $file );
+			$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Edited by SQweb', $file );
 			file_put_contents( $wp_cache_config_file, $file );
 		} else {
 			add_action( 'admin_notices', array( $this, 'notice' ) );
