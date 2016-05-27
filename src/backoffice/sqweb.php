@@ -146,6 +146,15 @@
 									</div>
 									<div class="sqw-tiers">
 										<p><?php _e( 'Preview :' ); ?></p>
+										<div class="sqweb-button sqweb-<?php echo $btheme; ?>">
+											<div class="sqw-btn">
+												<span class="sqw-btn-logo" target="_blank">
+												</span>
+												<a href="#" onclick="sqw.modal_first()" class="sqw-btn-link">
+													<?php echo (!empty($flogin) ? $flogin : __('Remove Ads', 'sqweb' )); ?>
+												</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

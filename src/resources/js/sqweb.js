@@ -97,4 +97,12 @@ $(document).ready(function() {
 	$('.sqw-textarea').keyup(function() {
 		resize(this);
 	});
+
+	$('.sqw-radio').click(function() {
+		$('.sqweb-button').removeClass('sqweb-grey').removeClass('sqweb-blue').addClass('sqweb-'+$(this).val());
+	});
+
+	$('#sqw-login-msg, #sqw-logout-msg').keyup(function() {
+		$('.sqw-btn-link').text($(this).val());
+	});
 });
