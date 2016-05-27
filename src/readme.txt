@@ -76,7 +76,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 = v2.0.0 =
 * New design.
 * Improve UX.
-* Improve compatibility with Wordpress Super Cache plugin.
+* Improve compatibility with Wordpress Super Cache.
 
 = v1.8.1 =
 * Fixed regression with older PHP versions, due to modern array syntax.
@@ -211,8 +211,11 @@ Fixed Trench translations.
 
 == Upgrade notice ==
 
+= v2.0.0 =
+Completly new design with quicker setup. Improved compatibility with Wordpress Super Cache.
+
 = v1.5.1 =
-* Improved end of the installation guidance.
+Improved end of the installation guidance.
 
 = v1.5.0 =
 Major overhaul of the configuration panel. Introduced new options, including a fully customizable paywall.
