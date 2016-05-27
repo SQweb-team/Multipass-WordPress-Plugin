@@ -7,4 +7,3 @@
 	$btheme = (get_option( 'btheme' ) != false) ? get_option( 'btheme' ) : 'blue';
 	$lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
 	$targeting = (get_option( 'targets' ) != false) ? get_option( 'targets' ) : 'false';
-?>

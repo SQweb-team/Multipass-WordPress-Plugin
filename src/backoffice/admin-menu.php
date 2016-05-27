@@ -15,4 +15,3 @@ if ( ! empty( $sqw_token ) ) {
 }
 
 include_once 'sqweb.php';
-
