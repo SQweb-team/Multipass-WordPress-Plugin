@@ -1,4 +1,3 @@
-<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 <div class="sqw-general">
 	<?php if ( empty( $sqw_token ) ) { ?>
 	<div class="sqw-login">
