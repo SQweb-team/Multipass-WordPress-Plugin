@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 <div class="sqw-general">
 	<?php if ( empty( $sqw_token ) ) { ?>
 	<div class="sqw-login">
@@ -133,15 +133,6 @@
 											<div class="sqw-margin-top">
 												<input class="sqw-radio" id="grey" type="radio" name="btheme" value="grey" <?php echo ('grey' == $btheme ? 'checked' : '') ?>/><label for="grey"><?php _e( 'Grey', 'sqweb' ); ?></label>
 											</div>
-											<!--<div class="sqw-margin-top">
-												<input class="sqw-radio" id="red" type="radio" name="btheme" value="red"/><label for="red"><?php _e( 'Red', 'sqweb' ); ?></label>
-											</div>
-											<div class="sqw-margin-top">
-												<input class="sqw-radio" id="purple" type="radio" name="btheme" value="purple"/><label for="purple"><?php _e( 'Purple', 'sqweb' ); ?></label>
-											</div>
-											<div class="sqw-margin-top">
-												<input class="sqw-radio" id="green" type="radio" name="btheme" value="green"/><label for="green"><?php _e( 'Green', 'sqweb' ); ?></label>
-											</div>-->
 										</div>
 									</div>
 									<div class="sqw-tiers">
