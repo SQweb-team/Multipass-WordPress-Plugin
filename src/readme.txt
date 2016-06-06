@@ -74,8 +74,8 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.0.1 =
-* Improve usage of late init on Wordpress Super Cache.
-* Improve detection of Wordpress Super Cache.
+* Improved usage of late init on Wordpress Super Cache.
+* Improved detection of Wordpress Super Cache.
 
 = v2.0.0 =
 * New design.
@@ -214,6 +214,9 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= v2.0.1 =
+Improved compatibility with Wordpress Super Cache.
 
 = v2.0.0 =
 Completly new design with quicker setup. Improved compatibility with Wordpress Super Cache.
