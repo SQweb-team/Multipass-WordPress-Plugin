@@ -8,22 +8,17 @@ class SQweb_filter
 	private static $_instance = null;
 	private $_ads;
 	private $_text;
+	private $_data_set = false;
 
 	public function __construct() {
 
-		global $wp_cache_mfunc_enabled;
-		if ( defined( 'WPCACHEHOME' ) && function_exists( 'add_cacheaction' ) ) {
-			if ( ! file_exists( WPCACHEHOME . '/plugins/sqweb.php' ) ) {
-				file_put_contents( WPCACHEHOME . '/plugins/sqweb.php', '<?php $wp_super_cache_late_init = 1; ?>' );
-			}
-			if ( 0 == $wp_cache_mfunc_enabled ) {
+		global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
+		if ( $cache_enabled && $super_cache_enabled ) {
+			if ( ! $wp_cache_mfunc_enabled ) {
 				$this->enable_dynamic_cache();
 			}
-			add_cacheaction( 'add_cacheaction', array( $this, 'initialize_cache_sqweb' ) );
 			add_cacheaction( 'wpsc_cachedata_safety', function ( $safety ) { return 1; } );
 			add_cacheaction( 'wpsc_cachedata', array( $this, 'display_ads_with_wpsc' ) );
-		} else {
-			$this->set_data();
 		}
 	}
 
@@ -43,12 +38,13 @@ class SQweb_filter
 	}
 
 	public function enable_dynamic_cache() {
-		global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite;
-		if ( ! $wp_cache_mod_rewrite ) {
+		global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite, $wp_super_cache_late_init;
+		if ( ! $wp_cache_mod_rewrite || ! $wp_super_cache_late_init ) {
 			$wp_cache_config_file = WP_CONTENT_DIR . '/wp-cache-config.php';
 			$wp_cache_mfunc_enabled = 1;
 			$file = file_get_contents( $wp_cache_config_file );
 			$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Edited by SQweb', $file );
+			$file = str_replace( '$wp_super_cache_late_init = 0; //Added by WP-Cache Manager', '$wp_super_cache_late_init = 1; //Edited by SQweb', $file );
 			file_put_contents( $wp_cache_config_file, $file );
 		} else {
 			add_action( 'admin_notices', array( $this, 'notice' ) );
@@ -56,18 +52,18 @@ class SQweb_filter
 	}
 
 	public function set_data() {
-		$this->_ads = unserialize( get_option( 'sqw_ads' ) );
-		$this->_text = unserialize( get_option( ' sqw_text' ) );
-		$this->_ads = $this->_ads ? $this->_ads : array();
-		$this->_text = $this->_text ? $this->_text : array();
-	}
-
-	public function initialize_cache_sqweb() {
-		add_action( 'init', array( $this, 'set_data' ) );
+		if ( ! $this->_data_set ) {
+			$this->_ads = unserialize( get_option( 'sqw_ads' ) );
+			$this->_text = unserialize( get_option( ' sqw_text' ) );
+			$this->_ads = $this->_ads ? $this->_ads : array();
+			$this->_text = $this->_text ? $this->_text : array();
+			$this->_data_set = true;
+		}
 	}
 
 	public function add_ads( $ads, $text = null ) {
 
+		$this->set_data();
 		if ( ! in_array( $ads, $this->_ads ) ) {
 			$key = md5( rand() );
 			$this->_ads[ $key ] = $ads;
@@ -82,7 +78,8 @@ class SQweb_filter
 
 	private function display_ads( $key ) {
 
-		if ( defined( 'WPCACHEHOME' ) && function_exists( 'add_cacheaction' ) ) {
+		global $cache_enabled, $super_cache_enabled;
+		if ( $cache_enabled && $super_cache_enabled ) {
 			echo $key;
 		} else {
 			if ( sqweb_check_credentials() > 0 ) {
@@ -94,7 +91,7 @@ class SQweb_filter
 	}
 
 	public function display_ads_with_wpsc( &$cache ) {
-
+		$this->set_data();
 		if ( sqweb_check_credentials() > 0 ) {
 			foreach ( $this->_text as $key => $text ) {
 				$cache = str_replace( $key, $text, $cache );
