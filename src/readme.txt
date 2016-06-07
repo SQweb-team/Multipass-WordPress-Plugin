@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.5.2
-Stable tag: 2.0.1
+Stable tag: 2.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -73,9 +73,12 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.1.0 =
+* Add compatibility with W3TC.
+
 = v2.0.1 =
-* Improved usage of late init on Wordpress Super Cache.
-* Improved detection of Wordpress Super Cache.
+* Improve usage of late init on Wordpress Super Cache.
+* Improve detection of Wordpress Super Cache.
 
 = v2.0.0 =
 * New design.
@@ -214,9 +217,6 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
-
-= v2.0.1 =
-Improved compatibility with Wordpress Super Cache.
 
 = v2.0.0 =
 Completly new design with quicker setup. Improved compatibility with Wordpress Super Cache.

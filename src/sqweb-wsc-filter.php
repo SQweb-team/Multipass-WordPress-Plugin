@@ -6,9 +6,10 @@
 class SQweb_filter
 {
 	private static $_instance = null;
-	private $_ads;
-	private $_text;
+	public $_ads;
+	public $_text;
 	private $_data_set = false;
+	private $_w3tc;
 
 	public function __construct() {
 
@@ -20,6 +21,36 @@ class SQweb_filter
 			add_cacheaction( 'wpsc_cachedata_safety', function ( $safety ) { return 1; } );
 			add_cacheaction( 'wpsc_cachedata', array( $this, 'display_ads_with_wpsc' ) );
 		}
+		$this->get_w3tc_settings();
+	}
+
+	public function get_w3tc_settings() {
+		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.php';
+		/** Check if W3TC is enabled */
+		if ( file_exists( $wp_master_path ) ) {
+			$this->_w3tc = include( $wp_master_path );
+			if ( $this->_w3tc['pgcache.enabled'] ) {
+				if ( ! $this->_w3tc['pgcache.late_init'] ) {
+					/** Active Late Init */
+					$file = file_get_contents( $wp_master_path );
+					$file = str_replace( '\'pgcache.late_init\' => false', '\'pgcache.late_init\' => true', $file );
+					file_put_contents( $wp_master_path, $file );
+				}
+				if ( ! defined( 'W3TC_DYNAMIC_SECURITY' ) ) {
+					/** Define W3TC DYNAMIC SECURITY */
+					$wp_cache_config_file = ABSPATH . '/wp-config.php';
+					$file = file_get_contents( $wp_cache_config_file );
+					$file = str_replace( '/** Enable W3 Total Cache */', '/** Dynamic content for SQweb */
+define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
+
+/** Enable W3 Total Cache */', $file );
+					file_put_contents( $wp_cache_config_file, $file );
+				}
+				if ( $this->_w3tc['pgcache.engine'] === 'file' && $this->_w3tc['browsercache.enabled'] ) {
+					add_action( 'admin_notices', array( $this, 'notice_browser_cache' ) );
+				}
+			}
+		}
 	}
 
 	public static function get_instance() {
@@ -29,10 +60,18 @@ class SQweb_filter
 		return self::$_instance;
 	}
 
-	public function notice() {
+	public function notice_mod_rewrite() {
 	?>
 	<div class="notice notice-error is-dismissible">
 		<p><?php _e( '<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to PHP cache or Legacy cache.', 'sqweb' ); ?></p>
+	</div>
+	<?php
+	}
+
+	public function notice_browser_cache() {
+	?>
+	<div class="notice notice-error is-dismissible">
+		<p><?php _e( '<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible with page cache method : Disk: Basic, disabled it or switch on Disk: enhanced.', 'sqweb' ); ?></p>
 	</div>
 	<?php
 	}
@@ -47,7 +86,7 @@ class SQweb_filter
 			$file = str_replace( '$wp_super_cache_late_init = 0; //Added by WP-Cache Manager', '$wp_super_cache_late_init = 1; //Edited by SQweb', $file );
 			file_put_contents( $wp_cache_config_file, $file );
 		} else {
-			add_action( 'admin_notices', array( $this, 'notice' ) );
+			add_action( 'admin_notices', array( $this, 'notice_mod_rewrite' ) );
 		}
 	}
 
@@ -79,8 +118,19 @@ class SQweb_filter
 	private function display_ads( $key ) {
 
 		global $cache_enabled, $super_cache_enabled;
+		
 		if ( $cache_enabled && $super_cache_enabled ) {
 			echo $key;
+		} else if ( $this->_w3tc['pgcache.enabled'] ) {
+			?>
+			<!--mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
+				if ( sqweb_check_credentials() > 0 ) {
+					echo unserialize( get_option( 'sqw_text' ) )['<?php echo $key; ?>'];
+				} else {
+					echo unserialize( get_option( 'sqw_ads' ) )['<?php echo $key; ?>'];
+				}
+			<!--/mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
+			<?php
 		} else {
 			if ( sqweb_check_credentials() > 0 ) {
 				echo $this->_text[ $key ];
