@@ -174,12 +174,6 @@ return array(
 		}
 		return $cache;
 	}
-
-	public function reset_ads() {
-
-		delete_option( 'sqw_ads' );
-		delete_option( 'sqw_text' );
-	}
 }
 
 SQweb_filter::get_instance();
