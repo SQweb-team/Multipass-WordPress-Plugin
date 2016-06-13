@@ -220,8 +220,7 @@ Fixed Trench translations.
 == Upgrade notice ==
 
 = v2.1.0 =
-
-Don't forget to clear cache.
+Si vous utilisiez SQweb avec WordpressSuperCache, pour beneficier de l'optimisation de performance vous devez supprimer sqweb.php dans le dossier plugins du plugins WordpressSuperCache.
 
 = v2.0.0 =
 Completly new design with quicker setup. Improved compatibility with Wordpress Super Cache.
