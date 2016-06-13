@@ -75,7 +75,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 = v2.1.0 =
 * Add compatibility with W3TC.
-* Change data stockage for remove usage of late init on Wordpress Super Cache.
+* Changed storage method, allowing for the removal of late init on Wordpress Super Cache.
 
 = v2.0.1 =
 * Improve usage of late init on Wordpress Super Cache.
@@ -220,7 +220,7 @@ Fixed Trench translations.
 == Upgrade notice ==
 
 = v2.1.0 =
-Si vous utilisiez SQweb avec WordpressSuperCache, pour beneficier de l'optimisation de performance vous devez supprimer sqweb.php dans le dossier plugins du plugins WordpressSuperCache.
+If you previously used SQweb with WordPress Super Cache, you must delete sqweb.php in the plugins directory of WP Super Cache.
 
 = v2.0.0 =
 Completly new design with quicker setup. Improved compatibility with Wordpress Super Cache.
