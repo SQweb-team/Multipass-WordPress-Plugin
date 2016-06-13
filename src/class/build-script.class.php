@@ -27,7 +27,12 @@ class BuildScript
 		self::$_flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : 'Remove ads';
 		self::$_flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : 'Connected';
 		// Assembling
-		echo '<script data-cfasync="false">var _sqw = {
+		echo '
+			<script data-cfasync="false">
+				/**
+				 * SQweb v' . SQW_VERSION . '
+				 **/
+				var _sqw = {
 					id_site: ' . self::$_wsid . ',
 					debug: false,
 					targeting: ' . self::$_targets . ',
@@ -42,7 +47,8 @@ class BuildScript
 				var script = document.createElement("script");
 				script.type = "text/javascript";
 				script.src = "//cdn.sqweb.com/sqweb-beta.js";
-				document.getElementsByTagName("head")[0].appendChild(script);</script>';
+				document.getElementsByTagName("head")[0].appendChild(script);
+			</script>';
 	}
 
 	/**

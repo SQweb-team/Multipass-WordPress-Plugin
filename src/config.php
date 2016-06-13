@@ -22,4 +22,4 @@ function sqw_site_url() {
 // Self-Explanatory
 define( 'SQW_ENDPOINT', 'https://api.sqweb.com/' );
 define( 'DEBUG_MODE', 0 );
-define( 'SQW_VERSION', '2.0.1' );
+define( 'SQW_VERSION', '2.1.0' );

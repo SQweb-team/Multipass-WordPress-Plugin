@@ -312,7 +312,7 @@ function sqw_send_data( $type ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		$return = wp_remote_post( SQW_ENDPOINT . 'data/send', array(
+		wp_remote_post( SQW_ENDPOINT . 'data/send', array(
 			'method' => 'POST',
 			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 			'timeout' => 1,
