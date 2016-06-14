@@ -107,8 +107,8 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 		if ( ! $this->_data_set ) {
 			$sqweb_config_path = WP_PLUGIN_DIR . '/sqweb/sqweb-config.php';
 			$sqweb_config = include( $sqweb_config_path );
-			$this->_ads = unserialize( $sqweb_config['filter.ads'] );
-			$this->_text = unserialize( $sqweb_config['filter.text'] );
+			$this->_ads = unserialize( base64_decode( $sqweb_config['filter.ads'] ) );
+			$this->_text = unserialize( base64_decode( $sqweb_config['filter.text'] ) );
 			$this->_data_set = true;
 		}
 	}
@@ -124,8 +124,8 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 			$content = '<?php
 
 return array(
-	\'filter.ads\' => \'' . serialize( $this->_ads ) . '\',
-	\'filter.text\' => \'' . serialize( $this->_text ) . '\',
+	\'filter.ads\' => \'' . base64_encode( serialize( $this->_ads ) ) . '\',
+	\'filter.text\' => \'' . base64_encode( serialize( $this->_text ) ) . '\'
 );';
 			file_put_contents( $sqweb_config_path, $content );
 		} else {
