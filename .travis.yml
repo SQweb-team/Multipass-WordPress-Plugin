@@ -37,6 +37,7 @@ script:
     - phpcs --standard=WordPress-Core . --extensions=php
     - phpcs --standard=phpcs.xml . --extensions=php
     - gulp
+    - snyk test
 #    - "cd src && phpunit"
 
 notifications:
