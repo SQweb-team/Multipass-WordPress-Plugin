@@ -21,7 +21,6 @@ class SqwebAdControl extends WP_Widget
 		$adblock = apply_filters( 'widget_adblock', empty( $instance['adblock'] ) ? '' : $instance['adblock'], $instance );
 		echo $before_widget;
 		echo '<div class="textwidget">';
-		$wsid = get_option( 'wsid' );
 		SQweb_filter::get_instance()->add_ads( $adblock, $text );
 		echo '</div>';
 		echo $after_widget;
