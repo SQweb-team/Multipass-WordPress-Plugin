@@ -77,8 +77,8 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 * Fixed WordPress route rewriting.
 
 = v2.2.0 =
-* Remove usage of late init on Wordpress Super Cache.
-* Resolve issue on check credentials of subscribers.
+* Removed usage of late init on Wordpress Super Cache.
+* Resolved issue when checking subscribers' credentials.
 
 = v2.1.0 =
 * Add compatibility with W3TC.
