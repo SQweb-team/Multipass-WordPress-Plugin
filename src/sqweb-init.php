@@ -102,7 +102,7 @@ function sqwadmin_enqueue_styles( $hook ) {
 	}
 	wp_enqueue_style(
 		'sqweb-admin-style',
-		plugins_url( '/resources/css/sqweb_admin_style.css', __FILE__ )
+		'/wp-content/plugins/sqweb/resources/css/sqweb_admin_style.css'
 	);
 	wp_enqueue_script(
 		'sqweb-jquery',
@@ -110,7 +110,7 @@ function sqwadmin_enqueue_styles( $hook ) {
 	);
 	wp_enqueue_script(
 		'sqweb-admin-script',
-		plugins_url( '/resources/js/sqweb.js', __FILE__ )
+		'/wp-content/plugins/sqweb/resources/js/sqweb.js'
 	);
 }
 
@@ -119,13 +119,6 @@ function sqwadmin_enqueue_scripts( $hook ) {
 	if ( 'toplevel_page_SQwebAdmin' != $hook ) {
 		return;
 	}
-	wp_enqueue_script(
-		'chart',
-		plugins_url( '/resources/js/Chart.min.js', __FILE__ ),
-		array( 'jquery' ),
-		'1.0.0',
-		false
-	);
 }
 
 add_action( 'admin_enqueue_scripts', 'sqwadmin_enqueue_styles' );
