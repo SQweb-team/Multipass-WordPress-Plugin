@@ -28,7 +28,7 @@ return array(
 	\'filter.ads\' => \'YTowOnt9\',
 	\'filter.text\' => \'YTowOnt9\'
 );';
-	file_put_contents(WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content);
+	file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
 	global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
 	if ( $cache_enabled && $super_cache_enabled ) {
 		/** Install plugins on WP Super Cache */
