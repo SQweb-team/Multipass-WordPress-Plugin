@@ -21,6 +21,20 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) .
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
+	$content = '<?php
+
+return array(
+	\'wsid\' => ' . get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0 . ',
+	\'filter.ads\' => \'YTowOnt9\',
+	\'filter.text\' => \'YTowOnt9\'
+);';
+	file_put_contents(WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content);
+	global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
+	if ( $cache_enabled && $super_cache_enabled ) {
+		/** Install plugins on WP Super Cache */
+		$file = file_get_contents( WP_PLUGIN_DIR . '/sqweb/plugins/wp-super-cache.php' );
+		file_put_contents( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php', $file );
+	}
 }
 
 function sqw_deactivation() {

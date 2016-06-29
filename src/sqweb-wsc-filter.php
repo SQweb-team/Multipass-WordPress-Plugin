@@ -162,9 +162,9 @@ return array(
 				$sqweb_config = include( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/sqweb-config.php' );
 				include_once( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/functions.php');
 				if ( sqweb_check_credentials(<?php echo $this->_wsid; ?>) > 0 ) {
-					echo unserialize( $sqweb_config['filter.text'] )['<?php echo $key; ?>'];
+					echo base64_decode('<?php echo base64_encode($this->_text[$key]); ?>');
 				} else {
-					echo unserialize( $sqweb_config['filter.ads'] )['<?php echo $key; ?>'];
+					echo base64_decode('<?php echo base64_encode($this->_ads[$key]); ?>');
 				}
 			<!--/mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
 			<?php
