@@ -111,13 +111,15 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'cookies' => array(),
 			)
 		);
-		$response = json_decode( $return['body'] );
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 				$error_message = $return->get_error_message();
 				echo 'Something went wrong: ' . $error_message;
 			}
-		} elseif ( ! false == $response ) {
+			return ( 0 );
+		}
+		$response = json_decode( $return['body'] );
+		if ( ! false == $response ) {
 			update_option( 'sqw_token', $response->token );
 			return ( 1 );
 		}
