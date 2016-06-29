@@ -74,7 +74,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.2.1 =
-* Fix wordpress route rewriting
+* Fixed WordPress route rewriting.
 
 = v2.2.0 =
 * Remove usage of late init on Wordpress Super Cache.
