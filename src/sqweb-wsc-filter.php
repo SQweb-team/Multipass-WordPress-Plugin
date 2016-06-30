@@ -17,10 +17,10 @@ class SQweb_filter
 	public function __construct() {
 
 		if ( ! defined( 'WP_CONTENT_DIR' ) ) {
-			define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content/' );
+			define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 		}
 		if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
-			define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins/' );
+			define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 		}
 		global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
 		if ( $cache_enabled && $super_cache_enabled ) {
