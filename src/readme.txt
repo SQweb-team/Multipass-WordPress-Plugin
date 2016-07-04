@@ -53,7 +53,7 @@ To manage your advertisement blocks, use the following function :
 ?>
 `
 
-**If you're using Wordpress SuperCache, you must enable "Dynamic Content" under "Advanced Settings".**
+**If you're using WordPress Super Cache, you must enable "Dynamic Content" under "Advanced Settings".** Also, if you used 'mod_rewrite' with WordPress Super Cache, make sure to comment the rules in your '.htaccess' file.
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
 
