@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.5.2
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -49,11 +49,21 @@ To manage your advertisement blocks, use the following function :
 
 `
 <?php
-	SQweb_filter::get_instance()->add_ads('ads');
+	SQweb_filter::get_instance()->add_ads('YOUR ADVERTISEMENT CODE HERE');
 ?>
 `
 
-**If you're using Wordpress SuperCache, you must enable "Dynamic Content" under "Advanced Settings".**
+Replace 'YOUR ADVERTISEMENT CODE HERE' with your code.
+
+If you wish to show extra content to your subscribers, you can add a second parameter like so :
+
+`
+<?php
+	SQweb_filter::get_instance()->add_ads('YOUR ADVERTISEMENT CODE HERE', 'YOUR SUBSCRIBER CONTENT HERE');
+?>
+`
+
+**If you're using WordPress Super Cache, you must enable "Dynamic Content" under "Advanced Settings".** Also, if you used 'mod_rewrite' with WordPress Super Cache, make sure to comment the rules in your '.htaccess' file.
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
 
@@ -72,6 +82,10 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.2.2 =
+* Improved installation instructions.
+* Updated root certificates.
 
 = v2.2.1 =
 * Fixed WordPress route rewriting.
