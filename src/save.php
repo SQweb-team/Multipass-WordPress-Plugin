@@ -52,4 +52,3 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
 }
-?>

@@ -50,4 +50,3 @@ if ( isset( $_POST ) && ( ! empty( $_POST['sqw-firstname'] ) || ! empty( $_POST[
 		add_notice_event( 'error', __( 'Sorry, an error occurred. Please try again.', 'sqweb' ) );
 	}
 }
-?>
