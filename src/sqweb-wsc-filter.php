@@ -24,7 +24,7 @@ class SQweb_filter
 			define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 		}
 		global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
-		add_action('sqweb_daily_event', array($this, 'clean_data'));
+		add_action( 'sqweb_daily_event', array( $this, 'clean_data' ) );
 		if ( $cache_enabled && $super_cache_enabled ) {
 			$this->_type_cache = 'wp_super_cache';
 			if ( ! file_exists( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php' ) ) {
@@ -152,14 +152,14 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 		}
 	}
 
-	private function generateRandomString( $length = 128 ) {
+	private function generate_random_string( $length = 128 ) {
 	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	    $charactersLength = strlen($characters);
-	    $randomString = '';
-	    for ($i = 0; $i < $length; $i++) {
-	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    $characters_length = strlen( $characters );
+	    $random_string = '';
+	    for ( $i = 0; $i < $length; $i++ ) {
+	        $random_string .= $characters[ rand( 0, $characters_length - 1 ) ];
 	    }
-	    return $randomString;
+	    return $random_string;
 	}
 
 	public function add_ads( $ads, $text = null, $display_now = true ) {
@@ -167,7 +167,7 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 		$this->set_data();
 		if ( ! in_array( $ads, $this->_ads ) ) {
 			$sqweb_config_path = WP_PLUGIN_DIR . '/sqweb/sqweb-config.php';
-			$key = $this->generateRandomString( rand( 32, 128 ) );
+			$key = $this->generate_random_string( rand( 32, 128 ) );
 			$this->_ads[ $key ] = $ads;
 			$this->_text[ $key ] = $text;
 			$content = file_get_contents( $sqweb_config_path );
@@ -189,7 +189,7 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 			case 'wp_super_cache':
 				echo $key;
 				break;
-			
+
 			case 'w3tc':
 				?>
 				<!--mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->

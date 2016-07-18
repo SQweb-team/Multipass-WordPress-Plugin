@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
-Version: 2.2.3
+Version: 2.2.4
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -21,8 +21,8 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) .
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
-	if (! wp_next_scheduled ( 'sqweb_daily_event' )) {
-		wp_schedule_event(time(), 'daily', 'sqweb_daily_event');
+	if ( ! wp_next_scheduled( 'sqweb_daily_event' ) ) {
+		wp_schedule_event( time(), 'daily', 'sqweb_daily_event' );
 	}
 	$content = '<?php
 
@@ -42,7 +42,7 @@ return array(
 
 function sqw_deactivation() {
 	sqw_send_data( 'disabled' );
-	wp_clear_scheduled_hook('sqweb_daily_event');
+	wp_clear_scheduled_hook( 'sqweb_daily_event' );
 }
 
 function sqw_notice_install() {

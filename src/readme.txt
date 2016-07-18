@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.5.2
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -72,6 +72,7 @@ If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon 
 Please make sure that you're forwarding client IPs properly. A detailed thread with example configurations is available [here]("https://core.trac.wordpress.org/ticket/9235").
 
 If you need any help, email us at hello@sqweb.com and one of our engineers will check your configuration with you.
+
 
 == Frequently asked questions ==
 
