@@ -1,6 +1,6 @@
 <?php
 return array(
 	'wsid'		=> 0,
-	'filter.ads' => 'YTowOnt9',
-	'filter.text' => 'YTowOnt9',
+	'filter.ads' => 'YToxOntzOjEwMToiUVFwWnBKenJRN1VLOW5rVjN4eHVZOGgxbUZlaVFrMEhicEdBOGYyWm5YS3drNHNuQ1pSQjg5Q3ZPUk5GYk5tbmQzWG1qWm1HVzZkaGFGRk5Gd29ORzBpdVM1OTRUd3I3enB1VHAiO3M6MToiYSI7fQ==',
+	'filter.text' => 'YToxOntzOjEwMToiUVFwWnBKenJRN1VLOW5rVjN4eHVZOGgxbUZlaVFrMEhicEdBOGYyWm5YS3drNHNuQ1pSQjg5Q3ZPUk5GYk5tbmQzWG1qWm1HVzZkaGFGRk5Gd29ORzBpdVM1OTRUd3I3enB1VHAiO3M6MToiYyI7fQ==',
 );
