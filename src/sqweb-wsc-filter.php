@@ -13,6 +13,7 @@ class SQweb_filter
 	private $_wsid;
 	private $_data_set = false;
 	private $_w3tc;
+	private $_type_cache = 0;
 
 	public function __construct() {
 
@@ -23,7 +24,9 @@ class SQweb_filter
 			define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 		}
 		global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
+		add_action('sqweb_daily_event', array($this, 'clean_data'));
 		if ( $cache_enabled && $super_cache_enabled ) {
+			$this->_type_cache = 'wp_super_cache';
 			if ( ! file_exists( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php' ) ) {
 				/** Install plugins on WP Super Cache */
 				$file = file_get_contents( WP_PLUGIN_DIR . '/sqweb/plugins/wp-super-cache.php' );
@@ -33,9 +36,10 @@ class SQweb_filter
 				$this->enable_dynamic_cache();
 			}
 			add_cacheaction( 'wpsc_cachedata_safety', function ( $safety ) { return 1; } );
-			add_cacheaction( 'wpsc_cachedata', array( $this, 'display_ads_with_wpsc' ) );
+			add_cacheaction( 'wpsc_cachedata', array( $this, 'display_content_with_wpsc' ) );
+		} else {
+			$this->get_w3tc_settings();
 		}
-		$this->get_w3tc_settings();
 	}
 
 	public static function get_instance() {
@@ -56,7 +60,7 @@ class SQweb_filter
 	public function notice_browser_cache() {
 	?>
 	<div class="notice notice-error is-dismissible">
-		<p><?php _e( '<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible with page cache method : Disk: Basic, please disabled it.', 'sqweb' ); ?></p>
+		<p><?php _e( '<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible with SQweb, please disabled it.', 'sqweb' ); ?></p>
 	</div>
 	<?php
 	}
@@ -69,11 +73,11 @@ class SQweb_filter
 	<?php
 	}
 
-	public function enable_dynamic_cache() {
+	private function enable_dynamic_cache() {
 		global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite, $wp_super_cache_late_init;
 		if ( ! $wp_cache_mod_rewrite || ! $wp_super_cache_late_init ) {
 			$wp_cache_config_file = WP_CONTENT_DIR . '/wp-cache-config.php';
-			$wp_cache_mfunc_enabled = 1;
+			$wp_cache_mfunc_enabled = 'w3tc';
 			$file = file_get_contents( $wp_cache_config_file );
 			$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Edited by SQweb', $file );
 			/** Automatic activate late init, deprecated since 2.1.1
@@ -85,12 +89,13 @@ class SQweb_filter
 		}
 	}
 
-	public function get_w3tc_settings() {
+	private function get_w3tc_settings() {
 		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.php';
 		/** Check if W3TC is enabled */
 		if ( file_exists( $wp_master_path ) ) {
 			$this->_w3tc = include( $wp_master_path );
 			if ( $this->_w3tc['pgcache.enabled'] ) {
+				$this->_type_cache = 'w3tc';
 				if ( ! $this->_w3tc['pgcache.late_init'] ) {
 					/* Active Late Init */
 					$file = file_get_contents( $wp_master_path );
@@ -117,7 +122,26 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 		}
 	}
 
-	public function set_data() {
+	public function filter_option( $value ) {
+		$this->add_ads( $value, null, false );
+	}
+
+	private function option_ads_check() {
+		$array_option = array(
+			'ads_under_post_title_320',
+			'ads_post_footer_700',
+			'ads_post_footer_320',
+			'ads_header_320',
+			'ads_header_468',
+			'ads_header_700',
+		);
+
+		foreach ( $array_option as $value ) {
+			add_filter( 'option_' . $value, array( $this, 'filter_get_option' ), 100 );
+		}
+	}
+
+	private function set_data() {
 		if ( ! $this->_data_set ) {
 			$sqweb_config_path = WP_PLUGIN_DIR . '/sqweb/sqweb-config.php';
 			$sqweb_config = include( $sqweb_config_path );
@@ -128,67 +152,87 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 		}
 	}
 
-	public function add_ads( $ads, $text = null ) {
+	private function generateRandomString( $length = 128 ) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+	    for ($i = 0; $i < $length; $i++) {
+	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+	    return $randomString;
+	}
+
+	public function add_ads( $ads, $text = null, $display_now = true ) {
 
 		$this->set_data();
 		if ( ! in_array( $ads, $this->_ads ) ) {
 			$sqweb_config_path = WP_PLUGIN_DIR . '/sqweb/sqweb-config.php';
-			$key = md5( rand() );
+			$key = $this->generateRandomString( rand( 32, 128 ) );
 			$this->_ads[ $key ] = $ads;
 			$this->_text[ $key ] = $text;
-			$content = '<?php
-
-return array(
-	\'wsid\' => ' . get_option( 'wsid' ) . ',
-	\'filter.ads\' => \'' . base64_encode( serialize( $this->_ads ) ) . '\',
-	\'filter.text\' => \'' . base64_encode( serialize( $this->_text ) ) . '\'
-);';
+			$content = file_get_contents( $sqweb_config_path );
+			$content = preg_replace( '/(?<=\'wsid\' => ).+(?=,)/', get_option( 'wsid' ), $content );
+			$content = preg_replace( '/(?<=\'filter\.ads\' => \').+(?=\',)/', base64_encode( serialize( $this->_ads ) ), $content );
+			$content = preg_replace( '/(?<=\'filter\.text\' => \').+(?=\',)/', base64_encode( serialize( $this->_text ) ), $content );
 			file_put_contents( $sqweb_config_path, $content );
 		} else {
 			$key = array_search( $ads, $this->_ads );
 		}
-		$this->display_ads( $key );
+		if ( $display_now ) {
+			$this->display_ads( $key );
+		}
 	}
 
 	private function display_ads( $key ) {
 
-		global $cache_enabled, $super_cache_enabled;
+		switch ( $this->_type_cache ) {
+			case 'wp_super_cache':
+				echo $key;
+				break;
+			
+			case 'w3tc':
+				?>
+				<!--mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
+					$sqweb_config = include( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/sqweb-config.php' );
+					include_once( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/functions.php' );
+					if ( sqweb_check_credentials(<?php echo $this->_wsid; ?>) > 0 ) {
+						echo base64_decode('<?php echo base64_encode( $this->_text[ $key ] ); ?>');
+					} else {
+						echo base64_decode('<?php echo base64_encode( $this->_ads[ $key ] ); ?>');
+					}
+				<!--/mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
+				<?php
+				break;
 
-		if ( $cache_enabled && $super_cache_enabled ) {
-			echo $key;
-		} elseif ( $this->_w3tc['pgcache.enabled'] ) {
-			?>
-			<!--mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
-				$sqweb_config = include( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/sqweb-config.php' );
-				include_once( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/functions.php');
-				if ( sqweb_check_credentials(<?php echo $this->_wsid; ?>) > 0 ) {
-					echo base64_decode('<?php echo base64_encode( $this->_text[ $key ] ); ?>');
+			default:
+				if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
+					echo $this->_text[ $key ];
 				} else {
-					echo base64_decode('<?php echo base64_encode( $this->_ads[ $key ] ); ?>');
+					echo $this->_ads[ $key ];
 				}
-			<!--/mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
-			<?php
-		} else {
-			if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
-				echo $this->_text[ $key ];
-			} else {
-				echo $this->_ads[ $key ];
-			}
+				break;
 		}
 	}
 
-	public function display_ads_with_wpsc( &$cache ) {
+	public function display_content_with_wpsc( &$cache ) {
 		$this->set_data();
-		if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
-			foreach ( $this->_text as $key => $text ) {
-				$cache = str_replace( $key, $text, $cache );
-			}
-		} else {
-			foreach ( $this->_ads as $key => $ads ) {
-				$cache = str_replace( $key, $ads, $cache );
+		if ( ! empty( $this->_ads ) ) {
+			if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
+				foreach ( $this->_text as $key => $text ) {
+					$cache = str_replace( $key, $text, $cache );
+				}
+			} else {
+				foreach ( $this->_ads as $key => $ads ) {
+					$cache = str_replace( $key, $ads, $cache );
+				}
 			}
 		}
 		return $cache;
+	}
+
+	public function clean_data() {
+		global $wpdb;
+		$count = $wpdb->query( "DELETE FROM {$wpdb->prefix}sqw_limit WHERE time <= '" . (time() - 86400) . "'" );
 	}
 }
 

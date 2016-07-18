@@ -21,6 +21,9 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) .
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
+	if (! wp_next_scheduled ( 'sqweb_daily_event' )) {
+		wp_schedule_event(time(), 'daily', 'sqweb_daily_event');
+	}
 	$content = '<?php
 
 return array(
@@ -39,6 +42,7 @@ return array(
 
 function sqw_deactivation() {
 	sqw_send_data( 'disabled' );
+	wp_clear_scheduled_hook('sqweb_daily_event');
 }
 
 function sqw_notice_install() {

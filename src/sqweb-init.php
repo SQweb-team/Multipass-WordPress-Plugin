@@ -102,15 +102,12 @@ function sqwadmin_enqueue_styles( $hook ) {
 	}
 	wp_enqueue_style(
 		'sqweb-admin-style',
-		'/wp-content/plugins/sqweb/resources/css/sqweb_admin_style.css'
-	);
-	wp_enqueue_script(
-		'sqweb-jquery',
-		'https://code.jquery.com/jquery-2.2.3.min.js'
+		WP_PLUGIN_DIR . '/sqweb/resources/css/sqweb_admin_style.css'
 	);
 	wp_enqueue_script(
 		'sqweb-admin-script',
-		'/wp-content/plugins/sqweb/resources/js/sqweb.js'
+		WP_PLUGIN_DIR . '/sqweb/resources/js/sqweb.js',
+		array( 'jquery' )
 	);
 }
 

@@ -316,6 +316,7 @@ input[type=password] {
 
 .sqw-textarea {
     width: 80%;
+    min-height: 30px;
     height: 30px;
     box-shadow: none !important;
     overflow: hidden;
