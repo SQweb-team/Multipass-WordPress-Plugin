@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * @deprecated 2.2.4
+ */
+
+/**
  * Try apply_filter with AdSense
  */
 
