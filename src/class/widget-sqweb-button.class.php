@@ -3,8 +3,7 @@
  * Adding SQweb button
  */
 
-class WidgetSqwebButton extends WP_Widget
-{
+class WidgetSqwebButton extends WP_Widget {
 
 	function __construct() {
 

@@ -4,8 +4,7 @@
 * Auto-Config Plugin SQweb
 * @since 2.2.4
 */
-class Auto_Config
-{
+class Auto_Config {
 
 	public function __construct( $auto_config = false ) {
 		if ( is_admin() ) {

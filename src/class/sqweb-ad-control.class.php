@@ -3,8 +3,7 @@
  * Adding SQweb Ad control Widget
  */
 
-class SqwebAdControl extends WP_Widget
-{
+class SqwebAdControl extends WP_Widget {
 
 	public function __construct() {
 

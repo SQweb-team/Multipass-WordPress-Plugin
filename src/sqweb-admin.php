@@ -4,8 +4,7 @@
 * Edit admin for better integration of SQweb
 * @since 2.2.4
 */
-class SQweb_admin
-{
+class SQweb_admin {
 
 	function __construct() {
 		if ( is_admin() ) {
