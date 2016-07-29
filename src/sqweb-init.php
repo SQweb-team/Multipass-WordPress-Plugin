@@ -99,7 +99,6 @@ function sqw_filter_content( $content ) {
 				$wpdb->query( "UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '" . $newseeing . "' WHERE id = " . $count['0']->id );
 			}
 		}
-		break;
 	}
 	if ( get_option( 'cutartperc' ) !== false ) {
 		return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
