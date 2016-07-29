@@ -92,7 +92,7 @@ class SQweb_filter {
 			$this->_ads[ $key ] = $ads;
 			$this->_text[ $key ] = $text;
 			$content = file_get_contents( $sqweb_config_path );
-			$content = preg_replace( '/(?<=\'wsid\' => ).+(?=,)/', get_option( 'wsid' ), $content );
+			$content = preg_replace( '/(?<=\'wsid\' => )\d+(?=,)/', get_option( 'wsid' ), $content );
 			$content = preg_replace( '/(?<=\'filter\.ads\' => \').+(?=\',)/', base64_encode( serialize( $this->_ads ) ), $content );
 			$content = preg_replace( '/(?<=\'filter\.text\' => \').+(?=\',)/', base64_encode( serialize( $this->_text ) ), $content );
 			file_put_contents( $sqweb_config_path, $content );
@@ -106,7 +106,6 @@ class SQweb_filter {
 
 	private function display_ads( $key ) {
 		if ( 'wp_super_cache' === $this->_type_cache ) {
-			echo 'wp_super_cache';
 			echo $key;
 		} elseif ( 'w3tc' === $this->_type_cache ) {
 				?>
