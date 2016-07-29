@@ -16,6 +16,9 @@ class SQweb_admin {
 			} else {
 				new Auto_Config( false );
 			}
+			if ( isset( $_GET['sqw-reset'] ) && true == $_GET['sqw-reset'] ) {
+				$this->sqw_reset();
+			}
 			/**
 			 * Check if we are in the SQweb administration page.
 			 **/
@@ -48,7 +51,34 @@ class SQweb_admin {
 		}
 	}
 
+	private function sqw_reset() {
+		delete_option( 'wsid' );
+		delete_option( 'sqw_token' );
+		delete_option( 'sqw_analytics' );
+		delete_option( 'sqw_multipass' );
+		delete_option( 'cutartperc' );
+		delete_option( 'lang' );
+		delete_option( 'btheme' );
+		delete_option( 'flogout' );
+		delete_option( 'flogin' );
+		delete_option( 'fmes' );
+		delete_option( 'dateart' );
+		delete_option( 'artbyday' );
+		delete_option( 'categorie' );
+		$content = '<?php
+
+return array(
+	\'wsid\' => ' . (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0) . ',
+	\'filter.ads\' => \'YTowOnt9\',
+	\'filter.text\' => \'YTowOnt9\',
+);
+';
+		file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
+		wp_redirect( remove_query_arg( 'sqw-reset' ) );
+	}
+
 	public function sqw_logout() {
+		echo '<a href=' . add_query_arg( 'sqw-reset', '1' ) . " style='position: absolute; bottom: 56px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Reset configuration of SQweb', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'logout', '1' ) . " style='position: absolute; bottom: 32px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Logout from SQweb', 'sqweb' ) . '</p>';
 	}
 
