@@ -15,6 +15,9 @@ class Auto_Config {
 			if ( is_plugin_active( 'w3-total-cache/w3-total-cache.php' ) ) {
 				$this->config_w3tc( $auto_config );
 			}
+			if ( $auto_config ) {
+				wp_redirect( remove_query_arg( 'sqw-auto-config' ) );
+			}
 		}
 	}
 
@@ -105,10 +108,13 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 	public function notice_mod_rewrite() {
 	?>
 	<div class="notice notice-error is-dismissible">
-		<p><?php 
+		<p>
+		<?php
 		_e( '<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP cache or Legacy cache, you can click', 'sqweb');
 		echo '<a href="' . add_query_arg( 'sqw-auto-config', '1' ) . '">';
-		_e('here</a> for automatic configuration.', 'sqweb' ); ?></p>
+		_e('here</a> for automatic configuration.', 'sqweb' );
+		?>
+		</p>
 	</div>
 	<?php
 	}
@@ -116,10 +122,13 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 	public function notice_browser_cache() {
 	?>
 	<div class="notice notice-error is-dismissible">
-		<p><?php
+		<p>
+		<?php
 		_e( '<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible with SQweb, please disabled it, you can click', 'sqweb');
 		echo '<a href="' . add_query_arg( 'sqw-auto-config', '1' ) . '">';
-		_e('here</a> for automatic configuration.', 'sqweb' ); ?></p>
+		_e('here</a> for automatic configuration.', 'sqweb' );
+		?>
+		</p>
 	</div>
 	<?php
 	}
@@ -127,10 +136,13 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 	public function notice_engine() {
 	?>
 	<div class="notice notice-error is-dismissible">
-		<p><?php
+		<p>
+		<?php
 		_e( '<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced mod, please switch to Disk: basic, you can click', 'sqweb');
 		echo '<a href="' . add_query_arg( 'sqw-auto-config', '1' ) . '">';
-		_e('here</a> for automatic configuration.', 'sqweb' ); ?></p>
+		_e('here</a> for automatic configuration.', 'sqweb' );
+		?>
+		</p>
 	</div>
 	<?php
 	}
