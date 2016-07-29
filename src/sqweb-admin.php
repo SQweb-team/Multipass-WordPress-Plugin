@@ -6,27 +6,27 @@
 */
 class SQweb_admin
 {
-	
+
 	function __construct() {
 		if ( is_admin() ) {
 			/**
 			 * Check if admin choose to use SQweb auto-config feature.
 			 **/
-			if ( isset( $_GET['auto-config'] ) && $_GET['auto-config'] == true ) {
-				new Auto_Config(true);
+			if ( isset( $_GET['auto-config'] ) && true == $_GET['auto-config'] ) {
+				new Auto_Config( true );
 			} else {
-				new Auto_Config(false);
+				new Auto_Config( false );
 			}
 			/**
 			 * Check if we are in the SQweb administration page.
 			 **/
 			if ( isset( $_GET['page'] ) && 'SQwebAdmin' == $_GET['page'] ) {
-				add_action( 'admin_enqueue_scripts', array($this, 'script') );
+				add_action( 'admin_enqueue_scripts', array( $this, 'script' ) );
 				/**
 				 * Check if User if log in for show logout button.
 				 **/
 				if ( get_option( 'sqw_token' ) ) {
-					add_action( 'admin_footer', array($this, 'sqw_logout'), 1 );
+					add_action( 'admin_footer', array( $this, 'sqw_logout' ), 1 );
 				}
 				/**
 				 * Check if error message need to be show and show it.
@@ -43,7 +43,7 @@ class SQweb_admin
 			 * Add post capacity to paywall limit on single article.
 			 **/
 			if ( get_option( 'categorie' ) || get_option( 'artbyday' ) || get_option( 'cutartperc' ) || get_option( 'dateart' ) ) {
-				add_action( 'post_submitbox_misc_actions', array($this, 'featured_post_field') );
+				add_action( 'post_submitbox_misc_actions', array( $this, 'featured_post_field' ) );
 				add_action( 'save_post', array( $this, 'save_postdata' ) );
 			}
 		}
@@ -74,22 +74,22 @@ class SQweb_admin
 		update_option( 'sqw_message', serialize( $messages ) );
 	}
 
-	public function featured_post_field()
-	{
+	public function featured_post_field() {
+
 	    global $post;
 
 	    /* check if this is a post, if not then we won't add the custom field */
 	    /* change this post type to any type you want to add the custom field to */
-	    if (get_post_type($post) != 'post') {
+	    if ( get_post_type( $post ) != 'post' ) {
 	    	return false;
 	    }
 
 	    /* get the value corrent value of the custom field */
-	    $value = get_post_meta($post->ID, 'sqw_limited', true);
+	    $value = get_post_meta( $post->ID, 'sqw_limited', true );
 	    ?>
 	        <div class="misc-pub-section">
 	            <?php //if there is a value (1), check the checkbox ?>
-	            <label><input type="checkbox"<?php echo (!empty($value) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e('Post restricted to Multipass users', 'sqweb');?></label>
+	            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
 	        </div>
 	    <?php
 	}
@@ -102,13 +102,13 @@ class SQweb_admin
 		}
 
 	    /* check if the user can edit this page */
-	    if ( !current_user_can( 'edit_page', $postid ) ) {
+	    if ( ! current_user_can( 'edit_page', $postid ) ) {
 	    	return false;
 		}
 
 	    /* check if there's a post id and check if this is a post */
 	    /* make sure this is the same post type as above */
-	    if ( empty( $postid ) || $_POST['post_type'] != 'post' ) {
+	    if ( empty( $postid ) || 'post' != $_POST['post_type'] ) {
 	    	return false;
 	    }
 

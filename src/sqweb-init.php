@@ -46,10 +46,10 @@ function sqw_login_content( $content ) {
 	global $wpdb, $post;
 	$wsid = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
 	if ( sqweb_check_credentials( $wsid ) == 0 ) {
-		if ( get_post_meta($post->ID, 'sqw_limited', true) ) {
+		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 			$content = sqw_filter_content( $content );
 			return $content;
-		} else if ( get_option( 'categorie' ) ) {
+		} elseif ( get_option( 'categorie' ) ) {
 			$categorie = unserialize( get_option( 'categorie' ) );
 			$categorie = is_array( $categorie ) ? $categorie : array();
 			$category = get_the_category();

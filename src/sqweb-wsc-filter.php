@@ -24,14 +24,14 @@ class SQweb_filter
 		if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
 			define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 		}
-		if (function_exists( 'add_action' )) {
+		if ( function_exists( 'add_action' ) ) {
 			add_action( 'sqweb_daily_event', array( $this, 'clean_data' ) );
 		}
 		if ( Auto_Config::is_wpsc_enabled() ) {
 			$this->_type_cache = 'wp_super_cache';
 			add_cacheaction( 'wpsc_cachedata_safety', function ( $safety ) { return 1; } );
 			add_cacheaction( 'wpsc_cachedata', array( $this, 'display_content_with_wpsc' ) );
-		} else if ( Auto_Config::is_w3tc_enabled() ) {
+		} elseif ( Auto_Config::is_w3tc_enabled() ) {
 			$this->_type_cache = 'w3tc';
 		}
 	}

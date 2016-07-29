@@ -6,13 +6,13 @@
 */
 class Auto_Config
 {
-	
+
 	public function __construct( $auto_config = false ) {
 		if ( is_admin() ) {
-			if (is_plugin_active( 'wp-super-cache/wp-cache.php' )) {
+			if ( is_plugin_active( 'wp-super-cache/wp-cache.php' ) ) {
 				$this->config_wpsc( $auto_config );
 			}
-			if (is_plugin_active( 'w3-total-cache/w3-total-cache.php' )) {
+			if ( is_plugin_active( 'w3-total-cache/w3-total-cache.php' ) ) {
 				$this->config_w3tc( $auto_config );
 			}
 		}
@@ -30,7 +30,7 @@ class Auto_Config
 				$file = str_replace( '$wp_super_cache_late_init = 0; //Added by WP-Cache Manager', '$wp_super_cache_late_init = 1; //Edited by SQweb', $file );
 				*/
 				file_put_contents( $wp_cache_config_file, $file );
-			} 
+			}
 		} else {
 			add_action( 'admin_notices', array( $this, 'notice_mod_rewrite' ) );
 		}
@@ -85,7 +85,7 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 		/** Check if W3TC is enabled */
 		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.php';
 		if ( file_exists( $wp_master_path ) ) {
-			$w3tc = include(WP_CONTENT_DIR . '/w3tc-config/master.php');
+			$w3tc = include( WP_CONTENT_DIR . '/w3tc-config/master.php' );
 			if ( $w3tc['pgcache.enabled'] ) {
 				return (1);
 			}
