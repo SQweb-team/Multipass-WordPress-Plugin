@@ -7,18 +7,18 @@
 class Auto_Config
 {
 	
-	public function __construct() {
+	public function __construct( $auto_config = false ) {
 		if ( is_admin() ) {
 			if (is_plugin_active( 'wp-super-cache/wp-cache.php' )) {
-				$this->config_wpsc();
+				$this->config_wpsc( $auto_config );
 			}
 			if (is_plugin_active( 'w3-total-cache/w3-total-cache.php' )) {
-				$this->config_w3tc();
+				$this->config_w3tc( $auto_config );
 			}
 		}
 	}
 
-	private function config_wpsc( $auto_config = false ) {
+	private function config_wpsc( $auto_config ) {
 		global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite;
 		if ( ! $wp_cache_mod_rewrite ) {
 			if ( ! $wp_cache_mfunc_enabled ) {
@@ -41,7 +41,7 @@ class Auto_Config
 		}
 	}
 
-	private function config_w3tc( $auto_config = false ) {
+	private function config_w3tc( $auto_config ) {
 		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.php';
 		/** Check if W3TC is enabled */
 		if ( file_exists( $wp_master_path ) ) {

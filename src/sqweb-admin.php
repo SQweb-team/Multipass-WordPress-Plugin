@@ -9,16 +9,39 @@ class SQweb_admin
 	
 	function __construct() {
 		if ( is_admin() ) {
+			/**
+			 * Check if admin choose to use SQweb auto-config feature.
+			 **/
+			if ( isset( $_GET['auto-config'] ) && $_GET['auto-config'] == true ) {
+				new Auto_Config(true);
+			} else {
+				new Auto_Config(false);
+			}
+			/**
+			 * Check if we are in the SQweb administration page.
+			 **/
 			if ( isset( $_GET['page'] ) && 'SQwebAdmin' == $_GET['page'] ) {
 				add_action( 'admin_enqueue_scripts', array($this, 'script') );
+				/**
+				 * Check if User if log in for show logout button.
+				 **/
 				if ( get_option( 'sqw_token' ) ) {
 					add_action( 'admin_footer', array($this, 'sqw_logout'), 1 );
 				}
+				/**
+				 * Check if error message need to be show and show it.
+				 **/
 				if ( unserialize( get_option( 'sqw_message' ) ) ) {
 					add_action( 'admin_notices', array( $this, 'notice_event' ) );
 				}
 			}
+			/**
+			 * Add SQweb tab on WP administration.
+			 **/
 			add_action( 'admin_menu', array( $this, 'register_admin_menu' ) );
+			/**
+			 * Add post capacity to paywall limit on single article.
+			 **/
 			if ( get_option( 'categorie' ) || get_option( 'artbyday' ) || get_option( 'cutartperc' ) || get_option( 'dateart' ) ) {
 				add_action( 'post_submitbox_misc_actions', array($this, 'featured_post_field') );
 				add_action( 'save_post', array( $this, 'save_postdata' ) );
