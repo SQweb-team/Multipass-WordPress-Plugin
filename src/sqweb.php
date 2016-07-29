@@ -98,12 +98,12 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'add_action_li
 
 // Including classes and dependencies files.
 require_once 'config.php';
+require_once 'auto-config.php';
 require_once 'sqweb-admin.php';
 require_once 'class/build-script.class.php';
 require_once 'class/widget-sqweb-button.class.php';
 require_once 'functions.php';
 require_once 'shortcode-function.php';
 require_once 'sqweb-init.php';
-require_once 'sqweb-filter.php';
 require_once 'sqweb-wsc-filter.php';
 require_once 'class/sqweb-ad-control.class.php';

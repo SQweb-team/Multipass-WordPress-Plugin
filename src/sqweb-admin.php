@@ -11,7 +11,7 @@ class SQweb_admin {
 			/**
 			 * Check if admin choose to use SQweb auto-config feature.
 			 **/
-			if ( isset( $_GET['auto-config'] ) && true == $_GET['auto-config'] ) {
+			if ( isset( $_GET['sqw-auto-config'] ) && true == $_GET['sqw-auto-config'] ) {
 				new Auto_Config( true );
 			} else {
 				new Auto_Config( false );

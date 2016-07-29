@@ -105,13 +105,10 @@ class SQweb_filter {
 	}
 
 	private function display_ads( $key ) {
-
-		switch ( $this->_type_cache ) {
-			case 'wp_super_cache':
-				echo $key;
-				break;
-
-			case 'w3tc':
+		if ( 'wp_super_cache' === $this->_type_cache ) {
+			echo 'wp_super_cache';
+			echo $key;
+		} elseif ( 'w3tc' === $this->_type_cache ) {
 				?>
 				<!--mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
 					$sqweb_config = include( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/sqweb-config.php' );
@@ -123,15 +120,12 @@ class SQweb_filter {
 					}
 				<!--/mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
 				<?php
-				break;
-
-			default:
-				if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
-					echo $this->_text[ $key ];
-				} else {
-					echo $this->_ads[ $key ];
-				}
-				break;
+		} else {
+			if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
+				echo $this->_text[ $key ];
+			} else {
+				echo $this->_ads[ $key ];
+			}
 		}
 	}
 
