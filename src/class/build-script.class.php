@@ -4,8 +4,8 @@
  * Building javascript
  */
 
-class BuildScript
-{
+class BuildScript {
+
 	private static $_wsid;
 	private static $_flogin;
 	private static $_flogout;
