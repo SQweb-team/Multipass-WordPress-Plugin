@@ -27,10 +27,11 @@ function sqw_install() {
 	$content = '<?php
 
 return array(
-	\'wsid\' => ' . get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0 . ',
+	\'wsid\' => ' . (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0) . ',
 	\'filter.ads\' => \'YTowOnt9\',
-	\'filter.text\' => \'YTowOnt9\'
-);';
+	\'filter.text\' => \'YTowOnt9\',
+);
+';
 	file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
 	global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
 	if ( $cache_enabled && $super_cache_enabled ) {
