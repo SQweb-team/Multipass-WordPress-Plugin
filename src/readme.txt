@@ -104,16 +104,16 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.2.4 =
-* Add support for personnalize the paywall button.
-* Add ability to enforce limits on specific articles only.
-* Cleaned the code to make it easier to understand.
-* Improve compatibility with W3 Total Cache and Wordpress Super Cache.
-* Optimise the code for improve performance when website don't use all fonctionnality of SQweb and Multipass.
-* Add reset button for reset configuration of SQweb.
-* Add autoconfig plugin, now you can autorize SQweb to configure automatically your cache plugin.
+* Added customization support for the paywall button.
+* Added option to enforce limits on selected articles.
+* Added reset button to reset plugin configuration.
+* Added automatic caching configuration option.
+* Improved compatibility with W3 Total Cache and Wordpress Super Cache.
+* Updated readme with load-balancers/reverse proxies configuration notes.
+* Major code cleanup and performance improvements.
 
 = v2.2.3 =
-* Updated readme with load-balancers/reverse proxies configuration.
+* Internal Release.
 
 = v2.2.2 =
 * Improved installation instructions.
