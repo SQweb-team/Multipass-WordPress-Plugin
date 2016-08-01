@@ -72,7 +72,7 @@ function sqw_login_content( $content ) {
 
 function sqw_filter_content( $content ) {
 
-	$connectsqw = '<div class="sqw-paywall-button-container">' . __( 'Content restricted to subscribers.', 'sqweb' ) . '</div><div class="sqweb-button"></div>';
+	$connectsqw = '<div class="sqw-paywall-button-container">' . __( 'Content restricted to subscribers.', 'sqweb' ) . '<div class="sqweb-button"></div></div>';
 	if ( get_option( 'dateart' ) !== false ) {
 		if ( get_post_time( 'U', true ) > time() - get_option( 'dateart' ) * 86400 ) {
 			if ( get_option( 'cutartperc' ) !== false ) {

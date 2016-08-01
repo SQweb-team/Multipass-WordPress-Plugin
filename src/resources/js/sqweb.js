@@ -104,7 +104,7 @@ jQuery(function($) {
 		});
 
 		$('#sqw-login-msg, #sqw-logout-msg').keyup(function() {
-			$('.sqw-btn-link').text($(this).val());
+			$('.sqw-btn-mp-link').text($(this).val());
 		});
 	});
 });

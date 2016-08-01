@@ -70,15 +70,11 @@ If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon 
 = Personnalize Paywall button =
 
 Since 2.2.4 you can personnalize Paywall button for corresponding with your website
-You need to use the css class
+You need to use the CSS class
 `
 sqw-paywall-button-container
 `
-For personnalize the div contain button and
-`
-sqw-paywall-button
-`
-for the button.
+For personnalize the div contain button
 
 = Using this plugin with a load-balancer or a reverse proxy =
 
