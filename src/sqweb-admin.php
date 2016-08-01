@@ -41,6 +41,7 @@ class SQweb_admin {
 			 * Add SQweb tab on WP administration.
 			 **/
 			add_action( 'admin_menu', array( $this, 'register_admin_menu' ) );
+			add_action( 'admin_menu', array( $this, 'register_admin_sub_menu' ), 20 );
 			/**
 			 * Add post capacity to paywall limit on single article.
 			 **/
@@ -182,6 +183,11 @@ return array(
 		if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
 			add_menu_page( 'Debug info', 'Debug info', 'manage_options', 'sqweb_debug', 'sqweb_display_php_info' );
 		}
+	}
+
+	public function register_admin_sub_menu() {
+		add_submenu_page( 'SQwebAdmin', 'SQwebAdmin', __( 'SQweb settings', 'sqweb' ), 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
+		add_submenu_page( 'SQwebAdmin', 'SQwebIntegration', __( 'SQweb integration', 'sqweb' ), 'manage_options', 'SQwebIntegration', 'install_help_sqw' );
 	}
 }
 

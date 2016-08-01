@@ -22,7 +22,7 @@ add_action( 'widgets_init', 'register_sqweb_ad_control_widget' );
 add_action( 'widgets_init', 'register_widget_sqweb_button' );
 
 /**
- * admin_menu.php is required to display the admin page content
+ * admin-menu.php is required to display the admin page content
  */
 function sqweb_display_admin_menu() {
 
@@ -32,8 +32,12 @@ function sqweb_display_admin_menu() {
 	//echo '</div>';
 }
 
+function install_help_sqw() {
+	echo 'test';
+}
+
 function sqweb_display_php_info() {
-		phpinfo();
+	phpinfo();
 }
 
 /**
@@ -68,7 +72,7 @@ function sqw_login_content( $content ) {
 
 function sqw_filter_content( $content ) {
 
-	$connectsqw = '<div class="sqw-paywall-button-container"><button class="sqw-paywall-button" onClick="sqw.modal_first()">' . __( 'Content restricted to subscribers, Click here to activate your account.', 'sqweb' ) . '</button></div>';
+	$connectsqw = '<div class="sqw-paywall-button-container">' . __( 'Content restricted to subscribers.', 'sqweb' ) . '</div><div class="sqweb-button"></div>';
 	if ( get_option( 'dateart' ) !== false ) {
 		if ( get_post_time( 'U', true ) > time() - get_option( 'dateart' ) * 86400 ) {
 			if ( get_option( 'cutartperc' ) !== false ) {
