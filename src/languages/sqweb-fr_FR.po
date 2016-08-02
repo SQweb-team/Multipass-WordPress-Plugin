@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-08-01 15:42+0200\n"
-"PO-Revision-Date: 2016-08-01 15:50+0200\n"
+"POT-Creation-Date: 2016-08-02 14:00+0200\n"
+"PO-Revision-Date: 2016-08-02 14:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -90,7 +90,7 @@ msgstr ""
 "En rejoignant notre réseau, vous aurez une partie de la cotisation à chaque "
 "fois qu’un abonné visite votre site Web."
 
-#: backoffice/sqweb.php:50 backoffice/sqweb.php:166
+#: backoffice/sqweb.php:50 backoffice/sqweb.php:167
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -192,7 +192,7 @@ msgstr "Espagnol"
 msgid "Text for not connected users"
 msgstr "Texte pour visiteur"
 
-#: backoffice/sqweb.php:119 backoffice/sqweb.php:144
+#: backoffice/sqweb.php:119
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
@@ -204,43 +204,47 @@ msgstr "Texte pour SQweber"
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/sqweb.php:128
+#: backoffice/sqweb.php:129
 msgid "Select the color :"
 msgstr "Choisissez la couleur :"
 
-#: backoffice/sqweb.php:130
+#: backoffice/sqweb.php:131
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/sqweb.php:133
+#: backoffice/sqweb.php:134
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/sqweb.php:138
+#: backoffice/sqweb.php:140
 msgid "Preview :"
 msgstr "Prévisualisation"
 
-#: backoffice/sqweb.php:162
+#: backoffice/sqweb.php:145
+msgid "Become premium with"
+msgstr "Devenir premium avec"
+
+#: backoffice/sqweb.php:163
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:166
+#: backoffice/sqweb.php:167
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr "L’Adblock Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:168
+#: backoffice/sqweb.php:169
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:170
+#: backoffice/sqweb.php:171
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:172
+#: backoffice/sqweb.php:173
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:180
+#: backoffice/sqweb.php:181
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -305,13 +309,9 @@ msgstr "<b>SQweb notice : </b>"
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:182
+#: sqweb-admin.php:189
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
-
-#: sqweb-admin.php:189
-msgid "SQweb integration"
-msgstr "Integration SQweb"
 
 #: sqweb-init.php:75
 msgid "Content restricted to subscribers."
@@ -346,6 +346,9 @@ msgstr ""
 #: sqweb.php:93
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "SQweb integration"
+#~ msgstr "Integration SQweb"
 
 #~ msgid ""
 #~ "Content restricted to subscribers, Click here to activate your account."

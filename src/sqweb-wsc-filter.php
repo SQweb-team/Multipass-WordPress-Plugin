@@ -104,6 +104,12 @@ class SQweb_filter {
 		}
 	}
 
+	public function use_ads( $key ) {
+
+		$this->set_data();
+		$this->display_ads( $key );
+	}
+
 	private function display_ads( $key ) {
 		if ( 'wp_super_cache' === $this->_type_cache ) {
 			echo $key;
