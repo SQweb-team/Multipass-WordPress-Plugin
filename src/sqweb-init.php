@@ -72,6 +72,7 @@ function sqw_login_content( $content ) {
 
 function sqw_filter_content( $content ) {
 
+	global $wpdb;
 	$connectsqw = '<div class="sqw-paywall-button-container">' . __( 'Content restricted to subscribers.', 'sqweb' ) . '<div class="sqweb-button"></div></div>';
 	if ( get_option( 'dateart' ) !== false ) {
 		if ( get_post_time( 'U', true ) > time() - get_option( 'dateart' ) * 86400 ) {
@@ -84,9 +85,11 @@ function sqw_filter_content( $content ) {
 	}
 	if ( get_option( 'artbyday' ) !== false ) {
 		$id = get_the_ID();
-		$count = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '" . $_SERVER['REMOTE_ADDR'] . "' AND time > '" . (time() - 86400) . "' ORDER BY id DESC" );
+		$query = $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '%s' AND time > '%d' ORDER BY id DESC", array( $_SERVER['REMOTE_ADDR'], (time() - 86400 ) ) );
+		$count = $wpdb->get_results( $query );
 		if ( empty( $count ) ) {
-			$wpdb->query( "INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('" . $_SERVER['REMOTE_ADDR'] . "', 1, '" . serialize( array( $id ) ) . "', " . time() . ')' );
+			$query = $wpdb->prepare( "INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('%s', 1, '%s', %d )", array( $_SERVER['REMOTE_ADDR'], serialize( array( $id ) ), time() ) );
+			$wpdb->query( $query );
 		} elseif ( ! empty( $count['0'] ) && $count['0']->nbarticles >= get_option( 'artbyday' ) ) {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
@@ -100,7 +103,8 @@ function sqw_filter_content( $content ) {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
 				$newseeing = serialize( array_merge( $newseeing, array( $id ) ) );
-				$wpdb->query( "UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '" . $newseeing . "' WHERE id = " . $count['0']->id );
+				$query = $wpdb->prepare( "UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '%s' WHERE id = %d", array( $newseeing, $count['0']->id ) );
+				$wpdb->query( $query );
 			}
 		}
 	}
