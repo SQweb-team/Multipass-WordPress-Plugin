@@ -1,15 +1,15 @@
 <?php
 
 function sqw_balise( $balise, $match ) {
-	if ( preg_match('/<(\w+)(?(?!.+\/>).*>|$)/', $match, $tmp ) ) {
+	if ( preg_match( '/<(\w+)(?(?!.+\/>).*>|$)/', $match, $tmp ) ) {
 		if ( ! isset( $balise ) ) {
-			$balise = [];
+			$balise = array();
 		}
 		$balise[] = $tmp[1];
 	}
 	foreach ( $balise as $key => $value ) {
-		if ( preg_match('/<\/(.+)>/', $value, $tmp ) ) {
-			unset($balise[$key]);
+		if ( preg_match( '/<\/(.+)>/', $value, $tmp ) ) {
+			unset( $balise[ $key ] );
 		}
 	}
 	return $balise;
@@ -31,7 +31,7 @@ function transparent( $text, $percent ) {
 	$lambda = (1 / $nbr);
 	$alpha = 1;
 	$begin = 0;
-	$balise = [];
+	$balise = array();
 	while ( $begin < $nbr ) {
 		if ( preg_match( '/<.+?>/', $array_text[ $begin ], $match ) ) {
 			$balise = sqw_balise( $balise, $match[0] );
@@ -43,7 +43,7 @@ function transparent( $text, $percent ) {
 		}
 		$begin++;
 	}
-	$final[] = $array_text[ count($array_text) - 1 ];
+	$final[] = $array_text[ count( $array_text ) - 1 ];
 	foreach ($balise as $value) {
 		$final[] = '</' . $value . '>';
 	}

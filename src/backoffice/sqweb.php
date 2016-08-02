@@ -142,7 +142,7 @@
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
 												<a href="#" onclick="sqw.modal_first()" class="sqw-btn-mp-link">
-													<?php __('Become premium with', 'sqweb') ?> <span class="sqw-btn-mp-green">Multipass</span>
+													<?php __( 'Become premium with', 'sqweb' ) ?> <span class="sqw-btn-mp-green">Multipass</span>
 												</a>
 											</div>
 										</div>
