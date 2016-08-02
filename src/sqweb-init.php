@@ -85,11 +85,9 @@ function sqw_filter_content( $content ) {
 	}
 	if ( get_option( 'artbyday' ) !== false ) {
 		$id = get_the_ID();
-		$query = $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '%s' AND time > '%d' ORDER BY id DESC", array( $_SERVER['REMOTE_ADDR'], (time() - 86400 ) ) );
-		$count = $wpdb->get_results( $query );
+		$count = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '%s' AND time > '%d' ORDER BY id DESC", array( $_SERVER['REMOTE_ADDR'], (time() - 86400 ) ) ) );
 		if ( empty( $count ) ) {
-			$query = $wpdb->prepare( "INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('%s', 1, '%s', %d )", array( $_SERVER['REMOTE_ADDR'], serialize( array( $id ) ), time() ) );
-			$wpdb->query( $query );
+			$wpdb->query( $wpdb->prepare( "INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('%s', 1, '%s', %d )", array( $_SERVER['REMOTE_ADDR'], serialize( array( $id ) ), time() ) ) );
 		} elseif ( ! empty( $count['0'] ) && $count['0']->nbarticles >= get_option( 'artbyday' ) ) {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
@@ -103,8 +101,7 @@ function sqw_filter_content( $content ) {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
 				$newseeing = serialize( array_merge( $newseeing, array( $id ) ) );
-				$query = $wpdb->prepare( "UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '%s' WHERE id = %d", array( $newseeing, $count['0']->id ) );
-				$wpdb->query( $query );
+				$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->prefix}sqw_limit SET nbarticles = nbarticles + 1, seeingart = '%s' WHERE id = %d", array( $newseeing, $count['0']->id ) ) );
 			}
 		}
 	}

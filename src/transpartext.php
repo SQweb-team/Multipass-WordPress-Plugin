@@ -44,7 +44,7 @@ function transparent( $text, $percent ) {
 		$begin++;
 	}
 	$final[] = $array_text[ count( $array_text ) - 1 ];
-	foreach ($balise as $value) {
+	foreach ( $balise as $value ) {
 		$final[] = '</' . $value . '>';
 	}
 	$final = implode( ' ', $final );
