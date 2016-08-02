@@ -187,6 +187,7 @@ return array(
 
 	public function register_admin_sub_menu() {
 		add_submenu_page( 'SQwebAdmin', 'SQwebAdmin', __( 'SQweb settings', 'sqweb' ), 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
+		/* Added in 2.2.4 but temporary in wait for other version  */
 		//add_submenu_page( 'SQwebAdmin', 'SQwebIntegration', __( 'SQweb integration', 'sqweb' ), 'manage_options', 'SQwebIntegration', 'install_help_sqw' );
 	}
 }
