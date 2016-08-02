@@ -66,6 +66,7 @@ class SQweb_admin {
 		delete_option( 'dateart' );
 		delete_option( 'artbyday' );
 		delete_option( 'categorie' );
+		global $wpdb;
 		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sqw_limit" );
 		$content = '<?php
 
