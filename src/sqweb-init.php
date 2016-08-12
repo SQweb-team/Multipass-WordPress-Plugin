@@ -73,11 +73,14 @@ function sqw_login_content( $content ) {
 function sqw_filter_content( $content ) {
 
 	global $wpdb;
-	$connectsqw = '<div class="sqw-paywall-button-container">' . __( 'Content restricted to subscribers.', 'sqweb' ) . '<div class="sqweb-button"></div></div>';
+	$connectsqw = '<div class="sqw-paywall-button-container"><h4>' . __( 'Content restricted to subscribers.', 'sqweb' ) . '</h4><div class="sqweb-button"></div></div>';
+	$restrictartbyday = '<div class="sqw-paywall-button-container"><h4>' . __( 'Content restricted to subscribers.', 'sqweb' ) . '</h4><div class="sqweb-button"></div></div>';
+	$restrictdateart = '<div class="sqw-paywall-button-container"><h4>' . __( 'Content restricted to subscribers.', 'sqweb' ) . '</h4><div class="sqweb-button"></div></div>';
+	$restrictcutartperc = '<div class="sqw-paywall-button-container"><h4>' . __( 'Content restricted to subscribers.', 'sqweb' ) . '</h4><p>' . __('Come back tomorrow', 'sqweb') . '</p><p>Or</p><div class="sqweb-button"></div></div>';
 	if ( get_option( 'dateart' ) !== false ) {
 		if ( get_post_time( 'U', true ) > time() - get_option( 'dateart' ) * 86400 ) {
 			if ( get_option( 'cutartperc' ) !== false ) {
-				return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
+				return transparent( $content, get_option( 'cutartperc' ) ) . $restrictcutartperc;
 			} else {
 				return $connectsqw;
 			}
@@ -92,7 +95,7 @@ function sqw_filter_content( $content ) {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
 				if ( get_option( 'cutartperc' ) !== false ) {
-					return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
+					return transparent( $content, get_option( 'cutartperc' ) ) . $restrictcutartperc;
 				} else {
 					return $connectsqw;
 				}
@@ -106,9 +109,20 @@ function sqw_filter_content( $content ) {
 		}
 	}
 	if ( get_option( 'cutartperc' ) !== false ) {
-		return transparent( $content, get_option( 'cutartperc' ) ) . $connectsqw;
+		return transparent( $content, get_option( 'cutartperc' ) ) . $restrictcutartperc;
 	}
 	return $content;
 }
 
 add_filter( 'the_content', 'sqw_login_content' );
+
+function paywall_style() {
+	wp_enqueue_style(
+		'sqweb-admin-style',
+		'/wp-content/plugins/sqweb/resources/css/sqweb_paywall_style.css'
+	);
+}
+
+if ( get_option( 'dateart' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'cutartperc' ) !== false ) {
+	add_action( 'wp_enqueue_scripts', 'paywall_style');
+}

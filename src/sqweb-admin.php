@@ -110,17 +110,10 @@ return array(
 
 	    global $post;
 
-	    /* check if this is a post, if not then we won't add the custom field */
-	    /* change this post type to any type you want to add the custom field to */
-	    if ( get_post_type( $post ) != 'post' ) {
-	    	return false;
-	    }
-
-	    /* get the value corrent value of the custom field */
+	    /* get the value current value of the custom field */
 	    $value = get_post_meta( $post->ID, 'sqw_limited', true );
 	    ?>
 	        <div class="misc-pub-section">
-	            <?php //if there is a value (1), check the checkbox ?>
 	            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
 	        </div>
 	    <?php
@@ -140,7 +133,7 @@ return array(
 
 	    /* check if there's a post id and check if this is a post */
 	    /* make sure this is the same post type as above */
-	    if ( empty( $postid ) || 'post' != $_POST['post_type'] ) {
+	    if ( empty( $postid ) ) {
 	    	return false;
 	    }
 

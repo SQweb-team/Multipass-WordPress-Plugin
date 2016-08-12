@@ -21,8 +21,11 @@ class SQweb_filter {
 		if ( ! defined( 'WP_CONTENT_DIR' ) ) {
 			define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 		}
-		if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
+		if ( ! defined( 'WP_PLUGIN_DIR' ) && defined( 'WP_CONTENT_DIR' ) ) {
 			define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
+		}
+		if ( ! defined( 'WP_CONTENT_DIR' ) || ! defined( 'WP_PLUGIN_DIR' ) ) {
+			deactivate_plugins( 'sqweb/sqweb.php' );
 		}
 		if ( function_exists( 'add_action' ) ) {
 			add_action( 'sqweb_daily_event', array( $this, 'clean_data' ) );
