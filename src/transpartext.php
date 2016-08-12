@@ -38,7 +38,7 @@ function transparent( $text, $percent ) {
 			$final[] = $array_text[ $begin ];
 			$nbr++;
 		} else {
-			$final[] = '<span style="opacity: ' . $alpha . '">' . $array_text[ $begin ] . '</span>';
+			$final[] = '<span style="opacity: ' . number_format( $alpha, 5, '.', '' ) . '">' . $array_text[ $begin ] . '</span>';
 			$alpha -= $lambda;
 		}
 		$begin++;
