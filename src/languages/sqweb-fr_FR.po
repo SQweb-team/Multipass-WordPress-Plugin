@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-08-02 14:00+0200\n"
-"PO-Revision-Date: 2016-08-02 14:01+0200\n"
+"POT-Creation-Date: 2016-08-15 15:31+0200\n"
+"PO-Revision-Date: 2016-08-15 15:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -293,29 +293,63 @@ msgstr "Une erreur est survenue. Veuillez re-essayer."
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
-#: sqweb-admin.php:82
+#: sqweb-admin.php:84
 msgid "Reset configuration of SQweb"
 msgstr "Réinitialiser la configuration de SQweb"
 
-#: sqweb-admin.php:83
+#: sqweb-admin.php:85
 msgid "Logout from SQweb"
 msgstr "Ce déconnecté de SQweb"
 
-#: sqweb-admin.php:91
+#: sqweb-admin.php:93
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:122
+#: sqweb-admin.php:117
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:189
+#: sqweb-admin.php:184
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
 
-#: sqweb-init.php:75
-msgid "Content restricted to subscribers."
-msgstr "Contenu réservé aux abonnés."
+#: sqweb-init.php:76
+msgid "The rest of this article is for subscriber only"
+msgstr "La suite de cette page est réservée aux abonnés"
+
+#: sqweb-init.php:76 sqweb-init.php:78
+msgid "Become a subscriber now with Multipass"
+msgstr "Débloquez ce contenu avec Multipass"
+
+#: sqweb-init.php:77
+#, php-format
+msgid "You have already read %d article for free today"
+msgid_plural "You have already read %d articles for free today"
+msgstr[0] "Vous avez lu votre article quotidien offert"
+msgstr[1] "Vous avez lu vos %d articles quotidiens offerts"
+
+#: sqweb-init.php:77
+msgid "Please come back tomorrow"
+msgstr "Vous voulez voir la suite ?"
+
+#: sqweb-init.php:77
+msgid "Or"
+msgstr "Ou"
+
+#: sqweb-init.php:77
+msgid "Access immediately all the content with Multipass"
+msgstr "Débloquez ce contenu avec Multipass"
+
+#: sqweb-init.php:78
+msgid "This content is for subscriber only"
+msgstr "Ce contenu est actuellement réservé aux abonnés"
+
+#: sqweb-init.php:78
+#, php-format
+msgid "It will be available for free in %d day"
+msgid_plural "It will be available for free in %d days"
+msgstr[0] "Il sera disponible dans %d jour"
+msgstr[1] "Il sera disponible dans %d jours"
 
 #: sqweb.php:52
 msgid ""
@@ -346,6 +380,12 @@ msgstr ""
 #: sqweb.php:93
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "You have already read %d articles for free today"
+#~ msgstr "Vous avez lu vos %d articles quotidiens offerts"
+
+#~ msgid "Content restricted to subscribers."
+#~ msgstr "Contenu réservé aux abonnés."
 
 #~ msgid "SQweb integration"
 #~ msgstr "Integration SQweb"
