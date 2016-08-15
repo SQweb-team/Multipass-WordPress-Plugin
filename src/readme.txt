@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.5.2
-Stable tag: 2.2.2
+Stable tag: 2.2.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -67,6 +67,12 @@ If you wish to show extra content to your subscribers, you can add a second para
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
 
+= Using this plugin with a load-balancer or a reverse proxy =
+
+Please make sure that you're forwarding client IPs properly. A detailed thread with example configurations is available [here]("https://core.trac.wordpress.org/ticket/9235").
+
+If you need any help, email us at hello@sqweb.com and one of our engineers will check your configuration with you.
+
 == Frequently asked questions ==
 
 = How much does SQweb cost ? =
@@ -82,6 +88,17 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.2.4 =
+* Added option to enforce limits on selected articles.
+* Added reset button to reset plugin configuration.
+* Added automatic caching configuration option.
+* Improved compatibility with W3 Total Cache and Wordpress Super Cache.
+* Updated readme with load-balancers/reverse proxies configuration notes.
+* Major code cleanup and performance improvements.
+
+= v2.2.3 =
+* Internal Release.
 
 = v2.2.2 =
 * Improved installation instructions.
@@ -239,6 +256,9 @@ Initial Public Release.
 Fixed Trench translations.
 
 == Upgrade notice ==
+
+= v2.2.4 =
+A new button as appared on the bottom of SQweb plugin, if a bug appared when you used SQweb, try use it, if don't work, contact us.
 
 = v2.1.0 =
 If you previously used SQweb with WordPress Super Cache, you must delete sqweb.php in the plugins directory of WP Super Cache.

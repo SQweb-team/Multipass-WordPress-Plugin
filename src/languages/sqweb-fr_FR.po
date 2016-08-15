@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-06-07 15:28+0200\n"
-"PO-Revision-Date: 2016-06-07 15:28+0200\n"
+"POT-Creation-Date: 2016-08-15 15:31+0200\n"
+"PO-Revision-Date: 2016-08-15 15:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -12,9 +12,39 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: auto-config.php:113
+msgid ""
+"<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP "
+"cache or Legacy cache, you can click "
+msgstr ""
+"<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
+"cache via PHP ou Legacy cache, vous pouvez aussi cliquer "
+
+#: auto-config.php:115 auto-config.php:129 auto-config.php:143
+msgid "here</a> for automatic configuration."
+msgstr "ici</a> pour une configuration automatique."
+
+#: auto-config.php:127
+msgid ""
+"<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
+"with SQweb, please disabled it, you can click "
+msgstr ""
+"<b>SQweb Notice :</b> Cache par navigateur de W3TC activé, il n’est "
+"malheureusement pas compatible avec SQweb, veuillez le désactivez, vous "
+"pouvez aussi cliquer "
+
+#: auto-config.php:141
+msgid ""
+"<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced "
+"mod, please switch to Disk: basic, you can click "
+msgstr ""
+"<b>SQweb Notice :</b> Le contenu dynamique n’est pas disponible dans le mode "
+"disk : enhanced mod, veuillez basculer sur le mode disk : basic, vous pouvez "
+"aussi cliquer "
 
 #: backoffice/sqweb.php:11 backoffice/sqweb.php:22
 msgid "Log in"
@@ -60,7 +90,7 @@ msgstr ""
 "En rejoignant notre réseau, vous aurez une partie de la cotisation à chaque "
 "fois qu’un abonné visite votre site Web."
 
-#: backoffice/sqweb.php:50 backoffice/sqweb.php:166
+#: backoffice/sqweb.php:50 backoffice/sqweb.php:167
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -162,7 +192,7 @@ msgstr "Espagnol"
 msgid "Text for not connected users"
 msgstr "Texte pour visiteur"
 
-#: backoffice/sqweb.php:119 backoffice/sqweb.php:144
+#: backoffice/sqweb.php:119
 msgid "Remove Ads"
 msgstr "Enlever la pub"
 
@@ -174,80 +204,84 @@ msgstr "Texte pour SQweber"
 msgid "Connected"
 msgstr "Connecté"
 
-#: backoffice/sqweb.php:128
+#: backoffice/sqweb.php:129
 msgid "Select the color :"
 msgstr "Choisissez la couleur :"
 
-#: backoffice/sqweb.php:130
+#: backoffice/sqweb.php:131
 msgid "Blue"
 msgstr "Bleu"
 
-#: backoffice/sqweb.php:133
+#: backoffice/sqweb.php:134
 msgid "Grey"
 msgstr "Gris"
 
-#: backoffice/sqweb.php:138
+#: backoffice/sqweb.php:140
 msgid "Preview :"
 msgstr "Prévisualisation"
 
-#: backoffice/sqweb.php:162
+#: backoffice/sqweb.php:145
+msgid "Become premium with"
+msgstr "Devenir premium avec"
+
+#: backoffice/sqweb.php:163
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:166
+#: backoffice/sqweb.php:167
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr "L’Adblock Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:168
+#: backoffice/sqweb.php:169
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:170
+#: backoffice/sqweb.php:171
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:172
+#: backoffice/sqweb.php:173
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:180
+#: backoffice/sqweb.php:181
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: class/sqweb-ad-control.class.php:11
+#: class/sqweb-ad-control.class.php:10
 msgid "Put here your advertising code to hide it for SQweb users"
 msgstr ""
 "Mettez ici la publicité qui sera cachée pour les utilisateurs payant SQweb."
 
-#: class/sqweb-ad-control.class.php:13
+#: class/sqweb-ad-control.class.php:12
 msgid "SQweb ad control"
 msgstr "SQweb advertising contrôleur"
 
-#: class/sqweb-ad-control.class.php:51
+#: class/sqweb-ad-control.class.php:48
 msgid "Title"
 msgstr "Titre"
 
-#: class/sqweb-ad-control.class.php:54
+#: class/sqweb-ad-control.class.php:51
 msgid "Advertising code"
 msgstr "Code publicitaire"
 
-#: class/sqweb-ad-control.class.php:57
+#: class/sqweb-ad-control.class.php:54
 msgid "Content for paying users"
 msgstr "Contenu pour les abonnés"
 
-#: class/widget-sqweb-button.class.php:11
+#: class/widget-sqweb-button.class.php:10
 msgid "Button to activate SQweb on your website."
 msgstr "Bouton pour activer SQweb sur votre site."
 
-#: class/widget-sqweb-button.class.php:13
+#: class/widget-sqweb-button.class.php:12
 msgid "SQweb button"
 msgstr "SQweb bouton"
 
-#: class/widget-sqweb-button.class.php:44
+#: class/widget-sqweb-button.class.php:42
 msgid "CLICK HERE TO LOG IN"
 msgstr "Cliquez ici pour vous connecter"
 
-#: class/widget-sqweb-button.class.php:46
+#: class/widget-sqweb-button.class.php:44
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
@@ -255,43 +289,69 @@ msgstr "Editez les paramètres"
 msgid "Sorry, an error occurred. Please try again."
 msgstr "Une erreur est survenue. Veuillez re-essayer."
 
-#: logout.php:3
-msgid "Logout from SQweb"
-msgstr "Ce déconnecté de SQweb"
-
 #: save.php:51
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
-#: sqweb-init.php:14
+#: sqweb-admin.php:84
+msgid "Reset configuration of SQweb"
+msgstr "Réinitialiser la configuration de SQweb"
+
+#: sqweb-admin.php:85
+msgid "Logout from SQweb"
+msgstr "Ce déconnecté de SQweb"
+
+#: sqweb-admin.php:93
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-init.php:138
-msgid "Content restricted to subscribers, Click here to activate your account."
-msgstr ""
-"Le contenu est restreint aux abonnées, cliquer ici pour activer votre "
-"compte !"
+#: sqweb-admin.php:117
+msgid "Post restricted to Multipass users"
+msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-wsc-filter.php:66
-msgid ""
-"<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to PHP "
-"cache or Legacy cache."
-msgstr ""
-"<b>SQweb notice : </b>Cache avec mod_rewrite détecté, merci de changer pour "
-"le cache PHP ou Legacy."
+#: sqweb-admin.php:184
+msgid "SQweb settings"
+msgstr "Paramètre SQweb"
 
-#: sqweb-wsc-filter.php:74
-msgid ""
-"<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
-"with page cache method : Disk: Basic, disabled it or switch on Disk: "
-"enhanced."
-msgstr ""
-"<b>SQweb notice : </b>Browser cache de W3TC est activé, il n’est pas "
-"compatible avec la méthode de page cache : Disk: basic, désactiver le ou "
-"changer pour Disk: enhanced."
+#: sqweb-init.php:76
+msgid "The rest of this article is for subscriber only"
+msgstr "La suite de cette page est réservée aux abonnés"
 
-#: sqweb.php:33
+#: sqweb-init.php:76 sqweb-init.php:78
+msgid "Become a subscriber now with Multipass"
+msgstr "Débloquez ce contenu avec Multipass"
+
+#: sqweb-init.php:77
+#, php-format
+msgid "You have already read %d article for free today"
+msgid_plural "You have already read %d articles for free today"
+msgstr[0] "Vous avez lu votre article quotidien offert"
+msgstr[1] "Vous avez lu vos %d articles quotidiens offerts"
+
+#: sqweb-init.php:77
+msgid "Please come back tomorrow"
+msgstr "Vous voulez voir la suite ?"
+
+#: sqweb-init.php:77
+msgid "Or"
+msgstr "Ou"
+
+#: sqweb-init.php:77
+msgid "Access immediately all the content with Multipass"
+msgstr "Débloquez ce contenu avec Multipass"
+
+#: sqweb-init.php:78
+msgid "This content is for subscriber only"
+msgstr "Ce contenu est actuellement réservé aux abonnés"
+
+#: sqweb-init.php:78
+#, php-format
+msgid "It will be available for free in %d day"
+msgid_plural "It will be available for free in %d days"
+msgstr[0] "Il sera disponible dans %d jour"
+msgstr[1] "Il sera disponible dans %d jours"
+
+#: sqweb.php:52
 msgid ""
 "<b>SQweb notice : </b>You need to log in to use SQweb. <a href=\"admin.php?"
 "page=SQwebAdmin\">Click here to proceed</a>."
@@ -299,7 +359,7 @@ msgstr ""
 "<b>SQweb info : </b>Vous devez vous connectez pour utiliser SQweb <a href="
 "\"admin.php?page=SQwebAdmin\">Cliquez ici pour vous connecter</a>."
 
-#: sqweb.php:57
+#: sqweb.php:76
 msgid ""
 "<div class=\"error\"><p><b>Error : </b>SQweb requires the curl extension, "
 "which is currently disabled or missing on your server. The SQweb plugin "
@@ -309,7 +369,7 @@ msgstr ""
 "est manquante ou désactivée sur votre serveur. Le plugin SQweb ne peut pas "
 "être activé.</p></div>"
 
-#: sqweb.php:62
+#: sqweb.php:81
 msgid ""
 "<div class=\"error\"><p><b>Error : </b>SQweb requires Wordpress 3.6 or "
 "greater. The SQweb plugin cannot be activated.</p></div>"
@@ -317,9 +377,40 @@ msgstr ""
 "<div class=\"error\"><p><b>Erreur : </b>SQweb requiert Wordpress 3.6 ou "
 "plus. Le plugin SQweb ne peut pas être activé.</p></div>"
 
-#: sqweb.php:74
+#: sqweb.php:93
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "You have already read %d articles for free today"
+#~ msgstr "Vous avez lu vos %d articles quotidiens offerts"
+
+#~ msgid "Content restricted to subscribers."
+#~ msgstr "Contenu réservé aux abonnés."
+
+#~ msgid "SQweb integration"
+#~ msgstr "Integration SQweb"
+
+#~ msgid ""
+#~ "Content restricted to subscribers, Click here to activate your account."
+#~ msgstr ""
+#~ "Le contenu est restreint aux abonnées, cliquer ici pour activer votre "
+#~ "compte !"
+
+#~ msgid ""
+#~ "<b>SQweb notice : </b>Cache with mod_rewrite detected, please change to "
+#~ "PHP cache or Legacy cache."
+#~ msgstr ""
+#~ "<b>SQweb notice : </b>Cache avec mod_rewrite détecté, merci de changer "
+#~ "pour le cache PHP ou Legacy."
+
+#~ msgid ""
+#~ "<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not "
+#~ "compatible with page cache method : Disk: Basic, disabled it or switch on "
+#~ "Disk: enhanced."
+#~ msgstr ""
+#~ "<b>SQweb notice : </b>Browser cache de W3TC est activé, il n’est pas "
+#~ "compatible avec la méthode de page cache : Disk: basic, désactiver le ou "
+#~ "changer pour Disk: enhanced."
 
 #~ msgid "SQweb users must navigate without ADS on your website"
 #~ msgstr ""

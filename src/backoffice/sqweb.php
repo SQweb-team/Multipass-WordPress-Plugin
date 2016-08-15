@@ -123,6 +123,7 @@
 											<input class="sqw-input" type="text" name="flogout" id="sqw-logout-msg" value="<?php echo $flogout ?>" placeholder="<?php _e( 'Connected', 'sqweb' ); ?>">
 										</div>
 									</div>
+									<!-- Select color Disable in 2.2.4
 									<div class="sqw-tiers">
 										<div class="sqw-padding-left">
 											<p><?php _e( 'Select the color :' ); ?></p>
@@ -134,14 +135,14 @@
 											</div>
 										</div>
 									</div>
-									<div class="sqw-tiers">
+									-->
+									<div class="sqw-tiers sqw-padding-left">
 										<p><?php _e( 'Preview :', 'sqweb' ); ?></p>
 										<div class="sqweb-button sqweb-<?php echo $btheme; ?>">
-											<div class="sqw-btn">
-												<span class="sqw-btn-logo" target="_blank">
-												</span>
-												<a href="#" onclick="sqw.modal_first()" class="sqw-btn-link">
-													<?php echo ( ! empty( $flogin ) ? $flogin : __( 'Remove Ads', 'sqweb' )); ?>
+											<div class="sqw-btn-mp">
+												<span class="sqw-btn-mp-logo"></span>
+												<a href="#" onclick="sqw.modal_first()" class="sqw-btn-mp-link">
+													<?php __( 'Become premium with', 'sqweb' ) ?> <span class="sqw-btn-mp-green">Multipass</span>
 												</a>
 											</div>
 										</div>

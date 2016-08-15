@@ -3,8 +3,7 @@
  * Adding SQweb Ad control Widget
  */
 
-class SqwebAdControl extends WP_Widget
-{
+class SqwebAdControl extends WP_Widget {
 
 	public function __construct() {
 
@@ -15,15 +14,14 @@ class SqwebAdControl extends WP_Widget
 
 	function widget( $args, $instance ) {
 
-		extract( $args );
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
 		$adblock = apply_filters( 'widget_adblock', empty( $instance['adblock'] ) ? '' : $instance['adblock'], $instance );
-		echo $before_widget;
+		echo $args['before_widget'];
 		echo '<div class="textwidget">';
 		SQweb_filter::get_instance()->add_ads( $adblock, $text );
 		echo '</div>';
-		echo $after_widget;
+		echo $args['after_widget'];
 	}
 
 	function update( $new_instance, $old_instance ) {
