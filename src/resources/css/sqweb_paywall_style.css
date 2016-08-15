@@ -1,4 +1,5 @@
 .sqw-paywall-button-container {
+    cursor: pointer;
     color: #364355;
     border: 1px solid #364355;
     text-align: center;
@@ -12,7 +13,6 @@
 }
 
 .sqw-paywall-button-container span {
-    cursor: pointer;
     font-weight: bold;
     color: #4491ff;
     border-bottom: 1px solid #4491ff;
@@ -22,5 +22,5 @@
     margin: 10px;
     width: 36px;
     height: 36px;
-    box-shadow: none;
+    box-shadow: none !important;
 }
