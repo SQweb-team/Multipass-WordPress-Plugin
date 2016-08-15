@@ -1,25 +1,25 @@
 .sqw-paywall-button-container {
-	color: #364355;
-	border: 1px solid #364355;
-	text-align: center;
-	padding: 20px;
-	border-radius: 5px;
-	font-family: "Helvetica Neue";
+    color: #364355;
+    border: 1px solid #364355;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue';
 }
 
 .sqw-paywall-button-container p {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .sqw-paywall-button-container span {
-	cursor: pointer;
-	font-weight: bold;
-	color: #4491ff;
-	border-bottom: 1px solid #4491ff;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4491ff;
+    border-bottom: 1px solid #4491ff;
 }
 
 .sqw-paywall-button-container img {
-	margin: 10px;
-	width: 36px;
-	height: 36px;
+    margin: 10px;
+    width: 36px;
+    height: 36px;
 }
