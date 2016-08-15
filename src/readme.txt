@@ -67,21 +67,11 @@ If you wish to show extra content to your subscribers, you can add a second para
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
 
-= Personnalize Paywall button =
-
-Since 2.2.4 you can personnalize Paywall button for corresponding with your website
-You need to use the CSS class
-`
-sqw-paywall-button-container
-`
-For personnalize the div contain button
-
 = Using this plugin with a load-balancer or a reverse proxy =
 
 Please make sure that you're forwarding client IPs properly. A detailed thread with example configurations is available [here]("https://core.trac.wordpress.org/ticket/9235").
 
 If you need any help, email us at hello@sqweb.com and one of our engineers will check your configuration with you.
-
 
 == Frequently asked questions ==
 
@@ -100,7 +90,6 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.2.4 =
-* Added customization support for the paywall button.
 * Added option to enforce limits on selected articles.
 * Added reset button to reset plugin configuration.
 * Added automatic caching configuration option.
