@@ -34,14 +34,13 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 	public function widget( $args, $instance ) {
 		global $adrotate_config, $blog_id;
 
-		extract( $args );
 		if ( empty( $instance['adid'] ) ) { $instance['adid'] = 0; }
 		if ( empty( $instance['siteid'] ) ) { $instance['siteid'] = $blog_id; }
 		if ( empty( $instance['title'] ) ) { $instance['title'] = ''; }
 
 		$title = apply_filters( 'widget_title', $instance['title'] );
 
-		echo $before_widget;
+		echo $args['before_widget'];
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
@@ -58,7 +57,7 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 
 		if ( 'Y' == $adrotate_config['widgetalign'] ) { echo '</li></ul>'; }
 
-		echo $after_widget;
+		echo $args['after_widget'];
 
 	}
 
@@ -94,11 +93,10 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
 		$title = $description = $type = $adid = '';
-		extract( $instance );
-		$title = esc_attr( $title );
-		$description = esc_attr( $description );
-		$type = esc_attr( $type );
-		$adid = esc_attr( $adid );
+		$title = esc_attr( $instance['title'] );
+		$description = esc_attr( $instance['description'] );
+		$type = esc_attr( $instance['type'] );
+		$adid = esc_attr( $instance['adid'] );
 ?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional):', 'adrotate' ); ?></label>
