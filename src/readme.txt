@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.5.2
-Stable tag: 2.2.4
+Stable tag: 2.3.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -43,7 +43,7 @@ If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in 
 
 In your theme, to display the button, add the following :
 
-`do_shortcode('sqweb_button')`
+`do_shortcode('[sqweb_button]')`
 
 To manage your advertisement blocks, use the following function :
 
