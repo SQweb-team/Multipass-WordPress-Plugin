@@ -49,7 +49,7 @@
 						<div class="sqw-clear"></div>
 						<p class="sqw-body basic-font-10"><?php _e( 'By joining our network, you’ll get a part of the membership fee whenever a subscriber visit your website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
-							<h4><?php _e( 'Do you want to restrict some content for free users ?' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
+							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
 								<div class="sqw-check-categorie">
 									<p><?php _e( 'Setup content restrictions :' ); ?></p>
@@ -142,7 +142,9 @@
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
 												<a href="#" onclick="sqw.modal_first()" class="sqw-btn-mp-link">
+													<?php if ( empty( $flogin ) ) { ?>
 													<?php __( 'Become premium with', 'sqweb' ) ?> <span class="sqw-btn-mp-green">Multipass</span>
+													<?php } else { echo $flogin; } ?>
 												</a>
 											</div>
 										</div>
