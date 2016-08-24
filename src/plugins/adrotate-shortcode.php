@@ -17,20 +17,20 @@
  Return:    Function()
  Since:		0.7
 -------------------------------------------------------------*/
-function adrotate_shortcode_sqw_compatibility($atts, $content = null) {
+function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 	global $adrotate_config;
 
 	$banner_id = $group_ids = 0;
-	if(!empty($atts['banner'])) $banner_id = trim($atts['banner'], "\r\t ");
-	if(!empty($atts['group'])) $group_ids = trim($atts['group'], "\r\t ");
-	if(!empty($atts['fallback'])) $fallback	= 0; // Not supported in free version
-	if(!empty($atts['weight']))	$weight	= 0; // Not supported in free version
-	if(!empty($atts['site'])) $site = 0; // Not supported in free version
-
-	if($banner_id > 0 AND ($group_ids == 0 OR $group_ids > 0)) { // Show one Ad
+	if ( ! empty( $atts['banner'] ) ) { $banner_id = trim( $atts['banner'], "\r\t " ); }
+	if ( ! empty( $atts['group'] ) ) { $group_ids = trim( $atts['group'], "\r\t " ); }
+	if ( ! empty( $atts['fallback'] ) ) { $fallback	= 0; // Not supported in free version
+	}	if ( ! empty( $atts['weight'] ) ) {	$weight	= 0; // Not supported in free version
+	}	if ( ! empty( $atts['site'] ) ) { $site = 0; // Not supported in free version
+	}
+	if ( $banner_id > 0 and (0 == $group_ids or $group_ids > 0) ) { // Show one Ad
 		SQweb_filter::get_instance()->add_ads( adrotate_ad( $banner_id, true, 0, 0 ) );
 	}
-	if($banner_id == 0 AND $group_ids > 0) { // Show group
+	if ( 0 == $banner_id and $group_ids > 0 ) { // Show group
 		SQweb_filter::get_instance()->add_ads( adrotate_group( $group_ids, 0, 0, 0 ) );
 	}
 }

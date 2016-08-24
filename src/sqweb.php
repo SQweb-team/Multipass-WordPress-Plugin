@@ -111,7 +111,7 @@ require_once 'class/sqweb-ad-control.class.php';
 if ( function_exists( 'adrotate_ad' ) ) {
 	require_once 'plugins/adrotate-widget.php';
 	require_once 'plugins/adrotate-shortcode.php';
-	remove_shortcode('adrotate', 'adrotate_shortcode');
-	add_shortcode('adrotate', 'adrotate_shortcode_sqw_compatibility');
-	add_action('widgets_init', create_function('', 'return register_widget("adrotate_widgets_sqw_compatibility");'));
+	remove_shortcode( 'adrotate', 'adrotate_shortcode' );
+	add_shortcode( 'adrotate', 'adrotate_shortcode_sqw_compatibility' );
+	add_action( 'widgets_init', create_function( '', 'return register_widget("AdrotateWidgetsSqwCompatibility");' ) );
 }
