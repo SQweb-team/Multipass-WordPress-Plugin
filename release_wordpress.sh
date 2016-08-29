@@ -15,7 +15,7 @@ GIT_TAG_SHORT=$(git describe --abbrev=0 --tags | cut -d v -f 2)
 npm install
 
 echo "Creating a release and extracting it..."
-gulp && unzip ./dist/sqweb-wordpress-plugin.zip -d $DIR_DIST
+gulp && unzip ./dist/sqweb-wordpress-plugin.zip -d ./dist/
 
 echo "Cleaning up the trunk..."
 rm -rf $DIR_DIST_SVN/trunk/* && svn delete $DIR_DIST_SVN/trunk
@@ -37,6 +37,9 @@ cd ../sqweb-wordpress-plugin-svn/sqweb
 
 # Confirming we're in the proper directory
 pwd
+
+# SVN voodoo to avoid "E170004: Item '/sqweb/trunk' is out of date"
+svn update
 
 echo "Checking out to svn..."
 svn add tags/$GIT_TAG_SHORT && svn add trunk/*
