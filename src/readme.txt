@@ -89,6 +89,10 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.3.0 =
+* Compatibility with Adrotate plugin.
+* Fixed transpartext offset error.
+
 = v2.2.4 =
 * Added option to enforce limits on selected articles.
 * Added reset button to reset plugin configuration.
