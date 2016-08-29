@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-08-15 15:31+0200\n"
-"PO-Revision-Date: 2016-08-15 15:33+0200\n"
+"POT-Creation-Date: 2016-08-24 14:57+0200\n"
+"PO-Revision-Date: 2016-08-29 11:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -90,14 +90,14 @@ msgstr ""
 "En rejoignant notre réseau, vous aurez une partie de la cotisation à chaque "
 "fois qu’un abonné visite votre site Web."
 
-#: backoffice/sqweb.php:50 backoffice/sqweb.php:167
+#: backoffice/sqweb.php:50 backoffice/sqweb.php:169
 msgid "More infos"
 msgstr "Plus d’infos"
 
 #: backoffice/sqweb.php:52
 msgid "Do you want to restrict some content for free users ?"
 msgstr ""
-"Voulez-vous de restreindre certains contenus pour les utilisateurs gratuits?"
+"Voulez-vous restreindre certains contenus pour les utilisateurs gratuits ?"
 
 #: backoffice/sqweb.php:55
 msgid "Setup content restrictions :"
@@ -220,31 +220,31 @@ msgstr "Gris"
 msgid "Preview :"
 msgstr "Prévisualisation"
 
-#: backoffice/sqweb.php:145
+#: backoffice/sqweb.php:146
 msgid "Become premium with"
 msgstr "Devenir premium avec"
 
-#: backoffice/sqweb.php:163
+#: backoffice/sqweb.php:165
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:167
+#: backoffice/sqweb.php:169
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr "L’Adblock Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:169
+#: backoffice/sqweb.php:171
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:171
+#: backoffice/sqweb.php:173
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:173
+#: backoffice/sqweb.php:175
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:181
+#: backoffice/sqweb.php:183
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -289,7 +289,47 @@ msgstr "Editez les paramètres"
 msgid "Sorry, an error occurred. Please try again."
 msgstr "Une erreur est survenue. Veuillez re-essayer."
 
-#: save.php:51
+#: plugins/adrotate-widget.php:104
+msgid "Title (optional):"
+msgstr "Titre (optionnel) :"
+
+#: plugins/adrotate-widget.php:107
+msgid "HTML will be stripped out."
+msgstr "Tout code HTML sera nettoyé"
+
+#: plugins/adrotate-widget.php:110
+msgid "Description (optional):"
+msgstr "Description (facultatif) :"
+
+#: plugins/adrotate-widget.php:113
+msgid "What is this widget used for? (Not parsed, HTML will be stripped out.)"
+msgstr "À quoi sert ce widget ?"
+
+#: plugins/adrotate-widget.php:116
+msgid "Type:"
+msgstr "Type : "
+
+#: plugins/adrotate-widget.php:118
+msgid "Advert - Use Advert ID"
+msgstr "Annonce - Advert ID"
+
+#: plugins/adrotate-widget.php:119
+msgid "Group - Use group ID"
+msgstr "Groupe - Groupe ID"
+
+#: plugins/adrotate-widget.php:122
+msgid "Choose what you want to use this widget for"
+msgstr "Choisissez ce que vous voulez faire de ce widget"
+
+#: plugins/adrotate-widget.php:125
+msgid "ID:"
+msgstr "ID :"
+
+#: plugins/adrotate-widget.php:128
+msgid "Fill in the ID of the type you want to display!"
+msgstr "Remplissez avec un ID du type que vous voulez affichez !"
+
+#: save.php:49
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 

@@ -26,22 +26,24 @@ function transparent( $text, $percent ) {
 	    unset( $array_text[ $key ] );
 	}
 	$array_text = array_values( $array_text );
-	$words = count( explode( ' ', $text ) );
+	$words = count( $array_text );
 	$nbr = ceil( $words / 100 * $percent );
 	$lambda = (1 / $nbr);
 	$alpha = 1;
 	$begin = 0;
 	$balise = array();
 	while ( $begin < $nbr ) {
-		if ( preg_match( '/<.+?>/', $array_text[ $begin ], $match ) ) {
-			$balise = sqw_balise( $balise, $match[0] );
-			$final[] = $array_text[ $begin ];
-			$nbr++;
-		} else {
-			$final[] = '<span style="opacity: ' . number_format( $alpha, 5, '.', '' ) . '">' . $array_text[ $begin ] . '</span>';
-			$alpha -= $lambda;
+		if ( isset( $array_text[ $begin + 1 ] ) ) {
+			if ( preg_match( '/<.+?>/', $array_text[ $begin ], $match ) ) {
+				$balise = sqw_balise( $balise, $match[0] );
+				$final[] = $array_text[ $begin ];
+				$nbr++;
+			} else {
+				$final[] = '<span style="opacity: ' . number_format( $alpha, 5, '.', '' ) . '">' . $array_text[ $begin ] . '</span>';
+				$alpha -= $lambda;
+			}
+			$begin++;
 		}
-		$begin++;
 	}
 	$final[] = $array_text[ count( $array_text ) - 1 ];
 	foreach ( $balise as $value ) {
