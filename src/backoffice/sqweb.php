@@ -103,18 +103,18 @@
 										<?php
 											$sexept_role = unserialize( get_option( 'sqw_exept_role' ) );
 											$exept_role = get_editable_roles();
-											if ( ! is_array( $sexept_role ) ) {
-												$sexept_role = array_keys($exept_role);
-											}
+										if ( ! is_array( $sexept_role ) ) {
+											$sexept_role = array_keys( $exept_role );
+										}
 											$i = 0;
-											foreach ( $exept_role as $key => $value ) {
-												$i++;
-												echo '
+										foreach ( $exept_role as $key => $value ) {
+											$i++;
+											echo '
 													<div>
 														<input type="checkbox" name="exept_role[]" id="' . $key . '" value="' . $key . '" ' . ( in_array( $key, $sexept_role ) ? 'checked' : '' ) . '/>
 														<label for="' . $key . '">' . $value['name'] . '</label>
 													</div>';
-											}
+										}
 										?>
 									</div>
 									<div style="clear: both;"></div>

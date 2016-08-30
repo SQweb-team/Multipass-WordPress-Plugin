@@ -11,7 +11,7 @@ function sqweb_check_credentials( $site_id = null ) {
 
 	static $credentials;
 	if ( ! isset( $credentials ) ) {
-		if ( function_exists( 'get_option' ) && function_exists( 'wp_get_current_user' ) && count(array_intersect( wp_get_current_user()->roles, unserialize( get_option( 'sqw_exept_role' ) ) ) ) ) {
+		if ( function_exists( 'get_option' ) && function_exists( 'wp_get_current_user' ) && count( array_intersect( wp_get_current_user()->roles, unserialize( get_option( 'sqw_exept_role' ) ) ) ) ) {
 			$credentials = 1;
 		} else {
 			if ( isset( $_COOKIE['sqw_z'] ) && null !== $site_id ) {
