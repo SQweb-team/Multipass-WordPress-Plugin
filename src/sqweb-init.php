@@ -49,24 +49,32 @@ function sqw_login_content( $content ) {
 
 	global $wpdb, $post;
 	$wsid = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
-	/*if ( function_exists('sqw_pmp_access') && sqw_pmp_access(get_the_category())) {
+	if ( function_exists( 'sqw_pmp_access' ) && sqw_pmp_access( get_the_category() ) ) {
 		return $content;
-	}*/
+	}
 	if ( sqweb_check_credentials( $wsid ) == 0 ) {
-		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
-			$content = sqw_filter_content( $content );
-			return $content;
-		} elseif ( get_option( 'categorie' ) ) {
-			$categorie = unserialize( get_option( 'categorie' ) );
-			$categorie = is_array( $categorie ) ? $categorie : array();
-			$category = get_the_category();
-			foreach ( $category as $value ) {
-				foreach ( $categorie as $cat ) {
-					if ( $value->slug == $cat ) {
-						$content = sqw_filter_content( $content );
-						return $content;
+		if ( get_option( 'sqw_prior_paywall' ) || ! function_exists( 'pmpro_getOption' ) ) {
+			if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
+				$content = sqw_filter_content( $content );
+				return $content;
+			} elseif ( get_option( 'categorie' ) ) {
+				$categorie = unserialize( get_option( 'categorie' ) );
+				$categorie = is_array( $categorie ) ? $categorie : array();
+				$category = get_the_category();
+				foreach ( $category as $value ) {
+					foreach ( $categorie as $cat ) {
+						if ( $value->slug == $cat ) {
+							$content = sqw_filter_content( $content );
+							return $content;
+						}
 					}
 				}
+			}
+		} else {
+			add_filter( 'the_content', 'pmpro_membership_content_filter', 5 );
+			$filterqueries = pmpro_getOption( 'filterqueries' );
+			if ( ! empty( $filterqueries ) ) {
+			    add_filter( 'pre_get_posts', 'pmpro_search_filter' );
 			}
 		}
 	}

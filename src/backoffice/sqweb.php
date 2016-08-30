@@ -70,6 +70,12 @@
 									}
 									?>
 								</div>
+								<div class="sqw-check-prior-paywall sqw-clear">
+									<div>
+										<input type="checkbox" name="sqw_prior_paywall" id="sqw_prior_paywall" value="true" <?php echo ( get_option( 'sqw_prior_paywall' ) ? 'checked' : '' ) ?>/>
+										<label for="sqw_prior_paywall"><?php _e( 'Prioritize Multipass over other paywalls', 'sqweb' ); ?></label>
+									</div>
+								</div>
 								<div class="sqw-selector sqw-clear">
 									<div class="sqw-select">
 										<h5><?php _e( 'I want a part of my content to be displayed for non paying users.', 'sqweb' ); ?></h5>
@@ -117,7 +123,7 @@
 										}
 										?>
 									</div>
-									<div style="clear: both;"></div>
+									<div class="sqw-clear"></div>
 								</div>
 							</div>
 							<div class="sqw-config-button">

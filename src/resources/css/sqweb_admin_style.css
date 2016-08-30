@@ -233,8 +233,15 @@ input[type=password] {
     float: left;
 }
 
+.sqw-check-prior-paywall div {
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+}
+
 .sqw-check-categorie input[type=checkbox],
-.sqw-check-user-rank input[type=checkbox] {
+.sqw-check-user-rank input[type=checkbox],
+.sqw-check-prior-paywall input[type=checkbox] {
     margin-top: 0;
     margin-right: 8px;
     border-radius: 4px;

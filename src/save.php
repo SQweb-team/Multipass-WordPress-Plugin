@@ -27,6 +27,12 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		update_option( 'sqw_exept_role', serialize( array() ) );
 	}
 
+	if ( ! empty( $_POST['sqw_prior_paywall'] ) ) {
+		update_option( 'sqw_prior_paywall', true );
+	} else {
+		delete_option( 'sqw_prior_paywall' );
+	}
+
 	if ( ! empty( $_POST['perctart'] ) ) {
 		update_option( 'cutartperc', $_POST['perctart'] );
 	} else {

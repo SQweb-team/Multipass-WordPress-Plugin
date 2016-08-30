@@ -23,3 +23,7 @@ function sqw_pmp_access( $post_categorie ) {
 	);
 	return ($query);
 }
+
+remove_filter( 'the_content', 'pmpro_membership_content_filter', 5 );
+remove_filter( 'pre_get_posts', 'pmpro_search_filter' );
+
