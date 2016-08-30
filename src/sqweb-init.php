@@ -49,6 +49,9 @@ function sqw_login_content( $content ) {
 
 	global $wpdb, $post;
 	$wsid = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
+	/*if ( function_exists('sqw_pmp_access') && sqw_pmp_access(get_the_category())) {
+		return $content;
+	}*/
 	if ( sqweb_check_credentials( $wsid ) == 0 ) {
 		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 			$content = sqw_filter_content( $content );

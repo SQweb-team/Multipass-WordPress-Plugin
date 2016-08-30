@@ -21,6 +21,12 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		delete_option( 'categorie' );
 	}
 
+	if ( ! empty( $_POST['exept_role'] ) ) {
+		update_option( 'sqw_exept_role', serialize( $_POST['exept_role'] ) );
+	} else {
+		update_option( 'sqw_exept_role', serialize( array() ) );
+	}
+
 	if ( ! empty( $_POST['perctart'] ) ) {
 		update_option( 'cutartperc', $_POST['perctart'] );
 	} else {

@@ -98,6 +98,26 @@
 											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'dateart' ) !== false ? get_option( 'dateart' ) : '' ); ?>" name="dateart"/><span class="basic-font-10"> <?php _e( 'days before end of restriction', 'sqweb' ); ?></span>
 										</div>
 									</div>
+									<div class="sqw-check-user-rank">
+										<p><?php _e( 'Do not restrict content to the following user groups :' ); ?></p>
+										<?php
+											$sexept_role = unserialize( get_option( 'sqw_exept_role' ) );
+											$exept_role = get_editable_roles();
+											if ( ! is_array( $sexept_role ) ) {
+												$sexept_role = array_keys($exept_role);
+											}
+											$i = 0;
+											foreach ( $exept_role as $key => $value ) {
+												$i++;
+												echo '
+													<div>
+														<input type="checkbox" name="exept_role[]" id="' . $key . '" value="' . $key . '" ' . ( in_array( $key, $sexept_role ) ? 'checked' : '' ) . '/>
+														<label for="' . $key . '">' . $value['name'] . '</label>
+													</div>';
+											}
+										?>
+									</div>
+									<div style="clear: both;"></div>
 								</div>
 							</div>
 							<div class="sqw-config-button">
