@@ -3,8 +3,7 @@
 /**
 * SQweb Filter
 */
-class SQweb_filter_articles
-{
+class SQweb_filter_articles {
 
 	function __construct() {
 
