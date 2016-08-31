@@ -95,7 +95,7 @@ class SQweb_filter {
 			$this->_ads[ $key ] = $ads;
 			$this->_text[ $key ] = $text;
 			$content = file_get_contents( $sqweb_config_path );
-			$content = preg_replace( '/(?<=\'wsid\' => )\d+(?=,)/', get_option( 'wsid' ), $content );
+			$content = preg_replace( '/(?<=\'wsid\' => )\d+(?=,)/', ( get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0 ), $content );
 			$content = preg_replace( '/(?<=\'filter\.ads\' => \').+(?=\',)/', base64_encode( serialize( $this->_ads ) ), $content );
 			$content = preg_replace( '/(?<=\'filter\.text\' => \').+(?=\',)/', base64_encode( serialize( $this->_text ) ), $content );
 			file_put_contents( $sqweb_config_path, $content );
@@ -121,7 +121,7 @@ class SQweb_filter {
 				<!--mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
 					$sqweb_config = include( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/sqweb-config.php' );
 					include_once( '<?php echo WP_PLUGIN_DIR; ?>/sqweb/functions.php' );
-					if ( sqweb_check_credentials(<?php echo $this->_wsid; ?>) > 0 ) {
+					if ( apply_filters( 'sqw_check_credentials', <?php echo $this->_wsid; ?>) > 0 ) {
 						echo base64_decode('<?php echo base64_encode( $this->_text[ $key ] ); ?>');
 					} else {
 						echo base64_decode('<?php echo base64_encode( $this->_ads[ $key ] ); ?>');
@@ -129,7 +129,7 @@ class SQweb_filter {
 				<!--/mfunc <?php echo W3TC_DYNAMIC_SECURITY; ?> -->
 				<?php
 		} else {
-			if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
+			if ( apply_filters( 'sqw_check_credentials', $this->_wsid ) ) {
 				echo $this->_text[ $key ];
 			} else {
 				echo $this->_ads[ $key ];
@@ -140,7 +140,7 @@ class SQweb_filter {
 	public function display_content_with_wpsc( &$cache ) {
 		$this->set_data();
 		if ( ! empty( $this->_ads ) ) {
-			if ( sqweb_check_credentials( $this->_wsid ) > 0 ) {
+			if ( ( function_exists( 'apply_filters' ) && apply_filters( 'sqw_check_credentials', $this->_wsid ) ) || sqweb_check_credentials( $this->_wsid ) ) {
 				foreach ( $this->_text as $key => $text ) {
 					$cache = str_replace( $key, $text, $cache );
 				}

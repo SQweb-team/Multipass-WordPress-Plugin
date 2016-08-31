@@ -111,6 +111,7 @@ if ( shortcode_exists( 'membership' ) ) {
 	require_once 'plugins/paidmembership.php';
 }
 
+require_once 'includes/sqweb-filter.php';
 require_once 'sqweb-init.php';
 require_once 'sqweb-wsc-filter.php';
 require_once 'class/sqweb-ad-control.class.php';
