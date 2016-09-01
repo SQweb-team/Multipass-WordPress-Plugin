@@ -70,6 +70,12 @@
 									}
 									?>
 								</div>
+								<div class="sqw-check-prior-paywall sqw-clear">
+									<div>
+										<input type="checkbox" name="sqw_prior_paywall" id="sqw_prior_paywall" value="true" <?php echo ( get_option( 'sqw_prior_paywall' ) ? 'checked' : '' ) ?>/>
+										<label for="sqw_prior_paywall"><?php _e( 'Prioritize Multipass over other paywalls', 'sqweb' ); ?></label>
+									</div>
+								</div>
 								<div class="sqw-selector sqw-clear">
 									<div class="sqw-select">
 										<h5><?php _e( 'I want a part of my content to be displayed for non paying users.', 'sqweb' ); ?></h5>
@@ -98,6 +104,26 @@
 											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'dateart' ) !== false ? get_option( 'dateart' ) : '' ); ?>" name="dateart"/><span class="basic-font-10"> <?php _e( 'days before end of restriction', 'sqweb' ); ?></span>
 										</div>
 									</div>
+									<div class="sqw-check-user-rank">
+										<p><?php _e( 'Do not restrict content to the following user groups :' ); ?></p>
+										<?php
+											$sexept_role = unserialize( get_option( 'sqw_exept_role' ) );
+											$exept_role = get_editable_roles();
+										if ( ! is_array( $sexept_role ) ) {
+											$sexept_role = array_keys( $exept_role );
+										}
+											$i = 0;
+										foreach ( $exept_role as $key => $value ) {
+											$i++;
+											echo '
+													<div>
+														<input type="checkbox" name="exept_role[]" id="' . $key . '" value="' . $key . '" ' . ( in_array( $key, $sexept_role ) ? 'checked' : '' ) . '/>
+														<label for="' . $key . '">' . $value['name'] . '</label>
+													</div>';
+										}
+										?>
+									</div>
+									<div class="sqw-clear"></div>
 								</div>
 							</div>
 							<div class="sqw-config-button">

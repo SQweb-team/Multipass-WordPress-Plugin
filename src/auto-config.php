@@ -99,7 +99,7 @@ define( \'W3TC_DYNAMIC_SECURITY\', \'' . md5( rand() ) . '\');
 	public static function is_wpsc_enabled() {
 		/** Check if WPSC is enabled */
 		global $cache_enabled, $super_cache_enabled;
-		if ( $cache_enabled && $super_cache_enabled ) {
+		if ( $cache_enabled && $super_cache_enabled && function_exists( 'add_cacheaction' ) ) {
 			return (1);
 		}
 		return (0);

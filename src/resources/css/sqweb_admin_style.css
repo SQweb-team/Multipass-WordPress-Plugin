@@ -226,13 +226,22 @@ input[type=password] {
     margin-left: 3%;
 }
 
-.sqw-check-categorie div {
+.sqw-check-categorie div,
+.sqw-check-user-rank div {
     margin-bottom: 15px;
     width: 25%;
     float: left;
 }
 
-.sqw-check-categorie input[type=checkbox] {
+.sqw-check-prior-paywall div {
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+}
+
+.sqw-check-categorie input[type=checkbox],
+.sqw-check-user-rank input[type=checkbox],
+.sqw-check-prior-paywall input[type=checkbox] {
     margin-top: 0;
     margin-right: 8px;
     border-radius: 4px;
@@ -258,6 +267,10 @@ input[type=password] {
 
 .sqw-selector p {
     margin: 0;
+}
+
+.sqw-check-user-rank p {
+    margin-bottom: 15px;
 }
 
 .sqw-active .sqw_title_multipass {

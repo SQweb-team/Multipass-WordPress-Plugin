@@ -60,19 +60,26 @@ function sqweb_check_credentials( $site_id = null ) {
 					$error_message = $return->get_error_message();
 					echo 'Something went wrong: ' . $error_message;
 				}
-				$credentials = 0;
+				$credentials = false;
 			} else {
 				$response = json_decode( isset( $return['body'] ) ? $return['body'] : $return );
 				if ( false !== $response && true === $response->status && $response->credit > 0 ) {
-					$credentials = $response->credit;
-					return $response->credit;
+					$credentials = true;
+				} else {
+					$credentials = false;
 				}
 			}
+		} else {
+			$credentials = false;
 		}
-	} else {
-		return $credentials;
 	}
-	return ( 0 );
+	return $credentials;
+}
+
+if ( function_exists( 'get_option' ) && function_exists( 'wp_get_current_user' ) && unserialize( get_option( 'sqw_exept_role' ) ) && count( array_intersect( wp_get_current_user()->roles, unserialize( get_option( 'sqw_exept_role' ) ) ) ) ) {
+	add_filter( 'sqw_check_credentials', function () { return true; }, 5, 1 );
+} else {
+	add_filter( 'sqw_check_credentials', 'sqweb_check_credentials', 5, 1 );
 }
 
 /**

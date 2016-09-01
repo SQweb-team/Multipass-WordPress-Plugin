@@ -2,8 +2,8 @@
 Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
-Tested up to: 4.5.2
-Stable tag: 2.3.1
+Tested up to: 4.6.0
+Stable tag: 2.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -88,6 +88,11 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.3.2 =
+* Add exclude user role from SQweb panel.
+* Compatibility with Paid Membership Pro.
+* Improve compatibility with others plugin via filter.
 
 = v2.3.1 =
 * Fixed broken release process.

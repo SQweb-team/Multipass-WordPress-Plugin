@@ -36,7 +36,7 @@ class WidgetSqwebButton extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance, array( 'flogin' => 'Remove ads', 'flogout' => 'Connected' ) );
 		$get_options['wmid'] = get_option( 'wmid' );
-		$get_options['wsid'] = get_option( 'wsid' );
+		$get_options['wsid'] = (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0);
 		$get_options['fmes'] = get_option( 'fmes' );
 		if ( '' === $get_options['wsid'] || '' === $get_options['wmid'] ) {
 			echo '<span style="color:red">ID MISSING<a href="admin.php?page=SQwebAdmin"><br>', __( 'CLICK HERE TO LOG IN', 'sqweb' ), '<br></a></span>';
