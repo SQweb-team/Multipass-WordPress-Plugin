@@ -90,9 +90,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.3.2 =
-* Add exclude user role from SQweb panel.
+* Add excludes according to WordPress user role from SQweb panel.
 * Compatibility with Paid Membership Pro.
-* Improve compatibility with others plugin via filter.
+* Improve compatibility with others plugin via filters.
 
 = v2.3.1 =
 * Fixed broken release process.
