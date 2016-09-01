@@ -48,7 +48,7 @@ echo "Pushing to SVN..."
 svn ci -m "$GIT_TAG"
 
 # Letting the team know
-curl -X POST --data-urlencode 'payload={"channel": "#sqw-dev-plug-wp", "text": "'$GIT_TAG_SHORT' has been pushed to WordPress.org"}' \
+curl -X POST --data-urlencode 'payload={"channel": "#sqw-dev-plug-wp", "text": "Version '$GIT_TAG_SHORT' has been pushed to WordPress.org"}' \
 	https://hooks.slack.com/services/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
 
 echo "Done!"
