@@ -27,8 +27,7 @@ class SQweb_filter_articles {
 	function limited_sqw( $content ) {
 		global $post;
 		if ( get_post_meta( $post->id, 'sqw_limited', true ) ) {
-			$content = sqw_filter_content( $content );
-			return $content;
+			return apply_filters( 'sqw_filter_content', $content );
 		} elseif ( get_option( 'categorie' ) ) {
 			$categorie = unserialize( get_option( 'categorie' ) );
 			$categorie = is_array( $categorie ) ? $categorie : array();
