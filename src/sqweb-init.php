@@ -47,12 +47,17 @@ buildScript::save();
 
 function sqw_login_content( $content ) {
 
+	global $post;
+
 	$wsid = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
 	if ( function_exists( 'sqw_pmp_access' ) && sqw_pmp_access( get_the_category() ) ) {
 		return $content;
 	}
-	if ( ! apply_filters( 'sqw_check_credentials', $wsid ) ) {
-		$content = apply_filters( 'sqw_limited', $content );
+	$value = get_post_meta( $post->ID, 'sqw_unlimited', true );
+	if ( empty( $value ) ) {
+		if ( ! apply_filters( 'sqw_check_credentials', $wsid ) ) {
+			$content = apply_filters( 'sqw_limited', $content );
+		}
 	}
 	return $content;
 }

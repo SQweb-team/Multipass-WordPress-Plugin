@@ -42,7 +42,7 @@
 					<div class="sqw-multipass">
 						<div class="sqw-header">
 							<h3 class="sqw-title sqw-title-multipass <?php echo ( get_option( 'sqw_multipass' ) ? 'sqw-title-multipass-color' : '' ) ?>">
-								<?php _e( 'Activate Multipass' ); ?>
+								<?php _e( 'Activate Multipass', 'sqweb' ); ?>
 							</h3><div class="sqw-tack sqw-tack-big <?php echo ( get_option( 'sqw_multipass' ) ? 'sqw-tack-big-check sqw-green' : '' ); ?>" name="multipass" data-color="green"><div></div></div>
 							<input type="hidden" class="sqw-multipass-input" name="sqw_multipass" value="<?php echo get_option( 'sqw_multipass' ); ?>"/>
 						</div>

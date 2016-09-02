@@ -45,10 +45,8 @@ class SQweb_admin {
 			/**
 			 * Add post capacity to paywall limit on single article.
 			 **/
-			if ( get_option( 'categorie' ) || get_option( 'artbyday' ) || get_option( 'cutartperc' ) || get_option( 'dateart' ) ) {
-				add_action( 'post_submitbox_misc_actions', array( $this, 'featured_post_field' ) );
-				add_action( 'save_post', array( $this, 'save_postdata' ) );
-			}
+			add_action( 'post_submitbox_misc_actions', array( $this, 'featured_post_field' ) );
+			add_action( 'save_post', array( $this, 'save_postdata' ) );
 		}
 	}
 
@@ -111,16 +109,36 @@ return array(
 	    global $post;
 
 	    /* get the value current value of the custom field */
-	    $value = get_post_meta( $post->ID, 'sqw_limited', true );
+	    $check = false;
+		$categorie = unserialize( get_option( 'categorie' ) );
+		$categorie = is_array( $categorie ) ? $categorie : array();
+		$category = get_the_category();
+		foreach ( $category as $value ) {
+			foreach ( $categorie as $cat ) {
+				if ( $value->slug == $cat ) {
+					$check = true;
+				}
+			}
+		}
+		$value = get_post_meta( $post->ID, 'sqw_limited', true );
 	    ?>
 	        <div class="misc-pub-section">
 	            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
 	        </div>
 	    <?php
+	    if ( $check ) {
+		    $value = get_post_meta( $post->ID, 'sqw_unlimited', true );
+		   	?>
+		        <div class="misc-pub-section">
+		            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' );?></label>
+		        </div>
+		    <?php
+		}
 	}
 
 
 	public function save_postdata( $postid ) {
+
 	    /* check if this is an autosave */
 	    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return false;
@@ -144,9 +162,15 @@ return array(
 	    if ( isset( $_POST['sqw_limited'] ) ) {
 	        /* store the value in the database */
 	        add_post_meta( $postid, 'sqw_limited', 1, true );
+	        delete_post_meta( $postid, 'sqw_unlimited' );
 	    } else {
-	        /* not marked? delete the value in the database */
+	    	delete_post_meta( $postid, 'sqw_limited' );
+	    }
+	    if ( isset( $_POST['sqw_unlimited'] ) ) {
+	    	add_post_meta( $postid, 'sqw_unlimited', 1, true);
 	        delete_post_meta( $postid, 'sqw_limited' );
+	    } else {
+	    	delete_post_meta( $postid, 'sqw_unlimited' );
 	    }
 	}
 

@@ -26,9 +26,9 @@ class SQweb_filter_articles {
 
 	function limited_sqw( $content ) {
 		global $post;
-		if ( get_post_meta( $post->id, 'sqw_limited', true ) ) {
+		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 			return apply_filters( 'sqw_filter_content', $content );
-		} elseif ( get_option( 'categorie' ) ) {
+		} else {
 			$categorie = unserialize( get_option( 'categorie' ) );
 			$categorie = is_array( $categorie ) ? $categorie : array();
 			$category = get_the_category();
@@ -103,7 +103,9 @@ class SQweb_filter_articles {
 	 */
 
 	public function filter_articles_by_day( $content, $message, $cutmessage ) {
+
 		global $wpdb;
+
 		$id = get_the_ID();
 		$count = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '%s' AND time > '%d' ORDER BY id DESC", array( $_SERVER['REMOTE_ADDR'], (time() - 86400 ) ) ) );
 		if ( empty( $count ) ) {
