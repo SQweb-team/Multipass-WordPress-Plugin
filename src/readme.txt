@@ -89,6 +89,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.3.5 =
+* Reset sqweb-config.php
+
 = v2.3.4 =
 * Ability to schedule public availability for premium content.
 * Improved compatibility with Paid Membership Pro.
