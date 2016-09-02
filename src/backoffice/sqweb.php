@@ -105,7 +105,7 @@
 										</div>
 									</div>
 									<div class="sqw-check-user-rank">
-										<p><?php _e( 'Do not restrict content to the following user groups :' ); ?></p>
+										<p><?php _e( 'Do not restrict content to the following user groups :', 'sqweb' ); ?></p>
 										<?php
 											$sexept_role = unserialize( get_option( 'sqw_exept_role' ) );
 											$exept_role = get_editable_roles();

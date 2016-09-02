@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-08-30 17:10+0200\n"
-"PO-Revision-Date: 2016-08-30 17:12+0200\n"
+"POT-Creation-Date: 2016-09-02 15:35+0200\n"
+"PO-Revision-Date: 2016-09-02 15:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -294,6 +294,44 @@ msgstr "Cliquez ici pour vous connecter"
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
+#: includes/sqweb-filter.php:69
+msgid "The rest of this article is for subscriber only"
+msgstr "La suite de cette page est réservée aux abonnés"
+
+#: includes/sqweb-filter.php:69 includes/sqweb-filter.php:71
+msgid "Become a subscriber now with Multipass"
+msgstr "Débloquez ce contenu avec Multipass"
+
+#: includes/sqweb-filter.php:70
+#, php-format
+msgid "You have already read %d article for free today"
+msgid_plural "You have already read %d articles for free today"
+msgstr[0] "Vous avez lu votre article quotidien offert"
+msgstr[1] "Vous avez lu vos %d articles quotidiens offerts"
+
+#: includes/sqweb-filter.php:70
+msgid "Please come back tomorrow"
+msgstr "Vous voulez voir la suite ?"
+
+#: includes/sqweb-filter.php:70
+msgid "Or"
+msgstr "Ou"
+
+#: includes/sqweb-filter.php:70
+msgid "Access immediately all the content with Multipass"
+msgstr "Débloquez ce contenu avec Multipass"
+
+#: includes/sqweb-filter.php:71
+msgid "This content is for subscriber only"
+msgstr "Ce contenu est actuellement réservé aux abonnés"
+
+#: includes/sqweb-filter.php:71
+#, php-format
+msgid "It will be available for free in %d day"
+msgid_plural "It will be available for free in %d days"
+msgstr[0] "Il sera disponible dans %d jour"
+msgstr[1] "Il sera disponible dans %d jours"
+
 #: login.php:27 login.php:50
 msgid "Sorry, an error occurred. Please try again."
 msgstr "Une erreur est survenue. Veuillez re-essayer."
@@ -342,63 +380,29 @@ msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
-#: sqweb-admin.php:84
+#: sqweb-admin.php:82
 msgid "Reset configuration of SQweb"
 msgstr "Réinitialiser la configuration de SQweb"
 
-#: sqweb-admin.php:85
+#: sqweb-admin.php:83
 msgid "Logout from SQweb"
 msgstr "Ce déconnecté de SQweb"
 
-#: sqweb-admin.php:93
+#: sqweb-admin.php:91
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:117
+#: sqweb-admin.php:126
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:184
+#: sqweb-admin.php:133
+msgid "Post available for every users"
+msgstr "Poste disponible pour tous les utilisateurs"
+
+#: sqweb-admin.php:208
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
-
-#: sqweb-init.php:87
-msgid "The rest of this article is for subscriber only"
-msgstr "La suite de cette page est réservée aux abonnés"
-
-#: sqweb-init.php:87 sqweb-init.php:89
-msgid "Become a subscriber now with Multipass"
-msgstr "Débloquez ce contenu avec Multipass"
-
-#: sqweb-init.php:88
-#, php-format
-msgid "You have already read %d article for free today"
-msgid_plural "You have already read %d articles for free today"
-msgstr[0] "Vous avez lu votre article quotidien offert"
-msgstr[1] "Vous avez lu vos %d articles quotidiens offerts"
-
-#: sqweb-init.php:88
-msgid "Please come back tomorrow"
-msgstr "Vous voulez voir la suite ?"
-
-#: sqweb-init.php:88
-msgid "Or"
-msgstr "Ou"
-
-#: sqweb-init.php:88
-msgid "Access immediately all the content with Multipass"
-msgstr "Débloquez ce contenu avec Multipass"
-
-#: sqweb-init.php:89
-msgid "This content is for subscriber only"
-msgstr "Ce contenu est actuellement réservé aux abonnés"
-
-#: sqweb-init.php:89
-#, php-format
-msgid "It will be available for free in %d day"
-msgid_plural "It will be available for free in %d days"
-msgstr[0] "Il sera disponible dans %d jour"
-msgstr[1] "Il sera disponible dans %d jours"
 
 #: sqweb.php:52
 msgid ""
