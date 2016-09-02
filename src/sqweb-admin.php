@@ -167,7 +167,7 @@ return array(
 	    	delete_post_meta( $postid, 'sqw_limited' );
 	    }
 	    if ( isset( $_POST['sqw_unlimited'] ) ) {
-	    	add_post_meta( $postid, 'sqw_unlimited', 1, true);
+	    	add_post_meta( $postid, 'sqw_unlimited', 1, true );
 	        delete_post_meta( $postid, 'sqw_limited' );
 	    } else {
 	    	delete_post_meta( $postid, 'sqw_unlimited' );
