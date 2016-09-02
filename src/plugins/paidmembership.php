@@ -4,7 +4,7 @@
  */
 
 function sqw_pmp_access( $post_categorie ) {
-	global $wpdb;
+	global $wpdb, $post;
 	$categorie = array();
 	foreach ( $post_categorie as $value ) {
 		$categorie[] = $value->slug;
@@ -13,8 +13,14 @@ function sqw_pmp_access( $post_categorie ) {
 	$query = $wpdb->get_results(
 		$wpdb->prepare( "SELECT membership_id FROM {$wpdb->pmpro_memberships_categories} WHERE category_id IN(%s)", array( implode( ',', $categorie ) ) )
 	);
+	$query2 = $wpdb->get_results(
+		$wpdb->prepare( "SELECT membership_id FROM {$wpdb->pmpro_memberships_pages} WHERE page_id = %d", array( $post->ID ) )
+	);
 	$levels = array();
 	foreach ( $query as $value ) {
+		$levels[] = $value->membership_id;
+	}
+	foreach ( $query2 as $value ) {
 		$levels[] = $value->membership_id;
 	}
 	$query = $wpdb->query(
