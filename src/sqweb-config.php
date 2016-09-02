@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'wsid' => 86315,
-	'filter.ads' => 'YToyOntzOjYwOiJzVXZ4VjliZkZ5MUZlUUZJSFpsRTVxc3N5NTlSUXZhanBGUWxQMkF2QkJhUXNQeWFQVU9VbGduVW13TWQiO3M6MzoiYWRzIjtzOjY2OiJvMUZPOVczZkEwV2N3TWJZNDIyNWFHUVk4U2FwMktLckxxZ1Zua2FYazZhUlRsUFluUjN5eVV3R05INVFyUWhkaHkiO3M6NDoiYWRzcyI7fQ==',
-	'filter.text' => 'YToyOntzOjYwOiJzVXZ4VjliZkZ5MUZlUUZJSFpsRTVxc3N5NTlSUXZhanBGUWxQMkF2QkJhUXNQeWFQVU9VbGduVW13TWQiO3M6NzoiY29udGVudCI7czo2NjoibzFGTzlXM2ZBMFdjd01iWTQyMjVhR1FZOFNhcDJLS3JMcWdWbmthWGs2YVJUbFBZblIzeXlVd0dOSDVRclFoZGh5IjtzOjc6ImNvbnRlbnQiO30=',
+	'wsid' => 0,
+	'filter.ads' => 'YTowOnt9',
+	'filter.text' => 'YTowOnt9',
 );
