@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.6.0
-Stable tag: 2.3.4
+Stable tag: 2.3.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -73,6 +73,46 @@ Please make sure that you're forwarding client IPs properly. A detailed thread w
 
 If you need any help, email us at hello@sqweb.com and one of our engineers will check your configuration with you.
 
+= Change box displayed by Multipass on paywall =
+
+You can add in your theme on function.php a filter to edit the box displayed by Multipass paywall
+
+Example to add content after box:
+`
+function box_sqweb( $content ) {
+	return $content . 'I add my content';
+}
+
+add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
+`
+
+`
+function box_sqweb( $content ) {
+	return $content . 'I add my content';
+}
+
+add_filter( 'sqw_msg_restrict_art_by_day', 'box_sqweb' );
+`
+
+`
+function box_sqweb( $content ) {
+	return $content . 'I add my content';
+}
+
+add_filter( 'sqw_msg_restrict_date_art', 'box_sqweb' );
+`
+
+You can also delete the box to create your customized box for your website.
+
+Example to create your own box :
+`
+function box_sqweb( $content ) {
+	return 'I don\'t need the box so I create a customized box';
+}
+
+add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
+`
+
 == Frequently asked questions ==
 
 = How much does SQweb cost ? =
@@ -89,8 +129,12 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.3.6 =
+* Add customized box.
+* Improved compatibility with Paid Membership Pro
+
 = v2.3.5 =
-* Reset sqweb-config.php
+* Reset sqweb-config.php.
 
 = v2.3.4 =
 * Ability to schedule public availability for premium content.

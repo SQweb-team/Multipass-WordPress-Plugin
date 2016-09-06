@@ -21,6 +21,9 @@ function transparent( $text, $percent ) {
 	} elseif ( 100 == $percent ) {
 		return $text;
 	}
+	if ( empty( $text ) ) {
+		return $text;
+	}
 	$array_text = preg_split( '/(<.+?><\/.+?>)|(<.+?>)|( )/', $text, 0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE );
 	foreach ( array_keys( $array_text, ' ', true ) as $key ) {
 	    unset( $array_text[ $key ] );
