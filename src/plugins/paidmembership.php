@@ -6,7 +6,7 @@
 function sqw_pmp_access( $post_categorie ) {
 	global $wpdb, $post;
 	static $return = null;
-	if ( $return === null ) {
+	if ( null === $return ) {
 		$categorie = array();
 		foreach ( $post_categorie as $value ) {
 			$categorie[] = $value->slug;
