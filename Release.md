@@ -3,7 +3,7 @@ SQweb - WordPress Plugin - Release Instructions
 
 ##Requirements
 
-You will need a copy of the SVN repo from wordpress.org (one level up from you Git clone), and an authorized wordpress.org account.
+You will need a copy of the SVN repo from wordpress.org (one level up from your Git clone), and an authorized wordpress.org account with commit access.
 
 ##1. Checks
 
