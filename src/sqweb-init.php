@@ -33,7 +33,6 @@ function sqweb_display_admin_menu() {
 }
 
 function install_help_sqw() {
-	echo 'test';
 }
 
 function sqweb_display_php_info() {

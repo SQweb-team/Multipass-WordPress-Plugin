@@ -116,7 +116,7 @@
 }
 
 .sqw-form-green {
-    border-color: #2cc990 !important;
+    border-color: #ffdb06 !important;
 }
 
 .sqw-form input[type=text],
@@ -215,7 +215,7 @@ input[type=password] {
 }
 
 .sqw-title-multipass-color {
-    color: #2cc990;
+    color: #ffdb06;
 }
 
 .sqw-title-analytics-color {
@@ -274,7 +274,7 @@ input[type=password] {
 }
 
 .sqw-active .sqw_title_multipass {
-    color: #2cc990;
+    color: #ffdb06;
 }
 
 .sqw-config-button {
@@ -316,7 +316,7 @@ input[type=password] {
 }
 
 .sqw-radio:checked {
-    background-color: #2cc990;
+    background-color: #ffdb06;
 }
 
 .sqw-radio:checked::before {
@@ -377,7 +377,7 @@ input[type=password] {
 }
 
 .sqw-green {
-    background-color: #2cc990;
+    background-color: #ffdb06;
 }
 
 .sqw-red {
@@ -522,13 +522,6 @@ input[type=password] {
  * Multipass Button
  */
 
-.sqw-btn-mp,
-.sqw-btn-mp-link {
-    color: #fff !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-}
-
 .sqweb-button-mp {
     height: 52px;
     margin-top: 10px;
@@ -537,29 +530,31 @@ input[type=password] {
 
 .sqw-btn-mp {
     border-radius: 5px;
-    background-color: #4491ff;
+    background-color: #ffdb06;
     display: inline-block;
     height: 42px;
     box-sizing: border-box;
-    min-width: 300px;
-    transition: background .2s ease-in-out;
+    min-width: 250px;
+    width: 100%;
+    max-width: 300px;
+    transition: all .2s ease-in-out;
 }
 
 .sqw-btn-mp:hover {
-    background-color: color(#4491ff w(+11%));
-    transition: background .2s ease-in-out;
+    padding-left: 10px;
+    transition: all .2s ease-in-out;
 }
 
 .sqw-btn-mp-logo {
     display: inline-block;
     float: left;
     background-size: 100% 100%;
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMjE4cHgiIGhlaWdodD0iMjQ1cHgiIHZpZXdCb3g9IjAgMCAyMTggMjQ1IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPkxvZ288L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJBcnRib2FyZC0yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1LjAwMDAwMCwgLTk5LjAwMDAwMCkiPiAgICAgICAgICAgIDxnIGlkPSJMb2dvIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTUuMDAwMDAwLCA5OS4wMDAwMDApIj4gICAgICAgICAgICAgICAgPGcgaWQ9IkxvZ28tTXVsdGlwYXNzIj4gICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yLjgxNDU1NTA0LDIzLjU1OTQ2MzMgQzIuODE0NTU1MDQsMjMuNTU5NDYzMyAtNC41MDY3ODM0MywxNS41MjUyODI0IDQuNDY2Nzg0ODcsNC44MTMwNDE4NyBDMTMuNDQwMzUzMiwtNS44OTkxOTg2NyAyNi41MTE0NTEzLDQuNjE0NDE5MDcgMjYuNTExNDUxMyw0LjYxNDQxOTA3IEwxNjUuMTY3Njk5LDE0Mi45MjA2MDcgQzE2NS4xNjc2OTksMTQyLjkyMDYwNyAxNzcuMjM5NjEzLDE1NC4xODUxOTcgMTY1LjgxMjkwOCwxNjUuMTI3MzA1IEMxNTQuMzg2MjA0LDE3Ni4wNjk0MTMgMTE5LjkzNDY4NywyMTAuNjA5Njk0IDExOS45MzQ2ODcsMjEwLjYwOTY5NCBDMTE5LjkzNDY4NywyMTAuNjA5Njk0IDEwOC43MjgzODksMjIxLjYxNDI5MiA5Ny4wNDY1NDI5LDIxMC41MTAzODMgQzg1LjM2NDY5NzIsMTk5LjQwNjQ3NCA1MC4zMDAyMDA0LDE2My45MzIyMjEgNTAuMzAwMjAwNCwxNjMuOTMyMjIxIEM1MC4zMDAyMDA0LDE2My45MzIyMjEgNDAuMjg5MzcwMiwxNTMuNDE4NTk3IDUxLjk2NTg3MjEsMTQyLjI3MDA2MSBDNjMuNjQyMzc0LDEzMS4xMjE1MjYgODcuMzQwMzkyOCwxMDguMDg2ODU0IDg3LjM0MDM5MjgsMTA4LjA4Njg1NCBMNy4wMTExNzcxNywyOC41MTYyMDg4IEwyLjgxNDU1NTA0LDIzLjU1OTQ2MzMgWiBNMTA4LjcxNDkyMSwxMjkuODczMTA5IEwxMzMuMjUwMDgyLDE1My44ODc1MzggTDEwOC44Nzk0NjUsMTc4LjcwMjczOCBMODQuMDQxODcxNSwxNTQuMTgxMzQxIEwxMDguNzE0OTIxLDEyOS44NzMxMDkgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIiBmaWxsPSIjMzFFMUExIj48L3BhdGg+ICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMC4yMjYxNDg4MiwzMyBMMzAuOTY2NjQ3NCw2NC4wMzE5NjA5IEwzMC44NTQyNDgzLDIyOC4xNDA5ODEgQzMwLjg1NDI0ODMsMjI4LjE0MDk4MSAzMi42MzUyNzQ3LDI0NC40MDc0NDkgMTUuOTQxMTg5OSwyNDQuNDA3NDQ5IEMtMC43NTI4OTQ5NCwyNDQuNDA3NDQ5IDAuMDA1MjU2NDExNDksMjI2Ljk1NzMyMSAwLjAwNTI1NjQxMTQ5LDIyNi45NTczMjEgTDAuMjI2MTQ4ODIsMzMgWiIgaWQ9IlBhdGgtOTUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4gICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMzcuMTgxMjE3LDEwNC4xNTc0NzkgTDE4Ny4wNTIxMjYsNTQuMjU0ODI0MSBMMTg2Ljk0NDA2NywyMjkuNzAzMjk0IEMxODYuOTQ0MDY3LDIyOS43MDMyOTQgMTg1LjY2OTA1MywyNDQuMDc4NDEyIDIwMi4yODg5MjksMjQ0LjA3ODQxMiBDMjE4LjkwODgwNCwyNDQuMDc4NDEyIDIxNy45MTk3NzksMjI2Ljk0NTE2NiAyMTcuOTE5Nzc5LDIyNi45NDUxNjYgTDIxNy44MjM4NzEsMTYuMTQ1MTEwMiBDMjE3LjgyMzg3MSwxNi4xNDUxMTAyIDIxNi4yNjA2OTcsMC40MDUxOTQwNDYgMjA1LjgzMTAxNiwwLjQwNTE5NDA0NiBDMTk1LjQwMTMzNiwwLjQwNTE5NDA0NiAxOTMuNzc0MzczLDMuMTc2MjkwODMgMTgwLjkyNzAyNywxNi4xNDUxMTAyIEMxNjguMDc5NjgyLDI5LjExMzkyOTcgMTE1LjY3NjE0Miw4Mi4zNTI0MjU1IDExNS42NzYxNDIsODIuMzUyNDI1NSBMMTM3LjE4MTIxNywxMDQuMTU3NDc5IFoiIGlkPSJQYXRoLTk2IiBmaWxsPSIjRkZGRkZGIj48L3BhdGg+ICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=');
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAASCAYAAAA6yNxSAAABX0lEQVR4Aa2WJXQdURCGH5UZ1J0t053HM7fMYMrMrRf1p9yGVeLCDD4yKnFR4YbjAipYZoatPyNmzvnW/t/C/WcDBqly66lTCwKC8WI7dwPyhLH0S4vA3wtYat8cc+slEtudWwtIzaoCPjwDUTohkcjMzAyB5Txj6aeagA9/95AeBIRjYnQeLL9WFPAB5MYdBw4sk30XvBUs9yoK+IDlkQ1xRomEc24xIDdoCvggvYPYzqviV4LuHiB90RP4j2c5/9q1a2GJxPqYOwiWPykK+AC6UvmT4Ap9AeQWqYCHXKQrgNy1Mb13oyT874crOJpyAUAqEVc18iVBuFSA3xrkG5Lgo0ePRsBSgV4RWXrh4Z5tkvB1RMYgt+oVEXLFxqNHF0rC/+4OY2lKp4qR3ntRvisJ/vXrVxCQnxhLP3SWEdLAxoSzsu7ftxqQmtTWMViu/dvlovcd27XLII9p/pD8Bs7dNFyzuX/GAAAAAElFTkSuQmCC');
     width: 32px;
-    height: 32px;
-    margin-left: 8px;
-    margin-top: 6px;
-    margin-right: 8px;
+    height: 18px;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-right: 10px;
 }
 
 .sqw-btn-mp-link {
@@ -569,6 +564,7 @@ input[type=password] {
     letter-spacing: -.25px !important;
     line-height: 42px;
     cursor: default;
+    text-decoration: none !important;
 }
 
 .sqw-btn-mp-logout {
@@ -583,12 +579,10 @@ input[type=password] {
     cursor: pointer;
 }
 
-a.sqw-btn-mp-link:hover {
-    text-decoration: none;
-    color: white;
+a.sqw-btn-mp-link:hover,
+a.sqw-btn-mp-link:active,
+a.sqw-btn-mp-link:focus {
+    text-decoration: none !important;
+    color: color(var(--black) w(+15%)) !important;
     cursor: pointer;
-}
-
-.sqw-btn-mp-green {
-    color: #31e0a1;
 }

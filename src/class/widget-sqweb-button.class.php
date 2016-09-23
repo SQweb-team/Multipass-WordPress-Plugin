@@ -7,9 +7,9 @@ class WidgetSqwebButton extends WP_Widget {
 
 	function __construct() {
 
-		$widget_ops = array( 'classname' => 'widget_text', 'description' => __( 'Button to activate SQweb on your website.', 'sqweb' ) );
+		$widget_ops = array( 'classname' => 'widget_text', 'description' => __( 'Button to activate Multipass on your website.', 'sqweb' ) );
 		$control_ops = array( 'width' => 400, 'height' => 350 );
-		parent::__construct( 'widgetSqwebButton', __( 'SQweb button', 'sqweb' ), $widget_ops, $control_ops );
+		parent::__construct( 'widgetSqwebButton', __( 'Multipass button', 'sqweb' ), $widget_ops, $control_ops );
 	}
 
 	function widget( $args, $instance ) {
@@ -19,11 +19,7 @@ class WidgetSqwebButton extends WP_Widget {
 		$langue = apply_filters( 'widget_text', empty( $instance['langue'] ) ? '' : $instance['langue'], $instance );
 		$get_options['btheme'] = get_option( 'btheme' );
 		echo $args['before_widget'];
-		if ( 'grey' === $get_options['btheme'] ) {
-			echo '<div class="sqweb-button sqweb-grey"></div>';
-		} else {
-			echo '<div class="sqweb-button"></div>';
-		}
+		echo '<div class="sqweb-button"></div>';
 		echo $args['after_widget'];
 	}
 

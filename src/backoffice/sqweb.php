@@ -47,12 +47,12 @@
 							<input type="hidden" class="sqw-multipass-input" name="sqw_multipass" value="<?php echo get_option( 'sqw_multipass' ); ?>"/>
 						</div>
 						<div class="sqw-clear"></div>
-						<p class="sqw-body basic-font-10"><?php _e( 'By joining our network, you’ll get a part of the membership fee whenever a subscriber visit your website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
+						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
 							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
 								<div class="sqw-check-categorie">
-									<p><?php _e( 'Setup content restrictions :' ); ?></p>
+									<p><?php _e( 'Setup content restrictions :', 'sqweb' ); ?></p>
 									<?php
 										$scategorie = unserialize( get_option( 'categorie' ) );
 									if ( ! $scategorie ) {
@@ -127,51 +127,26 @@
 								</div>
 							</div>
 							<div class="sqw-config-button">
-								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'SQweb users must browse without ads on your website', 'sqweb' ); ?></p>
+								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'Multipass users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>
-								<p class="sqw-center basic-font-12"><?php _e( 'This will be used for the iframe that visitors will use to register, payment and login.', 'sqweb' ); ?> <a href="https://www.sqweb.com/users/">DEMO</a></p>
+								<p class="sqw-center basic-font-12"><?php _e( 'This will be used for the button that visitors will use to register, payment and login.', 'sqweb' ); ?></p>
 								<div class="sqw-full-width">
 									<div class="sqw-tiers">
 										<div class="sqw-margin-top">
-											<label for="sqw-lang-select"><?php _e( 'Language of your website :', 'sqweb' ); ?></label>
+											<p><label for="sqw-lang-select"><?php _e( 'Language of your website :', 'sqweb' ); ?></label></p>
 											<select class="sqw-input-select" name="lang" id="sqw-lang-select">';
 												<option value="fr"><?php _e( 'French', 'sqweb' ); ?></option>
 												<option value="en"><?php _e( 'English', 'sqweb' ); ?></option>
 												<option value="es"><?php _e( 'Español', 'sqweb' ); ?></option>
 											</select>
 										</div>
-										<div class="sqw-margin-top">
-											<label for="sqw-login-msg"><?php _e( 'Text for not connected users', 'sqweb' ); ?></label>
-											<input class="sqw-input" type="text" name="flogin" id="sqw-login-msg" value="<?php echo $flogin ?>" placeholder="<?php _e( 'Remove Ads', 'sqweb' ); ?>">
-										</div>
-										<div class="sqw-margin-top">
-											<label for="sqw-logout-msg"><?php _e( 'Text for connected user', 'sqweb' ); ?></label>
-											<input class="sqw-input" type="text" name="flogout" id="sqw-logout-msg" value="<?php echo $flogout ?>" placeholder="<?php _e( 'Connected', 'sqweb' ); ?>">
-										</div>
 									</div>
-									<!-- Select color Disable in 2.2.4
-									<div class="sqw-tiers">
-										<div class="sqw-padding-left">
-											<p><?php _e( 'Select the color :' ); ?></p>
-											<div class="sqw-margin-top">
-												<input class="sqw-radio" id="blue" type="radio" name="btheme" value="blue" <?php echo ('blue' == $btheme ? 'checked' : '') ?>/><label for="blue" ><?php _e( 'Blue', 'sqweb' ); ?></label>
-											</div>
-											<div class="sqw-margin-top">
-												<input class="sqw-radio" id="grey" type="radio" name="btheme" value="grey" <?php echo ('grey' == $btheme ? 'checked' : '') ?>/><label for="grey"><?php _e( 'Grey', 'sqweb' ); ?></label>
-											</div>
-										</div>
-									</div>
-									-->
 									<div class="sqw-tiers sqw-padding-left">
 										<p><?php _e( 'Preview :', 'sqweb' ); ?></p>
-										<div class="sqweb-button sqweb-<?php echo $btheme; ?>">
+										<div class="sqweb-button">
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
-												<a href="#" onclick="sqw.modal_first()" class="sqw-btn-mp-link">
-													<?php if ( empty( $flogin ) ) { ?>
-													<?php __( 'Become premium with', 'sqweb' ) ?> <span class="sqw-btn-mp-green">Multipass</span>
-													<?php } else { echo $flogin; } ?>
-												</a>
+												<span class="sqw-btn-mp-link"><?php _e( 'Premium with Multipass', 'sqweb' ); ?></span>
 											</div>
 										</div>
 									</div>
@@ -210,5 +185,5 @@
 			</div>
 		</div>
 	</form>
-	<?php } ?>
+	<?php } // End if(). ?>
 </div>
