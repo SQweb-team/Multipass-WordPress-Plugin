@@ -21,6 +21,7 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) .
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
+	wp_cache_clear_cache();
 	if ( ! wp_next_scheduled( 'sqweb_daily_event' ) ) {
 		wp_schedule_event( time(), 'daily', 'sqweb_daily_event' );
 	}
