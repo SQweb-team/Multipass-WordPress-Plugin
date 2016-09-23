@@ -47,7 +47,7 @@ class SQweb_admin {
 			 **/
 			add_action( 'post_submitbox_misc_actions', array( $this, 'featured_post_field' ) );
 			add_action( 'save_post', array( $this, 'save_postdata' ) );
-		}
+		} // End if().
 	}
 
 	private function sqw_reset() {

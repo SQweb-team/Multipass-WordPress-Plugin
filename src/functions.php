@@ -71,8 +71,8 @@ function sqweb_check_credentials( $site_id = null ) {
 			}
 		} else {
 			$credentials = false;
-		}
-	}
+		} // End if().
+	} // End if().
 	return $credentials;
 }
 
@@ -132,7 +132,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			update_option( 'sqw_token', $response->token );
 			return ( 1 );
 		}
-	}
+	} // End if().
 	return ( 0 );
 }
 
@@ -226,7 +226,7 @@ function sqweb_check_token( $token ) {
 				return $res->user->id;
 			}
 		}
-	}
+	} // End if().
 	return ( 0 );
 }
 

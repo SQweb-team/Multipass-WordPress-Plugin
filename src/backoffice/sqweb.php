@@ -210,5 +210,5 @@
 			</div>
 		</div>
 	</form>
-	<?php } ?>
+	<?php } // End if(). ?>
 </div>
