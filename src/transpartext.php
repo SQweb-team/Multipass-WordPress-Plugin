@@ -45,10 +45,9 @@ function transparent( $text, $percent ) {
 				$final[] = '<span style="opacity: ' . number_format( $alpha, 5, '.', '' ) . '">' . $array_text[ $begin ] . '</span>';
 				$alpha -= $lambda;
 			}
-			$begin++;
 		}
+		$begin++;
 	}
-	$final[] = $array_text[ count( $array_text ) - 1 ];
 	foreach ( $balise as $value ) {
 		$final[] = '</' . $value . '>';
 	}

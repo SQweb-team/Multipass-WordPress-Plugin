@@ -7,9 +7,9 @@ class SqwebAdControl extends WP_Widget {
 
 	public function __construct() {
 
-		$widget_ops = array( 'classname' => 'widget_text', 'description' => __( 'Put here your advertising code to hide it for SQweb users', 'sqweb' ) );
+		$widget_ops = array( 'classname' => 'widget_text', 'description' => __( 'Put here your advertising code to hide it for Multipass users', 'sqweb' ) );
 		$control_ops = array( 'width' => 400, 'height' => 350 );
-		parent::__construct( 'sqweb_ad_control', __( 'SQweb ad control', 'sqweb' ), $widget_ops, $control_ops );
+		parent::__construct( 'sqweb_ad_control', __( 'Multipass ad manager', 'sqweb' ), $widget_ops, $control_ops );
 	}
 
 	function widget( $args, $instance ) {

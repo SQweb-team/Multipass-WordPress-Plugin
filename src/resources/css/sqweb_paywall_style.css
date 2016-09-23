@@ -1,10 +1,9 @@
 .sqw-paywall-button-container {
     cursor: pointer;
     color: #364355;
-    border: 1px solid #364355;
+    background-color: #ffdb06;
     text-align: center;
     padding: 20px;
-    border-radius: 5px;
     font-family: 'Helvetica Neue';
 }
 
@@ -14,13 +13,12 @@
 
 .sqw-paywall-button-container span {
     font-weight: bold;
-    color: #4491ff;
-    border-bottom: 1px solid #4491ff;
+    border-bottom: 1px solid #364355;
 }
 
 .sqw-paywall-button-container img {
     margin: 10px;
-    width: 36px;
-    height: 36px;
+    width: 300px;
+    height: 48px;
     box-shadow: none !important;
 }
