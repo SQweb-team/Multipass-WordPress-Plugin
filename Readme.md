@@ -11,29 +11,33 @@ SQweb WordPress Plugin
 
 You can download the latest stable release from [here](https://github.com/SQweb-team/SQweb-WordPress-Plugin/releases).
 
-##Contributing
+## Contributing
 
 We welcome contributions and improvements.
 
-###Coding Style
+### Coding Style
 
 All PHP code must pass [WordPress-Core](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
 For more information about JavaScript and CSS, please see our [Coding Style](https://github.com/SQweb-team/SQweb-Coding-Style) guide.
 
-###Builds and Releases
+### Builing
 
 Builds are handled with `gulp`. To get a build of the plugin, simply execute `gulp`. This will handle minification and packaging, and prepare a zip for you in `dist/`.
 
 By default, the `build/` folder is automatically removed. If you want to keep it, say for debugging, you can build the plugin using `gulp keep-build`.
 
-##Bugs and Security Vulnerabilities
+### Releasing
+
+Please see [Release.md](Release.md).
+
+## Bugs and Security Vulnerabilities
 
 If you encounter any bug or unexpected behavior, you can either report it on Github using the bug tracker, or via email at `hello@sqweb.com`. We will be in touch as soon as possible.
 
 If you discover a security vulnerability within SQweb or this plugin, please send an e-mail to `hello@sqweb.com`. All security vulnerabilities will be promptly addressed.
 
-##License
+## License
 
 Copyright (C) 2015 – SQweb
 
