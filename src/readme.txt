@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.6.0
-Stable tag: 2.3.8
+Stable tag: 2.3.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -128,6 +128,9 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.3.9 =
+* Compatibility with WP Rocket.
 
 = v2.3.8 =
 * Fixed error on plugin activation when WordPress Super Cache is missing.
