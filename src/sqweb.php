@@ -104,7 +104,8 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'add_action_li
 add_filter( 'rocket_cache_reject_cookies', 'compatibility_wp_rocket' );
 
 function compatibility_wp_rocket( $cookies ) {
-	return $cookies[] = 'sqw_z';
+	$cookies[] = 'sqw_z';
+	return $cookies;
 }
 
 // Including classes and dependencies files.
