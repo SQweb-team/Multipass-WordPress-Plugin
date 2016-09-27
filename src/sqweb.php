@@ -100,6 +100,14 @@ function add_action_links_sqweb( $links ) {
 
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'add_action_links_sqweb' );
 
+// Compatibility with WP_Rocket
+add_filter( 'rocket_cache_reject_cookies', 'compatibility_wp_rocket' );
+
+function compatibility_wp_rocket( $cookies ) {
+	$cookies[] = 'sqw_z';
+	return $cookies;
+}
+
 // Including classes and dependencies files.
 require_once 'config.php';
 require_once 'auto-config.php';
