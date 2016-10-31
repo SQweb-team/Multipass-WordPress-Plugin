@@ -129,6 +129,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.4.0 =
+* Updated SQweb script URL (now HTTPS only).
+
 = v2.3.9 =
 * Compatibility with WP Rocket.
 
