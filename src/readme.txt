@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.6.0
-Stable tag: 2.3.9
+Stable tag: 2.4.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -131,6 +131,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 = v2.4.0 =
 * Updated SQweb script URL (now HTTPS only).
+* Fix API Connexion with special char.
 
 = v2.3.9 =
 * Compatibility with WP Rocket.
