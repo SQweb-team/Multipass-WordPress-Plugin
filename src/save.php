@@ -9,9 +9,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		update_option( 'sqw_analytics', $_POST['sqw_analytics'] );
 	}
 
-	if ( isset( $_POST['flogin'], $_POST['flogout'], $_POST['lang'] ) ) {
-		update_option( 'flogin', $_POST['flogin'] );
-		update_option( 'flogout', $_POST['flogout'] );
+	if ( isset( $_POST['lang'] ) ) {
 		update_option( 'lang', $_POST['lang'] );
 	}
 
