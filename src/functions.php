@@ -159,9 +159,12 @@ function sqweb_sign_in( $email, $password ) {
 			'redirection' => 3,
 			'httpversion' => '1.0',
 			'blocking' => true,
-			'headers' => 'Content-Type: application/x-www-form-urlencoded',
+			'headers' => array(),
 			'user-agent' => $user_agent,
-			'body' => 'email=' . $email . '&password=' . $password,
+			'body' => array(
+				'email' => $email,
+				'password' => $password,
+			),
 			'cookies' => array(),
 			)
 		);
@@ -178,7 +181,7 @@ function sqweb_sign_in( $email, $password ) {
 				return ( 1 );
 			}
 		}
-	}
+	} // End if().
 	return ( 0 );
 }
 

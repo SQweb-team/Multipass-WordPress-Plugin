@@ -6,7 +6,11 @@ include_once( 'config.php' );
 include_once( 'functions.php' );
 include_once( 'auto-config.php' );
 
-class SQweb_filter {
+/*
+	Disabling PHPCS on this class name, following an update to WordPress' coding style.
+	Otherwise, we'd break backwards compatibility.
+ */
+class SQweb_filter { // @codingStandardsIgnoreStart
 
 	private static $_instance = null;
 	private $_ads;

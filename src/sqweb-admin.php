@@ -4,7 +4,7 @@
 * Edit admin for better integration of SQweb
 * @since 2.2.4
 */
-class SQweb_admin {
+class SQweb_Admin {
 
 	function __construct() {
 		if ( is_admin() ) {
@@ -177,7 +177,7 @@ return array(
 	public function script() {
 		wp_enqueue_style(
 			'sqweb-admin-style',
-			'/wp-content/plugins/sqweb/resources/css/sqweb_admin_style.css'
+			'/wp-content/plugins/sqweb/resources/css/SQweb_Admin_style.css'
 		);
 		wp_enqueue_script(
 			'sqweb-admin-script',
@@ -211,4 +211,4 @@ return array(
 	}
 }
 
-new SQweb_admin;
+new SQweb_Admin;
