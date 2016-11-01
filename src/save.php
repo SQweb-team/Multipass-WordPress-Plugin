@@ -58,7 +58,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	} else {
 		delete_option( 'fmes' );
 	}
-	SQweb_admin::add_notice_event( 'success', __( 'Your changes have been saved.', 'sqweb' ) );
+	SQweb_Admin::add_notice_event( 'success', __( 'Your changes have been saved.', 'sqweb' ) );
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
 } // End if().

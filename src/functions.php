@@ -181,7 +181,7 @@ function sqweb_sign_in( $email, $password ) {
 				return ( 1 );
 			}
 		}
-	}
+	} // End if().
 	return ( 0 );
 }
 

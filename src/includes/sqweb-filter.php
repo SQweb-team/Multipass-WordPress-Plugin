@@ -3,7 +3,7 @@
 /**
 * SQweb Filter
 */
-class SQweb_filter_articles {
+class SQweb_Filter_Articles {
 
 	function __construct() {
 
@@ -163,4 +163,4 @@ class SQweb_filter_articles {
 	}
 }
 
-new SQweb_filter_articles;
+new SQweb_Filter_Articles;
