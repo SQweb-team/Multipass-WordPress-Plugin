@@ -135,9 +135,9 @@
 										<div class="sqw-margin-top">
 											<p><label for="sqw-lang-select"><?php _e( 'Language of your website :', 'sqweb' ); ?></label></p>
 											<select class="sqw-input-select" name="lang" id="sqw-lang-select">';
-												<option value="fr"><?php _e( 'French', 'sqweb' ); ?></option>
-												<option value="en"><?php _e( 'English', 'sqweb' ); ?></option>
-												<option value="es"><?php _e( 'Español', 'sqweb' ); ?></option>
+												<option value="fr" <?php echo 'fr' === $lang ? 'selected' : ''; ?>><?php _e( 'French', 'sqweb' ); ?></option>
+												<option value="en" <?php echo 'en' === $lang ? 'selected' : ''; ?>><?php _e( 'English', 'sqweb' ); ?></option>
+												<option value="es" <?php echo 'es' === $lang ? 'selected' : ''; ?>><?php _e( 'Español', 'sqweb' ); ?></option>
 											</select>
 										</div>
 									</div>
