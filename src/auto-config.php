@@ -85,7 +85,7 @@ class Auto_Config {
 				}
 				file_put_contents( $wp_master_path, $file );
 			}
-		}
+		} // End if().
 	}
 
 	public static function is_w3tc_enabled() {

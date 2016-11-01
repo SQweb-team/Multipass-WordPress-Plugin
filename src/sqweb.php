@@ -17,7 +17,7 @@ License: GPL3
  */
 
 global $wp_version;
-if (isset($wp_version) && $wp_version < 4) {
+if ( isset( $wp_version ) && $wp_version < 4 ) {
 	require_once ABSPATH . 'wp-includes/pluggable.php';
 }
 
