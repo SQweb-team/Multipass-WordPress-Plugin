@@ -131,6 +131,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 = v2.4.1 =
 * Add condition for requiere Pluggable file.
+* Fix lang selector.
 
 = v2.4.0 =
 * Updated SQweb script URL (now HTTPS only).
