@@ -123,7 +123,7 @@ require_once 'shortcode-function.php';
 
 function pmpro_remove_ads() {
 	global $pmpro_display_ads;
-	if (1 == $pmpro_display_ads) {
+	if ( 1 == $pmpro_display_ads ) {
 		$pmpro_display_ads = 0;
 	}
 }
@@ -131,7 +131,7 @@ function pmpro_remove_ads() {
 // Compatibility with Paid Membership Pro
 if ( shortcode_exists( 'membership' ) ) {
 	require_once 'plugins/paidmembership.php';
-	if (apply_filters( 'sqw_check_credentials', get_option('wsid') )) {
+	if ( apply_filters( 'sqw_check_credentials', get_option( 'wsid' ) ) ) {
 		add_action( 'set_current_user', 'pmpro_remove_ads' );
 		add_action( 'init', 'pmpro_remove_ads' );
 	}
@@ -151,24 +151,25 @@ if ( function_exists( 'adrotate_ad' ) ) {
 	add_action( 'widgets_init', create_function( '', 'return register_widget("AdrotateWidgetsSqwCompatibility");' ) );
 }
 
+/*
+	Ignore class and variable name of other plugins.
+ */
 function compatibility_easy_adsense() {
 	//Compatibility easy adsense
 	//disable ads in ezAdsense
-	if ( class_exists( "ezAdSense" ) )
-	{
+	if ( class_exists( "ezAdSense" ) ) { // @codingStandardsIgnoreLine
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
-			global $ezCount, $urCount;
-			$ezCount = 100;
-			$urCount = 100;
+			global $ezCount, $urCount; // @codingStandardsIgnoreLine
+			$ezCount = 100; // @codingStandardsIgnoreLine
+			$urCount = 100; // @codingStandardsIgnoreLine
 		}
 	}
 	//disable ads in Easy Adsense (newer versions)
-	if ( class_exists( "EzAdSense" ) )
-	{
+	if ( class_exists( "EzAdSense" ) ) { // @codingStandardsIgnoreLine
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
-			global $ezAdSense;
-			$ezAdSense->ezCount = 100;
-			$ezAdSense->urCount = 100;
+			global $ezAdSense; // @codingStandardsIgnoreLine
+			$ezAdSense->ezCount = 100; // @codingStandardsIgnoreLine
+			$ezAdSense->urCount = 100; // @codingStandardsIgnoreLine
 		}
 	}
 }
