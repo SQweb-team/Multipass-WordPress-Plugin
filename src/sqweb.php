@@ -132,8 +132,8 @@ function pmpro_remove_ads() {
 if ( shortcode_exists( 'membership' ) ) {
 	require_once 'plugins/paidmembership.php';
 	if (apply_filters( 'sqw_check_credentials', get_option('wsid') )) {
-		add_action('set_current_user', 'pmpro_remove_ads');
-		add_action('init', 'pmpro_remove_ads');
+		add_action( 'set_current_user', 'pmpro_remove_ads' );
+		add_action( 'init', 'pmpro_remove_ads' );
 	}
 }
 
@@ -154,7 +154,7 @@ if ( function_exists( 'adrotate_ad' ) ) {
 function compatibility_easy_adsense() {
 	//Compatibility easy adsense
 	//disable ads in ezAdsense
-	if(class_exists("ezAdSense"))
+	if ( class_exists( "ezAdSense" ) )
 	{
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
 			global $ezCount, $urCount;
@@ -163,9 +163,9 @@ function compatibility_easy_adsense() {
 		}
 	}
 	//disable ads in Easy Adsense (newer versions)
-	if(class_exists("EzAdSense"))
+	if ( class_exists( "EzAdSense" ) )
 	{
-		if (apply_filters( 'sqw_check_credentials', get_option('wsid') )) {
+		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
 			global $ezAdSense;
 			$ezAdSense->ezCount = 100;
 			$ezAdSense->urCount = 100;
@@ -173,5 +173,5 @@ function compatibility_easy_adsense() {
 	}
 }
 
-add_action('set_current_user', 'compatibility_easy_adsense');
-add_action('init', 'compatibility_easy_adsense');
+add_action( 'set_current_user', 'compatibility_easy_adsense' );
+add_action( 'init', 'compatibility_easy_adsense' );
