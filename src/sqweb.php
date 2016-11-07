@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
-Version: 2.4.1
+Version: 2.4.2
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -121,9 +121,20 @@ require_once 'class/widget-sqweb-button.class.php';
 require_once 'functions.php';
 require_once 'shortcode-function.php';
 
+function pmpro_remove_ads() {
+	global $pmpro_display_ads;
+	if (1 == $pmpro_display_ads) {
+		$pmpro_display_ads = 0;
+	}
+}
+
 // Compatibility with Paid Membership Pro
 if ( shortcode_exists( 'membership' ) ) {
 	require_once 'plugins/paidmembership.php';
+	if (apply_filters( 'sqw_check_credentials', get_option('wsid') )) {
+		add_action('set_current_user', 'pmpro_remove_ads');
+		add_action('init', 'pmpro_remove_ads');
+	}
 }
 
 require_once 'includes/sqweb-filter.php';
@@ -139,3 +150,28 @@ if ( function_exists( 'adrotate_ad' ) ) {
 	add_shortcode( 'adrotate', 'adrotate_shortcode_sqw_compatibility' );
 	add_action( 'widgets_init', create_function( '', 'return register_widget("AdrotateWidgetsSqwCompatibility");' ) );
 }
+
+function compatibility_easy_adsense() {
+	//Compatibility easy adsense
+	//disable ads in ezAdsense
+	if(class_exists("ezAdSense"))
+	{
+		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
+			global $ezCount, $urCount;
+			$ezCount = 100;
+			$urCount = 100;
+		}
+	}
+	//disable ads in Easy Adsense (newer versions)
+	if(class_exists("EzAdSense"))
+	{
+		if (apply_filters( 'sqw_check_credentials', get_option('wsid') )) {
+			global $ezAdSense;
+			$ezAdSense->ezCount = 100;
+			$ezAdSense->urCount = 100;
+		}
+	}
+}
+
+add_action('set_current_user', 'compatibility_easy_adsense');
+add_action('init', 'compatibility_easy_adsense');
