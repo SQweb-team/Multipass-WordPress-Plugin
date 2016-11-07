@@ -157,21 +157,23 @@ if ( function_exists( 'adrotate_ad' ) ) {
 function compatibility_easy_adsense() {
 	//Compatibility easy adsense
 	//disable ads in ezAdsense
-	if ( class_exists( "ezAdSense" ) ) { // @codingStandardsIgnoreLine
+	// @codingStandardsIgnoreStart
+	if ( class_exists( "ezAdSense" ) ) {
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
-			global $ezCount, $urCount; // @codingStandardsIgnoreLine
-			$ezCount = 100; // @codingStandardsIgnoreLine
-			$urCount = 100; // @codingStandardsIgnoreLine
+			global $ezCount, $urCount;
+			$ezCount = 100;
+			$urCount = 100;
 		}
 	}
 	//disable ads in Easy Adsense (newer versions)
-	if ( class_exists( "EzAdSense" ) ) { // @codingStandardsIgnoreLine
+	if ( class_exists( "EzAdSense" ) ) {
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
-			global $ezAdSense; // @codingStandardsIgnoreLine
-			$ezAdSense->ezCount = 100; // @codingStandardsIgnoreLine
-			$ezAdSense->urCount = 100; // @codingStandardsIgnoreLine
+			global $ezAdSense;
+			$ezAdSense->ezCount = 100;
+			$ezAdSense->urCount = 100;
 		}
 	}
+	// @codingStandardsIgnoreEnd
 }
 
 add_action( 'set_current_user', 'compatibility_easy_adsense' );
