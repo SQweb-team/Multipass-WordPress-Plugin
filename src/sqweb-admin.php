@@ -177,7 +177,7 @@ return array(
 	public function script() {
 		wp_enqueue_style(
 			'sqweb-admin-style',
-			'/wp-content/plugins/sqweb/resources/css/SQweb_Admin_style.css'
+			'/wp-content/plugins/sqweb/resources/css/sqweb_admin_style.css'
 		);
 		wp_enqueue_script(
 			'sqweb-admin-script',
