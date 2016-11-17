@@ -1,47 +1,52 @@
 language:
-    - php
-
+- php
 php:
-    - 5.4
-    - 5.5
-    - 5.6
-    - 7.0
-    - hhvm
-
+- 5.4
+- 5.5
+- 5.6
+- 7.0
+- hhvm
 env:
-    - WP_VERSION=latest WP_MULTISITE=0
-
+  matrix:
+  - WP_VERSION=latest WP_MULTISITE=0
+  - secure: T3IggkimxNkj5fgvqcKFDWvdmyOcdyf6guA7TzK9houRRFHitcDi6Y3g4KJqpgI8Lcvt2PH8ByeDuf7tfzgKZXwUV1FDNeOizqLgHywXSKg1HiQnWkCmiUekQkPeyz7VTfoZ94WicIZ2Be9U6PpPdvNTmIWrvkPiKAWi1UsQXO5HJghAKBbIAx8LNnYF1C2DHAHlpD5Y+EZXgEPNaXHeE80ZiCKRFIbKu8nwe9hcdNlzO/uCo+v1ocbhZRnDI0QfYz7h9Tz4SxiTiOis5DyE2xQRQSa5YpMS1tLQNDJSBcxEzFX5d4PP+eYRiARqAmejXlY2dOBiqD+xpLoVlh4VCo8fnghYfUDox2Pu8tJrzyL54067I0zrEhl+BCUO2eOVROqH8XWSmTTjgbULV2CrxVbcUt5SX538yTQO4YDq+TJdY0I7b19HWtGYJeizvQKmfeQUoKhB38a1dCVrh2HSg25AoApMmFuPyUdF6H5jkNuk1mhdimCOA99fPmfPQbGrm/Z/lK8R9EIBMxKHr7OM4PF9E2UPsUkuemGOqo3/fZOoLgkYULwbZTBPF+vHbN2U2zi4KAFi9cZ4w2E590+wtSWLGouO26vCm+Z1KHXDRGxt3X5O6SFTpsqb6wyb0Z5NGrtxRqIDJ/ESIHVQ7KzctzaWE2s0cXMr+UVvz4CtK7k=
 matrix:
-    allow_failures:
-        - php: hhvm
-
+  allow_failures:
+  - php: hhvm
 cache:
-    directories:
-        - node_modules
-
+  directories:
+  - node_modules
 before_script:
-    - export PATH=~/.composer/vendor/bin:$PATH
-    - composer self-update
-    - composer global require "phpunit/phpunit=>4"
-    - composer global require "squizlabs/php_codesniffer=*"
-    - git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
-    - phpenv rehash
-    - phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
-    - phpcs -i
-    - bash src/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-    - git clone git://github.com/SQweb-team/SQweb-Coding-Style.git ~/build/SQweb-team/SQweb-Coding-Style
-    - nvm install 6
-    - npm install
-
+- export PATH=~/.composer/vendor/bin:$PATH
+- composer self-update
+- composer global require "phpunit/phpunit=>4"
+- composer global require "squizlabs/php_codesniffer=*"
+- git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git
+  ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
+- phpenv rehash
+- phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
+- phpcs -i
+- bash src/bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- git clone git://github.com/SQweb-team/SQweb-Coding-Style.git ~/build/SQweb-team/SQweb-Coding-Style
+- nvm install 6
+- npm install
 script:
-    - phpcs --standard=WordPress-Core . --extensions=php
-    - phpcs --standard=phpcs.xml . --extensions=php
-    - gulp
-    - snyk test
-
+- phpcs --standard=WordPress-Core . --extensions=php
+- phpcs --standard=phpcs.xml . --extensions=php
+- gulp
+- snyk test
 notifications:
-    slack: nwork:uXpjfOLXGLjDDxjthLtphsrz
-    email: false
-
+  slack: nwork:uXpjfOLXGLjDDxjthLtphsrz
+  email: false
 git:
   depth: 2
+deploy:
+  provider: releases
+  api_key:
+    secure: SLqXo32rPce9jT3/76cn6WDEe5faVVQe42r3VskjszK0VwjSX2+9irs8hP/1N260z04LtHVHMP3Fgaq6rTabVgtUj/MXnqx0w4cZMrG476IrWwIYdLI3n7OQ3NATf0YWDJrllmZJZr1MXDWgpJmUYeSjkMcnLqZkrr0BHWe03TfjaUP0lPQBaS29rOvkpGZeGBmoMIDBJPa3JzI6UoF2KMRLqX+E8Ni94DXE+ZJtNMDUN5SPJE15x5B0iX28e6qfY4d9vIREUuizJWsd09usGc5WOaEdj6oirtxGYN3vWlk84PW31rAULj7l+6RCyiJd2oTdMoNCMU31+AJ3eAoP03U7uvM77GqwFUMvLDlbU5yBe80pLTGOlRamQqnfg9bYZp0OU7T/jF7ejlOJ18jBP86bJztoInIdz5m+NHwx1OAqpRvXEIH5Q9Pe8EDWaj95b/igg0KSwzXhmOQ2bL1o5DMNAMDBCBd44LjHA9R3XXcTJy6A6wEmlm67qbO7py++RafjHfefVfyVQbCHIw2E6dSPA1m8IBSBor0C030Tur4Lb+8Bs2obv9F2vKuszL3+T9FYBjYJCZ4VsBbINK6tb5VDuINR+8A26jaQa8wvATCC3djQ9/w/8faBMiMFP9/X15rAFMlIFtO0kAVtXAtDqhMyKZ8UN1H6fRBNN0N8TaM=
+  file: dist/sqweb-wordpress-plugin.zip
+  on:
+    repo: SQweb-team/SQweb-WordPress-Plugin
+    tags: true
+after_deploy:
+- ./release_wordpress_after_deploy.sh
