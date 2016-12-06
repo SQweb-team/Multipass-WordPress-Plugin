@@ -1,22 +1,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-09-23 17:36+0200\n"
-"PO-Revision-Date: 2016-09-23 17:40+0200\n"
+"POT-Creation-Date: 2016-12-06 14:44+0100\n"
+"PO-Revision-Date: 2016-12-06 14:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: auto-config.php:113
+#: auto-config.php:117
 msgid ""
 "<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP "
 "cache or Legacy cache, you can click "
@@ -24,11 +24,11 @@ msgstr ""
 "<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
 "cache via PHP ou Legacy cache, vous pouvez aussi cliquer "
 
-#: auto-config.php:115 auto-config.php:129 auto-config.php:143
+#: auto-config.php:119 auto-config.php:133 auto-config.php:147
 msgid "here</a> for automatic configuration."
 msgstr "ici</a> pour une configuration automatique."
 
-#: auto-config.php:127
+#: auto-config.php:131
 msgid ""
 "<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
 "with SQweb, please disabled it, you can click "
@@ -37,7 +37,7 @@ msgstr ""
 "malheureusement pas compatible avec SQweb, veuillez le désactivez, vous "
 "pouvez aussi cliquer "
 
-#: auto-config.php:141
+#: auto-config.php:145
 msgid ""
 "<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced "
 "mod, please switch to Disk: basic, you can click "
@@ -92,7 +92,7 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:50 backoffice/sqweb.php:170
+#: backoffice/sqweb.php:50 backoffice/sqweb.php:178
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -204,32 +204,36 @@ msgstr "Espagnol"
 msgid "Preview :"
 msgstr "Prévisualisation"
 
-#: backoffice/sqweb.php:149
-msgid "Premium with Multipass"
-msgstr "Premium avec Multipass"
+#: backoffice/sqweb.php:146
+msgid "Normal size"
+msgstr "Taille normale"
 
-#: backoffice/sqweb.php:166
+#: backoffice/sqweb.php:153
+msgid "Tiny size"
+msgstr "Petite taille"
+
+#: backoffice/sqweb.php:174
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:170
+#: backoffice/sqweb.php:178
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr ""
 "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:172
+#: backoffice/sqweb.php:180
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:174
+#: backoffice/sqweb.php:182
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:176
+#: backoffice/sqweb.php:184
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:184
+#: backoffice/sqweb.php:192
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -353,35 +357,45 @@ msgstr "ID :"
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 
-#: save.php:61
+#: save.php:59
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
-#: sqweb-admin.php:82
+#: sqweb-admin.php:84
 msgid "Reset configuration of SQweb"
 msgstr "Réinitialiser la configuration de SQweb"
 
-#: sqweb-admin.php:83
+#: sqweb-admin.php:85
 msgid "Logout from SQweb"
 msgstr "Se déconnecter de SQweb"
 
-#: sqweb-admin.php:91
+#: sqweb-admin.php:93
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:126
+#: sqweb-admin.php:128
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:133
+#: sqweb-admin.php:135
 msgid "Post available for every users"
 msgstr "Poste disponible pour tous les utilisateurs"
 
-#: sqweb-admin.php:208
+#: sqweb-admin.php:210
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
 
-#: sqweb.php:53
+#: sqweb.php:30
+msgid ""
+"Earn money with user subscriptions instead of advertising. Set up a simple "
+"universal subscription on your site with just a few clicks. Includes adblock "
+"detection and targeting."
+msgstr ""
+"Monétisez votre site en proposant un abonnement en alternative à la "
+"publicité. L'installation prend quelques clics seulement. Inclus un "
+"détecteur d'adblock, avec ciblage."
+
+#: sqweb.php:65
 msgid ""
 "<b>SQweb notice : </b>You need to log in to use SQweb. <a href=\"admin.php?"
 "page=SQwebAdmin\">Click here to proceed</a>."
@@ -389,7 +403,7 @@ msgstr ""
 "<b>SQweb info : </b>Vous devez vous connectez pour utiliser SQweb <a href="
 "\"admin.php?page=SQwebAdmin\">Cliquez ici pour vous connecter</a>."
 
-#: sqweb.php:77
+#: sqweb.php:89
 msgid ""
 "<div class=\"error\"><p><b>Error : </b>SQweb requires the curl extension, "
 "which is currently disabled or missing on your server. The SQweb plugin "
@@ -399,7 +413,7 @@ msgstr ""
 "est manquante ou désactivée sur votre serveur. Le plugin SQweb ne peut pas "
 "être activé.</p></div>"
 
-#: sqweb.php:82
+#: sqweb.php:94
 msgid ""
 "<div class=\"error\"><p><b>Error : </b>SQweb requires Wordpress 3.6 or "
 "greater. The SQweb plugin cannot be activated.</p></div>"
@@ -407,9 +421,21 @@ msgstr ""
 "<div class=\"error\"><p><b>Erreur : </b>SQweb requiert Wordpress 3.6 ou "
 "plus. Le plugin SQweb ne peut pas être activé.</p></div>"
 
-#: sqweb.php:94
+#: sqweb.php:106
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid ""
+#~ "Earn money with user subscriptions instead of advertising. Set up a "
+#~ "simple universal subscription on your site with just a few clicks. "
+#~ "Includes adblock detection and targeting"
+#~ msgstr ""
+#~ "Monétisez votre site en proposant un abonnement en alternative à la "
+#~ "publicité. L'installation prend quelques clics seulement. Inclus un "
+#~ "détecteur d'adblock, avec ciblage."
+
+#~ msgid "Premium with Multipass"
+#~ msgstr "Premium avec Multipass"
 
 #~ msgid ""
 #~ "This will be used for the iframe that visitors will use to register, "

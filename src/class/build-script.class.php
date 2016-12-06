@@ -12,6 +12,7 @@ class BuildScript {
 	private static $_fmes;
 	private static $_lang;
 	private static $_targets;
+	private static $_blogname;
 
 	/**
 	 * Generating script
@@ -26,6 +27,13 @@ class BuildScript {
 		self::$_lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
 		self::$_flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : 'Remove ads';
 		self::$_flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : 'Connected';
+
+		if ( function_exists( 'get_blog_details' ) ) {
+			$current_site = get_blog_details();
+			self::$_blogname = $current_site->blogname;
+		} else {
+			self::$_blogname = get_option( 'blogname' );
+		}
 		// Assembling
 		echo '
 			<script data-cfasync="false">
@@ -36,6 +44,7 @@ class BuildScript {
 					id_site: ' . self::$_wsid . ',
 					debug: false,
 					targeting: ' . self::$_targets . ',
+					sqw_sitename: "' . self::$_blogname . '",
 					msg: "' . self::$_fmes . '",
 					i18n: "' . self::$_lang . '"
 				};
