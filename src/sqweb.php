@@ -27,7 +27,7 @@ load_plugin_textdomain( 'sqweb', false, dirname( plugin_basename( __FILE__ ) ) .
  * Short description translation.
  */
 
-__('Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.', 'sqweb');
+__( 'Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.', 'sqweb' );
 
 function sqw_install() {
 	sqw_send_data( 'enabled' );
