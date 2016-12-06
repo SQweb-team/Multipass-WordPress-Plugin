@@ -535,9 +535,6 @@ input[type=password] {
 }
 
 .sqw-btn-mp:hover {
-    /**
-    background-color: color(var(--yellow) w(+20%));
-    */
     padding-left: 10px;
     transition: all .2s ease-in-out;
 }
