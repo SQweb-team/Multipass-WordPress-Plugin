@@ -10,46 +10,47 @@ import stylelint from 'gulp-stylelint';
 import stylelintReporter from 'gulp-stylelint-console-reporter';
 import gulpIgnore from 'gulp-ignore';
 
-gulp.task('css-lint', function() {
-  gulp.src('src/resources/css/*.css')
-    .pipe(stylelint({
-      reporters: [
-        {formatter: 'verbose', console: true},
-      ],
-      configFile: '../SQweb-Coding-Style/css/stylelint.config.js',
-      debug: true
-    }));
-});
+gulp.task('css-lint', () => gulp
+  .src('src/resources/css/*.css')
+  .pipe(stylelint({
+    reporters: [
+      {
+        formatter: 'verbose',
+        console: true
+      },
+    ],
+    configFile: '../SQweb-Coding-Style/css/stylelint.config.js',
+    debug: true
+  }))
+);
 
-gulp.task('css-minify', function() {
-  return gulp.src('./build/sqweb-wordpress-plugin/resources/css/*.css')
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(nano())
-    .pipe(gulp.dest('./build/sqweb-wordpress-plugin/resources/css'))
-});
+gulp.task('css-minify', () => gulp
+  .src('./build/sqweb-wordpress-plugin/resources/css/*.css')
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(nano())
+  .pipe(gulp.dest('./build/sqweb-wordpress-plugin/resources/css'))
+);
 
-gulp.task('copy', function() {
-  return gulp.src(['./src/**/*'])
-    .pipe(gulp.dest('build/sqweb-wordpress-plugin'));
-});
+gulp.task('copy', () => gulp
+  .src(['./src/**/*'])
+  .pipe(gulp.dest('build/sqweb-wordpress-plugin'))
+);
 
-gulp.task('cleanup', function() {
+gulp.task('cleanup', () => {
   const base = 'build/sqweb-wordpress-plugin';
   return del([base + '/phpunit.xml', base + '/bin', base + '/tests']);
 });
 
-gulp.task('zip', function() {
-  return gulp.src(['./build/sqweb-wordpress-plugin/**/*'], {base : "./build"})
-    .pipe(zip('sqweb-wordpress-plugin.zip'))
-    .pipe(gulp.dest('dist'));
-});
+gulp.task('zip', () => gulp
+  .src(['./build/sqweb-wordpress-plugin/**/*'], {base : "./build"})
+  .pipe(zip('sqweb-wordpress-plugin.zip'))
+  .pipe(gulp.dest('dist'))
+);
 
-gulp.task('clean', function() {
-  return del(['build/']);
-});
+gulp.task('clean', () => del(['build/']));
 
 gulp.task('keep-build', sequence('css-lint', 'copy', 'css-minify', 'zip'));
 
