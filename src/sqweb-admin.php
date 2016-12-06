@@ -75,7 +75,9 @@ return array(
 );
 ';
 		file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
-		wp_redirect( remove_query_arg( 'sqw-reset' ) );
+		if ( function_exists( 'wp_redirect' ) ) {
+			wp_redirect( remove_query_arg( 'sqw-reset' ) );
+		}
 	}
 
 	public function sqw_logout() {
