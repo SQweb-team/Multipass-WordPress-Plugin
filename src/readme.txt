@@ -133,7 +133,7 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 * Translation short description.
 * Add Multipass tiny button.
 * Add visual change of lang in SQweb admin.
-* Add site name varialbe in JS.
+* Add site name variable in JS.
 
 = v2.4.3 =
 * Fix CSS include.
