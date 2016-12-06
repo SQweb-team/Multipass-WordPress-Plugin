@@ -121,6 +121,7 @@
 }
 
 .sqw-form input[type=text],
+input[type=email],
 input[type=password] {
     border: none;
     box-shadow: none;
@@ -583,9 +584,10 @@ a.sqw-btn-mp-link:focus {
     cursor: pointer;
 }
 
-/*
-    Slim variant
+/**
+ * Slim variant
  */
+
 .multipass-slim > .sqw-btn-mp {
     height: 32px;
     max-width: 248px;

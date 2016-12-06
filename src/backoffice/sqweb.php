@@ -147,14 +147,14 @@
 										<div class="sqweb-button">
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
-												<span class="sqw-btn-mp-link"><?php _e( 'Premium with Multipass', 'sqweb' ); ?></span>
+												<span class="sqw-btn-mp-link"></span>
 											</div>
 										</div>
 										<?php _e( 'Tiny size', 'sqweb' ); ?>
 										<div class="sqweb-button multipass-slim">
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
-												<span class="sqw-btn-mp-link"><?php _e( 'Premium with Multipass', 'sqweb' ); ?></span>
+												<span class="sqw-btn-mp-link"></span>
 											</div>
 										</div>
 									</div>
