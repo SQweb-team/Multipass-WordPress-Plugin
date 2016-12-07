@@ -184,3 +184,13 @@ function compatibility_easy_adsense() {
 
 add_action( 'set_current_user', 'compatibility_easy_adsense' );
 add_action( 'init', 'compatibility_easy_adsense' );
+
+/*
+	Compatibility with Cache Enabler
+*/
+
+function compatibility_cache_enabler() {
+	return (apply_filters( 'sqw_check_credentials', get_option('wsid') ));
+}
+
+add_filter( 'bypass_cache', 'compatibility_cache_enabler' );
