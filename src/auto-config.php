@@ -16,7 +16,9 @@ class Auto_Config {
 				$this->config_w3tc( $auto_config );
 			}
 			if ( $auto_config ) {
-				wp_redirect( remove_query_arg( 'sqw-auto-config' ) );
+				if ( function_exists( 'wp_redirect' ) ) {
+					wp_redirect( remove_query_arg( 'sqw-auto-config' ) );
+				}
 			}
 		}
 	}
@@ -47,10 +49,10 @@ class Auto_Config {
 	}
 
 	private function config_w3tc( $auto_config ) {
-		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.php';
+		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.json';
 		/** Check if W3TC is enabled */
 		if ( file_exists( $wp_master_path ) ) {
-			$this->_w3tc = include( $wp_master_path );
+			$this->_w3tc = json_decode( file_get_contents( $wp_master_path ), true );
 			if ( $this->_w3tc['pgcache.enabled'] ) {
 				if ( ! defined( 'W3TC_DYNAMIC_SECURITY' ) ) {
 					/** Define W3TC DYNAMIC SECURITY */
@@ -64,37 +66,39 @@ class Auto_Config {
 						file_put_contents( $wp_cache_config_file, $file );
 					}
 				}
-				$file = file_get_contents( $wp_master_path );
 				if ( ! $this->_w3tc['pgcache.late_init'] ) {
 					/* Active Late Init */
-					$file = str_replace( '\'pgcache.late_init\' => false', '\'pgcache.late_init\' => true', $file );
+					$this->_w3tc['pgcache.late_init'] = true;
 				}
 				if (  $this->_w3tc['browsercache.enabled'] ) {
 					if ( $auto_config ) {
-						$file = str_replace( '\'browsercache.enabled\' => true', '\'browsercache.enabled\' => false', $file );
+						$this->_w3tc['browsercache.enabled'] = false;
 					} else {
 						add_action( 'admin_notices', array( $this, 'notice_browser_cache' ) );
 					}
 				}
 				if ( 'file' !== $this->_w3tc['pgcache.engine'] ) {
 					if ( $auto_config ) {
-						$file = preg_replace( '/\'pgcache\.engine\' => .+/', '\'pgcache.engine\' => \'file\',', $file );
+						$this->_w3tc['pgcache.engine'] = 'file';
 					} else {
 						add_action( 'admin_notices', array( $this, 'notice_engine' ) );
 					}
 				}
-				file_put_contents( $wp_master_path, $file );
+				file_put_contents( $wp_master_path, json_encode( $this->_w3tc ) );
 			}
 		} // End if().
 	}
 
 	public static function is_w3tc_enabled() {
 		/** Check if W3TC is enabled */
-		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.php';
-		if ( file_exists( $wp_master_path ) ) {
-			$w3tc = include( WP_CONTENT_DIR . '/w3tc-config/master.php' );
-			if ( $w3tc['pgcache.enabled'] ) {
-				return (1);
+		$wp_master_path = WP_CONTENT_DIR . '/w3tc-config/master.json';
+		$active_plugin = get_option( 'active_plugins' );
+		if ( in_array( 'w3-total-cache/w3-total-cache.php', $active_plugin ) ) {
+			if ( file_exists( $wp_master_path ) ) {
+				$w3tc = json_decode( file_get_contents( $wp_master_path ), true );
+				if ( $w3tc['pgcache.enabled'] ) {
+					return (1);
+				}
 			}
 		}
 		return (0);

@@ -134,6 +134,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 * Add Multipass tiny button.
 * Add visual change of lang in SQweb admin.
 * Add site name variable in JS.
+* Compatibility with Cache Enabler.
+* Upgrade compatibility with W3 Super Cache v0.9.5.1.
+* Previous installs of W3TC break ads management Fixed.
 
 = v2.4.3 =
 * Fix CSS include.
