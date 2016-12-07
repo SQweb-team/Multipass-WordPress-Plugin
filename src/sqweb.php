@@ -190,7 +190,7 @@ add_action( 'init', 'compatibility_easy_adsense' );
 */
 
 function compatibility_cache_enabler() {
-	return (apply_filters( 'sqw_check_credentials', get_option('wsid') ));
+	return ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) );
 }
 
 add_filter( 'bypass_cache', 'compatibility_cache_enabler' );
