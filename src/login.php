@@ -23,8 +23,6 @@ if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['s
 				update_option( 'wsid', $website->id );
 			}
 		}
-	} else {
-		SQweb_Admin::add_notice_event( 'error', __( 'Sorry, an error occurred. Please try again.', 'sqweb' ) );
 	}
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
