@@ -130,13 +130,15 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.4.4 =
-* Translation short description.
-* Add Multipass tiny button.
+* Add translation of plugin description.
+* Add option to display a tiny Multipass button.
 * Add visual change of lang in SQweb admin.
 * Add site name variable in JS.
-* Compatibility with Cache Enabler.
-* Upgrade compatibility with W3 Super Cache v0.9.5.1.
-* Previous installs of W3TC break ads management Fixed.
+* Now compatible with Cache Enabler.
+* Now compatible with W3 Super Cache v0.9.5.1.
+* Fixed a bug making previous installs of W3TC break ads management.
+* Updated notice message when signing in and signing up.
+* Add a default message for adblockers.
 
 = v2.4.3 =
 * Fix CSS include.
