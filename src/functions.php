@@ -128,9 +128,16 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			return ( 0 );
 		}
 		$response = json_decode( $return['body'] );
-		if ( ! false == $response ) {
+		if ( isset( $response->token ) ) {
 			update_option( 'sqw_token', $response->token );
 			return ( 1 );
+		} elseif ( isset( $response->errors ) ) {
+			if ( isset( $response->errors->email ) ) {
+				SQweb_Admin::add_notice_event( 'error', __( 'Email already used.', 'sqweb' ) );
+			}
+			if ( isset( $response->errors->password ) ) {
+				SQweb_Admin::add_notice_event( 'error', __( 'Password must be 8 characters.', 'sqweb' ) );
+			}
 		}
 	} // End if().
 	return ( 0 );
