@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-12-06 14:44+0100\n"
-"PO-Revision-Date: 2016-12-06 14:44+0100\n"
+"POT-Creation-Date: 2016-12-08 14:43+0100\n"
+"PO-Revision-Date: 2016-12-08 14:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: auto-config.php:117
+#: auto-config.php:121
 msgid ""
 "<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP "
 "cache or Legacy cache, you can click "
@@ -24,11 +24,11 @@ msgstr ""
 "<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
 "cache via PHP ou Legacy cache, vous pouvez aussi cliquer "
 
-#: auto-config.php:119 auto-config.php:133 auto-config.php:147
+#: auto-config.php:123 auto-config.php:137 auto-config.php:151
 msgid "here</a> for automatic configuration."
 msgstr "ici</a> pour une configuration automatique."
 
-#: auto-config.php:131
+#: auto-config.php:135
 msgid ""
 "<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
 "with SQweb, please disabled it, you can click "
@@ -37,7 +37,7 @@ msgstr ""
 "malheureusement pas compatible avec SQweb, veuillez le désactivez, vous "
 "pouvez aussi cliquer "
 
-#: auto-config.php:145
+#: auto-config.php:149
 msgid ""
 "<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced "
 "mod, please switch to Disk: basic, you can click "
@@ -237,6 +237,18 @@ msgstr "Ce message apparaîtra dans une bannière en bas de page."
 msgid "Save"
 msgstr "Sauvegarder"
 
+#: backoffice/sqweb.php:201
+msgid ""
+"If you want a better experience on our website you can get <a href=\"#\" "
+"onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
+"important;\">your Multipass</a> to surf without ads and access premium "
+"content on all partner websites."
+msgstr ""
+"Vous voulez le meilleur de notre site ? Grâce à <a href=\"#\" onclick=\"sqw."
+"modal_first()\" class=\"sqw-btn-link\" style=\"color:white !important;"
+"\">Multipass</a>, surfez sans publicité et accéder au contenu premium sur "
+"tous les sites partenaires."
+
 #: class/sqweb-ad-control.class.php:10
 msgid "Put here your advertising code to hide it for Multipass users"
 msgstr ""
@@ -274,6 +286,22 @@ msgstr "Cliquez ici pour vous connecter"
 #: class/widget-sqweb-button.class.php:40
 msgid "Edit settings"
 msgstr "Editez les paramètres"
+
+#: functions.php:136
+msgid "Email already used."
+msgstr "Email déjà utilisée."
+
+#: functions.php:139
+msgid "Password must be 8 characters."
+msgstr "Le mot de passe doit comporter au moins 8 caractères"
+
+#: functions.php:190
+msgid "Email invalid."
+msgstr "Email non valide."
+
+#: functions.php:193
+msgid "Password invalid."
+msgstr "Mot de passe invalide."
 
 #: includes/sqweb-filter.php:93
 msgid "The rest of this article is for subscribers only"
@@ -313,9 +341,9 @@ msgstr[1] "Il sera disponible dans %d jours"
 msgid "Become a subscriber now with Multipass"
 msgstr "Débloquez ce contenu avec Multipass"
 
-#: login.php:27 login.php:50
-msgid "Sorry, an error occurred. Please try again."
-msgstr "Une erreur est survenue. Veuillez re-essayer."
+#: login.php:50
+msgid "All fields need to be filled."
+msgstr "Tous les champs doivent être remplis."
 
 #: plugins/adrotate-widget.php:102
 msgid "Title (optional):"
@@ -424,6 +452,9 @@ msgstr ""
 #: sqweb.php:106
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "Sorry, an error occurred. Please try again."
+#~ msgstr "Une erreur est survenue. Veuillez re-essayer."
 
 #~ msgid ""
 #~ "Earn money with user subscriptions instead of advertising. Set up a "

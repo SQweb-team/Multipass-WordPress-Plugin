@@ -37,6 +37,11 @@ jQuery(function($) {
 			$('.' + $(this).attr('name')).toggle(200);
 			$(this).toggleClass('sqw-tack-basic-check');
 			$(this).toggleClass('sqw-' + $(this).data('color'));
+			if ($(this).data('color') === 'red') {
+				$('.sqw-textarea').val(adb_default_message);
+			} else {
+				$('.sqw-textarea').val('');
+			}
 			if (!$(this).hasClass('sqw-tack-basic-check')) {
 				clean('.' + $(this).attr('name'));
 			}
