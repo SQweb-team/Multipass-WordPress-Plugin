@@ -17,7 +17,7 @@
 			<div class="sqw-clear"></div>
 			<div class="sqw-form">
 				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=login" method="post">
-					<input type="text" class="sqw-form-email" name="sqw-emailc" placeholder="<?php _e( 'Email' ); ?>">
+					<input type="email" class="sqw-form-email" name="sqw-emailc" placeholder="<?php _e( 'Email' ); ?>">
 					<input type="password" class="sqw-form-password" name="sqw-passwordc" placeholder="<?php _e( 'Password' ); ?>">
 					<button type="submit"><?php _e( 'Log in', 'sqweb' ); ?></button>
 				</form>
@@ -26,7 +26,7 @@
 				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=subscribe" method="post">
 					<input type="text" name="sqw-firstname" placeholder="<?php _e( 'First name', 'sqweb' ); ?>">
 					<input type="text" name="sqw-lastname" placeholder="<?php _e( 'Last name', 'sqweb' ); ?>">
-					<input type="text" class="sqw-form-email" name="sqw-email" placeholder="<?php _e( 'Email', 'sqweb' ); ?>">
+					<input type="email" class="sqw-form-email" name="sqw-email" placeholder="<?php _e( 'Email', 'sqweb' ); ?>">
 					<input type="password" class="sqw-form-password" name="sqw-password" placeholder="<?php _e( 'Password', 'sqweb' ); ?>">
 					<input type="password" class="sqw-form-password" name="sqw-confirmp" placeholder="<?php _e( 'Confirm password', 'sqweb' ); ?>">
 					<button type="submit"><?php _e( 'Subscribe', 'sqweb' ); ?></button>
@@ -141,12 +141,20 @@
 											</select>
 										</div>
 									</div>
-									<div class="sqw-tiers sqw-padding-left">
+									<div class="sqw-tiers2 sqw-padding-left">
 										<p><?php _e( 'Preview :', 'sqweb' ); ?></p>
+										<?php _e( 'Normal size', 'sqweb' ); ?>
 										<div class="sqweb-button">
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
-												<span class="sqw-btn-mp-link"><?php _e( 'Premium with Multipass', 'sqweb' ); ?></span>
+												<span class="sqw-btn-mp-link"></span>
+											</div>
+										</div>
+										<?php _e( 'Tiny size', 'sqweb' ); ?>
+										<div class="sqweb-button multipass-slim">
+											<div class="sqw-btn-mp">
+												<span class="sqw-btn-mp-logo"></span>
+												<span class="sqw-btn-mp-link"></span>
 											</div>
 										</div>
 									</div>
@@ -187,3 +195,9 @@
 	</form>
 	<?php } // End if(). ?>
 </div>
+
+<script>
+
+var adb_default_message = '<?php _e( 'If you want a better experience on our website you can get <a href="#" onclick="sqw.modal_first()" class="sqw-btn-link" style="color:white !important;">your Multipass</a> to surf without ads and access premium content on all partner websites.', 'sqweb' ); ?>';
+
+</script>

@@ -20,6 +20,11 @@
     float: left;
 }
 
+.sqw-tiers2 {
+    width: 61%;
+    float: left;
+}
+
 .sqw-center {
     text-align: center;
 }
@@ -116,6 +121,7 @@
 }
 
 .sqw-form input[type=text],
+input[type=email],
 input[type=password] {
     border: none;
     box-shadow: none;
@@ -573,4 +579,37 @@ a.sqw-btn-mp-link:focus {
     text-decoration: none !important;
     color: color(var(--black) w(+15%)) !important;
     cursor: pointer;
+}
+
+/**
+ * Slim variant
+ */
+
+.multipass-slim > .sqw-btn-mp {
+    height: 32px;
+    max-width: 248px;
+    border-radius: 4px;
+}
+
+.multipass-slim > .sqw-btn-mp:hover {
+    padding-left: 6px;
+}
+
+.multipass-slim > .sqw-btn-mp > .sqw-btn-mp-link {
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.multipass-slim > .sqw-btn-mp > .sqw-btn-mp-logo {
+    margin-top: 8px;
+    height: 16px;
+    width: 28px;
+    margin-left: 10px;
+}
+
+.multipass-slim > .sqw-btn-mp > .sqw-btn-mp-logout {
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+    margin-right: 8px;
 }

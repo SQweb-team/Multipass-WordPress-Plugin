@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.6.0
-Stable tag: 2.4.3
+Stable tag: 2.4.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -128,6 +128,17 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.4.4 =
+* Add translation of plugin description.
+* Add option to display a tiny Multipass button.
+* Add visual change of lang in SQweb admin.
+* Add site name variable in JS.
+* Now compatible with Cache Enabler.
+* Now compatible with W3 Super Cache v0.9.5.1.
+* Fixed a bug making previous installs of W3TC break ads management.
+* Updated notice message when signing in and signing up.
+* Add a default message for adblockers.
 
 = v2.4.3 =
 * Fix CSS include.

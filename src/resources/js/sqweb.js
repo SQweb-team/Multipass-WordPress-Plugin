@@ -7,6 +7,22 @@ jQuery(function($) {
 			}
 		});
 
+		var multipass_button_lang = {
+										'fr':'Premium avec Multipass',
+										'en':'Premium with Multipass',
+										'es':'Premium con Multipass'
+									};
+
+		function change_lang_button(lang) {
+			$('.sqw-btn-mp-link').html(multipass_button_lang[lang]);
+		}
+
+		change_lang_button($('.sqw-input-select').val());
+
+		$('.sqw-input-select').change(function() {
+			change_lang_button($(this).val());
+		});
+
 		function clean(elem) {
 			$(elem).find('input').each(function() {
 				if ($(this).attr('type') === 'checkbox') {
@@ -21,6 +37,11 @@ jQuery(function($) {
 			$('.' + $(this).attr('name')).toggle(200);
 			$(this).toggleClass('sqw-tack-basic-check');
 			$(this).toggleClass('sqw-' + $(this).data('color'));
+			if ($(this).data('color') === 'red') {
+				$('.sqw-textarea').val(adb_default_message);
+			} else {
+				$('.sqw-textarea').val('');
+			}
 			if (!$(this).hasClass('sqw-tack-basic-check')) {
 				clean('.' + $(this).attr('name'));
 			}
@@ -56,7 +77,7 @@ jQuery(function($) {
 			return (0);
 		}
 
-		$('.sqw-form input[type=text], input[type=password]').keyup(function() {
+		$('.sqw-form input[type=text], input[type=email], input[type=password]').keyup(function() {
 			var valid = 1;
 			switch ($(this).attr('name')) {
 				case 'sqw-emailc':
