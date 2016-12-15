@@ -41,7 +41,7 @@ class WidgetSqwebButton extends WP_Widget {
 	<option value="normal" <?php echo 'normal' === $button ? 'selected' : ''; ?>><?php _e( 'Normal', 'sqweb' ); ?></option>
 	<option value="large" <?php echo 'large' === $button ? 'selected' : ''; ?>><?php _e( 'Large', 'sqweb' ); ?></option>
 </select></p>
-	<?php
+		<?php
 		if ( '' === $get_options['wsid'] ) {
 			echo '<span style="color:red">ID MISSING<a href="admin.php?page=SQwebAdmin"><br>', __( 'CLICK HERE TO LOG IN', 'sqweb' ), '<br></a></span>';
 		}

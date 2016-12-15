@@ -3,7 +3,7 @@
  * Shortcode Function
  */
 
-function sqweb_button_short_code($atts = array(), $content = null, $tag = '') {
+function sqweb_button_short_code( $atts = array(), $content = null, $tag = '' ) {
 
 	$wporg_atts = shortcode_atts( array( 'type' => 'normal' ), $atts, $tag );
 
