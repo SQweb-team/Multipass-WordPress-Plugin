@@ -39,11 +39,21 @@ If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in 
 = The Shortcode Way =
 `[sqweb_button]`
 
+You can specify the button's type with :
+`[sqweb_button type="TYPE"]`
+
+TYPE can be : tiny, slim, normal, large.
+
 = The Manual Way =
 
 In your theme, to display the button, add the following :
 
-`do_shortcode('[sqweb_button]')`
+`<?php do_shortcode('[sqweb_button]') ?>`
+
+You can specify the button's type with :
+`<?php do_shortcode('[sqweb_button type="TYPE"]') ?>`
+
+TYPE can be : tiny, slim, normal, large.
 
 To manage your advertisement blocks, use the following function :
 
@@ -128,6 +138,10 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.4.6 =
+* Add new version of button.
+* Clean widget code.
 
 = v2.4.5 =
 * Compatibility with WordPress 4.7.
