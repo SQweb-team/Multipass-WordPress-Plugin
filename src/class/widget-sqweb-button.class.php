@@ -18,8 +18,10 @@ class WidgetSqwebButton extends WP_Widget {
 
 	function widget( $args, $instance ) {
 
+		$button = isset($instance['button']) ? $instance['button'] : 'normal';
+
 		echo $args['before_widget'];
-		echo '<div class="sqweb-button' . ( 'normal' !== $instance['button'] ? ' multipass-' . $instance['button'] : '' ) . '"></div>';
+		echo '<div class="sqweb-button' . ( 'normal' !== $button ? ' multipass-' . $button : '' ) . '"></div>';
 		echo $args['after_widget'];
 	}
 
