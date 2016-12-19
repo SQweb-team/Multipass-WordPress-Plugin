@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * signin
+ */
 if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['sqw-emailc'] ) && ! empty( $_POST['sqw-passwordc'] ) ) {
 	if ( sqweb_sign_in( $_POST['sqw-emailc'], $_POST['sqw-passwordc'] ) ) {
 		if ( function_exists( 'get_blog_details' ) ) {
@@ -27,6 +31,10 @@ if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['s
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
 }
+
+/**
+ * signup
+ */
 
 if ( ! empty( $_GET['type'] ) && 'subscribe' === $_GET['type'] ) {
 	if ( isset( $_POST ) && ( ! empty( $_POST['sqw-firstname'] ) || ! empty( $_POST['sqw-lastname'] ) || ! empty( $_POST['sqw-email'] ) || ! empty( $_POST['sqw-password'] ) ) ) {

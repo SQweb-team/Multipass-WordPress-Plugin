@@ -44,7 +44,7 @@ class BuildScript {
 					id_site: ' . self::$_wsid . ',
 					debug: false,
 					targeting: ' . self::$_targets . ',
-					sqw_sitename: "' . self::$_blogname . '",
+					sitename: "' . self::$_blogname . '",
 					msg: "' . self::$_fmes . '",
 					i18n: "' . self::$_lang . '"
 				};
@@ -62,7 +62,7 @@ class BuildScript {
 
 	/**
 	 * Saving custom script to file
-	 * @return int
+	 * @return 0
 	 */
 	public static function save() {
 		if ( get_option( 'wsid' ) ) {

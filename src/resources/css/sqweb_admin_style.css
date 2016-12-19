@@ -76,12 +76,12 @@
 .sqw-tab {
     margin: auto;
     padding-bottom: 40px;
-    width: 204px;
+    width: 284px;
 }
 
 .sqw-tab div {
     text-align: center;
-    width: 100px;
+    width: 140px;
     padding: 3px 0;
     border: 1px solid #4491ff;
     cursor: pointer;
@@ -97,15 +97,11 @@
 }
 
 .sqw-tab-login {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     float: left;
 }
 
 .sqw-tab-subscribe {
     float: left;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 .sqw-form {

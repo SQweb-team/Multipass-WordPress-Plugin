@@ -86,6 +86,9 @@ return array(
 	}
 
 	public static function notice_event() {
+		/**
+		 * Display notif added previously
+		 */
 		$message = unserialize( get_option( 'sqw_message' ) );
 		foreach ( $message as $value ) {
 			?>
