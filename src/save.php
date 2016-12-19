@@ -32,7 +32,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
-	 * Save user role can see article behind paywall in all case 
+	 * Save user role can see article behind paywall in all case
 	 */
 	if ( ! empty( $_POST['exept_role'] ) ) {
 		update_option( 'sqw_exept_role', serialize( $_POST['exept_role'] ) );

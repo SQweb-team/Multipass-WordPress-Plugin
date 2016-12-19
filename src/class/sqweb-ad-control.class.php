@@ -12,6 +12,10 @@ class SqwebAdControl extends WP_Widget {
 		parent::__construct( 'sqweb_ad_control', __( 'Multipass ad manager', 'sqweb' ), $widget_ops, $control_ops );
 	}
 
+	/**
+	 * Display Ads or content.
+	 */
+
 	function widget( $args, $instance ) {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );

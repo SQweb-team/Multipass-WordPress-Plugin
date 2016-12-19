@@ -12,12 +12,20 @@ class WidgetSqwebButton extends WP_Widget {
 		parent::__construct( 'widgetSqwebButton', __( 'Multipass button', 'sqweb' ), $widget_ops, $control_ops );
 	}
 
+	/**
+	 * Display button
+	 */
+
 	function widget( $args, $instance ) {
 
 		echo $args['before_widget'];
 		echo '<div class="sqweb-button' . ( 'normal' !== $instance['button'] ? ' multipass-' . $instance['button'] : '' ) . '"></div>';
 		echo $args['after_widget'];
 	}
+
+	/**
+	 * Save button type
+	 */
 
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
