@@ -3,14 +3,11 @@
  * Shortcode Function
  */
 
-function sqweb_button_short_code() {
+function sqweb_button_short_code( $atts = array(), $content = null, $tag = '' ) {
 
-	$get_options['btheme'] = get_option( 'btheme' );
-	if ( 'grey' == $get_options['btheme'] ) {
-		echo '<div class="sqweb-button sqweb-grey"></div>';
-	} else {
-		echo '<div class="sqweb-button"></div>';
-	}
+	$wporg_atts = shortcode_atts( array( 'type' => 'normal' ), $atts, $tag );
+
+	echo '<div class="sqweb-button' . ( 'normal' !== $wporg_atts['type'] ? ' multipass-' . $wporg_atts['type'] : '' ) . '"></div>';
 }
 
 add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
