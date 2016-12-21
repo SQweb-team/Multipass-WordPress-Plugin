@@ -13,14 +13,24 @@ jQuery(function($) {
 										'es':'Premium con Multipass'
 									};
 
+		var multipass_punch_line = {
+										'fr':'Lecture Illimitée • Zéro Pub',
+										'en':'Unrestricted Access • No Ads',
+									}
+
 		function change_lang_button(lang) {
-			$('.sqw-btn-mp-link').html(multipass_button_lang[lang]);
+			$('.sqw-btn-mp-link-tiny-none').html(multipass_button_lang[lang]);
+			$('#sqw-punch-line').html(multipass_punch_line[lang]);
 		}
 
 		change_lang_button($('.sqw-input-select').val());
 
 		$('.sqw-input-select').change(function() {
 			change_lang_button($(this).val());
+		});
+
+		$('#sqw-previ-select').change(function() {
+			$('.sqweb-button').removeClass().addClass('sqweb-button multipass-'+$(this).val());
 		});
 
 		function clean(elem) {
