@@ -10,7 +10,7 @@ DIR_DIST_SVN="../sqweb-wordpress-plugin-svn/sqweb"
 GIT_TAG_SHORT=$(git describe --abbrev=0 --tags | cut -d v -f 2)
 
 # Make sure that node dependencies are installed.
-npm install
+yarn install
 
 echo "Create a release tag in svn..."
 mkdir $DIR_DIST_SVN/tags/$GIT_TAG_SHORT
