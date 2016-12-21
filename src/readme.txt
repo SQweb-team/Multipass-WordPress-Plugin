@@ -139,6 +139,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.4.8 =
+* Update visual button on admin.
+
 = v2.4.7 =
 * Improve comment.
 * Fix check variable set.
