@@ -137,24 +137,36 @@
 											<select class="sqw-input-select" name="lang" id="sqw-lang-select">';
 												<option value="fr" <?php echo 'fr' === $lang ? 'selected' : ''; ?>><?php _e( 'French', 'sqweb' ); ?></option>
 												<option value="en" <?php echo 'en' === $lang ? 'selected' : ''; ?>><?php _e( 'English', 'sqweb' ); ?></option>
-												<option value="es" <?php echo 'es' === $lang ? 'selected' : ''; ?>><?php _e( 'Español', 'sqweb' ); ?></option>
+												<!--<option value="es" <?php echo 'es' === $lang ? 'selected' : ''; ?>><?php _e( 'Español', 'sqweb' ); ?></option>-->
+											</select>
+											<select class="sqw-input-select" id="sqw-previ-select">
+												<option value="tiny"><?php _e( 'Tiny', 'sqweb' ); ?></option>
+												<option value="slim"><?php _e( 'Slim', 'sqweb' ); ?></option>
+												<option value="normal"><?php _e( 'Normal', 'sqweb' ); ?></option>
+												<option value="large"><?php _e( 'Large', 'sqweb' ); ?></option>
 											</select>
 										</div>
 									</div>
 									<div class="sqw-tiers2 sqw-padding-left">
+										<?php
+										if ( function_exists( 'get_blog_details' ) ) {
+											$current_site = get_blog_details();
+											$blogname = $current_site->blogname;
+										} else {
+											$blogname = get_option( 'blogname' );
+										}
+										?>
 										<p><?php _e( 'Preview :', 'sqweb' ); ?></p>
-										<?php _e( 'Normal size', 'sqweb' ); ?>
-										<div class="sqweb-button">
+										<div class="sqweb-button multipass-large">
 											<div class="sqw-btn-mp">
 												<span class="sqw-btn-mp-logo"></span>
-												<span class="sqw-btn-mp-link"></span>
-											</div>
-										</div>
-										<?php _e( 'Tiny size', 'sqweb' ); ?>
-										<div class="sqweb-button multipass-slim">
-											<div class="sqw-btn-mp">
-												<span class="sqw-btn-mp-logo"></span>
-												<span class="sqw-btn-mp-link"></span>
+												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none">Premium avec Multipass</a>
+												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-only">Premium</a>
+												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-large-only">
+													<b>
+													<?php echo $blogname ?> PREMIUM</b>
+													<br><span id="sqw-punch-line">Lecture Illimitée • Zéro Pub</span>
+												</a>
 											</div>
 										</div>
 									</div>

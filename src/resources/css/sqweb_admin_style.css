@@ -573,7 +573,7 @@ a.sqw-btn-mp-link:hover,
 a.sqw-btn-mp-link:active,
 a.sqw-btn-mp-link:focus {
     text-decoration: none !important;
-    color: color(var(--black) w(+15%)) !important;
+    color: #2f3b4c !important;
     cursor: pointer;
 }
 
@@ -608,4 +608,71 @@ a.sqw-btn-mp-link:focus {
     height: 16px;
     margin-top: 8px;
     margin-right: 8px;
+}
+
+.multipass-tiny > .sqw-btn-mp > .sqw-btn-mp-logo {
+    display: none;
+}
+
+.multipass-tiny > .sqw-btn-mp > .sqw-btn-mp-link {
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: .5px !important;
+}
+
+.sqw-btn-mp-link-tiny-only {
+    display: none;
+}
+
+.multipass-tiny > .sqw-btn-mp > .sqw-btn-mp-link-tiny-only {
+    display: inline-block;
+}
+
+.multipass-tiny > .sqw-btn-mp > .sqw-btn-mp-logout {
+    margin-right: 0;
+    margin-top: 7px;
+    margin-left: 8px;
+}
+
+.multipass-large > .sqw-btn-mp > .sqw-btn-mp-link-tiny-none,
+.multipass-tiny > .sqw-btn-mp > .sqw-btn-mp-link-tiny-none {
+    display: none;
+}
+
+.sqw-btn-mp-link-large-only {
+    display: none;
+}
+
+.multipass-tiny > .sqw-btn-mp {
+    height: 32px;
+    border-radius: 4px;
+    width: initial;
+    min-width: initial;
+    padding: 0 12px;
+    font-style: italic;
+}
+
+.multipass-large > .sqw-btn-mp {
+    min-width: 250px;
+    min-height: 92px;
+    padding: 12px;
+}
+
+.multipass-large > .sqw-btn-mp > .sqw-btn-mp-logo {
+    width: 148px;
+    height: 24px;
+    background-position: top left;
+    background-image: url('https://cdn.multipass.net/logo.svg');
+    margin: 0;
+}
+
+.multipass-large > .sqw-btn-mp > .sqw-btn-mp-link-large-only {
+    display: inline-block;
+    color: #1a2831 !important;
+    line-height: 1.5;
+}
+
+.multipass-large > .sqw-btn-mp > .sqw-btn-mp-logout {
+    margin: 0;
+    margin-top: -22px;
 }
