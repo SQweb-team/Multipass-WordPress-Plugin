@@ -7,8 +7,6 @@ import zip from 'gulp-zip';
 import del from 'del';
 import autoprefixer from 'gulp-autoprefixer';
 import stylelint from 'gulp-stylelint';
-import stylelintReporter from 'gulp-stylelint-console-reporter';
-import gulpIgnore from 'gulp-ignore';
 
 gulp.task('css-lint', () => gulp
   .src('src/resources/css/*.css')
@@ -19,7 +17,7 @@ gulp.task('css-lint', () => gulp
         console: true
       },
     ],
-    configFile: '../SQweb-Coding-Style/css/stylelint.config.js',
+    configFile: __dirname + '/../SQweb-Coding-Style/css/stylelint.config.js',
     debug: true
   }))
 );
