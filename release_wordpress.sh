@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit this script if a command fails.
+set -e
+
 # SQWEB - WORDPRESS.ORG RELEASE
 # ------------------------------------------------------------------------------
 # WordPress.org handles releases through svn. This script takes care of it.
