@@ -98,7 +98,6 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 		$defaults = array();
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$title = $description = $type = $adid = '';
 		$title = esc_attr( $instance['title'] );
 		$description = esc_attr( $instance['description'] );
 		$type = esc_attr( $instance['type'] );

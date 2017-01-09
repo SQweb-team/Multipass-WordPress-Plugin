@@ -20,7 +20,9 @@
 function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 	global $adrotate_config;
 
-	$banner_id = $group_ids = 0;
+	$banner_id = 0;
+	$group_ids = 0;
+
 	if ( ! empty( $atts['banner'] ) ) {
 		$banner_id = trim( $atts['banner'], "\r\t " );
 	}
@@ -28,7 +30,7 @@ function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 		$group_ids = trim( $atts['group'], "\r\t " );
 	}
 	if ( ! empty( $atts['fallback'] ) ) {
-		$fallback	= 0;
+		$fallback = 0;
 	}
 	if ( ! empty( $atts['weight'] ) ) {
 		$weight	= 0;
