@@ -34,9 +34,15 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 	public function widget( $args, $instance ) {
 		global $adrotate_config, $blog_id;
 
-		if ( empty( $instance['adid'] ) ) { $instance['adid'] = 0; }
-		if ( empty( $instance['siteid'] ) ) { $instance['siteid'] = $blog_id; }
-		if ( empty( $instance['title'] ) ) { $instance['title'] = ''; }
+		if ( empty( $instance['adid'] ) ) {
+			$instance['adid'] = 0;
+		}
+		if ( empty( $instance['siteid'] ) ) {
+			$instance['siteid'] = $blog_id;
+		}
+		if ( empty( $instance['title'] ) ) {
+			$instance['title'] = '';
+		}
 
 		$title = apply_filters( 'widget_title', $instance['title'] );
 
