@@ -139,6 +139,10 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.5.0 =
+* Fixed a typo
+* Coding style
+
 = v2.4.9 =
 * Fixed broken release.
 

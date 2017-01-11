@@ -80,7 +80,9 @@ function sqweb_check_credentials( $site_id = null ) {
 if ( function_exists( 'add_filter' ) ) {
 	// Check if user is on the SQW_Exept_role, can be set on SQweb admin.
 	if ( function_exists( 'get_option' ) && function_exists( 'wp_get_current_user' ) && unserialize( get_option( 'sqw_exept_role' ) ) && count( array_intersect( wp_get_current_user()->roles, unserialize( get_option( 'sqw_exept_role' ) ) ) ) ) {
-		add_filter( 'sqw_check_credentials', function () { return true; }, 5, 1 );
+		add_filter( 'sqw_check_credentials', function () {
+			return true;
+		}, 5, 1 );
 	} else {
 		add_filter( 'sqw_check_credentials', 'sqweb_check_credentials', 5, 1 );
 	}
