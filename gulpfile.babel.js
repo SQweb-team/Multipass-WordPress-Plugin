@@ -1,12 +1,12 @@
 'use strict';
 
-import gulp from 'gulp';
-import nano from 'gulp-cssnano';
-import sequence from 'gulp-sequence';
-import zip from 'gulp-zip';
-import del from 'del';
-import autoprefixer from 'gulp-autoprefixer';
-import stylelint from 'gulp-stylelint';
+let gulp = require('gulp');
+let nano = require('gulp-cssnano');
+let sequence = require('gulp-sequence');
+let zip = require('gulp-zip');
+let del = require('del');
+let autoprefixer = require('gulp-autoprefixer');
+let stylelint = require('gulp-stylelint');
 
 gulp.task('css-lint', () => gulp
   .src('src/resources/css/*.css')
