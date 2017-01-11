@@ -19,8 +19,10 @@ echo "Create a release tag in svn..."
 mkdir $DIR_DIST_SVN/tags/$GIT_TAG_SHORT
 
 echo "Creating a release and extracting it..."
+gulp
+
 # Use bsdtar to remove the top parent directory when extracting. Unzip can't do that.
-gulp && bsdtar -xf ./dist/sqweb-wordpress-plugin.zip -s'|[^/]*/||' -C $DIR_DIST_SVN/tags/$GIT_TAG_SHORT/
+bsdtar -xf ./dist/sqweb-wordpress-plugin.zip -s'|[^/]*/||' -C $DIR_DIST_SVN/tags/$GIT_TAG_SHORT/
 
 echo "Cleaning up the trunk..."
 rm -rf $DIR_DIST_SVN/trunk/* && svn delete $DIR_DIST_SVN/trunk --force
