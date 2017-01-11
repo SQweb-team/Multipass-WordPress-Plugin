@@ -13,7 +13,7 @@ if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['s
 			$blogname = get_option( 'blogname' );
 			$siteurl = get_option( 'siteurl' );
 		}
-		$websites = sqw_get_sites()
+		$websites = sqw_get_sites();
 		if ( 0 != $websites ) {
 			foreach ( $websites as $key => $value ) {
 				if ( $value->url == $siteurl ) {
