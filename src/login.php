@@ -13,7 +13,8 @@ if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['s
 			$blogname = get_option( 'blogname' );
 			$siteurl = get_option( 'siteurl' );
 		}
-		if ( $websites = sqw_get_sites() ) {
+		$websites = sqw_get_sites()
+		if ( $websites != 0 ) {
 			foreach ( $websites as $key => $value ) {
 				if ( $value->url == $siteurl ) {
 					update_option( 'wsid', $value->id );
