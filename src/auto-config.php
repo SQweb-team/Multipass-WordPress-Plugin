@@ -70,7 +70,7 @@ class Auto_Config {
 					/* Active Late Init */
 					$this->_w3tc['pgcache.late_init'] = true;
 				}
-				if (  $this->_w3tc['browsercache.enabled'] ) {
+				if ( $this->_w3tc['browsercache.enabled'] ) {
 					if ( $auto_config ) {
 						$this->_w3tc['browsercache.enabled'] = false;
 					} else {

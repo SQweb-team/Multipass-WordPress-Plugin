@@ -122,8 +122,8 @@ function compatibility_wp_rocket( $cookies ) {
 require_once 'config.php';
 require_once 'auto-config.php';
 require_once 'sqweb-admin.php';
-require_once 'class/build-script.class.php';
-require_once 'class/widget-sqweb-button.class.php';
+require_once 'class/class-sqweb-build-script.php';
+require_once 'class/class-sqweb-widget-button.php';
 require_once 'functions.php';
 require_once 'shortcode-function.php';
 
@@ -146,7 +146,7 @@ if ( shortcode_exists( 'membership' ) ) {
 require_once 'includes/sqweb-filter.php';
 require_once 'sqweb-init.php';
 require_once 'sqweb-wsc-filter.php';
-require_once 'class/sqweb-ad-control.class.php';
+require_once 'class/class-sqweb-ad-control.php';
 
 // Compatibility with Adrotate
 if ( function_exists( 'adrotate_ad' ) ) {
