@@ -35,7 +35,7 @@ Please see [Release.md](Release.md).
 
 If you encounter any bug or unexpected behavior, you can either report it on Github using the bug tracker, or via email at `hello@sqweb.com`. We will be in touch as soon as possible.
 
-If you discover a security vulnerability within SQweb or this plugin, please send an e-mail to `hello@sqweb.com`. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within SQweb or this plugin, please e-mail `security@sqweb.com`. Vulnerabilities will be promptly addressed.
 
 ## License
 
