@@ -9,11 +9,11 @@ class SqwebAdControl extends WP_Widget {
 
 		$widget_ops = array(
 			'classname' => 'widget_text',
-			'description' => __( 'Put here your advertising code to hide it for Multipass users', 'sqweb' )
+			'description' => __( 'Put here your advertising code to hide it for Multipass users', 'sqweb' ),
 		);
 		$control_ops = array(
 			'width' => 400,
-			'height' => 350
+			'height' => 350,
 		);
 		parent::__construct( 'sqweb_ad_control', __( 'Multipass ad manager', 'sqweb' ), $widget_ops, $control_ops );
 	}
@@ -50,7 +50,12 @@ class SqwebAdControl extends WP_Widget {
 
 	function form( $instance ) {
 
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'text' => '', 'adblock' => '' ) );
+		$instance = wp_parse_args( (array) $instance, array(
+			'title' => '',
+			'text' => '',
+			'adblock' => '',
+			)
+		);
 		$title = strip_tags( $instance['title'] );
 		$text = esc_textarea( $instance['text'] );
 		$adblock = esc_textarea( $instance['adblock'] );

@@ -9,11 +9,11 @@ class WidgetSqwebButton extends WP_Widget {
 
 		$widget_ops = array(
 			'classname' => 'widget_text',
-			'description' => __( 'Button to activate Multipass on your website.', 'sqweb' )
+			'description' => __( 'Button to activate Multipass on your website.', 'sqweb' ),
 		);
 		$control_ops = array(
 			'width' => 400,
-			'height' => 350
+			'height' => 350,
 		);
 		parent::__construct( 'widgetSqwebButton', __( 'Multipass button', 'sqweb' ), $widget_ops, $control_ops );
 	}
@@ -46,8 +46,9 @@ class WidgetSqwebButton extends WP_Widget {
 	function form( $instance ) {
 
 		$instance = wp_parse_args( (array) $instance, array(
-			'button' => ''
-			) );
+			'button' => '',
+			)
+		);
 		$get_options['wsid'] = (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0);
 		$button = $instance['button'];
 

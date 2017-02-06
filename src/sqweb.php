@@ -120,7 +120,7 @@ function compatibility_wp_rocket( $cookies ) {
 
 // Including classes and dependencies files.
 require_once 'config.php';
-require_once 'auto-config.php';
+require_once 'class/class-sqweb-auto-config.php';
 require_once 'sqweb-admin.php';
 require_once 'class/class-sqweb-build-script.php';
 require_once 'class/class-sqweb-widget-button.php';
