@@ -189,7 +189,13 @@
 						</div>
 						<p class="sqw-body basic-font-10"><?php _e( 'The Adblock Manager gives you tools to mitigate adblocking.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos' ); ?></a></p>
 						<div class="sqw-analytics-body sqw-body <?php echo ( get_option( 'sqw_analytics' ) ? '' : 'sqw-hide' ); ?>">
-							<h4><?php _e( 'Would you like to display a message to your adblockers ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( ! empty( $fmes ) ? 'sqw-tack-basic-check sqw-red' : '' ); ?>" name="sqw-message" data-color="red"><div></div></div>
+							<div class="sqw-margin-top">
+								<h4><?php _e( 'Would you like to display a dynamic popup to your adblockers ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_popup' ) ? 'sqw-tack-basic-check sqw-red' : '' ); ?>" name="sqw-popup" data-color="red" data-type="popup"><div></div></div>
+								<input type="checkbox" value="true" name="sqw_popup" id="checkbox_popup" style="display:none;" <?php echo ( get_option( 'sqw_popup' ) ? 'checked' : '' ) ?>>
+							</div>
+							<div class="sqw-margin-top">
+								<h4><?php _e( 'Would you like to display a message to your adblockers ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( ! empty( $fmes ) ? 'sqw-tack-basic-check sqw-red' : '' ); ?>" name="sqw-message" data-color="red" data-type="message"><div></div></div>
+							</div>
 							<div class="sqw-message sqw-center <?php echo ( ! empty( $fmes ) ? '' : 'sqw-hide' ); ?>">
 								<h5><?php _e( 'Message shown to your adblockers', 'sqweb' ); ?></h4>
 								<textarea class="sqw-textarea" placeholder="Message" name="fmes"><?php echo stripslashes( $fmes ); ?></textarea>

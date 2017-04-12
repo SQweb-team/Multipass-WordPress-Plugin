@@ -11,6 +11,7 @@ class BuildScript {
 	private static $_flogout;
 	private static $_fmes;
 	private static $_lang;
+	private static $_popup;
 	private static $_targets;
 	private static $_blogname;
 
@@ -27,6 +28,7 @@ class BuildScript {
 		self::$_lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
 		self::$_flogin = (get_option( 'flogin' ) != false) ? get_option( 'flogin' ) : 'Remove ads';
 		self::$_flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : 'Connected';
+		self::$_popup = (get_option( 'sqw_popup' ) != false) ? get_option( 'sqw_popup' ) : 'false';
 
 		if ( function_exists( 'get_blog_details' ) ) {
 			$current_site = get_blog_details();
@@ -43,6 +45,7 @@ class BuildScript {
 				var _sqw = {
 					id_site: ' . self::$_wsid . ',
 					debug: false,
+					adblock_modal: ' . self::$_popup . ',
 					targeting: ' . self::$_targets . ',
 					sitename: "' . self::$_blogname . '",
 					msg: "' . self::$_fmes . '",
