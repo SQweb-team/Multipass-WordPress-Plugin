@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
-Version: 2.5.1
+Version: 2.5.2
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -91,7 +91,7 @@ function check() {
 
 	if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
-		_e( '<div class="error"><p><b>Error : </b>SQweb requires Wordpress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
+		_e( '<div class="error"><p><b>Error : </b>SQweb requires WordPress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
 	}
 }
 

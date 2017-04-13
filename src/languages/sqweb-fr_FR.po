@@ -1,50 +1,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2016-12-15 17:57+0100\n"
-"PO-Revision-Date: 2017-01-09 17:45+0100\n"
+"POT-Creation-Date: 2017-04-12 23:24+0200\n"
+"PO-Revision-Date: 2017-04-12 23:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#: auto-config.php:121
-msgid ""
-"<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP "
-"cache or Legacy cache, you can click "
-msgstr ""
-"<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
-"cache via PHP ou Legacy cache, vous pouvez aussi cliquer "
-
-#: auto-config.php:123 auto-config.php:137 auto-config.php:151
-msgid "here</a> for automatic configuration."
-msgstr "ici</a> pour une configuration automatique."
-
-#: auto-config.php:135
-msgid ""
-"<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
-"with SQweb, please disabled it, you can click "
-msgstr ""
-"<b>SQweb Notice :</b> Cache par navigateur de W3TC activé, il n’est "
-"malheureusement pas compatible avec SQweb, veuillez le désactivez, vous "
-"pouvez aussi cliquer "
-
-#: auto-config.php:149
-msgid ""
-"<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced "
-"mod, please switch to Disk: basic, you can click "
-msgstr ""
-"<b>SQweb Notice :</b> Le contenu dynamique n’est pas disponible dans le mode "
-"disk : enhanced mod, veuillez basculer sur le mode disk : basic, vous pouvez "
-"aussi cliquer "
 
 #: backoffice/sqweb.php:11 backoffice/sqweb.php:22
 msgid "Log in"
@@ -92,7 +62,7 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:50 backoffice/sqweb.php:178
+#: backoffice/sqweb.php:50 backoffice/sqweb.php:190
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -200,44 +170,56 @@ msgstr "Anglais"
 msgid "Español"
 msgstr "Espagnol"
 
-#: backoffice/sqweb.php:145
+#: backoffice/sqweb.php:143 class/class-sqweb-widget-button.php:58
+msgid "Tiny"
+msgstr "Très petit"
+
+#: backoffice/sqweb.php:144 class/class-sqweb-widget-button.php:59
+msgid "Slim"
+msgstr "Petit"
+
+#: backoffice/sqweb.php:145 class/class-sqweb-widget-button.php:60
+msgid "Normal"
+msgstr "Normal"
+
+#: backoffice/sqweb.php:146 class/class-sqweb-widget-button.php:61
+msgid "Large"
+msgstr "Large"
+
+#: backoffice/sqweb.php:159
 msgid "Preview :"
 msgstr "Prévisualisation"
 
-#: backoffice/sqweb.php:146
-msgid "Normal size"
-msgstr "Taille normale"
-
-#: backoffice/sqweb.php:153
-msgid "Tiny size"
-msgstr "Petite taille"
-
-#: backoffice/sqweb.php:174
+#: backoffice/sqweb.php:186
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:178
+#: backoffice/sqweb.php:190
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr ""
 "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:180
+#: backoffice/sqweb.php:193
+msgid "Would you like to display a dynamic popup to your adblockers ?"
+msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
+
+#: backoffice/sqweb.php:197
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:182
+#: backoffice/sqweb.php:200
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:184
+#: backoffice/sqweb.php:202
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:192
+#: backoffice/sqweb.php:210
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backoffice/sqweb.php:201
+#: backoffice/sqweb.php:219
 msgid ""
 "If you want a better experience on our website you can get <a href=\"#\" "
 "onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
@@ -249,77 +231,92 @@ msgstr ""
 "\">Multipass</a>, surfez sans publicité et accédez au contenu premium sur "
 "tous les sites partenaires."
 
-#: class/sqweb-ad-control.class.php:10
+#: class/class-sqweb-ad-control.php:12
 msgid "Put here your advertising code to hide it for Multipass users"
 msgstr ""
 "Mettez ici la publicité qui sera cachée pour les utilisateurs payant "
 "Multipass."
 
-#: class/sqweb-ad-control.class.php:12
+#: class/class-sqweb-ad-control.php:18
 msgid "Multipass ad manager"
 msgstr "Multipass Ad Manager"
 
-#: class/sqweb-ad-control.class.php:48
+#: class/class-sqweb-ad-control.php:63
 msgid "Title"
 msgstr "Titre"
 
-#: class/sqweb-ad-control.class.php:51
+#: class/class-sqweb-ad-control.php:66
 msgid "Advertising code"
 msgstr "Code publicitaire"
 
-#: class/sqweb-ad-control.class.php:54
+#: class/class-sqweb-ad-control.php:69
 msgid "Content for paying users"
 msgstr "Contenu premium pour les abonnés"
 
-#: class/widget-sqweb-button.class.php:10
+#: class/class-sqweb-auto-config.php:121
+msgid ""
+"<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP "
+"cache or Legacy cache, you can click "
+msgstr ""
+"<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
+"cache via PHP ou Legacy cache, vous pouvez aussi cliquer "
+
+#: class/class-sqweb-auto-config.php:123 class/class-sqweb-auto-config.php:137
+#: class/class-sqweb-auto-config.php:151
+msgid "here</a> for automatic configuration."
+msgstr "ici</a> pour une configuration automatique."
+
+#: class/class-sqweb-auto-config.php:135
+msgid ""
+"<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
+"with SQweb, please disabled it, you can click "
+msgstr ""
+"<b>SQweb Notice :</b> Cache par navigateur de W3TC activé, il n’est "
+"malheureusement pas compatible avec SQweb, veuillez le désactivez, vous "
+"pouvez aussi cliquer "
+
+#: class/class-sqweb-auto-config.php:149
+msgid ""
+"<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced "
+"mod, please switch to Disk: basic, you can click "
+msgstr ""
+"<b>SQweb Notice :</b> Le contenu dynamique n’est pas disponible dans le mode "
+"disk : enhanced mod, veuillez basculer sur le mode disk : basic, vous pouvez "
+"aussi cliquer "
+
+#: class/class-sqweb-widget-button.php:12
 msgid "Button to activate Multipass on your website."
 msgstr "Bouton pour activer Multipass sur votre site."
 
-#: class/widget-sqweb-button.class.php:12
+#: class/class-sqweb-widget-button.php:18
 msgid "Multipass button"
 msgstr "Bouton Multipass"
 
-#: class/widget-sqweb-button.class.php:37
+#: class/class-sqweb-widget-button.php:56
 msgid "Choose button"
 msgstr "Choisir le bouton"
 
-#: class/widget-sqweb-button.class.php:39
-msgid "Tiny"
-msgstr "Très petit"
-
-#: class/widget-sqweb-button.class.php:40
-msgid "Slim"
-msgstr "Petit"
-
-#: class/widget-sqweb-button.class.php:41
-msgid "Normal"
-msgstr "Normal"
-
-#: class/widget-sqweb-button.class.php:42
-msgid "Large"
-msgstr "Large"
-
-#: class/widget-sqweb-button.class.php:46
+#: class/class-sqweb-widget-button.php:65
 msgid "CLICK HERE TO LOG IN"
 msgstr "Cliquez ici pour vous connecter"
 
-#: class/widget-sqweb-button.class.php:48
+#: class/class-sqweb-widget-button.php:67
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
-#: functions.php:136
+#: functions.php:140
 msgid "Email already used."
 msgstr "Email déjà utilisée."
 
-#: functions.php:139
+#: functions.php:143
 msgid "Password must be 8 characters."
 msgstr "Le mot de passe doit comporter au moins 8 caractères"
 
-#: functions.php:190
+#: functions.php:194
 msgid "Email invalid."
 msgstr "Email non valide."
 
-#: functions.php:193
+#: functions.php:197
 msgid "Password invalid."
 msgstr "Mot de passe invalide."
 
@@ -361,51 +358,51 @@ msgstr[1] "Il sera disponible dans %d jours"
 msgid "Become a subscriber now with Multipass"
 msgstr "Débloquez ce contenu avec Multipass"
 
-#: login.php:50
+#: login.php:59
 msgid "All fields need to be filled."
 msgstr "Tous les champs doivent être remplis."
 
-#: plugins/adrotate-widget.php:102
+#: plugins/adrotate-widget.php:107
 msgid "Title (optional):"
 msgstr "Titre (optionnel) :"
 
-#: plugins/adrotate-widget.php:105
+#: plugins/adrotate-widget.php:110
 msgid "HTML will be stripped out."
 msgstr "Tout code HTML sera nettoyé"
 
-#: plugins/adrotate-widget.php:108
+#: plugins/adrotate-widget.php:113
 msgid "Description (optional):"
 msgstr "Description (facultatif) :"
 
-#: plugins/adrotate-widget.php:111
+#: plugins/adrotate-widget.php:116
 msgid "What is this widget used for? (Not parsed, HTML will be stripped out.)"
 msgstr "À quoi sert ce widget ?"
 
-#: plugins/adrotate-widget.php:114
+#: plugins/adrotate-widget.php:119
 msgid "Type:"
 msgstr "Type : "
 
-#: plugins/adrotate-widget.php:116
+#: plugins/adrotate-widget.php:121
 msgid "Advert - Use Advert ID"
 msgstr "Annonce - Advert ID"
 
-#: plugins/adrotate-widget.php:117
+#: plugins/adrotate-widget.php:122
 msgid "Group - Use group ID"
 msgstr "Groupe - Groupe ID"
 
-#: plugins/adrotate-widget.php:120
+#: plugins/adrotate-widget.php:125
 msgid "Choose what you want to use this widget for"
 msgstr "Choisissez ce que vous voulez faire de ce widget"
 
-#: plugins/adrotate-widget.php:123
+#: plugins/adrotate-widget.php:128
 msgid "ID:"
 msgstr "ID :"
 
-#: plugins/adrotate-widget.php:126
+#: plugins/adrotate-widget.php:131
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 
-#: save.php:59
+#: save.php:95
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
@@ -417,19 +414,19 @@ msgstr "Réinitialiser la configuration de SQweb"
 msgid "Logout from SQweb"
 msgstr "Se déconnecter de SQweb"
 
-#: sqweb-admin.php:93
+#: sqweb-admin.php:96
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:128
+#: sqweb-admin.php:131
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:135
+#: sqweb-admin.php:138
 msgid "Post available for every users"
 msgstr "Poste disponible pour tous les utilisateurs"
 
-#: sqweb-admin.php:210
+#: sqweb-admin.php:213
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
 
@@ -472,6 +469,12 @@ msgstr ""
 #: sqweb.php:106
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "Normal size"
+#~ msgstr "Taille normale"
+
+#~ msgid "Tiny size"
+#~ msgstr "Petite taille"
 
 #~ msgid "Sorry, an error occurred. Please try again."
 #~ msgstr "Une erreur est survenue. Veuillez re-essayer."

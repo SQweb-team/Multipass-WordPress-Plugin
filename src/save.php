@@ -78,6 +78,12 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		delete_option( 'dateart' );
 	}
 
+	if ( ! empty( $_POST['sqw_popup'] ) ) {
+		update_option( 'sqw_popup', 'true' );
+	} else {
+		delete_option( 'sqw_popup' );
+	}
+
 	/**
 	 * Save message display for adblockers.
 	 */
