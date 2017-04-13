@@ -105,7 +105,11 @@ return array(
 		if ( empty( $messages ) ) {
 			$messages = array();
 		}
-		array_push( $messages, array( 'type' => $type, 'message' => $message ) );
+		array_push( $messages,
+			array(
+				'type' => $type,
+				'message' => $message
+			) );
 		update_option( 'sqw_message', serialize( $messages ) );
 	}
 

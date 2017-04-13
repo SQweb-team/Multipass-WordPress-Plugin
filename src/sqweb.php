@@ -91,7 +91,7 @@ function check() {
 
 	if ( version_compare( $GLOBALS['wp_version'], '3.6', '<' ) ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
-		_e( '<div class="error"><p><b>Error : </b>SQweb requires Wordpress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
+		_e( '<div class="error"><p><b>Error : </b>SQweb requires WordPress 3.6 or greater. The SQweb plugin cannot be activated.</p></div>', 'sqweb' );
 	}
 }
 
