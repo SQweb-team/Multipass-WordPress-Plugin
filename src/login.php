@@ -25,7 +25,7 @@ if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['s
 		if ( ! get_option( 'wsid' ) ) {
 			$website = sqw_add_website( array(
 				'sqw-ws-name' => $blogname,
-				'sqw-ws-url' => $siteurl
+				'sqw-ws-url' => $siteurl,
 			), get_option( 'sqw_token' ) );
 			if ( $website ) {
 				update_option( 'wsid', $website->id );
@@ -55,10 +55,13 @@ if ( ! empty( $_GET['type'] ) && 'subscribe' === $_GET['type'] ) {
 			}
 			$website = sqw_add_website( array(
 				'sqw-ws-name' => $blogname,
-				'sqw-ws-url' => $siteurl
+				'sqw-ws-url' => $siteurl,
 			), get_option( 'sqw_token' ) );
 			update_option( 'wsid', $website->id );
-			wp_redirect( add_query_arg( array( 'action' => 'signin', 'success' => 'true' ) ) );
+			wp_redirect( add_query_arg( array(
+				'action' => 'signin',
+				'success' => 'true',
+			) ) );
 			exit;
 		}
 	} else {

@@ -108,8 +108,8 @@ return array(
 		array_push( $messages,
 			array(
 				'type' => $type,
-				'message' => $message
-			) );
+				'message' => $message,
+		) );
 		update_option( 'sqw_message', serialize( $messages ) );
 	}
 
