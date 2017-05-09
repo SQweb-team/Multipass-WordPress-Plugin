@@ -145,11 +145,11 @@ input[type=password] {
 }
 
 .sqw-diagnostic {
-	background: #4491ff;
-	border: none;
-	padding: 5px 10px;
-	margin-bottom: 15px;
-	cursor: pointer;
+    background: #4491ff;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .sqw-form button {
