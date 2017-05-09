@@ -206,6 +206,7 @@ return array(
 				exit;
 			}
 			include_once 'save.php';
+			include_once 'diagnostic.php';
 		}
 		add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
 		if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
