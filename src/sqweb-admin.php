@@ -109,7 +109,8 @@ return array(
 			array(
 				'type' => $type,
 				'message' => $message,
-		) );
+			)
+		);
 		update_option( 'sqw_message', serialize( $messages ) );
 	}
 

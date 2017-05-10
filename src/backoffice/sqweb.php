@@ -34,7 +34,7 @@
 			</div>
 			<div style="text-align:center;" class="">
 				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=diagnostic" method="post">
-					<button class="sqw-diagnostic" type="submit"><?php _e('A problem ? Send us your diagnostic', 'sqweb') ?></button>
+					<button class="sqw-diagnostic" type="submit"><?php _e( 'A problem ? Send us your diagnostic', 'sqweb' ) ?></button>
 				</form>
 			</div>
 		</div>
