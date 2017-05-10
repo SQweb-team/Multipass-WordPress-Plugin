@@ -39,7 +39,6 @@ before_script:
 script:
   # Don't fail the build but print the warnings
   - phpcs --config-set ignore_warnings_on_exit 1
-  - phpcs -p --standard=WordPress-Core . --extensions=php
   - phpcs -p --standard=phpcs.xml . --extensions=php
   - parallel-lint src/
   - gulp
