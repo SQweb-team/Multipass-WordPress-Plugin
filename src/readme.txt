@@ -139,6 +139,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.6.1 =
+* Improved database and scheduled task management
+
 = v2.6.0 =
 * Introduced diagnostic feature.
 

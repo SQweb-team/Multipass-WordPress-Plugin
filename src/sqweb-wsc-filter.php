@@ -159,7 +159,9 @@ class SQweb_filter { // @codingStandardsIgnoreStart
 
 	public function clean_data() {
 		global $wpdb;
-		$count = $wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->prefix}sqw_limit WHERE time <= %d", array( ( time() - 86400 ) ) ) );
+		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sqw_limit'" ) == $wpdb->prefix.'sqw_limit' ) {
+			$count = $wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->prefix}sqw_limit WHERE time <= %d", array( ( time() - 86400 ) ) ) );
+		}
 	}
 }
 

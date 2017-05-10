@@ -125,6 +125,10 @@ class SQweb_Filter_Articles {
 		global $wpdb;
 
 		$id = get_the_ID();
+		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sqw_limit'" ) != $wpdb->prefix.'sqw_limit' ) {
+			delete_option( 'artbyday' );
+			return $content;
+		}
 		$count = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}sqw_limit WHERE ip = '%s' AND time > '%d' ORDER BY id DESC", array( $_SERVER['REMOTE_ADDR'], (time() - 86400 ) ) ) );
 		if ( empty( $count ) ) {
 			$wpdb->query( $wpdb->prepare( "INSERT INTO {$wpdb->prefix}sqw_limit (ip, nbarticles, seeingart, time) VALUES ('%s', 1, '%s', %d )", array( $_SERVER['REMOTE_ADDR'], serialize( array( $id ) ), time() ) ) );
