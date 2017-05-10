@@ -45,12 +45,12 @@ return array(
 	\'filter.text\' => \'YTowOnt9\',
 );
 ';
-	file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
+	file_put_contents( plugin_dir_path( __FILE__ ) . 'sqweb-config.php', $content );
 	global $wp_cache_mfunc_enabled, $cache_enabled, $super_cache_enabled;
 	if ( $cache_enabled && $super_cache_enabled ) {
 		/** Install plugins on WP Super Cache */
-		$file = file_get_contents( WP_PLUGIN_DIR . '/sqweb/plugins/wp-super-cache.php' );
-		file_put_contents( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php', $file );
+		$file = file_get_contents( plugin_dir_path( __FILE__ ) . 'plugins/wp-super-cache.php' );
+		file_put_contents( plugin_dir_path( __FILE__ ) . '/wp-super-cache/plugins/sqweb.php', $file );
 	}
 }
 

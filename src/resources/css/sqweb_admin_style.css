@@ -147,6 +147,7 @@ input[type=password] {
 .sqw-diagnostic {
     background: #4491ff;
     border: none;
+    color: #fff;
     padding: 5px 10px;
     margin-bottom: 15px;
     cursor: pointer;

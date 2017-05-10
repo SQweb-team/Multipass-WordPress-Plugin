@@ -62,10 +62,11 @@ function sqw_login_content( $content ) {
 }
 
 function paywall_style() {
-	wp_enqueue_style(
-		'sqweb-admin-style',
-		'/wp-content/plugins/sqweb/resources/css/sqweb_paywall_style.css'
+	wp_register_style(
+		'sqweb_paywall_style',
+		plugin_dir_url( __FILE__ ) . 'resources/css/sqweb_paywall_style.css'
 	);
+	wp_enqueue_style( 'sqweb_paywall_style' );
 }
 
 if ( get_option( 'dateart' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'cutartperc' ) !== false ) {

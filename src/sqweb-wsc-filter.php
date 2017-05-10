@@ -71,7 +71,7 @@ class SQweb_filter { // @codingStandardsIgnoreStart
 
 	private function set_data() {
 		if ( ! $this->_data_set ) {
-			$sqweb_config_path = WP_PLUGIN_DIR . '/sqweb/sqweb-config.php';
+			$sqweb_config_path = plugin_dir_path( __FILE__ ) . 'sqweb-config.php';
 			$sqweb_config = include( $sqweb_config_path );
 			$this->_ads = unserialize( base64_decode( $sqweb_config['filter.ads'] ) );
 			$this->_text = unserialize( base64_decode( $sqweb_config['filter.text'] ) );
@@ -94,7 +94,7 @@ class SQweb_filter { // @codingStandardsIgnoreStart
 
 		$this->set_data();
 		if ( ! in_array( $ads, $this->_ads ) ) {
-			$sqweb_config_path = WP_PLUGIN_DIR . '/sqweb/sqweb-config.php';
+			$sqweb_config_path = plugin_dir_path( __FILE__ ) . 'sqweb-config.php';
 			$key = $this->generate_random_string( rand( 32, 128 ) );
 			$this->_ads[ $key ] = $ads;
 			$this->_text[ $key ] = $text;

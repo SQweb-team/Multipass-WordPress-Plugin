@@ -74,7 +74,7 @@ return array(
 	\'filter.text\' => \'YTowOnt9\',
 );
 ';
-		file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
+		file_put_contents( plugin_dir_url( __FILE__ ) . 'sqweb-config.php', $content );
 		if ( function_exists( 'wp_redirect' ) ) {
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
 		}
@@ -184,15 +184,17 @@ return array(
 	}
 
 	public function script() {
-		wp_enqueue_style(
+		wp_register_style(
 			'sqweb-admin-style',
-			'/wp-content/plugins/sqweb/resources/css/sqweb_admin_style.css'
+			plugin_dir_url( __FILE__ ) . 'resources/css/sqweb_admin_style.css'
 		);
-		wp_enqueue_script(
+		wp_enqueue_style( 'sqweb-admin-style' );
+		wp_register_script(
 			'sqweb-admin-script',
-			'/wp-content/plugins/sqweb/resources/js/sqweb.js',
+			plugin_dir_url( __FILE__ ) . 'resources/js/sqweb.js',
 			array( 'jquery' )
 		);
+		wp_enqueue_script( 'sqweb-admin-script' );
 	}
 
 	public function register_admin_menu() {
