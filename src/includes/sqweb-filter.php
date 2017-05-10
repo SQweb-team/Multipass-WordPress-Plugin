@@ -29,7 +29,7 @@ class SQweb_Filter_Articles {
 		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 			return apply_filters( 'sqw_filter_content', $content );
 		} else {
-			if ( false !== get_option( 'sqw_filter_all' ) )  {
+			if ( false !== get_option( 'sqw_filter_all' ) ) {
 				return apply_filters( 'sqw_filter_content', $content );
 			}
 			$categorie = unserialize( get_option( 'categorie' ) );
