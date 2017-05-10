@@ -52,9 +52,9 @@ class SqwebAdControl extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance,
 			array(
-			'title' => '',
-			'text' => '',
-			'adblock' => '',
+				'title' => '',
+				'text' => '',
+				'adblock' => '',
 			)
 		);
 		$title = strip_tags( $instance['title'] );
