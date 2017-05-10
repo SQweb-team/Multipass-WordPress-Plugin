@@ -36,7 +36,7 @@ function sqweb_check_credentials( $site_id = null ) {
 						'site_id' => $site_id,
 					),
 					'cookies' => array(),
-				)
+					)
 				);
 			} else {
 				$curl = curl_init();
@@ -122,7 +122,7 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 				'password' => $newpass,
 			),
 			'cookies' => array(),
-		)
+			)
 		);
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
@@ -164,20 +164,20 @@ function sqweb_sign_in( $email, $password ) {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
 		$return = wp_remote_post( SQW_ENDPOINT . 'auth/login', array(
-				'method' => 'POST',
-				'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
-				'timeout' => 2,
-				'redirection' => 3,
-				'httpversion' => '1.0',
-				'blocking' => true,
-				'headers' => array(),
-				'user-agent' => $user_agent,
-				'body' => array(
-					'email' => $email,
-					'password' => $password,
-				),
-				'cookies' => array(),
-			)
+			'method' => 'POST',
+			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+			'timeout' => 2,
+			'redirection' => 3,
+			'httpversion' => '1.0',
+			'blocking' => true,
+			'headers' => array(),
+			'user-agent' => $user_agent,
+			'body' => array(
+				'email' => $email,
+				'password' => $password,
+			),
+			'cookies' => array(),
+		)
 		);
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
@@ -230,7 +230,7 @@ function sqweb_check_token( $token ) {
 				'token' => $token,
 			),
 			'cookies' => array(),
-			)
+		)
 		);
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
@@ -278,7 +278,7 @@ function sqw_get_sites() {
 				'token' => get_option( 'sqw_token' ),
 			),
 			'cookies' => array(),
-		)
+			)
 		);
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
@@ -326,7 +326,7 @@ function sqw_add_website( $data, $token ) {
 				'url' => $data['sqw-ws-url'],
 			),
 			'cookies' => array(),
-		)
+			)
 		);
 		if ( is_wp_error( $return ) ) {
 			return ( 0 );
@@ -372,7 +372,7 @@ function sqw_send_data( $type ) {
 			'user-agent' => $user_agent,
 			'body' => $data,
 			'cookies' => array(),
-		)
+			)
 		);
 	}
 	return ( 0 );
