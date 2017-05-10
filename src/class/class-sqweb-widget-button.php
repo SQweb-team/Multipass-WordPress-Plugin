@@ -46,8 +46,8 @@ class WidgetSqwebButton extends WP_Widget {
 	function form( $instance ) {
 
 		$instance = wp_parse_args( (array) $instance, array(
-				'button' => '',
-			)
+			'button' => '',
+		)
 		);
 		$get_options['wsid'] = (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0);
 		$button = $instance['button'];
