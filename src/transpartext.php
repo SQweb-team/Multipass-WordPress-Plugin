@@ -26,7 +26,7 @@ function transparent( $text, $percent ) {
 	}
 	$array_text = preg_split( '/(<.+?><\/.+?>)|(<.+?>)|( )/', $text, 0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE );
 	foreach ( array_keys( $array_text, ' ', true ) as $key ) {
-	    unset( $array_text[ $key ] );
+		unset( $array_text[ $key ] );
 	}
 	$array_text = array_values( $array_text );
 	$words = count( $array_text );

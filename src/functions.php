@@ -32,11 +32,11 @@ function sqweb_check_credentials( $site_id = null ) {
 					'headers' => array(),
 					'user-agent' => $user_agent,
 					'body' => array(
-					'token' => $cookiez,
-					'site_id' => $site_id,
+						'token' => $cookiez,
+						'site_id' => $site_id,
 					),
 					'cookies' => array(),
-				    )
+					)
 				);
 			} else {
 				$curl = curl_init();
@@ -115,11 +115,11 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 			'headers' => array(),
 			'user-agent' => $user_agent,
 			'body' => array(
-			'role' => '1',
-			'first_name' => $first_name,
-			'last_name' => $last_name,
-			'email' => $email,
-			'password' => $newpass,
+				'role' => '1',
+				'first_name' => $first_name,
+				'last_name' => $last_name,
+				'email' => $email,
+				'password' => $newpass,
 			),
 			'cookies' => array(),
 			)
@@ -227,7 +227,7 @@ function sqweb_check_token( $token ) {
 			'headers' => array(),
 			'user-agent' => $user_agent,
 			'body' => array(
-			'token' => $token,
+				'token' => $token,
 			),
 			'cookies' => array(),
 			)
@@ -275,7 +275,7 @@ function sqw_get_sites() {
 			'headers' => array(),
 			'user-agent' => $user_agent,
 			'body' => array(
-			'token' => get_option( 'sqw_token' ),
+				'token' => get_option( 'sqw_token' ),
 			),
 			'cookies' => array(),
 			)
@@ -321,9 +321,9 @@ function sqw_add_website( $data, $token ) {
 			'headers' => array(),
 			'user-agent' => $user_agent,
 			'body' => array(
-			'token' => $token,
-			'name' => $data['sqw-ws-name'],
-			'url' => $data['sqw-ws-url'],
+				'token' => $token,
+				'name' => $data['sqw-ws-name'],
+				'url' => $data['sqw-ws-url'],
 			),
 			'cookies' => array(),
 			)

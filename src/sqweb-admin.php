@@ -115,10 +115,10 @@ return array(
 
 	public function featured_post_field() {
 
-	    global $post;
+		global $post;
 
-	    /* get the value current value of the custom field */
-	    $check = false;
+		/* get the value current value of the custom field */
+		$check = false;
 		$categorie = unserialize( get_option( 'categorie' ) );
 		$categorie = is_array( $categorie ) ? $categorie : array();
 		$category = get_the_category();
@@ -130,57 +130,57 @@ return array(
 			}
 		}
 		$value = get_post_meta( $post->ID, 'sqw_limited', true );
-	    ?>
-	        <div class="misc-pub-section">
-	            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
-	        </div>
-	    <?php
-	    if ( $check ) {
-		    $value = get_post_meta( $post->ID, 'sqw_unlimited', true );
-		   	?>
-		        <div class="misc-pub-section">
-		            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' );?></label>
-		        </div>
-		    <?php
+		?>
+			<div class="misc-pub-section">
+				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
+			</div>
+		<?php
+		if ( $check ) {
+			$value = get_post_meta( $post->ID, 'sqw_unlimited', true );
+			?>
+				<div class="misc-pub-section">
+					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' );?></label>
+				</div>
+			<?php
 		}
 	}
 
 
 	public function save_postdata( $postid ) {
 
-	    /* check if this is an autosave */
-	    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		/* check if this is an autosave */
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return false;
 		}
 
-	    /* check if the user can edit this page */
-	    if ( ! current_user_can( 'edit_page', $postid ) ) {
-	    	return false;
+		/* check if the user can edit this page */
+		if ( ! current_user_can( 'edit_page', $postid ) ) {
+			return false;
 		}
 
-	    /* check if there's a post id and check if this is a post */
-	    /* make sure this is the same post type as above */
-	    if ( empty( $postid ) ) {
-	    	return false;
-	    }
+		/* check if there's a post id and check if this is a post */
+		/* make sure this is the same post type as above */
+		if ( empty( $postid ) ) {
+			return false;
+		}
 
-	    /* if you are going to use text fields, then you should change the part below */
-	    /* use add_post_meta, update_post_meta and delete_post_meta, to control the stored value */
+		/* if you are going to use text fields, then you should change the part below */
+		/* use add_post_meta, update_post_meta and delete_post_meta, to control the stored value */
 
-	    /* check if the custom field is submitted (checkboxes that aren't marked, aren't submitted) */
-	    if ( isset( $_POST['sqw_limited'] ) ) {
-	        /* store the value in the database */
-	        add_post_meta( $postid, 'sqw_limited', 1, true );
-	        delete_post_meta( $postid, 'sqw_unlimited' );
-	    } else {
-	    	delete_post_meta( $postid, 'sqw_limited' );
-	    }
-	    if ( isset( $_POST['sqw_unlimited'] ) ) {
-	    	add_post_meta( $postid, 'sqw_unlimited', 1, true );
-	        delete_post_meta( $postid, 'sqw_limited' );
-	    } else {
-	    	delete_post_meta( $postid, 'sqw_unlimited' );
-	    }
+		/* check if the custom field is submitted (checkboxes that aren't marked, aren't submitted) */
+		if ( isset( $_POST['sqw_limited'] ) ) {
+			/* store the value in the database */
+			add_post_meta( $postid, 'sqw_limited', 1, true );
+			delete_post_meta( $postid, 'sqw_unlimited' );
+		} else {
+			delete_post_meta( $postid, 'sqw_limited' );
+		}
+		if ( isset( $_POST['sqw_unlimited'] ) ) {
+			add_post_meta( $postid, 'sqw_unlimited', 1, true );
+			delete_post_meta( $postid, 'sqw_limited' );
+		} else {
+			delete_post_meta( $postid, 'sqw_unlimited' );
+		}
 	}
 
 	public function script() {
