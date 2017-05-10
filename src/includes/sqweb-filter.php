@@ -29,6 +29,9 @@ class SQweb_Filter_Articles {
 		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 			return apply_filters( 'sqw_filter_content', $content );
 		} else {
+			if ( get_option( 'sqw_select_all' ) )  {
+				return apply_filters( 'sqw_filter_content', $content );
+			}
 			$categorie = unserialize( get_option( 'categorie' ) );
 			$categorie = is_array( $categorie ) ? $categorie : array();
 			$category = get_the_category();

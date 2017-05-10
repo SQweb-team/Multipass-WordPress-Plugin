@@ -32,6 +32,16 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
+	 * Select all content to filter
+	 */
+	if ( ! empty( $_POST['sqw_select_all'] ) ) {
+		update_option( 'sqw_select_all', true );
+	} else {
+		delete_option( 'sqw_select_all' );
+	}
+
+
+	/**
 	 * Save user role can see article behind paywall in all case
 	 */
 	if ( ! empty( $_POST['exept_role'] ) ) {

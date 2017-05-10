@@ -75,6 +75,9 @@
 									}
 									?>
 								</div>
+								<div class="">
+									<input type="checkbox" name="sqw_select_all" id="sqw_select_all" value="true"><label for="sqw_select_all"><?php _e( 'Select all content', 'sqweb') ?></label>
+								</div>
 								<div class="sqw-check-prior-paywall sqw-clear">
 									<div>
 										<input type="checkbox" name="sqw_prior_paywall" id="sqw_prior_paywall" value="true" <?php echo ( get_option( 'sqw_prior_paywall' ) ? 'checked' : '' ) ?>/>
