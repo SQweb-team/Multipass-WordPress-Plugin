@@ -296,7 +296,7 @@ function sqw_get_sites() {
 				return $response->websites;
 			}
 		}
-	}
+	} // End if()
 	return ( 0 );
 }
 
@@ -316,21 +316,22 @@ function sqw_add_website( $data, $token ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add', array(
-			'method' => 'POST',
-			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
-			'timeout' => 2,
-			'redirection' => 3,
-			'httpversion' => '1.0',
-			'blocking' => true,
-			'headers' => array(),
-			'user-agent' => $user_agent,
-			'body' => array(
-				'token' => $token,
-				'name' => $data['sqw-ws-name'],
-				'url' => $data['sqw-ws-url'],
-			),
-			'cookies' => array(),
+		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add',
+			array(
+				'method' => 'POST',
+				'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+				'timeout' => 2,
+				'redirection' => 3,
+				'httpversion' => '1.0',
+				'blocking' => true,
+				'headers' => array(),
+				'user-agent' => $user_agent,
+				'body' => array(
+					'token' => $token,
+					'name' => $data['sqw-ws-name'],
+					'url' => $data['sqw-ws-url'],
+				),
+				'cookies' => array(),
 			)
 		);
 		if ( is_wp_error( $return ) ) {
@@ -366,17 +367,18 @@ function sqw_send_data( $type ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		wp_remote_post( SQW_ENDPOINT . 'data/send', array(
-			'method' => 'POST',
-			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
-			'timeout' => 1,
-			'redirection' => 3,
-			'httpversion' => '1.0',
-			'blocking' => false,
-			'headers' => array(),
-			'user-agent' => $user_agent,
-			'body' => $data,
-			'cookies' => array(),
+		wp_remote_post( SQW_ENDPOINT . 'data/send',
+			array(
+				'method' => 'POST',
+				'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+				'timeout' => 1,
+				'redirection' => 3,
+				'httpversion' => '1.0',
+				'blocking' => false,
+				'headers' => array(),
+				'user-agent' => $user_agent,
+				'body' => $data,
+				'cookies' => array(),
 			)
 		);
 	}
