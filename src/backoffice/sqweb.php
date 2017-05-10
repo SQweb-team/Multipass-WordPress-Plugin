@@ -55,6 +55,9 @@
 						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
 							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
+							<div class="sqw-check-categorie sqw-filter-all">
+								<input type="checkbox" name="sqw_filter_all" id="sqw_filter_all" value="true" <?php echo ( get_option( 'sqw_filter_all' ) !== false ? 'checked' : '' ); ?>><label for="sqw_filter_all"><?php _e( 'Filter all content', 'sqweb') ?></label>
+							</div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
 								<div class="sqw-check-categorie">
 									<p><?php _e( 'Setup content restrictions :', 'sqweb' ); ?></p>
@@ -69,14 +72,11 @@
 										$i++;
 										echo '
 											<div>
-												<input type="checkbox" name="categorie[]" id="' . $value->slug . '" value="' . $value->slug . '" ' . ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) . '/>
+												<input class="categories_inputs" type="checkbox" name="categorie[]" id="' . $value->slug . '" value="' . $value->slug . '" ' . ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) . '/>
 												<label for="' . $value->slug . '">' . $value->name . '</label>
 											</div>';
 									}
 									?>
-								</div>
-								<div class="">
-									<input type="checkbox" name="sqw_select_all" id="sqw_select_all" value="true"><label for="sqw_select_all"><?php _e( 'Select all content', 'sqweb') ?></label>
 								</div>
 								<div class="sqw-check-prior-paywall sqw-clear">
 									<div>

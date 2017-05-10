@@ -34,10 +34,10 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	/**
 	 * Select all content to filter
 	 */
-	if ( ! empty( $_POST['sqw_select_all'] ) ) {
-		update_option( 'sqw_select_all', true );
+	if ( ! empty( $_POST['sqw_filter_all'] ) ) {
+		update_option( 'sqw_filter_all', true );
 	} else {
-		delete_option( 'sqw_select_all' );
+		delete_option( 'sqw_filter_all' );
 	}
 
 

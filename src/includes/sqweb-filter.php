@@ -29,7 +29,7 @@ class SQweb_Filter_Articles {
 		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 			return apply_filters( 'sqw_filter_content', $content );
 		} else {
-			if ( get_option( 'sqw_select_all' ) )  {
+			if ( false !== get_option( 'sqw_filter_all' ) )  {
 				return apply_filters( 'sqw_filter_content', $content );
 			}
 			$categorie = unserialize( get_option( 'categorie' ) );
@@ -128,7 +128,7 @@ class SQweb_Filter_Articles {
 		global $wpdb;
 
 		$id = get_the_ID();
-		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sqw_limit'" ) != $wpdb->prefix.'sqw_limit' ) {
+		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sqw_limit'" ) != $wpdb->prefix . 'sqw_limit' ) {
 			delete_option( 'artbyday' );
 			return $content;
 		}
