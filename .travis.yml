@@ -29,8 +29,8 @@ before_script:
   - composer global require "jakub-onderka/php-parallel-lint:dev-master"
   - git clone --depth 1 git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git
     ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
-  - phpenv rehash
   - phpcs --config-set installed_paths ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/WordPress
+  - phpenv rehash
   - phpcs -i
   - git clone --depth 1 git://github.com/SQweb-team/SQweb-Coding-Style.git ~/build/SQweb-team/SQweb-Coding-Style
   - nvm install 7
@@ -39,8 +39,8 @@ before_script:
 script:
   # Don't fail the build but print the warnings
   - phpcs --config-set ignore_warnings_on_exit 1
-  - phpcs --standard=WordPress . --extensions=php
-  - phpcs --standard=phpcs.xml . --extensions=php
+  - phpcs -p --standard=WordPress-Core . --extensions=php
+  - phpcs -p --standard=phpcs.xml . --extensions=php
   - parallel-lint src/
   - gulp
 
