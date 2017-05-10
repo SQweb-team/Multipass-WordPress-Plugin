@@ -5,7 +5,6 @@ SQweb WordPress Plugin
 [![WordPress Rating](https://img.shields.io/wordpress/plugin/r/sqweb.svg)](https://wordpress.org/plugins/sqweb/)
 [![Dependency Status](https://www.versioneye.com/user/projects/568c03acdb4b700041000e09/badge.svg)](https://www.versioneye.com/user/projects/568c03acdb4b700041000e09)
 [![Known Vulnerabilities](https://snyk.io/test/github/sqweb-team/sqweb-wordpress-plugin/badge.svg)](https://snyk.io/test/github/sqweb-team/sqweb-wordpress-plugin)
-[![License](https://img.shields.io/badge/license-GPL%20v3-428F7E.svg)](http://opensource.org/licenses/GPL-3.0)
 
 **This plugin enables you to easily install SQweb on your WordPress powered site.**
 
@@ -21,7 +20,7 @@ All PHP code must pass [WordPress-Core](https://github.com/WordPress-Coding-Stan
 
 For more information about JavaScript and CSS, please see our [Coding Style](https://github.com/SQweb-team/SQweb-Coding-Style) guide.
 
-### Builing
+### Building
 
 Builds are handled with `gulp`. To get a build of the plugin, simply execute `gulp`. This will handle minification and packaging, and prepare a zip for you in `dist/`.
 
