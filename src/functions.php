@@ -296,7 +296,7 @@ function sqw_get_sites() {
 				return $response->websites;
 			}
 		}
-	} // End if()
+	} // End if().
 	return ( 0 );
 }
 
@@ -343,7 +343,7 @@ function sqw_add_website( $data, $token ) {
 				return ( $res->website );
 			}
 		}
-	}
+	} // End if().
 	return ( 0 );
 }
 
