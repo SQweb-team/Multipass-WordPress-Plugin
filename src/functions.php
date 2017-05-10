@@ -217,20 +217,21 @@ function sqweb_check_token( $token ) {
 		} else {
 			$user_agent = 'SQweb/WordPress Undefined; Curl ' . $curl_version['version'] . ( ! empty( $curl_version['ssl_version'] ) ? '; SSL ' . $curl_version['ssl_version'] : '');
 		}
-		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t', array(
-			'method' => 'POST',
-			'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
-			'timeout' => 2,
-			'redirection' => 3,
-			'httpversion' => '1.0',
-			'blocking' => true,
-			'headers' => array(),
-			'user-agent' => $user_agent,
-			'body' => array(
-				'token' => $token,
-			),
-			'cookies' => array(),
-		)
+		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t',
+			array(
+				'method' => 'POST',
+				'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
+				'timeout' => 2,
+				'redirection' => 3,
+				'httpversion' => '1.0',
+				'blocking' => true,
+				'headers' => array(),
+				'user-agent' => $user_agent,
+				'body' => array(
+					'token' => $token,
+				),
+				'cookies' => array(),
+			)
 		);
 		if ( is_wp_error( $return ) ) {
 			if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {
