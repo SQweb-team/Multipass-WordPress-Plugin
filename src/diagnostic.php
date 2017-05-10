@@ -13,7 +13,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 		'admin_email' => get_bloginfo( 'admin_email' ),
 	);
 	foreach ( $plugins as $value ) {
-		$infos['report_plugins'][$value['Name']] = array(
+		$infos['report_plugins'][ $value['Name'] ] = array(
 			'Version' => $value['Version'],
 			'PluginURI' => $value['PluginURI'],
 		);
@@ -26,7 +26,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email'];
 		} else {
 			$message .= '<br><br>Plugins: <br><br>';
-			foreach ($info as $key => $plugin) {
+			foreach ( $info as $key => $plugin ) {
 				$message .= 'Name => ' . $key;
 				$message .= '<br>Version => ' . $plugin['Version'];
 				$message .= '<br>PluginURI => ' . $plugin['PluginURI'] . '<br><br>';

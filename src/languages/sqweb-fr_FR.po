@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-05-09 16:24+0200\n"
-"PO-Revision-Date: 2017-05-09 16:55+0200\n"
+"POT-Creation-Date: 2017-05-10 13:53+0200\n"
+"PO-Revision-Date: 2017-05-10 13:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -308,7 +308,7 @@ msgstr "Cliquez ici pour vous connecter"
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
-#: diagnostic.php:35
+#: diagnostic.php:37
 msgid "Your diagnostic has been sent to our support team."
 msgstr "Votre diagnostique a été envoyé à notre support technique."
 
@@ -426,15 +426,15 @@ msgstr "Se déconnecter de SQweb"
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:135
+#: sqweb-admin.php:136
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:142
+#: sqweb-admin.php:143
 msgid "Post available for every users"
 msgstr "Poste disponible pour tous les utilisateurs"
 
-#: sqweb-admin.php:218
+#: sqweb-admin.php:221
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
 
