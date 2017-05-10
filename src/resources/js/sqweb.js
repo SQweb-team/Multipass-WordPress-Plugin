@@ -137,5 +137,13 @@ jQuery(function($) {
 		$('#sqw-login-msg, #sqw-logout-msg').keyup(function() {
 			$('.sqw-btn-mp-link').text($(this).val());
 		});
+
+		$('#sqw_filter_all').click(function() {
+			if ($('#sqw_filter_all').attr('checked') !== undefined ) {
+				$('.categories_inputs').attr('disabled', true);
+			} else {
+				$('.categories_inputs').attr('disabled', false);
+			}
+		});
 	});
 });

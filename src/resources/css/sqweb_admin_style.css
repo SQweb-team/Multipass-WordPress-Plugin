@@ -231,6 +231,11 @@ input[type=password] {
     margin-left: 3%;
 }
 
+.sqw-filter-all {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
 .sqw-check-categorie div,
 .sqw-check-user-rank div {
     margin-bottom: 15px;
