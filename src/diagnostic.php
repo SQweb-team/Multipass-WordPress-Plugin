@@ -24,7 +24,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 	foreach ( $infos as $key => $info ) {
 		if ( 'report_website' == $key ) {
 			$message .= 'About WordPress:<br><br>name => ' . $info['name'] . '<br>version => ' . $info['version'];
-			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email']'<br>template url => ' . $info['template_url'];
+			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email'] . '<br>template url => ' . $info['template_url'];
 		} else {
 			$message .= '<br><br>Plugins: <br><br>';
 			foreach ( $info as $key => $plugin ) {
