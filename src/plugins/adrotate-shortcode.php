@@ -15,7 +15,7 @@
  Purpose:   Prepare function requests for calls on shortcodes
  Receive:   $atts, $content
  Return:    Function()
- Since:		0.7
+ Since:     0.7
 -------------------------------------------------------------*/
 function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 	global $adrotate_config;
@@ -33,7 +33,7 @@ function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 		$fallback = 0;
 	}
 	if ( ! empty( $atts['weight'] ) ) {
-		$weight	= 0;
+		$weight = 0;
 	}
 	if ( ! empty( $atts['site'] ) ) {
 		$site = 0;

@@ -74,7 +74,7 @@ return array(
 	\'filter.text\' => \'YTowOnt9\',
 );
 ';
-		file_put_contents( WP_PLUGIN_DIR . '/sqweb/sqweb-config.php', $content );
+		file_put_contents( plugin_dir_url( __FILE__ ) . 'sqweb-config.php', $content );
 		if ( function_exists( 'wp_redirect' ) ) {
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
 		}
@@ -109,16 +109,17 @@ return array(
 			array(
 				'type' => $type,
 				'message' => $message,
-		) );
+			)
+		);
 		update_option( 'sqw_message', serialize( $messages ) );
 	}
 
 	public function featured_post_field() {
 
-	    global $post;
+		global $post;
 
-	    /* get the value current value of the custom field */
-	    $check = false;
+		/* get the value current value of the custom field */
+		$check = false;
 		$categorie = unserialize( get_option( 'categorie' ) );
 		$categorie = is_array( $categorie ) ? $categorie : array();
 		$category = get_the_category();
@@ -130,69 +131,71 @@ return array(
 			}
 		}
 		$value = get_post_meta( $post->ID, 'sqw_limited', true );
-	    ?>
-	        <div class="misc-pub-section">
-	            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
-	        </div>
-	    <?php
-	    if ( $check ) {
-		    $value = get_post_meta( $post->ID, 'sqw_unlimited', true );
-		   	?>
-		        <div class="misc-pub-section">
-		            <label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' );?></label>
-		        </div>
-		    <?php
+		?>
+			<div class="misc-pub-section">
+				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
+			</div>
+		<?php
+		if ( $check ) {
+			$value = get_post_meta( $post->ID, 'sqw_unlimited', true );
+			?>
+				<div class="misc-pub-section">
+					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' );?></label>
+				</div>
+			<?php
 		}
 	}
 
 
 	public function save_postdata( $postid ) {
 
-	    /* check if this is an autosave */
-	    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		/* check if this is an autosave */
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return false;
 		}
 
-	    /* check if the user can edit this page */
-	    if ( ! current_user_can( 'edit_page', $postid ) ) {
-	    	return false;
+		/* check if the user can edit this page */
+		if ( ! current_user_can( 'edit_page', $postid ) ) {
+			return false;
 		}
 
-	    /* check if there's a post id and check if this is a post */
-	    /* make sure this is the same post type as above */
-	    if ( empty( $postid ) ) {
-	    	return false;
-	    }
+		/* check if there's a post id and check if this is a post */
+		/* make sure this is the same post type as above */
+		if ( empty( $postid ) ) {
+			return false;
+		}
 
-	    /* if you are going to use text fields, then you should change the part below */
-	    /* use add_post_meta, update_post_meta and delete_post_meta, to control the stored value */
+		/* if you are going to use text fields, then you should change the part below */
+		/* use add_post_meta, update_post_meta and delete_post_meta, to control the stored value */
 
-	    /* check if the custom field is submitted (checkboxes that aren't marked, aren't submitted) */
-	    if ( isset( $_POST['sqw_limited'] ) ) {
-	        /* store the value in the database */
-	        add_post_meta( $postid, 'sqw_limited', 1, true );
-	        delete_post_meta( $postid, 'sqw_unlimited' );
-	    } else {
-	    	delete_post_meta( $postid, 'sqw_limited' );
-	    }
-	    if ( isset( $_POST['sqw_unlimited'] ) ) {
-	    	add_post_meta( $postid, 'sqw_unlimited', 1, true );
-	        delete_post_meta( $postid, 'sqw_limited' );
-	    } else {
-	    	delete_post_meta( $postid, 'sqw_unlimited' );
-	    }
+		/* check if the custom field is submitted (checkboxes that aren't marked, aren't submitted) */
+		if ( isset( $_POST['sqw_limited'] ) ) {
+			/* store the value in the database */
+			add_post_meta( $postid, 'sqw_limited', 1, true );
+			delete_post_meta( $postid, 'sqw_unlimited' );
+		} else {
+			delete_post_meta( $postid, 'sqw_limited' );
+		}
+		if ( isset( $_POST['sqw_unlimited'] ) ) {
+			add_post_meta( $postid, 'sqw_unlimited', 1, true );
+			delete_post_meta( $postid, 'sqw_limited' );
+		} else {
+			delete_post_meta( $postid, 'sqw_unlimited' );
+		}
 	}
 
 	public function script() {
-		wp_enqueue_style(
+		wp_register_style(
 			'sqweb-admin-style',
-			'/wp-content/plugins/sqweb/resources/css/sqweb_admin_style.css'
+			plugin_dir_url( __FILE__ ) . 'resources/css/sqweb_admin_style.css'
 		);
-		wp_enqueue_script(
+		wp_enqueue_style( 'sqweb-admin-style' );
+		wp_register_script(
 			'sqweb-admin-script',
-			'/wp-content/plugins/sqweb/resources/js/sqweb.js',
+			plugin_dir_url( __FILE__ ) . 'resources/js/sqweb.js',
 			array( 'jquery' )
 		);
+		wp_enqueue_script( 'sqweb-admin-script' );
 	}
 
 	public function register_admin_menu() {
@@ -206,6 +209,7 @@ return array(
 				exit;
 			}
 			include_once 'save.php';
+			include_once 'diagnostic.php';
 		}
 		add_menu_page( 'Manage SQweb', 'SQweb', 'manage_options', 'SQwebAdmin', 'sqweb_display_admin_menu' );
 		if ( defined( 'DEBUG_MODE' ) && DEBUG_MODE ) {

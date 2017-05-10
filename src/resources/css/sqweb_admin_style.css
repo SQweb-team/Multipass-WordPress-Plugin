@@ -144,6 +144,15 @@ input[type=password] {
     background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FscXVlXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMyLjIgMzIuMiI+PHN0eWxlPi5zdDAsLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNiMmIyYjI7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfS5zdDF7c3Ryb2tlLWxpbmVjYXA6cm91bmR9PC9zdHlsZT48Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxNS41IiBjeT0iMTkuNyIgcj0iLjUiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTUuNSAyMC4ydjMiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNNyAxNC4yaDE3djE0SDd6bTMtMy41YzAtMyAyLjUtNS41IDUuNS01LjVTMjEgNy43IDIxIDEwLjd2My41SDEwdi0zLjV6Ii8+PC9zdmc+');
 }
 
+.sqw-diagnostic {
+    background: #4491ff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
 .sqw-form button {
     margin-top: 20px;
     border: none;
@@ -151,6 +160,7 @@ input[type=password] {
     color: white;
     width: 100%;
     padding: 10px;
+    cursor: pointer;
 }
 
 /**
