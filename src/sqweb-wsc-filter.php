@@ -17,7 +17,6 @@ class SQweb_filter { // @codingStandardsIgnoreStart
 	private $_text;
 	private $_wsid;
 	private $_data_set = false;
-	private $_w3tc;
 	private $_type_cache = 0;
 
 	public function __construct() {
@@ -160,7 +159,7 @@ class SQweb_filter { // @codingStandardsIgnoreStart
 	public function clean_data() {
 		global $wpdb;
 		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sqw_limit'" ) == $wpdb->prefix.'sqw_limit' ) {
-			$count = $wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->prefix}sqw_limit WHERE time <= %d", array( ( time() - 86400 ) ) ) );
+			$wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->prefix}sqw_limit WHERE time <= %d", array( ( time() - 86400 ) ) ) );
 		}
 	}
 }
