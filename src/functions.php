@@ -25,7 +25,6 @@ function sqweb_check_credentials( $site_id = null ) {
 				$return = wp_remote_post( SQW_ENDPOINT . 'token/check',
 					array(
 						'method' => 'POST',
-						// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 						'timeout' => 2,
 						'redirection' => 3,
 						'httpversion' => '1.0',
@@ -63,11 +62,10 @@ function sqweb_check_credentials( $site_id = null ) {
 				}
 				$credentials = false;
 			} else {
+				$credentials = false;
 				$response = json_decode( isset( $return['body'] ) ? $return['body'] : $return );
 				if ( false !== $response && true === $response->status && $response->credit > 0 ) {
 					$credentials = true;
-				} else {
-					$credentials = false;
 				}
 			}
 		} else {
@@ -109,7 +107,6 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/new',
 			array(
 				'method' => 'POST',
-				// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 				'timeout' => 5,
 				'redirection' => 3,
 				'httpversion' => '1.0',
@@ -168,7 +165,6 @@ function sqweb_sign_in( $email, $password ) {
 		$return = wp_remote_post( SQW_ENDPOINT . 'auth/login',
 			array(
 				'method' => 'POST',
-				// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 				'timeout' => 2,
 				'redirection' => 3,
 				'httpversion' => '1.0',
@@ -223,7 +219,6 @@ function sqweb_check_token( $token ) {
 		$return = wp_remote_post( SQW_ENDPOINT . 'sqw_auth/is_auth_t',
 			array(
 				'method' => 'POST',
-				// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 				'timeout' => 2,
 				'redirection' => 3,
 				'httpversion' => '1.0',
@@ -272,7 +267,6 @@ function sqw_get_sites() {
 		$return = wp_remote_post( SQW_ENDPOINT . 'websites',
 			array(
 				'method' => 'POST',
-				// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 				'timeout' => 3,
 				'redirection' => 3,
 				'httpversion' => '1.0',
@@ -319,7 +313,6 @@ function sqw_add_website( $data, $token ) {
 		$return = wp_remote_post( SQW_ENDPOINT . 'websites/add',
 			array(
 				'method' => 'POST',
-				// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 				'timeout' => 2,
 				'redirection' => 3,
 				'httpversion' => '1.0',
@@ -370,7 +363,6 @@ function sqw_send_data( $type ) {
 		wp_remote_post( SQW_ENDPOINT . 'data/send',
 			array(
 				'method' => 'POST',
-				// 'sslcertificates' => plugin_dir_path( __FILE__ ) . 'resources/certificates/cacert.pem',
 				'timeout' => 1,
 				'redirection' => 3,
 				'httpversion' => '1.0',
