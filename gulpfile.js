@@ -1,12 +1,19 @@
 'use strict';
 
 let gulp = require('gulp');
+let jshint = require('gulp-jshint');
 let nano = require('gulp-cssnano');
 let sequence = require('gulp-sequence');
 let zip = require('gulp-zip');
 let del = require('del');
 let autoprefixer = require('gulp-autoprefixer');
 let stylelint = require('gulp-stylelint');
+
+gulp.task('jshint', () => gulp
+    .src('src/resources/js/*.js')
+    .pipe(jshint(__dirname + '/../SQweb-Coding-Style/js/.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'))
+);
 
 gulp.task('css-lint', () => gulp
   .src('src/resources/css/*.css')
@@ -50,6 +57,6 @@ gulp.task('zip', () => gulp
 
 gulp.task('clean', () => del(['build/']));
 
-gulp.task('keep-build', sequence('css-lint', 'copy', 'css-minify', 'zip'));
+gulp.task('keep-build', sequence('jshint', 'css-lint', 'copy', 'css-minify', 'zip'));
 
-gulp.task('default', sequence('css-lint', 'copy', 'css-minify', 'cleanup', 'zip', 'clean'));
+gulp.task('default', sequence('jshint', 'css-lint', 'copy', 'css-minify', 'cleanup', 'zip', 'clean'));

@@ -16,7 +16,7 @@ jQuery(function($) {
 		var multipass_punch_line = {
 										'fr':'Lecture Illimitée • Zéro Pub',
 										'en':'Unrestricted Access • No Ads',
-									}
+									};
 
 		function change_lang_button(lang) {
 			$('.sqw-btn-mp-link-tiny-none').html(multipass_button_lang[lang]);
@@ -61,7 +61,7 @@ jQuery(function($) {
 			$('.sqw-' + $(this).attr('name') + '-body').toggle(200);
 			var valid = 1;
 			var value = $('.sqw-' + $(this).attr('name') + '-input').val();
-			if (value == 1) {
+			if (value === 1) {
 				valid = 0;
 			}
 			$('.sqw-' + $(this).attr('name') + '-input').val(valid);
@@ -75,16 +75,16 @@ jQuery(function($) {
 
 		function checkMail(mail) {
 			if (mail.match(/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/)) {
-				return (1);
+				return 1;
 			}
-			return (0);
+			return 0;
 		}
 
 		function checkPassword(pass) {
 			if (pass.length >= 8) {
-				return (1);
+				return 1;
 			}
-			return (0);
+			return 0;
 		}
 
 		$('.sqw-form input[type=text], input[type=email], input[type=password]').keyup(function() {
@@ -107,7 +107,7 @@ jQuery(function($) {
 					break;
 
 				case 'sqw-confirmp':
-					valid = (checkPassword($(this).val()) && $(this).val() === $('.sqw-form input[name=sqw-password]').val());
+					valid = checkPassword($(this).val()) && $(this).val() === $('.sqw-form input[name=sqw-password]').val();
 					break;
 			}
 			if (valid) {
