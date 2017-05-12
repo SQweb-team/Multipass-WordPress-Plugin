@@ -69,7 +69,6 @@ class SQweb_Filter_Articles {
 
 	public function filter_content( $content ) {
 
-		global $wpdb;
 		$restrictcutartperc = apply_filters( 'sqw_msg_restrict_cut_art_perc', $this->msg_restrict_cut_art_perc() );
 		$restrictartbyday = apply_filters( 'sqw_msg_restrict_art_by_day', $this->msg_restrict_art_by_day() );
 		$restrictdateart = apply_filters( 'sqw_msg_restrict_date_art', $this->msg_restrict_date_art() );

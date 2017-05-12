@@ -86,9 +86,7 @@ return array(
 	}
 
 	public static function notice_event() {
-		/**
-		 * Display notif added previously
-		 */
+		/* Display notif added previously */
 		$message = unserialize( get_option( 'sqw_message' ) );
 		foreach ( $message as $value ) {
 			?>
@@ -149,12 +147,12 @@ return array(
 
 	public function save_postdata( $postid ) {
 
-		/* check if this is an autosave */
+		/* Is this an autosave */
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return false;
 		}
 
-		/* check if the user can edit this page */
+		/* Can the user edit this page */
 		if ( ! current_user_can( 'edit_page', $postid ) ) {
 			return false;
 		}
@@ -199,8 +197,6 @@ return array(
 	}
 
 	public function register_admin_menu() {
-
-		global $wpdb;
 		if ( isset( $_GET['page'] ) && 'SQwebAdmin' == $_GET['page'] ) {
 			include_once 'login.php';
 			if ( isset( $_GET['logout'] ) && 1 == $_GET['logout'] ) {
