@@ -164,7 +164,7 @@ function compatibility_easy_adsense() {
 	//Compatibility easy adsense
 	//disable ads in ezAdsense
 	// @codingStandardsIgnoreStart
-	if ( class_exists( "ezAdSense" ) ) {
+	if ( class_exists( 'ezAdSense' ) ) {
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
 			global $ezCount, $urCount;
 			$ezCount = 100;
@@ -172,7 +172,7 @@ function compatibility_easy_adsense() {
 		}
 	}
 	//disable ads in Easy Adsense (newer versions)
-	if ( class_exists( "EzAdSense" ) ) {
+	if ( class_exists( 'EzAdSense' ) ) {
 		if ( apply_filters( 'sqw_check_credentials', get_option('wsid') ) ) {
 			global $ezAdSense;
 			$ezAdSense->ezCount = 100;
