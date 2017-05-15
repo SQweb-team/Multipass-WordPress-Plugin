@@ -27,7 +27,10 @@ class SQweb_Filter_Articles {
 	public function limited_sqw( $content ) {
 		global $post;
 
-		$ok_roles = array( 0 => 'administrator', 1 => 'administrator' );
+		$ok_roles = array(
+			0 => 'administrator',
+			1 => 'administrator'
+		);
 		$user_data = wp_get_current_user();
 		if ( 0 == $user_data->ID || 2 >= array_diff( $ok_roles, $user_data->roles ) ) {
 			if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
