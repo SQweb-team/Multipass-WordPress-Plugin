@@ -2,8 +2,9 @@
 /**
  * Get information about the WordPress installation, template and all installed plugins.
  */
-
+ // url => get_site_url();
 if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
+
 	$plugins = get_plugins();
 	$infos = array();
 	$infos['report_website'] = array(
