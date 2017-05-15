@@ -2,6 +2,7 @@
 /**
  * Get information about the WordPress installation, template and all installed plugins.
  */
+
 if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 	$plugins = get_plugins();
 	$infos = array();
@@ -12,6 +13,8 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 		'url' => get_bloginfo( 'url' ),
 		'admin_email' => get_bloginfo( 'admin_email' ),
 		'template_url' => get_bloginfo( 'template_url' ),
+		'server_software' => $_SERVER['SERVER_SOFTWARE'],
+		'server_signature' => $_SERVER['SERVER_SIGNATURE'],
 	);
 	foreach ( $plugins as $value ) {
 		$infos['report_plugins'][ $value['Name'] ] = array(
@@ -25,6 +28,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 		if ( 'report_website' == $key ) {
 			$message .= 'About WordPress:<br><br>name => ' . $info['name'] . '<br>version => ' . $info['version'];
 			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email'] . '<br>template url => ' . $info['template_url'];
+			$message .= '<br>server_software => ' . $info['server_software'] . '<br>server_signature => ' . $info['server_signature'];
 		} else {
 			$message .= '<br><br>Plugins: <br><br>';
 			foreach ( $info as $key => $plugin ) {

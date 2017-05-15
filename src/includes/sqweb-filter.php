@@ -26,19 +26,24 @@ class SQweb_Filter_Articles {
 
 	public function limited_sqw( $content ) {
 		global $post;
-		if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
-			return apply_filters( 'sqw_filter_content', $content );
-		} else {
-			if ( false !== get_option( 'sqw_filter_all' ) ) {
+
+		$ok_roles = array( 0 => 'administrator', 1 => 'administrator' );
+		$user_data = wp_get_current_user();
+		if ( 0 == $user_data->ID || 2 >= array_diff( $ok_roles, $user_data->roles ) ) {
+			if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
 				return apply_filters( 'sqw_filter_content', $content );
-			}
-			$categorie = unserialize( get_option( 'categorie' ) );
-			$categorie = is_array( $categorie ) ? $categorie : array();
-			$category = get_the_category();
-			foreach ( $category as $value ) {
-				foreach ( $categorie as $cat ) {
-					if ( $value->slug == $cat ) {
-						return apply_filters( 'sqw_filter_content', $content );
+			} else {
+				if ( false !== get_option( 'sqw_filter_all' ) ) {
+					return apply_filters( 'sqw_filter_content', $content );
+				}
+				$categorie = unserialize( get_option( 'categorie' ) );
+				$categorie = is_array( $categorie ) ? $categorie : array();
+				$category = get_the_category();
+				foreach ( $category as $value ) {
+					foreach ( $categorie as $cat ) {
+						if ( $value->slug == $cat ) {
+							return apply_filters( 'sqw_filter_content', $content );
+						}
 					}
 				}
 			}
