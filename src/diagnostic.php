@@ -38,7 +38,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email'] . '<br>template url => ' . $info['template_url'];
 			$message .= '<br>server_software => ' . $info['server_software'] . '<br>server_signature => ' . $info['server_signature'];
 			$message .= '<br><br>Header informations:<br><br>';
-			foreach ($header_infos as $key => $header_info) {
+			foreach ( $header_infos as $key => $header_info ) {
 				$message .= $key . ' => ' . $header_info . '<br>';
 			}
 		} else {
