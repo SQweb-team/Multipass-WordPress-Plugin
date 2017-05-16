@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.7.4
-Stable tag: 2.6.2
+Stable tag: 2.6.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -139,14 +139,18 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.6.3 =
+* Administrator and editors will not be blocked by Multipass anymore.
+* Improve the diagnostic feature to send informations about the website's header.
+
 = v2.6.2 =
-* Added an option to filter all articles at once.
+* Add an option to filter all articles at once.
 
 = v2.6.1 =
-* Improved database and scheduled task management
+* Improve database and scheduled task management.
 
 = v2.6.0 =
-* Introduced diagnostic feature.
+* Introduce diagnostic feature.
 
 = v2.5.2 =
 * Add dynamic popup option.
