@@ -3,18 +3,18 @@
 function curl_api( $method, $protocol ) {
 	$curl = curl_init();
 	if ( 'get' === $method ) {
-		curl_setopt_array( $curl, [
+		curl_setopt_array( $curl, array(
 			CURLOPT_URL => $protocol . '://api.multipass.net/ping',
 			CURLOPT_RETURNTRANSFER => 1,
 			CURLOPT_VERBOSE => 1,
-		]);
+		) );
 	} elseif ( 'post' === $method ) {
-		curl_setopt_array( $curl, [
+		curl_setopt_array( $curl, array(
 			CURLOPT_URL => $protocol . '://api.multipass.net/ping',
 			CURLOPT_RETURNTRANSFER => 1,
 			CURLOPT_POST  => 1,
 			CURLOPT_VERBOSE => 1,
-		]);
+		) );
 	}
 	return $curl;
 }
@@ -43,12 +43,12 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 		),
 	);
 	$message = 'API Connectivity:<br><br>';
-	foreach ($api_test as $value) {
+	foreach ( $api_test as $value ) {
 		$curl = curl_api( $value[1], $value[0] );
 		$response = curl_exec( $curl );
-		$message.= 'Method: ' . $value[1] . '<br>';
-		$message.= 'Protocol: ' . $value[0] . '<br>';
-		$message.= 'Status: ' . ($response === "1" ? 1 : 0) . '<br><br>';
+		$message .= 'Method: ' . $value[1] . '<br>';
+		$message .= 'Protocol: ' . $value[0] . '<br>';
+		$message .= 'Status: ' . ( '1' === $response ? 1 : 0 ) . '<br><br>';
 	}
 	$plugins = get_plugins();
 	stream_context_set_default(
