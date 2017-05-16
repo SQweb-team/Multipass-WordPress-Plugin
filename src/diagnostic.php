@@ -1,23 +1,22 @@
 <?php
 
-function curl_api($method, $protocol)
-{
-  $curl = curl_init();
-  if ( 'get' === $method ) {
-    curl_setopt_array( $curl, [
-      CURLOPT_URL => $protocol . '://api.multipass.net/ping',
-      CURLOPT_RETURNTRANSFER => 1,
-      CURLOPT_VERBOSE => 1,
-    ]);
-  } elseif ( 'post' === $method ) {
-    curl_setopt_array( $curl, [
-      CURLOPT_URL => $protocol . '://api.multipass.net/ping',
-      CURLOPT_RETURNTRANSFER => 1,
-      CURLOPT_POST  => 1,
-      CURLOPT_VERBOSE => 1,
-    ]);
-  }
-  return $curl;
+function curl_api( $method, $protocol ) {
+	$curl = curl_init();
+	if ( 'get' === $method ) {
+		curl_setopt_array( $curl, [
+			CURLOPT_URL => $protocol . '://api.multipass.net/ping',
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_VERBOSE => 1,
+		]);
+	} elseif ( 'post' === $method ) {
+		curl_setopt_array( $curl, [
+			CURLOPT_URL => $protocol . '://api.multipass.net/ping',
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_POST  => 1,
+			CURLOPT_VERBOSE => 1,
+		]);
+	}
+	return $curl;
 }
 
 /**
