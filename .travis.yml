@@ -13,6 +13,7 @@ env:
     - secure: T3IggkimxNkj5fgvqcKFDWvdmyOcdyf6guA7TzK9houRRFHitcDi6Y3g4KJqpgI8Lcvt2PH8ByeDuf7tfzgKZXwUV1FDNeOizqLgHywXSKg1HiQnWkCmiUekQkPeyz7VTfoZ94WicIZ2Be9U6PpPdvNTmIWrvkPiKAWi1UsQXO5HJghAKBbIAx8LNnYF1C2DHAHlpD5Y+EZXgEPNaXHeE80ZiCKRFIbKu8nwe9hcdNlzO/uCo+v1ocbhZRnDI0QfYz7h9Tz4SxiTiOis5DyE2xQRQSa5YpMS1tLQNDJSBcxEzFX5d4PP+eYRiARqAmejXlY2dOBiqD+xpLoVlh4VCo8fnghYfUDox2Pu8tJrzyL54067I0zrEhl+BCUO2eOVROqH8XWSmTTjgbULV2CrxVbcUt5SX538yTQO4YDq+TJdY0I7b19HWtGYJeizvQKmfeQUoKhB38a1dCVrh2HSg25AoApMmFuPyUdF6H5jkNuk1mhdimCOA99fPmfPQbGrm/Z/lK8R9EIBMxKHr7OM4PF9E2UPsUkuemGOqo3/fZOoLgkYULwbZTBPF+vHbN2U2zi4KAFi9cZ4w2E590+wtSWLGouO26vCm+Z1KHXDRGxt3X5O6SFTpsqb6wyb0Z5NGrtxRqIDJ/ESIHVQ7KzctzaWE2s0cXMr+UVvz4CtK7k=
   matrix:
     - WP_VERSION=latest WP_MULTISITE=0
+
 matrix:
   allow_failures:
     - php: hhvm
@@ -44,7 +45,11 @@ script:
   - gulp
 
 notifications:
-  slack: nwork:uXpjfOLXGLjDDxjthLtphsrz
+  slack:
+    on_success: never
+    on_failure: always
+    rooms:
+      secure: WOTCJsWG024RD5U4b5ZHBSh1NSAsddu2YAYaQ9seQWG75eVhiAte62wwsgDfuoFDCRLD340bfFVm/2iHL4d8rjv43t5CFYC2srgLPKZ2zdcBwT8/z00eAlHpfa3O95kxiZF05s+RiOW0Vn1iV1KSyzFVf/FtlbhO6I+TFwRl2aYXtvOz5yu1hgQf9WmB8MQrasSGaObZJs7WQ92rvxZmSnw2mL6/52FHmZG1EERNDj6bsZgfvEEK06RrfGE+j+NCy6+0fA9S2Yhkb9Bff2PZD28lw4Z7jmcJcFwd0H2OghC00jjffP/uz4OmsAm2EUcicllIBc8y/8tHSRIvdGB8XyE3/TBa4Qur/rJNUe7WYvr2moR823BeHxdgaNUK8fAiXqqLJbdY0pXU0f5sOUP5kLm8T7cjkMCw2J74jLiYvIsMoq12piwzvkE0089euYcXRogZfw5X10vmVzWxGaUbveXW1B1kqI6awgb0FLZg25H6y2ze3tWAH0cwZGtZ1aGvyb1CP89HfXne2TjUx9a6sn/UxuGgu5dFN8UvhryHTVwHaj8rQpViR8xAp5lFqhl9awflEYGO50WzaEOYHykMqf4V5u5HRaFMlCu6KHbkzlh2qK1zIaTUV8ZqT9WkW6phmqnbyvMrKeO4AL3LsYlCrzmRIrrgosTxvowZ3Je7D18=
   email: false
 
 git:
@@ -60,4 +65,4 @@ deploy:
     tags: true
 
 after_deploy:
-  - ./release_wordpress_after_deploy.sh
+  - "./release_wordpress_after_deploy.sh"
