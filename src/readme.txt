@@ -139,14 +139,18 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.6.3 =
+* Administrator and editors will not be blocked by Multipass anymore.
+* Improve the diagnostic feature to send informations about the website's header.
+
 = v2.6.2 =
-* Added an option to filter all articles at once.
+* Add an option to filter all articles at once.
 
 = v2.6.1 =
-* Improved database and scheduled task management
+* Improve database and scheduled task management.
 
 = v2.6.0 =
-* Introduced diagnostic feature.
+* Introduce diagnostic feature.
 
 = v2.5.2 =
 * Add dynamic popup option.
