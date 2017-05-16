@@ -1,9 +1,55 @@
 <?php
+
+function curl_api( $method, $protocol ) {
+	$curl = curl_init();
+	if ( 'get' === $method ) {
+		curl_setopt_array( $curl, array(
+			CURLOPT_URL => $protocol . '://api.multipass.net/ping',
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_VERBOSE => 1,
+		) );
+	} elseif ( 'post' === $method ) {
+		curl_setopt_array( $curl, array(
+			CURLOPT_URL => $protocol . '://api.multipass.net/ping',
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_POST  => 1,
+			CURLOPT_VERBOSE => 1,
+		) );
+	}
+	return $curl;
+}
+
 /**
  * Get information about the WordPress installation, template and all installed plugins.
  */
  // url => get_site_url();
 if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
+	$api_test = array(
+		0 => array(
+			'http',
+			'get',
+		),
+		1 => array(
+			'https',
+			'get',
+		),
+		2 => array(
+			'http',
+			'post',
+		),
+		3 => array(
+			'https',
+			'post',
+		),
+	);
+	$message = 'API Connectivity:<br><br>';
+	foreach ( $api_test as $value ) {
+		$curl = curl_api( $value[1], $value[0] );
+		$response = curl_exec( $curl );
+		$message .= 'Method: ' . $value[1] . '<br>';
+		$message .= 'Protocol: ' . $value[0] . '<br>';
+		$message .= 'Status: ' . ( '1' === $response ? 1 : 0 ) . '<br><br>';
+	}
 	$plugins = get_plugins();
 	stream_context_set_default(
 		array(
@@ -30,8 +76,6 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 			'PluginURI' => $value['PluginURI'],
 		);
 	}
-	$message = '';
-	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
 	foreach ( $infos as $key => $info ) {
 		if ( 'report_website' == $key ) {
 			$message .= 'About WordPress:<br><br>name => ' . $info['name'] . '<br>version => ' . $info['version'];
@@ -50,7 +94,8 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 			}
 		}
 	}
-	$verif = wp_mail( 'hello@sqweb.com', $infos['report_website']['name'] . ' diagnostic', $message, $headers );
+	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
+	$verif = wp_mail( 'diagnostic@sqweb.com', $infos['report_website']['name'] . ' diagnostic', $message, $headers );
 	SQweb_Admin::add_notice_event( 'success', __( 'Your diagnostic has been sent to our support team.', 'sqweb' ) );
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
