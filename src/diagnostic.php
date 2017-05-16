@@ -8,8 +8,8 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 	stream_context_set_default(
 		array(
 			'http' => array(
-				'method' => 'HEAD'
-			)
+				'method' => 'HEAD',
+			),
 		)
 	);
 	$header_infos = get_headers( get_site_url() );
