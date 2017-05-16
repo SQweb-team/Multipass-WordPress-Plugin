@@ -4,8 +4,15 @@
  */
  // url => get_site_url();
 if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
-
 	$plugins = get_plugins();
+	stream_context_set_default(
+		array(
+			'http' => array(
+				'method' => 'HEAD'
+			)
+		)
+	);
+	$header_infos = get_headers( get_site_url() );
 	$infos = array();
 	$infos['report_website'] = array(
 		'name' => get_bloginfo( 'name' ),
@@ -30,8 +37,12 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 			$message .= 'About WordPress:<br><br>name => ' . $info['name'] . '<br>version => ' . $info['version'];
 			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email'] . '<br>template url => ' . $info['template_url'];
 			$message .= '<br>server_software => ' . $info['server_software'] . '<br>server_signature => ' . $info['server_signature'];
+			$message .= '<br><br>Header informations:<br><br>';
+			foreach ($header_infos as $key => $header_info) {
+				$message .= $key . ' => ' . $header_info . '<br>';
+			}
 		} else {
-			$message .= '<br><br>Plugins: <br><br>';
+			$message .= '<br><br>Plugins:<br><br>';
 			foreach ( $info as $key => $plugin ) {
 				$message .= 'Name => ' . $key;
 				$message .= '<br>Version => ' . $plugin['Version'];
