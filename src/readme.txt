@@ -1,5 +1,5 @@
 === SQweb for WordPress ===
-Contributors: plavaux, nverdonc, bastienbotella
+Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.7.5
