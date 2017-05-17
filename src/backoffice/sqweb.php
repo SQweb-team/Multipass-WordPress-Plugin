@@ -54,11 +54,11 @@
 						<div class="sqw-clear"></div>
 						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
-							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
+							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-check-categorie sqw-filter-all">
 								<input type="checkbox" name="sqw_filter_all" id="sqw_filter_all" value="true" <?php echo ( get_option( 'sqw_filter_all' ) !== false ? 'checked' : '' ); ?>><label for="sqw_filter_all"><?php _e( 'Filter all content', 'sqweb' ) ?></label>
 							</div>
-							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
+							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
 								<div class="sqw-check-categorie">
 									<p><?php _e( 'Setup content restrictions :', 'sqweb' ); ?></p>
 									<?php
@@ -72,7 +72,7 @@
 										$i++;
 										echo '
 											<div>
-												<input class="categories_inputs" type="checkbox" name="categorie[]" id="' . $value->slug . '" value="' . $value->slug . '" ' . ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) . '/>
+												<input class="categories_inputs" type="checkbox" name="categorie[]" id="' . $value->slug . '" value="' . $value->slug . '" ' . ( in_array( $value->slug, $scategorie ) ? 'checked' : '' ) . ( get_option( 'sqw_filter_all' ) !== false ? ' disabled' : '' ) . '/>
 												<label for="' . $value->slug . '">' . $value->name . '</label>
 											</div>';
 									}
@@ -110,6 +110,14 @@
 										<div class="sqw-time-art sqw-center sqw-safe-padding <?php echo ( get_option( 'dateart' ) !== false ? '' : 'sqw-hide' ); ?>">
 											<p><?php _e( 'How many days will the posts remain restricted ?', 'sqweb' ); ?></p>
 											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'dateart' ) !== false ? get_option( 'dateart' ) : '' ); ?>" name="dateart"/><span class="basic-font-10"> <?php _e( 'days before end of restriction', 'sqweb' ); ?></span>
+										</div>
+									</div>
+									<div class="sqw-select">
+										<h5><?php _e( 'I want the posts to be archived after some days.', 'sqweb' ); ?></h5>
+										<div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'archiveart' ) !== false ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-archive-art" data-color="green"><div></div></div>
+										<div class="sqw-archive-art sqw-center sqw-safe-padding <?php echo ( get_option( 'archiveart' ) !== false ? '' : 'sqw-hide' ); ?>">
+											<p><?php _e( 'After how many days will the posts be archived ?', 'sqweb' ); ?></p>
+											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'archiveart' ) !== false ? get_option( 'archiveart' ) : '' ); ?>" name="archiveart"/><span class="basic-font-10"> <?php _e( 'days before archiving', 'sqweb' ); ?></span>
 										</div>
 									</div>
 									<div class="sqw-check-user-rank">

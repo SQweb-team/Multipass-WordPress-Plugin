@@ -2,8 +2,8 @@
 Contributors: plavaux, nverdonc, bastienbotella
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
-Tested up to: 4.7.4
-Stable tag: 2.6.3
+Tested up to: 4.7.5
+Stable tag: 2.7.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 

@@ -81,6 +81,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 			$message .= 'About WordPress:<br><br>name => ' . $info['name'] . '<br>version => ' . $info['version'];
 			$message .= '<br>wpurl => ' . $info['wpurl'] . '<br>url => ' . $info['url'] . '<br>admin_email => ' . $info['admin_email'] . '<br>template url => ' . $info['template_url'];
 			$message .= '<br>server_software => ' . $info['server_software'] . '<br>server_signature => ' . $info['server_signature'];
+			$message .= '<br>wsid => ' . ( get_option( 'wsid' ) !== 0 ? get_option('wsid') : 'Undefined' );
 			$message .= '<br><br>Header informations:<br><br>';
 			foreach ( $header_infos as $key => $header_info ) {
 				$message .= $key . ' => ' . $header_info . '<br>';
@@ -96,7 +97,11 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 	}
 	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
 	$verif = wp_mail( 'diagnostic@sqweb.com', $infos['report_website']['name'] . ' diagnostic', $message, $headers );
-	SQweb_Admin::add_notice_event( 'success', __( 'Your diagnostic has been sent to our support team.', 'sqweb' ) );
+	if ( $verif !== false ) {
+		SQweb_Admin::add_notice_event( 'success', __( 'Your diagnostic has been sent to our support team and you should soon receive a receipt at: ' . get_option( 'admin_email' ) , 'sqweb' ) );
+	} else {
+		SQweb_Admin::add_notice_event( 'warning', __( 'There was an error sending the diagnostic, please copy paste the diagnostic below and send it to: diagnostic@sqweb.com' , 'sqweb' ) );
+	}
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;
 } // End if().

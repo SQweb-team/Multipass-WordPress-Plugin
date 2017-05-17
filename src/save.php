@@ -88,6 +88,15 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		delete_option( 'dateart' );
 	}
 
+	/**
+	 * Save number of day before an article is considered an archive and is blocked.
+	 */
+	if ( ! empty( $_POST['archiveart'] ) ) {
+		update_option( 'archiveart', $_POST['archiveart'] );
+	} else {
+		delete_option( 'archiveart' );
+	}
+
 	if ( ! empty( $_POST['sqw_popup'] ) ) {
 		update_option( 'sqw_popup', 'true' );
 	} else {

@@ -55,6 +55,8 @@ class SQweb_Admin {
 		delete_option( 'sqw_token' );
 		delete_option( 'sqw_analytics' );
 		delete_option( 'sqw_multipass' );
+		delete_option( 'sqw_filter_all' );
+		delete_option( 'archiveart' );
 		delete_option( 'cutartperc' );
 		delete_option( 'lang' );
 		delete_option( 'btheme' );
