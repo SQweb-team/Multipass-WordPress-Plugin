@@ -83,6 +83,7 @@ return array(
 	}
 
 	public function sqw_logout() {
+		echo '<a href=' . add_query_arg( 'type', 'diagnostic' ) . " style='position: absolute; bottom: 80px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Send diagnostic', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'sqw-reset', '1' ) . " style='position: absolute; bottom: 56px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Reset configuration of SQweb', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'logout', '1' ) . " style='position: absolute; bottom: 32px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Logout from SQweb', 'sqweb' ) . '</p>';
 	}

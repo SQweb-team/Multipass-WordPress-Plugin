@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-05-17 14:17+0200\n"
-"PO-Revision-Date: 2017-05-17 14:20+0200\n"
+"POT-Creation-Date: 2017-05-17 16:19+0200\n"
+"PO-Revision-Date: 2017-05-17 16:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -327,20 +327,21 @@ msgid "Edit settings"
 msgstr "Editez les paramètres"
 
 #: diagnostic.php:101
+#, php-format
 msgid ""
 "Your diagnostic has been sent to our support team and you should soon "
-"receive a receipt at: "
+"receive a receipt at: %s"
 msgstr ""
 "Votre diagnostique a été envoyé à notre support technique et vous devriez "
-"recevoir un accusé de réception a l’adresse: "
+"recevoir un accusé de réception a l’adresse : %s"
 
 #: diagnostic.php:103
 msgid ""
-"There was an error sending the diagnostic, please copy paste the diagnostic "
-"below and send it to: diagnostic@sqweb.com"
+"There was an error sending the diagnostic, please contact our support team "
+"to: hello@sqweb.com"
 msgstr ""
-"Une erreur s’est produite lors de l’envoie du diagnostique. Copiez-coller le "
-"diagnostique ci-dessous et envoyez à l’adresse suivante: diagnostic@sqweb.com"
+"Une erreur s’est produite lors de l’envoie du diagnostique. Contactez notre "
+"support technique à l’adresse suivant : hello@sqweb.com"
 
 #: functions.php:139
 msgid "Email already used."
@@ -381,7 +382,7 @@ msgstr "Accéder immédiatement aux contenus premium avec Multipass"
 msgid "Or come back tomorrow"
 msgstr "Ou revenez demain"
 
-#: includes/sqweb-filter.php:118
+#: includes/sqweb-filter.php:118 includes/sqweb-filter.php:122
 msgid "This premium content is for subscribers only"
 msgstr "Ce contenu premium est limité aux abonnés uniquement"
 
@@ -392,9 +393,17 @@ msgid_plural "It will be available for free in %d days"
 msgstr[0] "Il sera disponible dans %d jour"
 msgstr[1] "Il sera disponible dans %d jours"
 
-#: includes/sqweb-filter.php:118
+#: includes/sqweb-filter.php:118 includes/sqweb-filter.php:122
 msgid "Become a subscriber now with Multipass"
 msgstr "Débloquez ce contenu avec Multipass"
+
+#: includes/sqweb-filter.php:122
+#, fuzzy
+#| msgid "This content is for subscriber only"
+msgid "Archives are for subscribers only"
+msgid_plural "Archives are for subscribers only"
+msgstr[0] "Ce contenu est actuellement réservé aux abonnés"
+msgstr[1] "Ce contenu est actuellement réservé aux abonnés"
 
 #: login.php:68
 msgid "All fields need to be filled."
@@ -445,26 +454,30 @@ msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
 #: sqweb-admin.php:86
+msgid "Send diagnostic"
+msgstr "Envoyez votre diagnostique"
+
+#: sqweb-admin.php:87
 msgid "Reset configuration of SQweb"
 msgstr "Réinitialiser la configuration de SQweb"
 
-#: sqweb-admin.php:87
+#: sqweb-admin.php:88
 msgid "Logout from SQweb"
 msgstr "Se déconnecter de SQweb"
 
-#: sqweb-admin.php:96
+#: sqweb-admin.php:97
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:136
+#: sqweb-admin.php:137
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:143
+#: sqweb-admin.php:144
 msgid "Post available for every users"
 msgstr "Poste disponible pour tous les utilisateurs"
 
-#: sqweb-admin.php:219
+#: sqweb-admin.php:220
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
 
@@ -563,9 +576,6 @@ msgstr "Configuration"
 
 #~ msgid "Access immediately to all the content"
 #~ msgstr "Débloquez ce contenu avec Multipass"
-
-#~ msgid "This content is for subscriber only"
-#~ msgstr "Ce contenu est actuellement réservé aux abonnés"
 
 #~ msgid ""
 #~ "By joining our network, you’ll get a part of the membership fee whenever "
