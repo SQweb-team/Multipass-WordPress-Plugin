@@ -76,7 +76,7 @@ return array(
 	\'filter.text\' => \'YTowOnt9\',
 );
 ';
-		file_put_contents( plugin_dir_url( __FILE__ ) . 'sqweb-config.php', $content );
+		file_put_contents( plugin_dir_path( __FILE__ ) . 'sqweb-config.php', $content );
 		if ( function_exists( 'wp_redirect' ) ) {
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
 		}
