@@ -522,8 +522,9 @@ A diagnostic feature is available in the plugin, which performs a number of chec
 
 The following information is gathered when running a diagnostic:
 
-- Website Name
+- Website name
 - WordPress version
+- PHP version
 - Website URL
 - Admin email
 - Template URL
