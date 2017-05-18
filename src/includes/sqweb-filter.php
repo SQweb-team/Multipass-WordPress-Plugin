@@ -6,7 +6,6 @@
 class SQweb_Filter_Articles {
 
 	function __construct() {
-
 		add_filter( 'sqw_filter_cut_articles_by_percent', array( $this, 'filter_cut_articles_by_percent' ), 5, 2 );
 		add_filter( 'sqw_filter_articles_by_day', array( $this, 'filter_articles_by_day' ), 5, 3 );
 		add_filter( 'sqw_filter_date_art', array( $this, 'filter_date_art' ), 5, 3 );
@@ -26,6 +25,7 @@ class SQweb_Filter_Articles {
 	 */
 
 	public function limited_sqw( $content ) {
+
 		global $post;
 
 		$ok_roles = array(
@@ -89,7 +89,7 @@ class SQweb_Filter_Articles {
 		}
 		if ( get_option( 'archiveart' ) !== false ) {
 			if ( time() - get_post_time( 'U', true ) > get_option( 'archiveart' ) * 86400 ) {
-				return apply_filters( 'sqw_filter_archive_art', $content, $restrictartchiveart, $restrictcutartperc );
+				return apply_filters( 'sqw_filter_archive_art', $content, $restrictarchiveart, $restrictcutartperc );
 			}
 		}
 		if ( get_option( 'artbyday' ) !== false ) {

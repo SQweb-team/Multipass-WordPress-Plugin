@@ -1,4 +1,8 @@
 <?php
+if ( ! isset( $wpdb ) ) {
+	global $wpdb;
+}
+
 if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) {
 
 	/**

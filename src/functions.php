@@ -323,6 +323,7 @@ function sqw_add_website( $data, $token ) {
 					'token' => $token,
 					'name' => $data['sqw-ws-name'],
 					'url' => $data['sqw-ws-url'],
+					'from' => 'WordPress',
 				),
 				'cookies' => array(),
 			)
