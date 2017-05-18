@@ -139,6 +139,12 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.7.0 =
+* Check whether WSID is defined in wp_options.
+* Add a link to diagnostic feature once logged in.
+* Improve the diagnostic feature: it now send data about which plugin is active and what is your PHP version.
+* Add an archive feature (lock content after X day(s)).
+
 = v2.6.3 =
 * Administrator and editors will not be blocked by Multipass anymore.
 * Improve the diagnostic feature to send informations about the website's header and check if your website can access to our API.
