@@ -79,9 +79,9 @@ return array(
 		if ( function_exists( 'wp_redirect' ) ) {
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
 		} else {
-			$protocol = true === stripos( $_SERVER['SERVER_PROTOCOL'], 'https' ) ? 'https://' : 'http://';
+			$protocol = ( true === stripos( $_SERVER['SERVER_PROTOCOL'], 'https' ) ? 'https://' : 'http://' );
 			$url = $protocol . $_SERVER['HTTP_HOST'];
-			$url = $url . preg_replace('/&sqw-reset=1/', '', $_SERVER['REQUEST_URI']);
+			$url = $url . preg_replace( '/&sqw-reset=1/', '', $_SERVER['REQUEST_URI'] );
 			header( 'Location: ' . $url );
 		}
 	}
