@@ -516,6 +516,23 @@ The gathering and processing of information operated by SQweb has been declared 
 
 For more information, please see our full [Privacy Policy](https://www.sqweb.com/privacy).
 
+**A note about the diagnostic feature:**
+
+A diagnostic feature is available in the plugin, which performs a number of checks for our support team.
+
+The following information is gathered when running a diagnostic:
+
+- Website name
+- WordPress version
+- PHP version
+- Website URL
+- Admin email
+- Template URL
+- Server information (`$_SERVER['SERVER_SOFTWARE']` and `$_SERVER['SERVER_SIGNATURE']`, if available)
+- List of installed plugins + activation status
+
+The diagnostic also performs connectivity checks to ensure that a connection to our API (required for the proper operation of this plugin) is possible.
+
 == Translations ==
 
 * English
