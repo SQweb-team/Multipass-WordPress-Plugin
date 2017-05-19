@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.7.5
-Stable tag: 2.6.3
+Stable tag: 2.7.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -139,9 +139,15 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.7.0 =
+* Check whether WSID is defined in wp_options.
+* Add a link to diagnostic feature once logged in.
+* Improve the diagnostic feature: it now send data about which plugin is active and what is your PHP version.
+* Add an archive feature (lock content after X day(s)).
+
 = v2.6.3 =
 * Administrator and editors will not be blocked by Multipass anymore.
-* Improved diagnostic feature, with server and API connectivity checks.
+* Improve the diagnostic feature to send informations about the website's header and check if your website can access to our API.
 
 = v2.6.2 =
 * Add an option to filter all articles at once.

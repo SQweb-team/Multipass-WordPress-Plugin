@@ -69,7 +69,7 @@ function paywall_style() {
 	wp_enqueue_style( 'sqweb_paywall_style' );
 }
 
-if ( get_option( 'dateart' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'cutartperc' ) !== false ) {
+if ( get_option( 'archiveart' ) !== false || get_option( 'filter_all' ) !== false || get_option( 'dateart' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'cutartperc' ) !== false ) {
 	add_filter( 'the_content', 'sqw_login_content' );
 	add_action( 'wp_enqueue_scripts', 'paywall_style' );
 }

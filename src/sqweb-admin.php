@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Edit admin for better integration of SQweb
 * @since 2.2.4
@@ -55,6 +54,8 @@ class SQweb_Admin {
 		delete_option( 'sqw_token' );
 		delete_option( 'sqw_analytics' );
 		delete_option( 'sqw_multipass' );
+		delete_option( 'sqw_filter_all' );
+		delete_option( 'archiveart' );
 		delete_option( 'cutartperc' );
 		delete_option( 'lang' );
 		delete_option( 'btheme' );
@@ -74,13 +75,19 @@ return array(
 	\'filter.text\' => \'YTowOnt9\',
 );
 ';
-		file_put_contents( plugin_dir_url( __FILE__ ) . 'sqweb-config.php', $content );
+		file_put_contents( plugin_dir_path( __FILE__ ) . 'sqweb-config.php', $content );
 		if ( function_exists( 'wp_redirect' ) ) {
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
+		} else {
+			$protocol = ( true === stripos( $_SERVER['SERVER_PROTOCOL'], 'https' ) ? 'https://' : 'http://' );
+			$url = $protocol . $_SERVER['HTTP_HOST'];
+			$url = $url . preg_replace( '/&sqw-reset=1/', '', $_SERVER['REQUEST_URI'] );
+			header( 'Location: ' . $url );
 		}
 	}
 
 	public function sqw_logout() {
+		echo '<a href=' . add_query_arg( 'type', 'diagnostic' ) . " style='position: absolute; bottom: 80px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Send diagnostic', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'sqw-reset', '1' ) . " style='position: absolute; bottom: 56px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Reset configuration of SQweb', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'logout', '1' ) . " style='position: absolute; bottom: 32px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Logout from SQweb', 'sqweb' ) . '</p>';
 	}
