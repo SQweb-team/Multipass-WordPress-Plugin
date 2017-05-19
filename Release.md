@@ -1,23 +1,34 @@
-SQweb - WordPress Plugin - Release Instructions
-===
+# SQweb - WordPress Plugin - Release Instructions
 
-##Requirements
+## Requirements
 
-You will need a copy of the SVN repo from wordpress.org (one level up from your Git clone), and an authorized wordpress.org account with commit access.
+Provided that you have an authorized WordPress.org account with commit access:
 
-##1. Checks
+- A copy of the SVN repo from wordpress.org (one level up from your Git clone).
+
+	```shell
+	mkdir sqweb-wordpress-plugin-svn
+	cd sqweb-wordpress-plugin-svn
+	svn co https://plugins.svn.wordpress.org/sqweb/
+	```
+	
+- A clone of [SQweb-Coding-Style](https://github.com/SQweb-team/SQweb-Coding-Style) one level up from your working directory.
+
+## 1. Checks
 
 Make sure `readme.txt` includes up to date version, changelog and release notes information.
 
 Then tag the latest commit with the target version, such as `v1.5.2`.
 
-##2. WordPress.org Release
+If this is the first time you release, attempt to prepare a release archive with `gulp`.
+
+## 2. WordPress.org Release
 
 Run `./release_wordpress.sh`.
 
 If everything worked as expected, you should receive a confirmation email within a few minutes.
 
-##3. GitHub Release
+## 3. GitHub Release
 
 Prepare a release archive with `gulp`. The resulting zip is found under `dist/`.
 
