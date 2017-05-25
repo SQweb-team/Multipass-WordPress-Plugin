@@ -12,6 +12,8 @@ Provided that you have an authorized WordPress.org account with commit access:
 	svn co https://plugins.svn.wordpress.org/sqweb/
 	```
 	
+	NB: You may have to use `--username` with SVN.
+	
 - A clone of [SQweb-Coding-Style](https://github.com/SQweb-team/SQweb-Coding-Style) one level up from your working directory.
 
 ## 1. Checks
