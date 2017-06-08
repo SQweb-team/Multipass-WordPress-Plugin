@@ -129,7 +129,7 @@ class SQweb_Filter_Articles {
 					</div>
 					<div class="footer__mp__normalize footer__mp__button_footer">
 						<p class="footer__mp__normalize footer__mp__button_p">' . __( 'Multipass is a multisite subscription, wihtout commitment.', 'sqweb' ) . '</p>
-						<a target="_blank" class="footer__mp__button_discover footer__mp__button_strong" href="https://www.multipass.net/fr/sites-partenaires-premium-sans-pub-ni-limites"><span>></span> <span class="footer__mp__button_footer_txt">' . __('Discover our partners', 'sqweb' ) . '</span></a>
+						<a target="_blank" class="footer__mp__button_discover footer__mp__button_strong" href="https://www.multipass.net/fr/sites-partenaires-premium-sans-pub-ni-limites"><span>></span> <span class="footer__mp__button_footer_txt">' . __( 'Discover our partners', 'sqweb' ) . '</span></a>
 					</div>
 				</div>';
 	}
