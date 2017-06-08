@@ -119,7 +119,19 @@ class SQweb_Filter_Articles {
 	}
 
 	public function msg_restrict_archive_art() {
-		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _n( 'Archives are for subscribers only', 'Archives are for subscribers only', 'sqweb' ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+		return '<div class="footer__mp__normalize footer__mp__button_container">
+					<div class="footer__mp__button_header">
+						<div class="footer__mp__button_header_title">' . __( 'This article is archived.', 'sqweb' ) . '</div>
+						<div class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
+					</div>
+					<div class="footer__mp__normalize footer__mp__button_cta">
+						<a href="#" class="footer__mp__cta_fresh">' . __( 'Unlock this article, get your', 'sqweb' ) . '</a>
+					</div>
+					<div class="footer__mp__normalize footer__mp__button_footer">
+						<p class="footer__mp__normalize footer__mp__button_p">' . __( 'Multipass is a multisite subscription, wihtout commitment.', 'sqweb' ) . '</p>
+						<a target="_blank" class="footer__mp__button_discover footer__mp__button_strong" href="https://www.multipass.net/fr/sites-partenaires-premium-sans-pub-ni-limites"><span>></span> <span class="footer__mp__button_footer_txt">' . __('Discover our partners', 'sqweb' ) . '</span></a>
+					</div>
+				</div>';
 	}
 
 	/**

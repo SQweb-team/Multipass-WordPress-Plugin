@@ -139,6 +139,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.7.1 =
+* Add a new style for the locked article button.
+
 = v2.7.0 =
 * Check whether WSID is defined in wp_options.
 * Add a link to diagnostic feature once logged in.
