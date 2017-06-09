@@ -107,7 +107,7 @@ class SQweb_Filter_Articles {
 	 */
 
 	public function msg_restrict_cut_art_perc() {
-		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'The rest of this article is for subscribers only', 'sqweb' ) . '</h5><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><span>' . __( 'Become a subscriber now', 'sqweb' ) . '</span></div>';
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'The rest of this article is restriced', 'sqweb' ) . '</h5><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><span>' . __( 'Become a subscriber now', 'sqweb' ) . '</span></div>';
 	}
 
 	public function msg_restrict_art_by_day() {
