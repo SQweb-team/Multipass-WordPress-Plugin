@@ -16,7 +16,7 @@ function sqweb_add_filter_short_code( $atts = array(), $content = null, $tag = '
 
 	$wporg_atts = shortcode_atts( array(
 		'ads' => 'ad',
-		'premium' => ""
+		'premium' => '',
 	), $atts, $tag);
 
 	if ( apply_filters( 'sqw_check_credentials', get_option( 'wsid' ) ) ) {
