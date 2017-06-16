@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.7.5
-Stable tag: 2.7.0
+Stable tag: 2.7.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -73,6 +73,19 @@ If you wish to show extra content to your subscribers, you can add a second para
 ?>
 `
 
+You can also use this shortcode:
+
+`[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE"]`
+or
+`<?php do_shortcode('[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE"]') ?>`
+
+Add a premium argument to this shortcode to display something in the place of the advertising block, this is optionnal.
+i.e:
+
+`[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE" premium="SOMETHING TO REPLACE THE AD WITH"]`
+or
+`<?php do_shortcode('[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE" premium="SOMETHING TO REPLACE THE AD WITH"]') ?>`
+
 **If you're using WordPress Super Cache, you must enable "Dynamic Content" under "Advanced Settings".** Also, if you used 'mod_rewrite' with WordPress Super Cache, make sure to comment the rules in your '.htaccess' file.
 
 If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
@@ -138,6 +151,9 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.7.1 =
+* Add a new shortcode to enhance ads filtering in themes.
 
 = v2.7.0 =
 * Check whether WSID is defined in wp_options.
