@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-05-17 16:19+0200\n"
-"PO-Revision-Date: 2017-05-17 16:19+0200\n"
+"POT-Creation-Date: 2017-06-19 15:23+0200\n"
+"PO-Revision-Date: 2017-06-19 15:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -326,16 +326,25 @@ msgstr "Cliquez ici pour vous connecter"
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
-#: diagnostic.php:101
-#, php-format
+#: diagnostic.php:105
+#, fuzzy, php-format
+#| msgid ""
+#| "Your diagnostic has been sent to our support team and you should soon "
+#| "receive a receipt at: %s"
 msgid ""
 "Your diagnostic has been sent to our support team and you should soon "
 "receive a receipt at: %s"
-msgstr ""
+msgid_plural ""
+"Your diagnostic has been sent to our support team and you should soon "
+"receive a receipt at: %s"
+msgstr[0] ""
+"Votre diagnostique a été envoyé à notre support technique et vous devriez "
+"recevoir un accusé de réception a l’adresse : %s"
+msgstr[1] ""
 "Votre diagnostique a été envoyé à notre support technique et vous devriez "
 "recevoir un accusé de réception a l’adresse : %s"
 
-#: diagnostic.php:103
+#: diagnostic.php:107
 msgid ""
 "There was an error sending the diagnostic, please contact our support team "
 "to: hello@sqweb.com"
@@ -359,51 +368,52 @@ msgstr "Email non valide."
 msgid "Password invalid."
 msgstr "Mot de passe invalide."
 
-#: includes/sqweb-filter.php:110
-msgid "The rest of this article is for subscribers only"
-msgstr "La suite de cette page est réservée aux abonnés"
+#: includes/sqweb-filter.php:112
+msgid "The rest of this article is restricted"
+msgstr "Cet article est réservé aux abonnés"
 
-#: includes/sqweb-filter.php:110
-msgid "Become a subscriber now"
-msgstr "Débloquez ce contenu avec Multipass"
+#: includes/sqweb-filter.php:113 includes/sqweb-filter.php:129
+#: includes/sqweb-filter.php:145 includes/sqweb-filter.php:161
+msgid "Already premium? "
+msgstr "Déjà abonné ? "
 
-#: includes/sqweb-filter.php:114
+#: includes/sqweb-filter.php:113 includes/sqweb-filter.php:129
+#: includes/sqweb-filter.php:145 includes/sqweb-filter.php:161
+msgid "Sign in"
+msgstr "Connexion"
+
+#: includes/sqweb-filter.php:116 includes/sqweb-filter.php:132
+#: includes/sqweb-filter.php:148 includes/sqweb-filter.php:164
+msgid "Unlock this article, get your"
+msgstr "Débloquez ce contenu avec"
+
+#: includes/sqweb-filter.php:119 includes/sqweb-filter.php:135
+#: includes/sqweb-filter.php:151 includes/sqweb-filter.php:167
+msgid "The multisite subscription, wihtout commitment."
+msgstr "L’abonnement multi-site sans engagement."
+
+#: includes/sqweb-filter.php:120 includes/sqweb-filter.php:136
+#: includes/sqweb-filter.php:152 includes/sqweb-filter.php:168
+msgid "Discover our partners"
+msgstr "Découvrir les partenaires"
+
+#: includes/sqweb-filter.php:128
 #, php-format
 msgid "You have already read %d premium article for free today"
 msgid_plural "You have already read %d premium articles for free today"
 msgstr[0] "Vous avez lu votre %d article premium quotidien offert"
 msgstr[1] "Vous avez lu vos %d articles premium quotidien offert"
 
-#: includes/sqweb-filter.php:114
-msgid "Access immediately the premium content with Multipass"
-msgstr "Accéder immédiatement aux contenus premium avec Multipass"
-
-#: includes/sqweb-filter.php:114
-msgid "Or come back tomorrow"
-msgstr "Ou revenez demain"
-
-#: includes/sqweb-filter.php:118 includes/sqweb-filter.php:122
-msgid "This premium content is for subscribers only"
-msgstr "Ce contenu premium est limité aux abonnés uniquement"
-
-#: includes/sqweb-filter.php:118
+#: includes/sqweb-filter.php:144
 #, php-format
-msgid "It will be available for free in %d day"
-msgid_plural "It will be available for free in %d days"
+msgid "This will be available for free in %d day"
+msgid_plural "This will be available for free in %d days"
 msgstr[0] "Il sera disponible dans %d jour"
 msgstr[1] "Il sera disponible dans %d jours"
 
-#: includes/sqweb-filter.php:118 includes/sqweb-filter.php:122
-msgid "Become a subscriber now with Multipass"
-msgstr "Débloquez ce contenu avec Multipass"
-
-#: includes/sqweb-filter.php:122
-#, fuzzy
-#| msgid "This content is for subscriber only"
-msgid "Archives are for subscribers only"
-msgid_plural "Archives are for subscribers only"
-msgstr[0] "Ce contenu est actuellement réservé aux abonnés"
-msgstr[1] "Ce contenu est actuellement réservé aux abonnés"
+#: includes/sqweb-filter.php:160
+msgid "This article is restricted."
+msgstr "Cet article est réservé."
 
 #: login.php:68
 msgid "All fields need to be filled."
@@ -449,35 +459,35 @@ msgstr "ID :"
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 
-#: save.php:114
+#: save.php:118
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
-#: sqweb-admin.php:86
+#: sqweb-admin.php:90
 msgid "Send diagnostic"
 msgstr "Envoyez votre diagnostique"
 
-#: sqweb-admin.php:87
+#: sqweb-admin.php:91
 msgid "Reset configuration of SQweb"
 msgstr "Réinitialiser la configuration de SQweb"
 
-#: sqweb-admin.php:88
+#: sqweb-admin.php:92
 msgid "Logout from SQweb"
 msgstr "Se déconnecter de SQweb"
 
-#: sqweb-admin.php:97
+#: sqweb-admin.php:101
 msgid "<b>SQweb notice : </b>"
 msgstr "<b>SQweb notice : </b>"
 
-#: sqweb-admin.php:137
+#: sqweb-admin.php:141
 msgid "Post restricted to Multipass users"
 msgstr "Post réservé aux utilisateurs Multipass"
 
-#: sqweb-admin.php:144
+#: sqweb-admin.php:148
 msgid "Post available for every users"
 msgstr "Poste disponible pour tous les utilisateurs"
 
-#: sqweb-admin.php:220
+#: sqweb-admin.php:224
 msgid "SQweb settings"
 msgstr "Paramètre SQweb"
 
@@ -520,6 +530,31 @@ msgstr ""
 #: sqweb.php:106
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "The rest of this article is for subscribers only"
+#~ msgstr "La suite de cette page est réservée aux abonnés"
+
+#~ msgid "Become a subscriber now"
+#~ msgstr "Débloquez ce contenu avec Multipass"
+
+#~ msgid "Access immediately the premium content with Multipass"
+#~ msgstr "Accéder immédiatement aux contenus premium avec Multipass"
+
+#~ msgid "Or come back tomorrow"
+#~ msgstr "Ou revenez demain"
+
+#~ msgid "This premium content is for subscribers only"
+#~ msgstr "Ce contenu premium est limité aux abonnés uniquement"
+
+#~ msgid "Become a subscriber now with Multipass"
+#~ msgstr "Débloquez ce contenu avec Multipass"
+
+#, fuzzy
+#~| msgid "This content is for subscriber only"
+#~ msgid "Archives are for subscribers only"
+#~ msgid_plural "Archives are for subscribers only"
+#~ msgstr[0] "Ce contenu est actuellement réservé aux abonnés"
+#~ msgstr[1] "Ce contenu est actuellement réservé aux abonnés"
 
 #~ msgid "Normal size"
 #~ msgstr "Taille normale"
@@ -612,9 +647,6 @@ msgstr "Configuration"
 
 #~ msgid "Become premium with"
 #~ msgstr "Devenir premium avec"
-
-#~ msgid "The rest of this article is for subscriber only"
-#~ msgstr "La suite de cette page est réservée aux abonnés"
 
 #~ msgid "Access immediately all the content with Multipass"
 #~ msgstr "Débloquez ce contenu avec Multipass"
@@ -1000,9 +1032,6 @@ msgstr "Configuration"
 
 #~ msgid "Sign up"
 #~ msgstr "Inscription"
-
-#~ msgid "Sign in"
-#~ msgstr "Connexion"
 
 #~ msgid ""
 #~ "A error has appeared, please check you correctly followed the "
