@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-06-08 15:24+0200\n"
-"PO-Revision-Date: 2017-06-08 15:28+0200\n"
+"POT-Creation-Date: 2017-06-19 15:23+0200\n"
+"PO-Revision-Date: 2017-06-19 15:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -368,67 +368,52 @@ msgstr "Email non valide."
 msgid "Password invalid."
 msgstr "Mot de passe invalide."
 
-#: includes/sqweb-filter.php:110
-msgid "The rest of this article is for subscribers only"
-msgstr "La suite de cette page est réservée aux abonnés"
+#: includes/sqweb-filter.php:112
+msgid "The rest of this article is restricted"
+msgstr "Cet article réservé aux abonnés"
 
-#: includes/sqweb-filter.php:110
-msgid "Become a subscriber now"
-msgstr "Débloquez ce contenu avec Multipass"
+#: includes/sqweb-filter.php:113 includes/sqweb-filter.php:129
+#: includes/sqweb-filter.php:145 includes/sqweb-filter.php:161
+msgid "Already premium? "
+msgstr "Déjà abonné ? "
 
-#: includes/sqweb-filter.php:114
+#: includes/sqweb-filter.php:113 includes/sqweb-filter.php:129
+#: includes/sqweb-filter.php:145 includes/sqweb-filter.php:161
+msgid "Sign in"
+msgstr "Connexion"
+
+#: includes/sqweb-filter.php:116 includes/sqweb-filter.php:132
+#: includes/sqweb-filter.php:148 includes/sqweb-filter.php:164
+msgid "Unlock this article, get your"
+msgstr "Débloquez ce contenu avec"
+
+#: includes/sqweb-filter.php:119 includes/sqweb-filter.php:135
+#: includes/sqweb-filter.php:151 includes/sqweb-filter.php:167
+msgid "The multisite subscription, wihtout commitment."
+msgstr "L’abonnement multi-site sans engagement."
+
+#: includes/sqweb-filter.php:120 includes/sqweb-filter.php:136
+#: includes/sqweb-filter.php:152 includes/sqweb-filter.php:168
+msgid "Discover our partners"
+msgstr "Découvrir tous les partenaires"
+
+#: includes/sqweb-filter.php:128
 #, php-format
 msgid "You have already read %d premium article for free today"
 msgid_plural "You have already read %d premium articles for free today"
 msgstr[0] "Vous avez lu votre %d article premium quotidien offert"
 msgstr[1] "Vous avez lu vos %d articles premium quotidien offert"
 
-#: includes/sqweb-filter.php:114
-msgid "Access immediately the premium content with Multipass"
-msgstr "Accéder immédiatement aux contenus premium avec Multipass"
-
-#: includes/sqweb-filter.php:114
-msgid "Or come back tomorrow"
-msgstr "Ou revenez demain"
-
-#: includes/sqweb-filter.php:118
-msgid "This premium content is for subscribers only"
-msgstr "Ce contenu premium est limité aux abonnés uniquement"
-
-#: includes/sqweb-filter.php:118
+#: includes/sqweb-filter.php:144
 #, php-format
-msgid "It will be available for free in %d day"
-msgid_plural "It will be available for free in %d days"
+msgid "This will be available for free in %d day"
+msgid_plural "This will be available for free in %d days"
 msgstr[0] "Il sera disponible dans %d jour"
 msgstr[1] "Il sera disponible dans %d jours"
 
-#: includes/sqweb-filter.php:118
-msgid "Become a subscriber now with Multipass"
-msgstr "Débloquez ce contenu avec Multipass"
-
-#: includes/sqweb-filter.php:124
-msgid "This article is archived."
-msgstr "Cet article est archivé."
-
-#: includes/sqweb-filter.php:125
-msgid "Already premium? "
-msgstr "Déjà abonné ? "
-
-#: includes/sqweb-filter.php:125
-msgid "Sign in"
-msgstr "Connexion"
-
-#: includes/sqweb-filter.php:128
-msgid "Unlock this article, get your"
-msgstr "Débloquez ce contenu avec"
-
-#: includes/sqweb-filter.php:131
-msgid "Multipass is a multisite subscription, wihtout commitment."
-msgstr "Multipass est un abonnement multi-site sans engagement."
-
-#: includes/sqweb-filter.php:132
-msgid "Discover our partners"
-msgstr "Découvrir tous les partenaires"
+#: includes/sqweb-filter.php:160
+msgid "This article is restricted."
+msgstr "Cet article est réservé."
 
 #: login.php:68
 msgid "All fields need to be filled."
@@ -546,6 +531,24 @@ msgstr ""
 msgid "Settings"
 msgstr "Configuration"
 
+#~ msgid "The rest of this article is for subscribers only"
+#~ msgstr "La suite de cette page est réservée aux abonnés"
+
+#~ msgid "Become a subscriber now"
+#~ msgstr "Débloquez ce contenu avec Multipass"
+
+#~ msgid "Access immediately the premium content with Multipass"
+#~ msgstr "Accéder immédiatement aux contenus premium avec Multipass"
+
+#~ msgid "Or come back tomorrow"
+#~ msgstr "Ou revenez demain"
+
+#~ msgid "This premium content is for subscribers only"
+#~ msgstr "Ce contenu premium est limité aux abonnés uniquement"
+
+#~ msgid "Become a subscriber now with Multipass"
+#~ msgstr "Débloquez ce contenu avec Multipass"
+
 #, fuzzy
 #~| msgid "This content is for subscriber only"
 #~ msgid "Archives are for subscribers only"
@@ -644,9 +647,6 @@ msgstr "Configuration"
 
 #~ msgid "Become premium with"
 #~ msgstr "Devenir premium avec"
-
-#~ msgid "The rest of this article is for subscriber only"
-#~ msgstr "La suite de cette page est réservée aux abonnés"
 
 #~ msgid "Access immediately all the content with Multipass"
 #~ msgstr "Débloquez ce contenu avec Multipass"
