@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
 "POT-Creation-Date: 2017-06-19 15:23+0200\n"
-"PO-Revision-Date: 2017-06-19 15:26+0200\n"
+"PO-Revision-Date: 2017-06-19 15:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -370,7 +370,7 @@ msgstr "Mot de passe invalide."
 
 #: includes/sqweb-filter.php:112
 msgid "The rest of this article is restricted"
-msgstr "Cet article réservé aux abonnés"
+msgstr "Cet article est réservé aux abonnés"
 
 #: includes/sqweb-filter.php:113 includes/sqweb-filter.php:129
 #: includes/sqweb-filter.php:145 includes/sqweb-filter.php:161
@@ -395,7 +395,7 @@ msgstr "L’abonnement multi-site sans engagement."
 #: includes/sqweb-filter.php:120 includes/sqweb-filter.php:136
 #: includes/sqweb-filter.php:152 includes/sqweb-filter.php:168
 msgid "Discover our partners"
-msgstr "Découvrir tous les partenaires"
+msgstr "Découvrir les partenaires"
 
 #: includes/sqweb-filter.php:128
 #, php-format
