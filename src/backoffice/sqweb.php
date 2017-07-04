@@ -54,11 +54,11 @@
 						<div class="sqw-clear"></div>
 						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
-							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
-							<div class="sqw-check-categorie sqw-filter-all">
-								<input type="checkbox" name="sqw_filter_all" id="sqw_filter_all" value="true" <?php echo ( get_option( 'sqw_filter_all' ) !== false ? 'checked' : '' ); ?>><label for="sqw_filter_all"><?php _e( 'Filter all content', 'sqweb' ) ?></label>
-							</div>
+							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" id="sqw-paywall" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
+								<div class="sqw-check-categorie sqw-filter-all">
+									<input type="checkbox" name="sqw_filter_all" id="sqw_filter_all" value="true" <?php echo ( get_option( 'sqw_filter_all' ) !== false ? 'checked' : '' ); ?>><label for="sqw_filter_all"><?php _e( 'Filter all content', 'sqweb' ) ?></label>
+								</div>
 								<div class="sqw-check-categorie">
 									<p><?php _e( 'Setup content restrictions :', 'sqweb' ); ?></p>
 									<?php
@@ -142,6 +142,11 @@
 									<div class="sqw-clear"></div>
 								</div>
 							</div>
+							<div class="sqw-support-button">
+								<h4><?php _e( 'Do you want to display a supportive button at the end of your articles ?', 'sqweb' ); ?></h4>
+								<div id="sqw_display_support_trigger" class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_display_support' ) != 0  ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw_display_support" data-color="green"><div></div></div>
+								<input type="hidden" id="sqw_display_support" name="sqw_display_support" value="<?php echo get_option( 'sqw_display_support' ); ?>">
+							</div>
 							<div class="sqw-config-button">
 								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'Multipass users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>
@@ -159,7 +164,7 @@
 												<option value="tiny"><?php _e( 'Tiny', 'sqweb' ); ?></option>
 												<option value="slim"><?php _e( 'Slim', 'sqweb' ); ?></option>
 												<option value="normal"><?php _e( 'Normal', 'sqweb' ); ?></option>
-												<option value="large"><?php _e( 'Large', 'sqweb' ); ?></option>
+												<option value="large" selected><?php _e( 'Large', 'sqweb' ); ?></option>
 											</select>
 										</div>
 									</div>

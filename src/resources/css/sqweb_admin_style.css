@@ -233,7 +233,6 @@ input[type=password] {
 
 .sqw-filter-all {
     padding-top: 10px;
-    padding-left: 15px;
 }
 
 .sqw-check-categorie div,
@@ -633,6 +632,10 @@ a.sqw-btn-mp-link:focus {
     line-height: 32px;
     text-transform: uppercase;
     letter-spacing: .5px !important;
+}
+
+.sqw-support-button {
+    margin-top: 25px;
 }
 
 .sqw-btn-mp-link-tiny-only {
