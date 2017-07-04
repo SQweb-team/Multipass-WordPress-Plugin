@@ -138,14 +138,14 @@ return array(
 		$value = get_post_meta( $post->ID, 'sqw_limited', true );
 		?>
 			<div class="misc-pub-section">
-				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' );?></label>
+				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null); ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' ); ?></label>
 			</div>
 		<?php
 		if ( $check ) {
 			$value = get_post_meta( $post->ID, 'sqw_unlimited', true );
 			?>
 				<div class="misc-pub-section">
-					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null) ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' );?></label>
+					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null); ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' ); ?></label>
 				</div>
 			<?php
 		}

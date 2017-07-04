@@ -51,7 +51,9 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 			echo $before_title . $title . $after_title;
 		}
 
-		if ( 'Y' == $adrotate_config['widgetalign'] ) { echo '<ul><li>'; }
+		if ( 'Y' == $adrotate_config['widgetalign'] ) {
+			echo '<ul><li>';
+		}
 
 		if ( 'single' == $instance['type'] ) {
 			SQweb_filter::get_instance()->add_ads( adrotate_ad( $instance['adid'], true, 0, 0, 0 ) );
@@ -61,7 +63,9 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 			SQweb_filter::get_instance()->add_ads( adrotate_group( $instance['adid'], 0, 0, 0 ) );
 		}
 
-		if ( 'Y' == $adrotate_config['widgetalign'] ) { echo '</li></ul>'; }
+		if ( 'Y' == $adrotate_config['widgetalign'] ) {
+			echo '</li></ul>';
+		}
 
 		echo $args['after_widget'];
 
@@ -118,8 +122,12 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'type' ); ?>"><?php _e( 'Type:', 'adrotate' ); ?></label>
 			<select class="widefat" id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" class="postform">
-				<option value="single" <?php if ( 'single' == $type ) { echo 'selected'; } ?>><?php _e( 'Advert - Use Advert ID', 'adrotate' ); ?></option>
-				<option value="group" <?php if ( 'group' == $type ) { echo 'selected'; } ?>><?php _e( 'Group - Use group ID', 'adrotate' ); ?></option>
+				<option value="single" <?php if ( 'single' == $type ) {
+					echo 'selected';
+				} ?>><?php _e( 'Advert - Use Advert ID', 'adrotate' ); ?></option>
+				<option value="group" <?php if ( 'group' == $type ) {
+					echo 'selected';
+				} ?>><?php _e( 'Group - Use group ID', 'adrotate' ); ?></option>
 			</select>
 			<br />
 			<small><?php _e( 'Choose what you want to use this widget for', 'adrotate' ); ?></small>

@@ -79,8 +79,8 @@ function end_of_article_support_button( $content ) {
 if ( get_option( 'archiveart' ) !== false || get_option( 'filter_all' ) !== false || get_option( 'dateart' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'cutartperc' ) !== false || get_option( 'sqw_display_support' ) != 0 ) {
 	add_filter( 'the_content', 'sqw_login_content' );
 	add_action( 'wp_enqueue_scripts', 'paywall_style' );
-}
+ }
 
 if ( sqweb_check_credentials( get_option('wsid') ) === false && get_option( 'sqw_display_support' ) != 0 ) {
 	add_filter('the_content', 'end_of_article_support_button');
-}
+ }
