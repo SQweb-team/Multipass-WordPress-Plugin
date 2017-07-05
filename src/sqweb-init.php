@@ -82,7 +82,7 @@ if ( get_option( 'archiveart' ) !== false || get_option( 'filter_all' ) !== fals
 }
 
 if ( sqweb_check_credentials( get_option( 'wsid' ) ) === false && get_option( 'sqw_display_support' ) != 0 ) {
-	if ( ! is_feed() && ! is_home() ) {
+	if ( '/' != $_SERVER['REQUEST_URI'] ) {
 		add_filter( 'the_content', 'end_of_article_support_button' );
 	}
 }
