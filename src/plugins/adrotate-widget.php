@@ -122,12 +122,17 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'type' ); ?>"><?php _e( 'Type:', 'adrotate' ); ?></label>
 			<select class="widefat" id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" class="postform">
-				<option value="single" <?php if ( 'single' == $type ) {
+				<option value="single"
+				<?php if ( 'single' == $type ) {
 					echo 'selected';
-				} ?>><?php _e( 'Advert - Use Advert ID', 'adrotate' ); ?></option>
+				} ?>>
+				<?php _e( 'Advert - Use Advert ID', 'adrotate' );
+				?></option>
 				<option value="group" <?php if ( 'group' == $type ) {
 					echo 'selected';
-				} ?>><?php _e( 'Group - Use group ID', 'adrotate' ); ?></option>
+				} ?>>
+				<?php _e( 'Group - Use group ID', 'adrotate' );
+				?></option>
 			</select>
 			<br />
 			<small><?php _e( 'Choose what you want to use this widget for', 'adrotate' ); ?></small>
