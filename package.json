@@ -31,8 +31,8 @@
     "gulp-stylelint": "3.9.0",
     "gulp-stylelint-console-reporter": "0.1.1",
     "gulp-zip": "^4.0.0",
-    "jshint": "^2.9.4",
+    "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
-    "snyk": "^1.34.4"
+    "snyk": "^1.36.2"
   }
 }
