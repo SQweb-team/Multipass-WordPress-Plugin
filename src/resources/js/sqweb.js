@@ -152,6 +152,9 @@ jQuery(function($) {
 		$('#sqw_filter_all').click(function() {
 			if ($('#sqw_filter_all').attr('checked') !== undefined ) {
 				$('.categories_inputs').attr('disabled', true);
+				$('div[name="sqw-fading-art"]').addClass('sqw-tack-basic-check sqw-green');
+				$('.sqw-fading-art').css('display', 'block');
+				$('input[name="perctart"]').val(25);
 			} else {
 				$('.categories_inputs').attr('disabled', false);
 			}

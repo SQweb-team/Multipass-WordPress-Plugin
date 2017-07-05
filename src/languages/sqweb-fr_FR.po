@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-07-04 18:15+0200\n"
-"PO-Revision-Date: 2017-07-04 18:17+0200\n"
+"POT-Creation-Date: 2017-07-05 10:36+0200\n"
+"PO-Revision-Date: 2017-07-05 10:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -66,7 +66,7 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:55 backoffice/sqweb.php:211
+#: backoffice/sqweb.php:55 backoffice/sqweb.php:167
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -166,87 +166,43 @@ msgstr "Ne pas restreindre de contenu aux groupes d’utilisateurs suivants :"
 
 #: backoffice/sqweb.php:146
 msgid ""
-"Do you want to display a supportive button at the end of your articles ?"
-msgstr "Afficher un bouton pied d’article de support"
+"Do you want to display a \"Support us\" button at the end of your articles ?"
+msgstr "Afficher un bouton “Supportez nous” en pied d’article"
 
 #: backoffice/sqweb.php:151
 msgid "Multipass users must browse without ads on your website"
 msgstr "Les abonnés Multipass doivent naviguer sans publicité sur votre site"
 
-#: backoffice/sqweb.php:153
-msgid ""
-"This will be used for the button that visitors will use to register, payment "
-"and login."
-msgstr ""
-"Configurez le bouton qui permet à vos visiteurs de s’enregistrer, payer et "
-"se connecter."
-
-#: backoffice/sqweb.php:157
-msgid "Language of your website :"
-msgstr "Langue de votre site :"
-
-#: backoffice/sqweb.php:159
-msgid "French"
-msgstr "Français"
-
-#: backoffice/sqweb.php:160
-msgid "English"
-msgstr "Anglais"
-
-#: backoffice/sqweb.php:161
-msgid "Español"
-msgstr "Espagnol"
-
-#: backoffice/sqweb.php:164 class/class-sqweb-widget-button.php:59
-msgid "Tiny"
-msgstr "Très petit"
-
-#: backoffice/sqweb.php:165 class/class-sqweb-widget-button.php:60
-msgid "Slim"
-msgstr "Petit"
-
-#: backoffice/sqweb.php:166 class/class-sqweb-widget-button.php:61
-msgid "Normal"
-msgstr "Normal"
-
-#: backoffice/sqweb.php:167 class/class-sqweb-widget-button.php:62
-msgid "Large"
-msgstr "Large"
-
-#: backoffice/sqweb.php:180
-msgid "Preview :"
-msgstr "Prévisualisation:"
-
-#: backoffice/sqweb.php:207
+#: backoffice/sqweb.php:163
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:211
+#: backoffice/sqweb.php:167
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr ""
 "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:214
+#: backoffice/sqweb.php:170
 msgid "Would you like to display a dynamic popup to your adblockers ?"
 msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:218
+#: backoffice/sqweb.php:174
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:221
+#: backoffice/sqweb.php:177
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:223
+#: backoffice/sqweb.php:179
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:231
+#: backoffice/sqweb.php:187
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backoffice/sqweb.php:240
+#: backoffice/sqweb.php:198
 msgid ""
 "If you want a better experience on our website you can get <a href=\"#\" "
 "onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
@@ -322,6 +278,22 @@ msgstr "Bouton Multipass"
 #: class/class-sqweb-widget-button.php:57
 msgid "Choose button"
 msgstr "Choisir le bouton"
+
+#: class/class-sqweb-widget-button.php:59
+msgid "Tiny"
+msgstr "Très petit"
+
+#: class/class-sqweb-widget-button.php:60
+msgid "Slim"
+msgstr "Petit"
+
+#: class/class-sqweb-widget-button.php:61
+msgid "Normal"
+msgstr "Normal"
+
+#: class/class-sqweb-widget-button.php:62
+msgid "Large"
+msgstr "Large"
 
 #: class/class-sqweb-widget-button.php:66
 msgid "CLICK HERE TO LOG IN"
@@ -497,43 +469,43 @@ msgstr "Cet article est réservé."
 msgid "All fields need to be filled."
 msgstr "Tous les champs doivent être remplis."
 
-#: plugins/adrotate-widget.php:107
+#: plugins/adrotate-widget.php:111
 msgid "Title (optional):"
 msgstr "Titre (optionnel) :"
 
-#: plugins/adrotate-widget.php:110
+#: plugins/adrotate-widget.php:114
 msgid "HTML will be stripped out."
 msgstr "Tout code HTML sera nettoyé."
 
-#: plugins/adrotate-widget.php:113
+#: plugins/adrotate-widget.php:117
 msgid "Description (optional):"
 msgstr "Description (facultatif) :"
 
-#: plugins/adrotate-widget.php:116
+#: plugins/adrotate-widget.php:120
 msgid "What is this widget used for? (Not parsed, HTML will be stripped out.)"
 msgstr "À quoi sert ce widget ?"
 
-#: plugins/adrotate-widget.php:119
+#: plugins/adrotate-widget.php:123
 msgid "Type:"
 msgstr "Type :"
 
-#: plugins/adrotate-widget.php:121
+#: plugins/adrotate-widget.php:133
 msgid "Advert - Use Advert ID"
 msgstr "Annonce - Advert ID"
 
-#: plugins/adrotate-widget.php:122
+#: plugins/adrotate-widget.php:144
 msgid "Group - Use group ID"
 msgstr "Groupe - Groupe ID"
 
-#: plugins/adrotate-widget.php:125
+#: plugins/adrotate-widget.php:151
 msgid "Choose what you want to use this widget for"
 msgstr "Choisissez ce que vous voulez faire de ce widget"
 
-#: plugins/adrotate-widget.php:128
+#: plugins/adrotate-widget.php:162
 msgid "ID:"
 msgstr "ID :"
 
-#: plugins/adrotate-widget.php:131
+#: plugins/adrotate-widget.php:181
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 
@@ -608,6 +580,28 @@ msgstr ""
 #: sqweb.php:106
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid ""
+#~ "This will be used for the button that visitors will use to register, "
+#~ "payment and login."
+#~ msgstr ""
+#~ "Configurez le bouton qui permet à vos visiteurs de s’enregistrer, payer "
+#~ "et se connecter."
+
+#~ msgid "Language of your website :"
+#~ msgstr "Langue de votre site :"
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "English"
+#~ msgstr "Anglais"
+
+#~ msgid "Español"
+#~ msgstr "Espagnol"
+
+#~ msgid "Preview :"
+#~ msgstr "Prévisualisation:"
 
 #~ msgid "Normal size"
 #~ msgstr "Taille normale"

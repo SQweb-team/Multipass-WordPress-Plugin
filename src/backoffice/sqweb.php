@@ -143,57 +143,13 @@
 								</div>
 							</div>
 							<div class="sqw-support-button">
-								<h4><?php _e( 'Do you want to display a supportive button at the end of your articles ?', 'sqweb' ); ?></h4>
+								<h4><?php _e( 'Do you want to display a "Support us" button at the end of your articles ?', 'sqweb' ); ?></h4>
 								<div id="sqw_display_support_trigger" class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_display_support' ) != 0 ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw_display_support" data-color="green"><div></div></div>
 								<input type="hidden" id="sqw_display_support" name="sqw_display_support" value="<?php echo get_option( 'sqw_display_support' ); ?>">
 							</div>
 							<div class="sqw-config-button">
 								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'Multipass users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>
-								<p class="sqw-center basic-font-12"><?php _e( 'This will be used for the button that visitors will use to register, payment and login.', 'sqweb' ); ?></p>
-								<div class="sqw-full-width">
-									<div class="sqw-tiers">
-										<div class="sqw-margin-top">
-											<p><label for="sqw-lang-select"><?php _e( 'Language of your website :', 'sqweb' ); ?></label></p>
-											<select class="sqw-input-select" name="lang" id="sqw-lang-select">';
-												<option value="fr" <?php echo 'fr' === $lang ? 'selected' : ''; ?>><?php _e( 'French', 'sqweb' ); ?></option>
-												<option value="en" <?php echo 'en' === $lang ? 'selected' : ''; ?>><?php _e( 'English', 'sqweb' ); ?></option>
-												<!--<option value="es" <?php echo 'es' === $lang ? 'selected' : ''; ?>><?php _e( 'Español', 'sqweb' ); ?></option>-->
-											</select>
-											<select class="sqw-input-select" id="sqw-previ-select">
-												<option value="tiny"><?php _e( 'Tiny', 'sqweb' ); ?></option>
-												<option value="slim"><?php _e( 'Slim', 'sqweb' ); ?></option>
-												<option value="normal"><?php _e( 'Normal', 'sqweb' ); ?></option>
-												<option value="large" selected><?php _e( 'Large', 'sqweb' ); ?></option>
-											</select>
-										</div>
-									</div>
-									<div class="sqw-tiers2 sqw-padding-left">
-										<?php
-										if ( function_exists( 'get_blog_details' ) ) {
-											$current_site = get_blog_details();
-											$blogname = $current_site->blogname;
-										} else {
-											$blogname = get_option( 'blogname' );
-										}
-										?>
-										<p><?php _e( 'Preview :', 'sqweb' ); ?></p>
-										<div class="sqweb-button multipass-large">
-											<div class="sqw-btn-mp">
-												<span class="sqw-btn-mp-logo"></span>
-												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none">Premium avec Multipass</a>
-												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-only">Premium</a>
-												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-large-only">
-													<b>
-													<?php echo $blogname; ?> PREMIUM</b>
-													<br><span id="sqw-punch-line">Lecture Illimitée • Zéro Pub</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sqw-clear">
 							</div>
 						</div>
 					</div>
