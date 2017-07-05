@@ -124,9 +124,9 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 			<select class="widefat" id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" class="postform">
 				<option value="single"
 				<?php
-					if ( 'single' == $type ) {
-						echo 'selected';
-					}
+				if ( 'single' == $type ) {
+					echo 'selected';
+				}
 				?>
 				>
 				<?php
@@ -135,9 +135,9 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 				</option>
 				<option value="group"
 				<?php
-					if ( 'group' == $type ) {
-						echo 'selected';
-					}
+				if ( 'group' == $type ) {
+					echo 'selected';
+				}
 				?>
 				>
 				<?php
@@ -166,7 +166,8 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 			<?php
 				echo $this->get_field_id( 'adid' );
 			?>
-			" name="<?php
+			" name="
+			<?php
 				echo $this->get_field_name( 'adid' );
 			?>
 			" type="text" value="

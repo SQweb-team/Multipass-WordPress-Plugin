@@ -234,7 +234,7 @@
 	</form>
 	<?php
 		} // End if().
-	 ?>
+	?>
 </div>
 
 <script>
