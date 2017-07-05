@@ -123,27 +123,77 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'type' ); ?>"><?php _e( 'Type:', 'adrotate' ); ?></label>
 			<select class="widefat" id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" class="postform">
 				<option value="single"
-				<?php if ( 'single' == $type ) {
-					echo 'selected';
-				} ?>>
-				<?php _e( 'Advert - Use Advert ID', 'adrotate' );
-				?></option>
-				<option value="group" <?php if ( 'group' == $type ) {
-					echo 'selected';
-				} ?>>
-				<?php _e( 'Group - Use group ID', 'adrotate' );
-				?></option>
+				<?php
+					if ( 'single' == $type ) {
+						echo 'selected';
+					}
+				?>
+				>
+				<?php
+					_e( 'Advert - Use Advert ID', 'adrotate' );
+				?>
+				</option>
+				<option value="group"
+				<?php
+					if ( 'group' == $type ) {
+						echo 'selected';
+					}
+				?>
+				>
+				<?php
+					_e( 'Group - Use group ID', 'adrotate' );
+				?>
+				</option>
 			</select>
 			<br />
-			<small><?php _e( 'Choose what you want to use this widget for', 'adrotate' ); ?></small>
+			<small>
+			<?php
+				_e( 'Choose what you want to use this widget for', 'adrotate' );
+			?>
+			</small>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'adid' ); ?>"><?php _e( 'ID:', 'adrotate' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'adid' ); ?>" name="<?php echo $this->get_field_name( 'adid' ); ?>" type="text" value="<?php echo $adid; ?>" />
+			<label for="
+			<?php
+				echo $this->get_field_id( 'adid' );
+			?>
+			">
+			<?php
+				_e( 'ID:', 'adrotate' );
+			?>
+			</label>
+			<input class="widefat" id="
+			<?php
+				echo $this->get_field_id( 'adid' );
+			?>
+			" name="<?php
+				echo $this->get_field_name( 'adid' );
+			?>
+			" type="text" value="
+			<?php
+				echo $adid;
+			?>
+			" />
 			<br />
-			<small><?php _e( 'Fill in the ID of the type you want to display!', 'adrotate' ); ?></small>
+			<small>
+			<?php
+				_e( 'Fill in the ID of the type you want to display!', 'adrotate' );
+			?>
+			</small>
 		</p>
-		<input id="<?php echo $this->get_field_id( 'siteid' ); ?>" name="<?php echo $this->get_field_name( 'siteid' ); ?>" type="hidden" value="<?php echo $blog_id; ?>" />
+		<input id="
+		<?php
+			echo $this->get_field_id( 'siteid' );
+		?>
+		" name="
+		<?php
+			echo $this->get_field_name( 'siteid' );
+		?>
+		" type="hidden" value="
+		<?php
+			echo $blog_id;
+		?>
+		" />
 <?php
 	}
 }
