@@ -379,7 +379,7 @@ function sqw_send_data( $type ) {
 }
 
 function sqw_support_button_html() {
-	return '<div class="sqw-article-footer-container">
+	return '<div onclick="sqw.modal_first()" class="sqw-article-footer-container">
 					<div class="sqw-article-footer-body">
 					<div class="sqw-article-footer-body-title">'
 						. __( 'Continue reading...', 'sqweb' )

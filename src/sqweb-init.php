@@ -82,5 +82,7 @@ if ( get_option( 'archiveart' ) !== false || get_option( 'filter_all' ) !== fals
 }
 
 if ( sqweb_check_credentials( get_option( 'wsid' ) ) === false && get_option( 'sqw_display_support' ) != 0 ) {
-	add_filter( 'the_content', 'end_of_article_support_button' );
+	if( !is_feed() && !is_home() ) {
+		add_filter( 'the_content', 'end_of_article_support_button' );
+	}
 }

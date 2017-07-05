@@ -95,9 +95,11 @@ class SQweb_Filter_Articles {
 		if ( get_option( 'artbyday' ) !== false ) {
 			return apply_filters( 'sqw_filter_articles_by_day', $content, $restrictartbyday, $restrictcutartperc );
 		}
-		if ( get_option( 'cutartperc' ) !== false ) {
+
+		if ( get_option( 'cutartperc' ) !== false && get_option( 'dateart' ) === false && get_option( 'archiveart' ) === false && get_option( 'artbyday' ) === false ) {
 			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $restrictcutartperc );
 		}
+
 		return $content;
 	}
 
@@ -221,7 +223,7 @@ class SQweb_Filter_Articles {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
 				if ( get_option( 'cutartperc' ) !== false ) {
-					return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $cutmessage );
+					return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $message );
 				} else {
 					return $message;
 				}
@@ -246,14 +248,14 @@ class SQweb_Filter_Articles {
 
 	public function filter_date_art( $content, $message, $cutmessage ) {
 		if ( get_option( 'cutartperc' ) !== false ) {
-			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $cutmessage );
+			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $message );
 		}
 		return $message;
 	}
 
 	public function filter_archive_art( $content, $message, $cutmessage ) {
 		if ( get_option( 'cutartperc' ) !== false ) {
-			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $cutmessage );
+			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $message );
 		}
 		return $message;
 	}
