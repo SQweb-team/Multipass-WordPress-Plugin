@@ -22,4 +22,4 @@ function sqw_site_url() {
 // Self-Explanatory
 define( 'SQW_ENDPOINT', 'https://api.multipass.net/' );
 define( 'DEBUG_MODE', 0 );
-define( 'SQW_VERSION', '2.7.2' );
+define( 'SQW_VERSION', '2.7.3' );

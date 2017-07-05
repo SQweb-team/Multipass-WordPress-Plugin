@@ -6,17 +6,24 @@ if ( ! isset( $wpdb ) ) {
 if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) {
 
 	/**
-	 * Save if user have select Multipass
+	 * Save if user have selected Multipass
 	 */
 	if ( isset( $_POST['sqw_multipass'] ) ) {
 		update_option( 'sqw_multipass', $_POST['sqw_multipass'] );
 	}
 
 	/**
-	 * Save if user have select Adblock manager
+	 * Save if user have selected Adblock manager
 	 */
 	if ( isset( $_POST['sqw_analytics'] ) ) {
 		update_option( 'sqw_analytics', $_POST['sqw_analytics'] );
+	}
+
+	/**
+	 * Save if an end of article button should be displayed
+	 */
+	if ( isset( $_POST['sqw_display_support'] ) ) {
+		update_option( 'sqw_display_support', $_POST['sqw_display_support'] );
 	}
 
 	/**

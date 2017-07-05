@@ -377,3 +377,29 @@ function sqw_send_data( $type ) {
 	}
 	return ( 0 );
 }
+
+function sqw_support_button_html() {
+	return '<div class="sqw-article-footer-container">
+				<div class="sqw-article-footer-body">
+					<div class="sqw-article-footer-body-title">'
+						. __( 'Continue reading...', 'sqweb' )
+					. '</div>
+					<div class="sqw-article-footer-body-content1">'
+						. __( '...we need you to hear this: More people are reading our website than ever but advertising revenues across the media are falling fast.', 'sqweb' )
+					. '</div>
+					<div class="sqw-article-footer-body-content2">'
+						. __( 'We want to keep our content as open as we can. We are independent, and our quality work takes a lot of time, money and hard work to produce.', 'sqweb' )
+					. '</div>
+					<div class="sqw-article-footer-body-content3">'
+						. __( 'You can support us with Multipass which enables you to pay for a bundle of websites: you can finance the work of journalists and content creators you love.', 'sqweb' )
+					. '</div>
+				</div>
+				<div onclick="sqw.modal_first()" class="sqw-article-footer-footer">
+					<div class="sqw-article-footer-footer-text">
+						<span class="sqw-article-footer-footer-bold">'
+							. __( 'Support us with', 'sqweb' )
+					. '</div>
+					<div class="sqw-article-footer-footer-logo-container"></div>
+				</div>
+			</div>';
+}

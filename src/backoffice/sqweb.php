@@ -16,14 +16,14 @@
 			</div>
 			<div class="sqw-clear"></div>
 			<div class="sqw-form">
-				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=login" method="post">
+				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI']; ?>&type=login" method="post">
 					<input type="email" class="sqw-form-email" name="sqw-emailc" placeholder="<?php _e( 'Email' ); ?>">
 					<input type="password" class="sqw-form-password" name="sqw-passwordc" placeholder="<?php _e( 'Password' ); ?>">
 					<button type="submit"><?php _e( 'Log in', 'sqweb' ); ?></button>
 				</form>
 			</div>
 			<div class="sqw-form sqw-hide">
-				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=subscribe" method="post">
+				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI']; ?>&type=subscribe" method="post">
 					<input type="text" name="sqw-firstname" placeholder="<?php _e( 'First name', 'sqweb' ); ?>">
 					<input type="text" name="sqw-lastname" placeholder="<?php _e( 'Last name', 'sqweb' ); ?>">
 					<input type="email" class="sqw-form-email" name="sqw-email" placeholder="<?php _e( 'Email', 'sqweb' ); ?>">
@@ -33,20 +33,20 @@
 				</form>
 			</div>
 			<div style="text-align:center;" class="">
-				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=diagnostic" method="post">
-					<button class="sqw-diagnostic" type="submit"><?php _e( 'A problem ? Send us your diagnostic', 'sqweb' ) ?></button>
+				<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI']; ?>&type=diagnostic" method="post">
+					<button class="sqw-diagnostic" type="submit"><?php _e( 'A problem ? Send us your diagnostic', 'sqweb' ); ?></button>
 				</form>
 			</div>
 		</div>
 	</div>
 	<?php } else { ?>
-	<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI'] ?>&type=save" method="post">
+	<form action="<?php echo sqw_site_url() . $_SERVER['REQUEST_URI']; ?>&type=save" method="post">
 		<div class="sqw-config">
 			<div class="sqw-integer">
 				<div class="sqw-box sqw-left">
 					<div class="sqw-multipass">
 						<div class="sqw-header">
-							<h3 class="sqw-title sqw-title-multipass <?php echo ( get_option( 'sqw_multipass' ) ? 'sqw-title-multipass-color' : '' ) ?>">
+							<h3 class="sqw-title sqw-title-multipass <?php echo ( get_option( 'sqw_multipass' ) ? 'sqw-title-multipass-color' : '' ); ?>">
 								<?php _e( 'Activate Multipass', 'sqweb' ); ?>
 							</h3><div class="sqw-tack sqw-tack-big <?php echo ( get_option( 'sqw_multipass' ) ? 'sqw-tack-big-check sqw-green' : '' ); ?>" name="multipass" data-color="green"><div></div></div>
 							<input type="hidden" class="sqw-multipass-input" name="sqw_multipass" value="<?php echo get_option( 'sqw_multipass' ); ?>"/>
@@ -54,13 +54,22 @@
 						<div class="sqw-clear"></div>
 						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
-							<h4><?php _e( 'Do you want to restrict some content for free users ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-paywall" data-color="green"><div></div></div>
-							<div class="sqw-check-categorie sqw-filter-all">
-								<input type="checkbox" name="sqw_filter_all" id="sqw_filter_all" value="true" <?php echo ( get_option( 'sqw_filter_all' ) !== false ? 'checked' : '' ); ?>><label for="sqw_filter_all"><?php _e( 'Filter all content', 'sqweb' ) ?></label>
-							</div>
+							<h4><?php _e( 'Do you want to restrict access to some content ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" id="sqw-paywall" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
+								<div class="sqw-selector sqw-clear">
+									<div class="sqw-select">
+										<div class="sqw-fading-art sqw-center">
+											<p><?php _e( 'What percentage of the articles do you want to show free users ?', 'sqweb' ); ?></p>
+											<p><?php _e( '(Free users and search engines will see this)', 'sqweb' ); ?></p>
+											<input type="number" name="perctart" min="0" max="100" value="<?php echo ( get_option( 'cutartperc' ) !== false ? get_option( 'cutartperc' ) : '' ); ?>"/><span class="basic-font-10"> %</span>
+										</div>
+									</div>
+								</div>
+								<div class="sqw-check-categorie sqw-filter-all">
+									<input type="checkbox" name="sqw_filter_all" id="sqw_filter_all" value="true" <?php echo ( get_option( 'sqw_filter_all' ) !== false ? 'checked' : '' ); ?>><label for="sqw_filter_all"><?php _e( 'Restrict all posts of all categories', 'sqweb' ); ?></label>
+								</div>
 								<div class="sqw-check-categorie">
-									<p><?php _e( 'Setup content restrictions :', 'sqweb' ); ?></p>
+									<p><?php _e( 'Restrict specific categories :', 'sqweb' ); ?></p>
 									<?php
 										$scategorie = unserialize( get_option( 'categorie' ) );
 									if ( ! $scategorie ) {
@@ -80,44 +89,34 @@
 								</div>
 								<div class="sqw-check-prior-paywall sqw-clear">
 									<div>
-										<input type="checkbox" name="sqw_prior_paywall" id="sqw_prior_paywall" value="true" <?php echo ( get_option( 'sqw_prior_paywall' ) ? 'checked' : '' ) ?>/>
+										<input type="checkbox" name="sqw_prior_paywall" id="sqw_prior_paywall" value="true" <?php echo ( get_option( 'sqw_prior_paywall' ) ? 'checked' : '' ); ?>/>
 										<label for="sqw_prior_paywall"><?php _e( 'Prioritize Multipass over other paywalls', 'sqweb' ); ?></label>
 									</div>
 								</div>
 								<div class="sqw-selector sqw-clear">
 									<div class="sqw-select">
-										<h5><?php _e( 'I want a part of my content to be displayed for non paying users.', 'sqweb' ); ?></h5>
-										<div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-fading-art" data-color="green"><div></div></div>
-										<p><?php _e( '(if you use this option only the beginning of the post will be displayed)', 'sqweb' ); ?></p>
-										<div class="sqw-fading-art sqw-center sqw-safe-padding <?php echo ( get_option( 'cutartperc' ) !== false ? '' : 'sqw-hide' ); ?>">
-											<p><?php _e( 'How much % of the articles do you want to show free users ?', 'sqweb' ); ?></p>
-											<p><?php _e( '(Free users and search engines will see this)', 'sqweb' ); ?></p>
-											<input type="number" name="perctart" min="0" max="100" value="<?php echo ( get_option( 'cutartperc' ) !== false ? get_option( 'cutartperc' ) : '' ); ?>"/><span class="basic-font-10"> %</span>
-										</div>
-									</div>
-									<div class="sqw-select">
 										<h5><?php _e( 'Start restricting content after a number of page views.', 'sqweb' ); ?></h5>
 										<div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'artbyday' ) !== false ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-number-art" data-color="green"><div></div></div>
-										<p><?php _e( '(This means any user will see part of your content and they will be blocked)', 'sqweb' ); ?></p>
+										<p><?php _e( '(How many posts can be read for free by a user before beeing asked to pay)', 'sqweb' ); ?></p>
 										<div class="sqw-number-art sqw-center sqw-safe-padding <?php echo ( get_option( 'artbyday' ) !== false ? '' : 'sqw-hide' ); ?>">
 											<p><?php _e( 'How many articles free users can see daily before being blocked ?', 'sqweb' ); ?></p>
 											<input type="number" min="0" max="100" value="<?php echo ( get_option( 'artbyday' ) !== false ? get_option( 'artbyday' ) : '' ); ?>" name="artbyday"/><span class="basic-font-10"> <?php _e( 'Articles per day', 'sqweb' ); ?></span>
 										</div>
 									</div>
 									<div class="sqw-select">
-										<h5><?php _e( 'I want the posts to be available to non paying users after some days.', 'sqweb' ); ?></h5>
+										<h5><?php _e( 'Do you want premium posts to be available to free users after some time ?', 'sqweb' ); ?></h5>
 										<div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'dateart' ) !== false ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-time-art" data-color="green"><div></div></div>
 										<div class="sqw-time-art sqw-center sqw-safe-padding <?php echo ( get_option( 'dateart' ) !== false ? '' : 'sqw-hide' ); ?>">
-											<p><?php _e( 'How many days will the posts remain restricted ?', 'sqweb' ); ?></p>
-											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'dateart' ) !== false ? get_option( 'dateart' ) : '' ); ?>" name="dateart"/><span class="basic-font-10"> <?php _e( 'days before end of restriction', 'sqweb' ); ?></span>
+											<p><?php _e( 'How many days will the posts remain restricted after publication ?', 'sqweb' ); ?></p>
+											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'dateart' ) !== false ? get_option( 'dateart' ) : '' ); ?>" name="dateart"/><span class="basic-font-10"> <?php _e( 'days before paywall unlock', 'sqweb' ); ?></span>
 										</div>
 									</div>
 									<div class="sqw-select">
-										<h5><?php _e( 'I want the posts to be archived after some days.', 'sqweb' ); ?></h5>
+										<h5><?php _e( 'Do you want archives (old posts) to be restricted after some time ?', 'sqweb' ); ?></h5>
 										<div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'archiveart' ) !== false ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw-archive-art" data-color="green"><div></div></div>
 										<div class="sqw-archive-art sqw-center sqw-safe-padding <?php echo ( get_option( 'archiveart' ) !== false ? '' : 'sqw-hide' ); ?>">
-											<p><?php _e( 'After how many days will the posts be archived ?', 'sqweb' ); ?></p>
-											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'archiveart' ) !== false ? get_option( 'archiveart' ) : '' ); ?>" name="archiveart"/><span class="basic-font-10"> <?php _e( 'days before archiving', 'sqweb' ); ?></span>
+											<p><?php _e( 'How many days after publication will the posts remain free ?' ); ?></p>
+											<input type="number" min="0" max="365" value="<?php echo ( get_option( 'archiveart' ) !== false ? get_option( 'archiveart' ) : '' ); ?>" name="archiveart"/><span class="basic-font-10"> <?php _e( 'days before paywall lock', 'sqweb' ); ?></span>
 										</div>
 									</div>
 									<div class="sqw-check-user-rank">
@@ -142,53 +141,17 @@
 									<div class="sqw-clear"></div>
 								</div>
 							</div>
+							<div class="sqw-support-button">
+								<h4><?php _e( 'Do you want to display a "Support us" message at the end of your posts ?', 'sqweb' ); ?></h4>
+								<div id="sqw_display_support_trigger" class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_display_support' ) != 0 ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw_display_support" data-color="green"><div></div></div>
+								<input type="hidden" id="sqw_display_support" name="sqw_display_support" value="<?php echo get_option( 'sqw_display_support' ); ?>">
+							</div>
+							<div class="sqw-support-button-preview <?php echo ( get_option( 'sqw_display_support' ) ? '' : 'sqw-hide' ); ?>">
+								<?php echo sqw_support_button_html(); ?>
+							</div>
 							<div class="sqw-config-button">
 								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'Multipass users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>
-								<p class="sqw-center basic-font-12"><?php _e( 'This will be used for the button that visitors will use to register, payment and login.', 'sqweb' ); ?></p>
-								<div class="sqw-full-width">
-									<div class="sqw-tiers">
-										<div class="sqw-margin-top">
-											<p><label for="sqw-lang-select"><?php _e( 'Language of your website :', 'sqweb' ); ?></label></p>
-											<select class="sqw-input-select" name="lang" id="sqw-lang-select">';
-												<option value="fr" <?php echo 'fr' === $lang ? 'selected' : ''; ?>><?php _e( 'French', 'sqweb' ); ?></option>
-												<option value="en" <?php echo 'en' === $lang ? 'selected' : ''; ?>><?php _e( 'English', 'sqweb' ); ?></option>
-												<!--<option value="es" <?php echo 'es' === $lang ? 'selected' : ''; ?>><?php _e( 'Español', 'sqweb' ); ?></option>-->
-											</select>
-											<select class="sqw-input-select" id="sqw-previ-select">
-												<option value="tiny"><?php _e( 'Tiny', 'sqweb' ); ?></option>
-												<option value="slim"><?php _e( 'Slim', 'sqweb' ); ?></option>
-												<option value="normal"><?php _e( 'Normal', 'sqweb' ); ?></option>
-												<option value="large"><?php _e( 'Large', 'sqweb' ); ?></option>
-											</select>
-										</div>
-									</div>
-									<div class="sqw-tiers2 sqw-padding-left">
-										<?php
-										if ( function_exists( 'get_blog_details' ) ) {
-											$current_site = get_blog_details();
-											$blogname = $current_site->blogname;
-										} else {
-											$blogname = get_option( 'blogname' );
-										}
-										?>
-										<p><?php _e( 'Preview :', 'sqweb' ); ?></p>
-										<div class="sqweb-button multipass-large">
-											<div class="sqw-btn-mp">
-												<span class="sqw-btn-mp-logo"></span>
-												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none">Premium avec Multipass</a>
-												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-only">Premium</a>
-												<a onclick="sqw.modal_first()" class="sqw-btn-mp-link sqw-btn-mp-link-large-only">
-													<b>
-													<?php echo $blogname ?> PREMIUM</b>
-													<br><span id="sqw-punch-line">Lecture Illimitée • Zéro Pub</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sqw-clear">
 							</div>
 						</div>
 					</div>
@@ -198,7 +161,7 @@
 				<div class="sqw-box sqw-right">
 					<div class="sqw-analytics">
 						<div class="sqw-header">
-							<h3 class="sqw-title sqw-title-analytics <?php echo ( get_option( 'sqw_analytics' ) ? 'sqw-title-analytics-color' : '' ) ?>">
+							<h3 class="sqw-title sqw-title-analytics <?php echo ( get_option( 'sqw_analytics' ) ? 'sqw-title-analytics-color' : '' ); ?>">
 								<?php _e( 'Activate Adblockers Manager' ); ?>
 							</h3><div class="sqw-tack sqw-tack-big <?php echo ( get_option( 'sqw_analytics' ) ? 'sqw-tack-big-check sqw-red' : '' ); ?>" name="analytics" data-color="red"><div></div></div>
 							<input type="hidden" class="sqw-analytics-input" name="sqw_analytics" value="<?php echo get_option( 'sqw_analytics' ); ?>"/>
@@ -207,7 +170,7 @@
 						<div class="sqw-analytics-body sqw-body <?php echo ( get_option( 'sqw_analytics' ) ? '' : 'sqw-hide' ); ?>">
 							<div class="sqw-margin-top">
 								<h4><?php _e( 'Would you like to display a dynamic popup to your adblockers ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_popup' ) ? 'sqw-tack-basic-check sqw-red' : '' ); ?>" name="sqw-popup" data-color="red" data-type="popup"><div></div></div>
-								<input type="checkbox" value="true" name="sqw_popup" id="checkbox_popup" style="display:none;" <?php echo ( get_option( 'sqw_popup' ) ? 'checked' : '' ) ?>>
+								<input type="checkbox" value="true" name="sqw_popup" id="checkbox_popup" style="display:none;" <?php echo ( get_option( 'sqw_popup' ) ? 'checked' : '' ); ?>>
 							</div>
 							<div class="sqw-margin-top">
 								<h4><?php _e( 'Would you like to display a message to your adblockers ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( ! empty( $fmes ) ? 'sqw-tack-basic-check sqw-red' : '' ); ?>" name="sqw-message" data-color="red" data-type="message"><div></div></div>
@@ -227,7 +190,9 @@
 			</div>
 		</div>
 	</form>
-	<?php } // End if(). ?>
+	<?php
+} // End if().
+	?>
 </div>
 
 <script>

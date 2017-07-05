@@ -95,9 +95,11 @@ class SQweb_Filter_Articles {
 		if ( get_option( 'artbyday' ) !== false ) {
 			return apply_filters( 'sqw_filter_articles_by_day', $content, $restrictartbyday, $restrictcutartperc );
 		}
-		if ( get_option( 'cutartperc' ) !== false ) {
+
+		if ( get_option( 'cutartperc' ) !== false && get_option( 'dateart' ) === false && get_option( 'archiveart' ) === false && get_option( 'artbyday' ) === false ) {
 			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $restrictcutartperc );
 		}
+
 		return $content;
 	}
 
@@ -107,6 +109,10 @@ class SQweb_Filter_Articles {
 	 */
 
 	public function msg_restrict_cut_art_perc() {
+		//V1 bouton
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'The rest of this article is for subscribers only', 'sqweb' ) . '</h5><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><span>' . __( 'Become a subscriber now', 'sqweb' ) . '</span></div>';
+
+		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div onclick="sqw.modal_first()" class="footer__mp__button_header_title">' . __( 'The rest of this article is restricted', 'sqweb' ) . '</div>
@@ -123,6 +129,10 @@ class SQweb_Filter_Articles {
 	}
 
 	public function msg_restrict_art_by_day() {
+		//V1 bouton
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</h5><span>' . __( 'Access immediately the premium content with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><p>' . __( 'Or come back tomorrow', 'sqweb' ) . '</p></div>';
+
+		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</div>
@@ -139,6 +149,10 @@ class SQweb_Filter_Articles {
 	}
 
 	public function msg_restrict_date_art() {
+		//V1 bouton
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _n( 'It will be available for free in %d day', 'It will be available for free in %d days', ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ), 'sqweb' ), ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+
+		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . sprintf( _n( 'This will be available for free in %d day', 'This will be available for free in %d days', ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ), 'sqweb' ), ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ) ) . '</div>
@@ -155,6 +169,10 @@ class SQweb_Filter_Articles {
 	}
 
 	public function msg_restrict_archive_art() {
+		//V1 bouton
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _n( 'Archives are for subscribers only', 'Archives are for subscribers only', 'sqweb' ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+
+		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . __( 'This article is restricted.', 'sqweb' ) . '</div>
@@ -205,7 +223,7 @@ class SQweb_Filter_Articles {
 			$newseeing = unserialize( $count['0']->seeingart );
 			if ( ! in_array( $id, $newseeing ) ) {
 				if ( get_option( 'cutartperc' ) !== false ) {
-					return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $cutmessage );
+					return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $message );
 				} else {
 					return $message;
 				}
@@ -230,14 +248,14 @@ class SQweb_Filter_Articles {
 
 	public function filter_date_art( $content, $message, $cutmessage ) {
 		if ( get_option( 'cutartperc' ) !== false ) {
-			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $cutmessage );
+			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $message );
 		}
 		return $message;
 	}
 
 	public function filter_archive_art( $content, $message, $cutmessage ) {
 		if ( get_option( 'cutartperc' ) !== false ) {
-			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $cutmessage );
+			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $message );
 		}
 		return $message;
 	}
