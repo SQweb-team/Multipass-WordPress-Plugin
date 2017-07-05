@@ -233,7 +233,7 @@
 		</div>
 	</form>
 	<?php
-		} // End if().
+} // End if().
 	?>
 </div>
 
