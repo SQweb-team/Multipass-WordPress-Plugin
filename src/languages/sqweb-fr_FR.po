@@ -146,7 +146,7 @@ msgstr "jours avant déverrouillage"
 
 #: backoffice/sqweb.php:123
 msgid "Do not restrict content to the following user groups :"
-msgstr "Ne pas restreindre de contenu aux groupes d’utilisateurs suivants :"
+msgstr "Ne pas restreindre de contenu aux groupes d’utilisateurs suivants :"
 
 #: backoffice/sqweb.php:145
 msgid ""
@@ -233,7 +233,7 @@ msgid ""
 "<b>SQweb notice : </b>Cache with mod_rewrite detected, please switch to PHP "
 "cache or Legacy cache, you can click "
 msgstr ""
-"<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
+"<b>SQweb Notice :</b> Cache avec mod_rewrite détecté, veuillez passer au "
 "cache via PHP ou Legacy cache, vous pouvez aussi cliquer "
 
 #: class/class-sqweb-auto-config.php:123 class/class-sqweb-auto-config.php:137
@@ -246,7 +246,7 @@ msgid ""
 "<b>SQweb notice : </b>Browser cache from W3TC is enabled, is not compatible "
 "with SQweb, please disabled it, you can click "
 msgstr ""
-"<b>SQweb Notice :</b> Cache par navigateur de W3TC activé, il n’est "
+"<b>SQweb Notice :</b> Cache par navigateur de W3TC activé, il n’est "
 "malheureusement pas compatible avec SQweb, veuillez le désactivez, vous "
 "pouvez aussi cliquer "
 
@@ -255,8 +255,8 @@ msgid ""
 "<b>SQweb notice : </b>Dynamic content is not available in Disk: enhanced "
 "mod, please switch to Disk: basic, you can click "
 msgstr ""
-"<b>SQweb Notice :</b> Le contenu dynamique n’est pas disponible dans le mode "
-"disk : enhanced mod, veuillez basculer sur le mode disk : basic, vous pouvez "
+"<b>SQweb Notice :</b> Le contenu dynamique n’est pas disponible dans le mode "
+"disk : enhanced mod, veuillez basculer sur le mode disk : basic, vous pouvez "
 "aussi cliquer "
 
 #: class/class-sqweb-widget-button.php:12
@@ -475,7 +475,7 @@ msgstr "Description (facultatif) :"
 
 #: plugins/adrotate-widget.php:120
 msgid "What is this widget used for? (Not parsed, HTML will be stripped out.)"
-msgstr "À quoi sert ce widget ?"
+msgstr "À quoi sert ce widget ?"
 
 #: plugins/adrotate-widget.php:123
 msgid "Type:"
@@ -495,7 +495,7 @@ msgstr "Choisissez ce que vous voulez faire de ce widget"
 
 #: plugins/adrotate-widget.php:162
 msgid "ID:"
-msgstr "ID :"
+msgstr "ID :"
 
 #: plugins/adrotate-widget.php:181
 msgid "Fill in the ID of the type you want to display!"
@@ -1081,7 +1081,7 @@ msgstr "Configuration"
 #~ "Widget menu and search for the widget called \"SQweb Button\""
 #~ msgstr ""
 #~ "Vous avez terminé l’installation, pour afficher le bouton SQweb, rendez "
-#~ "vous dans votre menu widget et cherchez le widget appelé « SQweb button »."
+#~ "vous dans votre menu widget et cherchez le widget appelé « SQweb button »."
 
 #~ msgid "I don't have account"
 #~ msgstr "Je n’ai pas de compte"
@@ -1148,8 +1148,8 @@ msgstr "Configuration"
 #~ "here to proceed</a>.</p>"
 #~ msgstr ""
 #~ "SQweb activé. <b>Notice :</b> Veuillez vous connecter et sélectionnez "
-#~ "votre site web afin d’utiliser SQweb. <a href=« admin.php?"
-#~ "page=SQwebAdmin »>Cliquez ici pour continuer</a>.<p>"
+#~ "votre site web afin d’utiliser SQweb. <a href=« admin.php?"
+#~ "page=SQwebAdmin »>Cliquez ici pour continuer</a>.<p>"
 
 #~ msgid "Register a new website"
 #~ msgstr "Enregistrer un nouveau site"
