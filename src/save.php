@@ -51,6 +51,15 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		delete_option( 'sqw_filter_all' );
 	}
 
+	/**
+	 * Enable php parsing in text widgets
+	 */
+	if ( ! empty( $_POST['sqw_php_parsing'] ) ) {
+		update_option( 'sqw_php_parsing', true );
+	} else {
+		delete_option( 'sqw_php_parsing' );
+	}
+
 
 	/**
 	 * Save user role can see article behind paywall in all case
