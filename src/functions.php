@@ -1,9 +1,9 @@
 <?php
 
-function php_execute( $html ){
-	if ( strpos( $html,"<"."?php" ) !== false ) {
+function php_execute ( $html ) {
+	if ( strpos( $html, '<' . '?php' ) !== false ) {
 		ob_start();
-		eval( "?" . ">" . $html );
+		eval( '?' . '>' . $html );
 		$html = ob_get_contents();
 		ob_end_clean();
 	}
