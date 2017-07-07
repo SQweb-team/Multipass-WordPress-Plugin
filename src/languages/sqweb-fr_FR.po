@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-07-05 14:25+0200\n"
-"PO-Revision-Date: 2017-07-05 14:30+0200\n"
+"POT-Creation-Date: 2017-07-07 14:38+0200\n"
+"PO-Revision-Date: 2017-07-07 14:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -66,7 +66,7 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:55 backoffice/sqweb.php:169
+#: backoffice/sqweb.php:55 backoffice/sqweb.php:173
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -153,40 +153,48 @@ msgid ""
 "Do you want to display a \"Support us\" message at the end of your posts ?"
 msgstr "Afficher un bouton “Supportez nous” en pied d’article"
 
-#: backoffice/sqweb.php:153
+#: backoffice/sqweb.php:154
+msgid ""
+"Enable php parsing in text widgets (this might be needed to filter ads in "
+"your theme template)"
+msgstr ""
+"Activer l’interprétation du PHP dans les widgets de text (Peut-être requis "
+"pour filtrer les pubs dans votre template de thème)"
+
+#: backoffice/sqweb.php:157
 msgid "Multipass users must browse without ads on your website"
 msgstr "Les abonnés Multipass doivent naviguer sans publicité sur votre site"
 
-#: backoffice/sqweb.php:165
+#: backoffice/sqweb.php:169
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:169
+#: backoffice/sqweb.php:173
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr ""
 "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:172
+#: backoffice/sqweb.php:176
 msgid "Would you like to display a dynamic popup to your adblockers ?"
 msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:176
+#: backoffice/sqweb.php:180
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:179
+#: backoffice/sqweb.php:183
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:181
+#: backoffice/sqweb.php:185
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:189
+#: backoffice/sqweb.php:193
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backoffice/sqweb.php:200
+#: backoffice/sqweb.php:204
 msgid ""
 "If you want a better experience on our website you can get <a href=\"#\" "
 "onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
@@ -310,27 +318,27 @@ msgstr ""
 "Une erreur s’est produite lors de l’envoie du diagnostique. Contactez notre "
 "support technique à l’adresse suivant : hello@sqweb.com"
 
-#: functions.php:139
+#: functions.php:149
 msgid "Email already used."
 msgstr "Email déjà utilisée."
 
-#: functions.php:142
+#: functions.php:152
 msgid "Password must be 8 characters."
 msgstr "Le mot de passe doit comporter au moins 8 caractères."
 
-#: functions.php:193
+#: functions.php:203
 msgid "Email invalid."
 msgstr "Email non valide."
 
-#: functions.php:196
+#: functions.php:206
 msgid "Password invalid."
 msgstr "Mot de passe invalide."
 
-#: functions.php:385
+#: functions.php:395
 msgid "Continue reading..."
 msgstr "L’article est terminé …"
 
-#: functions.php:388
+#: functions.php:398
 msgid ""
 "...we need you to hear this: More people are reading our website than ever "
 "but advertising revenues across the media are falling fast."
@@ -338,7 +346,7 @@ msgstr ""
 "… mais nous avons besoin que vous lisiez ceci: nous avons de plus en plus de "
 "lecteurs chaque jour, mais de moins en moins de revenus publicitaires."
 
-#: functions.php:391
+#: functions.php:401
 msgid ""
 "We want to keep our content as open as we can. We are independent, and our "
 "quality work takes a lot of time, money and hard work to produce."
@@ -347,7 +355,7 @@ msgstr ""
 "indépendants et notre travail de qualité prend beaucoup de temps, d’argent "
 "et de dévotion."
 
-#: functions.php:394
+#: functions.php:404
 msgid ""
 "You can support us with Multipass which enables you to pay for a bundle of "
 "websites: you can finance the work of journalists and content creators you "
@@ -357,7 +365,7 @@ msgstr ""
 "de sites, et ainsi financer le travail des créateurs et journalistes que "
 "vous aimez."
 
-#: functions.php:400
+#: functions.php:410
 msgid "Support us with"
 msgstr "Soutenez nous avec"
 
@@ -493,7 +501,7 @@ msgstr "ID :"
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 
-#: save.php:125
+#: save.php:134
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
