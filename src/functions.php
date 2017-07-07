@@ -1,6 +1,6 @@
 <?php
 
-function php_execute( $html ) {
+function sqw_php_execute( $html ) {
 	if ( strpos( $html, '<' . '?php' ) !== false ) {
 		ob_start();
 		eval( '?' . '>' . $html );

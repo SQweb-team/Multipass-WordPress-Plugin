@@ -88,5 +88,5 @@ if ( sqweb_check_credentials( get_option( 'wsid' ) ) === false && get_option( 's
 }
 
 if ( get_option( 'sqw_php_parsing' ) !== false ) {
-	add_filter( 'widget_text', 'php_execute' );
+	add_filter( 'widget_text', 'sqw_php_execute' );
 }
