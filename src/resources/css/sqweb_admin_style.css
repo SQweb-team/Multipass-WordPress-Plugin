@@ -248,6 +248,7 @@ input[type=password] {
     float: left;
 }
 
+.sqw-support-button input[type=checkbox],
 .sqw-check-categorie input[type=checkbox],
 .sqw-check-user-rank input[type=checkbox],
 .sqw-check-prior-paywall input[type=checkbox] {

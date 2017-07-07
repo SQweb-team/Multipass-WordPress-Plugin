@@ -1,5 +1,15 @@
 <?php
 
+function sqw_php_execute( $html ) {
+	if ( strpos( $html, '<' . '?php' ) !== false ) {
+		ob_start();
+		eval( '?' . '>' . $html );
+		$html = ob_get_contents();
+		ob_end_clean();
+	}
+	return $html;
+}
+
 /**
  * Send an http request to the api
  * returns true if logged, 0 if not
