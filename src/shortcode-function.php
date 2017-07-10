@@ -19,10 +19,13 @@ function sqweb_add_filter_short_code( $atts = array(), $content = null, $tag = '
 		'premium' => '',
 	), $atts, $tag);
 
+	$premium = preg_replace( '/&#093;/', ']', $wporg_atts['premium'] );
+	$ads = preg_replace( '/&#093;/', ']', $wporg_atts['ads'] );
+
 	if ( apply_filters( 'sqw_check_credentials', get_option( 'wsid' ) ) ) {
-		echo $wporg_atts['premium'];
+		echo $premium;
 	} else {
-		echo $wporg_atts['ads'];
+		echo $ads;
 	}
 }
 
