@@ -79,6 +79,8 @@ You can also use this shortcode:
 or
 `<?php do_shortcode('[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE"]') ?>`
 
+Warning: if you have a `]` in your advertisement tag, you have to replace it with it's html code i.e: `&#093;` or else the shortcode will not work.
+
 Add a premium argument to this shortcode to display something in the place of the advertising block, this is optionnal.
 i.e:
 
@@ -151,6 +153,9 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.7.5 =
+* Improve shortcode to filter ads from theme template.
 
 = v2.7.4 =
 * Add an option to enable php to be parsed in text widgets, hence in theme template.
