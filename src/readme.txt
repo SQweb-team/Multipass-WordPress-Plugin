@@ -79,6 +79,8 @@ You can also use this shortcode:
 or
 `<?php do_shortcode('[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE"]') ?>`
 
+Warning: if you have a `]` in your advertisement tag, you have to replace it with it's html code i.e: `&#093;` or else the shortcode will not work.
+
 Add a premium argument to this shortcode to display something in the place of the advertising block, this is optionnal.
 i.e:
 
