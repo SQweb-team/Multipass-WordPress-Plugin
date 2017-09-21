@@ -5,5 +5,5 @@
 	$flogout = (get_option( 'flogout' ) != false) ? get_option( 'flogout' ) : '';
 	$fmes = (get_option( 'fmes' ) != false) ? get_option( 'fmes' ) : '';
 	$btheme = (get_option( 'btheme' ) != false) ? get_option( 'btheme' ) : 'blue';
-	$lang = (get_option( 'lang' ) != false) ? get_option( 'lang' ) : 'en';
+	$lang = (get_option( 'sqw_lang' ) != false) ? get_option( 'sqw_lang' ) : 'en';
 	$targeting = (get_option( 'targets' ) != false) ? get_option( 'targets' ) : 'false';

@@ -227,6 +227,14 @@ input[type=password] {
     color: #f13564;
 }
 
+.sqw-select-lang {
+    margin-bottom: 30px;
+}
+
+.sqw-select-lang-tag {
+    float: right;
+}
+
 .sqw-paywall {
     margin-left: 3%;
 }

@@ -70,11 +70,12 @@ function paywall_style() {
 }
 
 function end_of_article_support_button( $content ) {
-	$content .= sqw_support_button_html();
+	if ( !strstr( $content, 'sqw.modal_first()' ) ) {
+		$content .= sqw_support_button_html();
+	}
 
 	return $content;
 }
-
 
 if ( get_option( 'archiveart' ) !== false || get_option( 'filter_all' ) !== false || get_option( 'dateart' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'cutartperc' ) !== false || get_option( 'sqw_display_support' ) != 0 ) {
 	add_filter( 'the_content', 'sqw_login_content' );

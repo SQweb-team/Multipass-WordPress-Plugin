@@ -29,8 +29,8 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	/**
 	 * Save the lang of button selected by webmaster
 	 */
-	if ( isset( $_POST['lang'] ) ) {
-		update_option( 'lang', $_POST['lang'] );
+	if ( isset( $_POST['sqw_lang'] ) ) {
+		update_option( 'sqw_lang', $_POST['sqw_lang'] );
 	}
 
 	/**
