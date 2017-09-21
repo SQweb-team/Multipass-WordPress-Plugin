@@ -54,6 +54,13 @@
 						<div class="sqw-clear"></div>
 						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
+							<div class="sqw-select-lang">
+								<h4><?php _e( 'In which language should users see the plugin ?', 'sqweb' ); ?></h4>
+								<select class="sqw-select-lang-tag" name="sqw_lang">
+									<option value="fr" <?php echo ( get_option( 'sqw_lang' ) === 'fr' ? 'selected' : '' ); ?> ><?php _e( 'French', 'fr' ); ?></option>
+									<option value="en" <?php echo ( get_option( 'sqw_lang' ) === 'en' ? 'selected' : '' ); ?> ><?php _e( 'English', 'en' ); ?></option>
+								</select>
+							</div>
 							<h4><?php _e( 'Do you want to restrict access to some content ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" id="sqw-paywall" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
 								<div class="sqw-selector sqw-clear">
@@ -161,7 +168,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="sqw-integer">
+			<!-- <div class="sqw-integer">
 				<div class="sqw-box sqw-right">
 					<div class="sqw-analytics">
 						<div class="sqw-header">
@@ -187,7 +194,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="sqw-clear"></div>
 			<div class="sqw-center">
 				<button type="submit" class="sqw-save"><?php _e( 'Save', 'sqweb' ); ?></button>

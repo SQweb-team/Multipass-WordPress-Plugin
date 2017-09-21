@@ -57,7 +57,7 @@ class SQweb_Admin {
 		delete_option( 'sqw_filter_all' );
 		delete_option( 'archiveart' );
 		delete_option( 'cutartperc' );
-		delete_option( 'lang' );
+		delete_option( 'sqw_lang' );
 		delete_option( 'btheme' );
 		delete_option( 'flogout' );
 		delete_option( 'flogin' );

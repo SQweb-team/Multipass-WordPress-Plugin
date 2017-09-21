@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.8
-Stable tag: 2.7.4
+Stable tag: 2.7.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -155,7 +155,8 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 == Changelog ==
 
 = v2.7.5 =
-* Improve shortcode to filter ads from theme template.
+* Restore the option to chose the plugin language
+* You can now use the "Support Us" button with restictions options, the support us button will appears on pages without restrictions.
 
 = v2.7.4 =
 * Add an option to enable php to be parsed in text widgets, hence in theme template.

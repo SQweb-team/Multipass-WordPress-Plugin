@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-07-07 14:38+0200\n"
-"PO-Revision-Date: 2017-07-07 14:39+0200\n"
+"POT-Creation-Date: 2017-09-21 16:16+0200\n"
+"PO-Revision-Date: 2017-09-21 16:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -66,94 +66,106 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:55 backoffice/sqweb.php:173
+#: backoffice/sqweb.php:55 backoffice/sqweb.php:180
 msgid "More infos"
 msgstr "Plus d’infos"
 
-#: backoffice/sqweb.php:57
+#: backoffice/sqweb.php:58
+msgid "In which language should users see the plugin ?"
+msgstr "Dans quelle langue l’utilisateur doit voire le plugin ?"
+
+#: backoffice/sqweb.php:60
+msgid "French"
+msgstr "Français"
+
+#: backoffice/sqweb.php:61
+msgid "English"
+msgstr "Anglais"
+
+#: backoffice/sqweb.php:64
 msgid "Do you want to restrict access to some content ?"
 msgstr "Voulez-vous restreindre certains contenus ?"
 
-#: backoffice/sqweb.php:62
+#: backoffice/sqweb.php:69
 msgid "What percentage of the articles do you want to show free users ?"
 msgstr "Quel % de l'article doit être montré aux utilisateurs gratuits ?"
 
-#: backoffice/sqweb.php:63
+#: backoffice/sqweb.php:70
 msgid "(Free users and search engines will see this)"
 msgstr "(Les utilisateurs gratuits et les moteurs de recherche verront ceci)"
 
-#: backoffice/sqweb.php:69
+#: backoffice/sqweb.php:76
 msgid "Restrict all posts of all categories"
 msgstr "Filtrer tous les contenus"
 
-#: backoffice/sqweb.php:72
+#: backoffice/sqweb.php:79
 msgid "Restrict specific categories :"
 msgstr "Filtrer seulement certaines catégories:"
 
-#: backoffice/sqweb.php:93
+#: backoffice/sqweb.php:100
 msgid "Prioritize Multipass over other paywalls"
 msgstr ""
 "Rendre Multipass prioritaire vis à vis des autres paywalls sur votre site"
 
-#: backoffice/sqweb.php:98
+#: backoffice/sqweb.php:105
 msgid "Start restricting content after a number of page views."
 msgstr ""
 "Démarrer la restriction de contenu après un certain nombre de pages vues."
 
-#: backoffice/sqweb.php:100
+#: backoffice/sqweb.php:107
 msgid ""
 "(How many posts can be read for free by a user before beeing asked to pay)"
 msgstr "(Combien d’articles peuvent être lus avant de bloquer l’utilisateur)"
 
-#: backoffice/sqweb.php:102
+#: backoffice/sqweb.php:109
 msgid "How many articles free users can see daily before being blocked ?"
 msgstr ""
 "Combien d’articles gratuit l’utilisateur peut voir par jours avant d’être "
 "bloquer ?"
 
-#: backoffice/sqweb.php:103
+#: backoffice/sqweb.php:110
 msgid "Articles per day"
 msgstr "Articles par jours"
 
-#: backoffice/sqweb.php:107
+#: backoffice/sqweb.php:114
 msgid ""
 "Do you want premium posts to be available to free users after some time ?"
 msgstr ""
 "Souhaitez-vous que les articles premium deviennent gratuits après un certain "
 "temps ?"
 
-#: backoffice/sqweb.php:110
+#: backoffice/sqweb.php:117
 msgid "How many days will the posts remain restricted after publication ?"
 msgstr "Combien de jours les articles restent bloqués ?"
 
-#: backoffice/sqweb.php:111
+#: backoffice/sqweb.php:118
 msgid "days before paywall unlock"
 msgstr "jours avant déverouillage"
 
-#: backoffice/sqweb.php:115
+#: backoffice/sqweb.php:122
 msgid "Do you want archives (old posts) to be restricted after some time ?"
 msgstr ""
 "Souahitez-vous que les articles deviennent des articles premium au bout d’un "
 "nombre de jours ?"
 
-#: backoffice/sqweb.php:118
+#: backoffice/sqweb.php:125
 msgid "How many days after publication will the posts remain free ?"
 msgstr "Combien de jours les articles restent gratuits ?"
 
-#: backoffice/sqweb.php:119
+#: backoffice/sqweb.php:126
 msgid "days before paywall lock"
 msgstr "jours avant déverrouillage"
 
-#: backoffice/sqweb.php:123
+#: backoffice/sqweb.php:130
 msgid "Do not restrict content to the following user groups :"
 msgstr "Ne pas restreindre de contenu aux groupes d’utilisateurs suivants :"
 
-#: backoffice/sqweb.php:145
+#: backoffice/sqweb.php:152
 msgid ""
 "Do you want to display a \"Support us\" message at the end of your posts ?"
 msgstr "Afficher un bouton “Supportez nous” en pied d’article"
 
-#: backoffice/sqweb.php:154
+#: backoffice/sqweb.php:161
 msgid ""
 "Enable php parsing in text widgets (this might be needed to filter ads in "
 "your theme template)"
@@ -161,40 +173,40 @@ msgstr ""
 "Activer l’interprétation du PHP dans les widgets de text (Peut-être requis "
 "pour filtrer les pubs dans votre template de thème)"
 
-#: backoffice/sqweb.php:157
+#: backoffice/sqweb.php:164
 msgid "Multipass users must browse without ads on your website"
 msgstr "Les abonnés Multipass doivent naviguer sans publicité sur votre site"
 
-#: backoffice/sqweb.php:169
+#: backoffice/sqweb.php:176
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:173
+#: backoffice/sqweb.php:180
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr ""
 "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:176
+#: backoffice/sqweb.php:183
 msgid "Would you like to display a dynamic popup to your adblockers ?"
 msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:180
+#: backoffice/sqweb.php:187
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:183
+#: backoffice/sqweb.php:190
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:185
+#: backoffice/sqweb.php:192
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:193
+#: backoffice/sqweb.php:200
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backoffice/sqweb.php:204
+#: backoffice/sqweb.php:211
 msgid ""
 "If you want a better experience on our website you can get <a href=\"#\" "
 "onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
@@ -611,12 +623,6 @@ msgstr "Configuration"
 
 #~ msgid "Language of your website :"
 #~ msgstr "Langue de votre site :"
-
-#~ msgid "French"
-#~ msgstr "Français"
-
-#~ msgid "English"
-#~ msgstr "Anglais"
 
 #~ msgid "Español"
 #~ msgstr "Espagnol"
@@ -1148,8 +1154,8 @@ msgstr "Configuration"
 #~ "here to proceed</a>.</p>"
 #~ msgstr ""
 #~ "SQweb activé. <b>Notice :</b> Veuillez vous connecter et sélectionnez "
-#~ "votre site web afin d’utiliser SQweb. <a href=« admin.php?"
-#~ "page=SQwebAdmin »>Cliquez ici pour continuer</a>.<p>"
+#~ "votre site web afin d’utiliser SQweb. <a href=« admin.php?page=SQwebAdmin "
+#~ "»>Cliquez ici pour continuer</a>.<p>"
 
 #~ msgid "Register a new website"
 #~ msgstr "Enregistrer un nouveau site"
