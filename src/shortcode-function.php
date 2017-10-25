@@ -15,12 +15,12 @@ function sqweb_button_short_code( $atts = array(), $content = null, $tag = '' ) 
 function sqweb_add_filter_short_code( $atts = array(), $content = null, $tag = '' ) {
 
 	$wporg_atts = shortcode_atts( array(
-		'ads' => 'ad',
+		'ads'     => 'ad',
 		'premium' => '',
 	), $atts, $tag);
 
 	$premium = preg_replace( '/&#093;/', ']', $wporg_atts['premium'] );
-	$ads = preg_replace( '/&#093;/', ']', $wporg_atts['ads'] );
+	$ads     = preg_replace( '/&#093;/', ']', $wporg_atts['ads'] );
 
 	if ( apply_filters( 'sqw_check_credentials', get_option( 'wsid' ) ) ) {
 		echo $premium;

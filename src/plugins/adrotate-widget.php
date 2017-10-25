@@ -10,26 +10,26 @@
 ------------------------------------------------------------------------------------ */
 
 /*-------------------------------------------------------------
- Name:      adrotate_widget
+Name:      adrotate_widget
 
- Purpose:   Unlimited widgets for the sidebar
- Since:		0.8
+Purpose:   Unlimited widgets for the sidebar
+Since:		0.8
 -------------------------------------------------------------*/
 class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 
 	/*-------------------------------------------------------------
-	 Purpose:   Construct the widget
+	Purpose:   Construct the widget
 	-------------------------------------------------------------*/
 	public function __construct() {
 		$widget_ops = array(
-			'classname' => 'AdrotateWidgetsSqwCompatibility',
+			'classname'   => 'AdrotateWidgetsSqwCompatibility',
 			'description' => 'Show a group of adverts or a single advert in any widget area.',
 		);
 		parent::__construct( 'AdrotateWidgetsSqwCompatibility', 'AdRotate SQweb compatibility', $widget_ops );
 	}
 
 	/*-------------------------------------------------------------
-	 Purpose:   Display the widget
+	Purpose:   Display the widget
 	-------------------------------------------------------------*/
 	public function widget( $args, $instance ) {
 		global $adrotate_config, $blog_id;
@@ -72,12 +72,12 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 	}
 
 	/*-------------------------------------------------------------
-	 Purpose:   Save the widget options per instance
+	Purpose:   Save the widget options per instance
 	-------------------------------------------------------------*/
 	public function update( $new_instance, $old_instance ) {
-		$new_instance['title'] = strip_tags( $new_instance['title'] );
+		$new_instance['title']       = strip_tags( $new_instance['title'] );
 		$new_instance['description'] = strip_tags( $new_instance['description'] );
-		$new_instance['type'] = strip_tags( $new_instance['type'] );
+		$new_instance['type']        = strip_tags( $new_instance['type'] );
 
 		//Try and preserve pre-fix widget IDs
 		if ( isset( $new_instance['id'] ) and $new_instance['adid'] < 1 ) {
@@ -94,7 +94,7 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 	}
 
 	/*-------------------------------------------------------------
-	 Purpose:   Display the widget options for admins
+	Purpose:   Display the widget options for admins
 	-------------------------------------------------------------*/
 	public function form( $instance ) {
 		global $blog_id;
@@ -102,10 +102,10 @@ class AdrotateWidgetsSqwCompatibility extends WP_Widget {
 		$defaults = array();
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$title = esc_attr( $instance['title'] );
+		$title       = esc_attr( $instance['title'] );
 		$description = esc_attr( $instance['description'] );
-		$type = esc_attr( $instance['type'] );
-		$adid = esc_attr( $instance['adid'] );
+		$type        = esc_attr( $instance['type'] );
+		$adid        = esc_attr( $instance['adid'] );
 ?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional):', 'adrotate' ); ?></label>

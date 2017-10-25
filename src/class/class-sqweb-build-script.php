@@ -29,20 +29,20 @@ class BuildScript {
 	public function generate() {
 
 		// Getting the options
-		self::$_targets 			= 'false';
-		self::$_wsid 				= ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
-		self::$_fmes 				= ( get_option( 'fmes' ) != false ) ? get_option( 'fmes' ) : '';
-		self::$_lang 				= ( get_option( 'sqw_lang' ) != false ) ? get_option( 'sqw_lang' ) : 'en';
-		self::$_popup 				= ( get_option( 'sqw_popup' ) != false ) ? get_option( 'sqw_popup' ) : 'false';
-		self::$_login 				= ( get_option( 'sqw_btn_login' ) != false ) ? get_option( 'sqw_btn_login' ) : '';
-		self::$_support 			= ( get_option( 'sqw_btn_support' ) != false ) ? get_option( 'sqw_btn_support' ) : '';
-		self::$_connected 			= ( get_option( 'sqw_btn_connected' ) != false ) ? get_option( 'sqw_btn_connected' ) : '';
-		self::$_btn_noads 			= ( get_option( 'sqw_btn_noads' ) != false ) ? get_option( 'sqw_btn_noads' ) : '';
-		self::$_login_tiny 			= ( get_option( 'sqw_btn_login_tiny' ) != false ) ? get_option( 'sqw_btn_login_tiny' ) : '';
-		self::$_connected_s 		= ( get_option( 'sqw_btn_connected_s' ) != false ) ? get_option( 'sqw_btn_connected_s' ) : '';
-		self::$_btn_unlimited 		= ( get_option( 'sqw_btn_unlimited' ) != false ) ? get_option( 'sqw_btn_unlimited' ) : '';
-		self::$_connected_tiny 		= ( get_option( 'sqw_btn_connected_tiny' ) != false ) ? get_option( 'sqw_btn_connected_tiny' ) : '';
-		self::$_connected_support 	= ( get_option( 'sqw_btn_connected_support' ) != false ) ? get_option( 'sqw_btn_connected_support' ) : '';
+		self::$_targets           = 'false';
+		self::$_wsid              = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
+		self::$_fmes              = ( get_option( 'fmes' ) != false ) ? get_option( 'fmes' ) : '';
+		self::$_lang              = ( get_option( 'sqw_lang' ) != false ) ? get_option( 'sqw_lang' ) : 'en';
+		self::$_popup             = ( get_option( 'sqw_popup' ) != false ) ? get_option( 'sqw_popup' ) : 'false';
+		self::$_login             = ( get_option( 'sqw_btn_login' ) != false ) ? get_option( 'sqw_btn_login' ) : '';
+		self::$_support           = ( get_option( 'sqw_btn_support' ) != false ) ? get_option( 'sqw_btn_support' ) : '';
+		self::$_connected         = ( get_option( 'sqw_btn_connected' ) != false ) ? get_option( 'sqw_btn_connected' ) : '';
+		self::$_btn_noads         = ( get_option( 'sqw_btn_noads' ) != false ) ? get_option( 'sqw_btn_noads' ) : '';
+		self::$_login_tiny        = ( get_option( 'sqw_btn_login_tiny' ) != false ) ? get_option( 'sqw_btn_login_tiny' ) : '';
+		self::$_connected_s       = ( get_option( 'sqw_btn_connected_s' ) != false ) ? get_option( 'sqw_btn_connected_s' ) : '';
+		self::$_btn_unlimited     = ( get_option( 'sqw_btn_unlimited' ) != false ) ? get_option( 'sqw_btn_unlimited' ) : '';
+		self::$_connected_tiny    = ( get_option( 'sqw_btn_connected_tiny' ) != false ) ? get_option( 'sqw_btn_connected_tiny' ) : '';
+		self::$_connected_support = ( get_option( 'sqw_btn_connected_support' ) != false ) ? get_option( 'sqw_btn_connected_support' ) : '';
 
 		if ( function_exists( 'get_blog_details' ) ) {
 			$current_site    = get_blog_details();

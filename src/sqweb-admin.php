@@ -84,7 +84,7 @@ class SQweb_Admin {
 		$content = '<?php
 
 return array(
-	\'wsid\' => ' . (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0) . ',
+	\'wsid\' => ' . ( get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0 ) . ',
 	\'filter.ads\' => \'YTowOnt9\',
 	\'filter.text\' => \'YTowOnt9\',
 );
@@ -94,8 +94,8 @@ return array(
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
 		} else {
 			$protocol = ( true === stripos( $_SERVER['SERVER_PROTOCOL'], 'https' ) ? 'https://' : 'http://' );
-			$url = $protocol . $_SERVER['HTTP_HOST'];
-			$url = $url . preg_replace( '/&sqw-reset=1/', '', $_SERVER['REQUEST_URI'] );
+			$url      = $protocol . $_SERVER['HTTP_HOST'];
+			$url      = $url . preg_replace( '/&sqw-reset=1/', '', $_SERVER['REQUEST_URI'] );
 			header( 'Location: ' . $url );
 		}
 	}
@@ -126,7 +126,7 @@ return array(
 		}
 		array_push( $messages,
 			array(
-				'type' => $type,
+				'type'    => $type,
 				'message' => $message,
 			)
 		);
@@ -138,10 +138,10 @@ return array(
 		global $post;
 
 		/* get the value current value of the custom field */
-		$check = false;
+		$check     = false;
 		$categorie = unserialize( get_option( 'categorie' ) );
 		$categorie = is_array( $categorie ) ? $categorie : array();
-		$category = get_the_category();
+		$category  = get_the_category();
 		foreach ( $category as $value ) {
 			foreach ( $categorie as $cat ) {
 				if ( $value->slug == $cat ) {
@@ -152,14 +152,14 @@ return array(
 		$value = get_post_meta( $post->ID, 'sqw_limited', true );
 		?>
 			<div class="misc-pub-section">
-				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null); ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' ); ?></label>
+				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null ); ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' ); ?></label>
 			</div>
 		<?php
 		if ( $check ) {
 			$value = get_post_meta( $post->ID, 'sqw_unlimited', true );
 			?>
 				<div class="misc-pub-section">
-					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null); ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' ); ?></label>
+					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null ); ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' ); ?></label>
 				</div>
 			<?php
 		}

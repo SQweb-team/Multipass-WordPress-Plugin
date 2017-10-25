@@ -156,10 +156,10 @@
 							<div class="sqw-support-button-preview <?php echo ( get_option( 'sqw_display_support' ) ? '' : 'sqw-hide' ); ?>">
 								<?php echo sqw_support_button_html(); ?>
 							</div>
-							<div class="sqw-support-button">
+							<!-- <div class="sqw-support-button">
 								<input class="sqw-checkbox-border" <?php echo ( get_option( 'sqw_php_parsing' ) ? 'checked' : '' ); ?> type="checkbox" name="sqw_php_parsing">
 								<h4><?php _e( 'Enable php parsing in text widgets (this might be needed to filter ads in your theme template)', 'sqweb' ); ?></h4>
-							</div>
+							</div> -->
 							<div class="sqw-config-button">
 								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'Multipass users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>

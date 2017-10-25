@@ -57,9 +57,9 @@ class SqwebAdControl extends WP_Widget {
 				'adblock' => '',
 			)
 		);
-		$title   = strip_tags( $instance['title'] );
-		$text    = esc_textarea( $instance['text'] );
-		$adblock = esc_textarea( $instance['adblock'] );
+		$title    = strip_tags( $instance['title'] );
+		$text     = esc_textarea( $instance['text'] );
+		$adblock  = esc_textarea( $instance['adblock'] );
 	?>
 	 <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'sqweb' ); ?> :</label>
 	 <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
