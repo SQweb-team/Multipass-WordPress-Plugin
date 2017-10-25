@@ -10,12 +10,12 @@
 ------------------------------------------------------------------------------------ */
 
 /*-------------------------------------------------------------
- Name:      adrotate_shortcode
+Name:      adrotate_shortcode
 
- Purpose:   Prepare function requests for calls on shortcodes
- Receive:   $atts, $content
- Return:    Function()
- Since:     0.7
+Purpose:   Prepare function requests for calls on shortcodes
+Receive:   $atts, $content
+Return:    Function()
+Since:     0.7
 -------------------------------------------------------------*/
 function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 	global $adrotate_config;

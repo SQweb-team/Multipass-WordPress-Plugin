@@ -197,7 +197,7 @@
 						<hr width='270px'></hr>
 						<div class="sqw-clear"></div>
 						<div class="sqw-body">
-							<h4><?php _e( 'Regular button', 'sqweb') ?></h4>
+							<h4><?php _e( 'Regular button', 'sqweb' ); ?></h4>
 							<div class="sqweb-button-support sqw-margin-top">
 								<div class="sqw-btn-mp">
 									<span class="sqw-btn-mp-logo"></span>

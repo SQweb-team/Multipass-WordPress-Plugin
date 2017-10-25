@@ -31,7 +31,7 @@ function transparent( $text, $percent ) {
 	$array_text = array_values( $array_text );
 	$words      = count( $array_text );
 	$nbr        = ceil( $words / 100 * $percent );
-	$lambda     = (1 / $nbr);
+	$lambda     = ( 1 / $nbr );
 	$alpha      = 1;
 	$begin      = 0;
 	$balise     = array();

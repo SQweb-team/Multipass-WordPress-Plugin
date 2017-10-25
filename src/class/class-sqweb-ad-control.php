@@ -61,14 +61,14 @@ class SqwebAdControl extends WP_Widget {
 		$text     = esc_textarea( $instance['text'] );
 		$adblock  = esc_textarea( $instance['adblock'] );
 	?>
-	 <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'sqweb' ); ?> :</label>
-	 <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
+	<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'sqweb' ); ?> :</label>
+	<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
 
-	 <p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Advertising code', 'sqweb' ); ?> :</label>
-	 <textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id( 'adblock' ); ?>" name="<?php echo $this->get_field_name( 'adblock' ); ?>"><?php echo $adblock; ?></textarea></p>
+	<p><label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Advertising code', 'sqweb' ); ?> :</label>
+	<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id( 'adblock' ); ?>" name="<?php echo $this->get_field_name( 'adblock' ); ?>"><?php echo $adblock; ?></textarea></p>
 
-	 <p><label for="<?php echo $this->get_field_id( 'adblock' ); ?>"><?php _e( 'Content for paying users', 'sqweb' ); ?> :</label>
-	 <textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id( 'text' ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>"><?php echo $text; ?></textarea></p>
+	<p><label for="<?php echo $this->get_field_id( 'adblock' ); ?>"><?php _e( 'Content for paying users', 'sqweb' ); ?> :</label>
+	<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id( 'text' ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>"><?php echo $text; ?></textarea></p>
 
 	<?php
 	}

@@ -102,6 +102,7 @@ if ( ! empty( $_GET['type'] ) && 'diagnostic' == $_GET['type'] ) {
 	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
 	$verif   = wp_mail( 'diagnostic@sqweb.com', $infos['report_website']['name'] . ' diagnostic', $message, $headers );
 	if ( false !== $verif ) {
+		// translators: This send a confirm notice with the email where the webmaster will receive a receipt
 		SQweb_Admin::add_notice_event( 'success', sprintf( _n( 'Your diagnostic has been sent to our support team and you should soon receive a receipt at: %s', 'Your diagnostic has been sent to our support team and you should soon receive a receipt at: %s', get_option( 'admin_email' ), 'sqweb' ), get_option( 'admin_email' ) ) );
 	} else {
 		SQweb_Admin::add_notice_event( 'warning', __( 'There was an error sending the diagnostic, please contact our support team to: hello@sqweb.com', 'sqweb' ) );

@@ -150,7 +150,7 @@ require_once 'class/class-sqweb-ad-control.php';
 
 // Compatibility with Adrotate
 if ( function_exists( 'adrotate_ad' ) ) {
-	$return_register_widget = function {
+	$return_register_widget = function() {
 		return register_widget( 'AdrotateWidgetsSqwCompatibility' );
 	}
 	require_once 'plugins/adrotate-widget.php';
