@@ -7,12 +7,12 @@ class SqwebAdControl extends WP_Widget {
 
 	public function __construct() {
 
-		$widget_ops = array(
-			'classname' => 'widget_text',
+		$widget_ops  = array(
+			'classname'   => 'widget_text',
 			'description' => __( 'Put here your advertising code to hide it for Multipass users', 'sqweb' ),
 		);
 		$control_ops = array(
-			'width' => 400,
+			'width'  => 400,
 			'height' => 350,
 		);
 		parent::__construct( 'sqweb_ad_control', __( 'Multipass ad manager', 'sqweb' ), $widget_ops, $control_ops );
@@ -24,8 +24,8 @@ class SqwebAdControl extends WP_Widget {
 
 	function widget( $args, $instance ) {
 
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
+		$title   = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+		$text    = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
 		$adblock = apply_filters( 'widget_adblock', empty( $instance['adblock'] ) ? '' : $instance['adblock'], $instance );
 		echo $args['before_widget'];
 		echo '<div class="textwidget">';
@@ -36,13 +36,13 @@ class SqwebAdControl extends WP_Widget {
 
 	function update( $new_instance, $old_instance ) {
 
-		$instance = $old_instance;
+		$instance          = $old_instance;
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		if ( current_user_can( 'unfiltered_html' ) ) {
-			$instance['text'] = $new_instance['text'];
+			$instance['text']    = $new_instance['text'];
 			$instance['adblock'] = $new_instance['adblock'];
 		} else {
-			$instance['text'] = stripslashes( wp_filter_post_kses( addslashes( $new_instance['text'] ) ) );
+			$instance['text']    = stripslashes( wp_filter_post_kses( addslashes( $new_instance['text'] ) ) );
 			$instance['adblock'] = stripslashes( wp_filter_post_kses( addslashes( $new_instance['adblock'] ) ) );
 		}
 		return $instance;
@@ -52,13 +52,13 @@ class SqwebAdControl extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance,
 			array(
-				'title' => '',
-				'text' => '',
+				'title'   => '',
+				'text'    => '',
 				'adblock' => '',
 			)
 		);
-		$title = strip_tags( $instance['title'] );
-		$text = esc_textarea( $instance['text'] );
+		$title   = strip_tags( $instance['title'] );
+		$text    = esc_textarea( $instance['text'] );
 		$adblock = esc_textarea( $instance['adblock'] );
 	?>
 	 <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'sqweb' ); ?> :</label>
