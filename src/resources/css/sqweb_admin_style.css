@@ -711,6 +711,57 @@ a.sqw-btn-mp-link:focus {
     margin-bottom: 55px;
 }
 
+.sqw-customize-btn-split-half {
+    width: 43%;
+    display: inline-block;
+}
+
+.sqw-input-customize-btn {
+    border: none !important;
+    background-color: #ffdb06 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+.sqw-input-customize-btn:hover {
+    cursor: text;
+}
+
+.sqw-input-customize-btn:focus {
+    outline: none;
+}
+
+.sqw-input-customize-btn-tiny {
+    width: 78px;
+    font-style: italic;
+    line-height: 30px !important;
+}
+
+.sqw-input-customize-btn-regular {
+    line-height: 40px !important;
+    width: 204px;
+}
+
+.sqw-input-customize-btn-regular-logged-out {
+    width: 228px;
+}
+
+.sqw-input-customize-btn-large-before-dot {
+    font-size: 16px;
+    width: 56%;
+}
+
+.sqw-input-customize-btn-large-after-dot {
+    font-size: 16px;
+    margin-left: -2px;
+    width: 38%;
+}
+
+.sqw-input-customize-btn-large-logged-in {
+    font-size: 16px;
+    width: 256px;
+}
+
 // Button preview
 
 .sqw-article-footer-body-content3,

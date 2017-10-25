@@ -23,11 +23,14 @@ class WidgetSqwebButton extends WP_Widget {
 	 */
 
 	function widget( $args, $instance ) {
-
 		$button = isset( $instance['button'] ) ? $instance['button'] : 'normal';
 
 		echo $args['before_widget'];
-		echo '<div class="sqweb-button' . ( 'normal' !== $button ? ' multipass-' . $button : '' ) . '"></div>';
+		if ( 'support' !== $button) {
+			echo '<div class="sqweb-button' . ( 'normal' !== $button ? ' multipass-' . $button : '' ) . '"></div>';
+		} else {
+			echo '<div class="sqweb-button-support' . ( 'normal' !== $button ? ' multipass-' . $button : '' ) . '"></div>';
+		}
 		echo $args['after_widget'];
 	}
 
@@ -59,6 +62,7 @@ class WidgetSqwebButton extends WP_Widget {
 	<option value="tiny" <?php echo 'tiny' === $button ? 'selected' : ''; ?>><?php _e( 'Tiny', 'sqweb' ); ?></option>
 	<option value="slim" <?php echo 'slim' === $button ? 'selected' : ''; ?>><?php _e( 'Slim', 'sqweb' ); ?></option>
 	<option value="normal" <?php echo 'normal' === $button ? 'selected' : ''; ?>><?php _e( 'Normal', 'sqweb' ); ?></option>
+	<option value="support" <?php echo 'support' === $button ? 'selected' : ''; ?>><?php _e( 'Normal - Support us', 'sqweb' ); ?></option>
 	<option value="large" <?php echo 'large' === $button ? 'selected' : ''; ?>><?php _e( 'Large', 'sqweb' ); ?></option>
 </select></p>
 		<?php

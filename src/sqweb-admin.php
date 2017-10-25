@@ -51,20 +51,34 @@ class SQweb_Admin {
 
 	private function sqw_reset() {
 		delete_option( 'wsid' );
-		delete_option( 'sqw_token' );
-		delete_option( 'sqw_analytics' );
-		delete_option( 'sqw_multipass' );
-		delete_option( 'sqw_filter_all' );
-		delete_option( 'archiveart' );
-		delete_option( 'cutartperc' );
-		delete_option( 'sqw_lang' );
-		delete_option( 'btheme' );
-		delete_option( 'flogout' );
-		delete_option( 'flogin' );
 		delete_option( 'fmes' );
+		delete_option( 'btheme' );
+		delete_option( 'flogin' );
+		delete_option( 'flogout' );
 		delete_option( 'dateart' );
+		delete_option( 'sqw_lang' );
 		delete_option( 'artbyday' );
 		delete_option( 'categorie' );
+		delete_option( 'sqw_popup' );
+		delete_option( 'sqw_token' );
+		delete_option( 'archiveart' );
+		delete_option( 'cutartperc' );
+		delete_option( 'sqw_analytics' );
+		delete_option( 'sqw_multipass' );
+		delete_option( 'sqw_btn_login' );
+		delete_option( 'sqw_btn_noads' );
+		delete_option( 'sqw_filter_all' );
+		delete_option( 'sqw_exept_role' );
+		delete_option( 'sqw_btn_support' );
+		delete_option( 'sqw_php_parsing' );
+		delete_option( 'sqw_prior_paywall' );
+		delete_option( 'sqw_btn_connected' );
+		delete_option( 'sqw_btn_unlimited' );
+		delete_option( 'sqw_btn_login_tiny' );
+		delete_option( 'sqw_display_support' );
+		delete_option( 'sqw_btn_connected_s' );
+		delete_option( 'sqw_btn_connected_tiny' );
+		delete_option( 'sqw_btn_connected_support' );
 		global $wpdb;
 		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sqw_limit" );
 		$content = '<?php

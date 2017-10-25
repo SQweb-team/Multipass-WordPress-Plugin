@@ -170,7 +170,7 @@ class SQweb_Filter_Articles {
 
 	public function msg_restrict_archive_art() {
 		//V1 bouton
-		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _n( 'Archives are for subscribers only', 'Archives are for subscribers only', 'sqweb' ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _e( 'Archives are for subscribers only', 'sqweb' ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
 
 		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
