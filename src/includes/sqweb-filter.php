@@ -132,7 +132,7 @@ class SQweb_Filter_Articles {
 		// translators: this is to limit the number of article readable by day
 		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</h5><span>' . __( 'Access immediately the premium content with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><p>' . __( 'Or come back tomorrow', 'sqweb' ) . '</p></div>';
 
-		// translators: This is the v2 of the above button
+		// translators: this is the v2 of the above button
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</div>
