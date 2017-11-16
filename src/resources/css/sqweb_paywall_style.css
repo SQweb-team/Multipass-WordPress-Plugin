@@ -1,1 +1,24 @@
-.sqw-paywall-button-container{cursor:pointer;color:#364355;background-color:#ffdb06;text-align:center;padding:20px;font-family:Helvetica Neue}.sqw-paywall-button-container p{margin-bottom:10px}.sqw-paywall-button-container span{font-weight:700;border-bottom:1px solid #364355}.sqw-paywall-button-container img{margin:10px;width:300px;height:48px;box-shadow:none!important}
+.sqw-paywall-button-container {
+    cursor: pointer;
+    color: #364355;
+    background-color: #ffdb06;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Helvetica Neue';
+}
+
+.sqw-paywall-button-container p {
+    margin-bottom: 10px;
+}
+
+.sqw-paywall-button-container span {
+    font-weight: bold;
+    border-bottom: 1px solid #364355;
+}
+
+.sqw-paywall-button-container img {
+    margin: 10px;
+    width: 300px;
+    height: 48px;
+    box-shadow: none !important;
+}
