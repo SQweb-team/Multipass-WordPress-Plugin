@@ -78,7 +78,7 @@ class SQweb_Filter_Articles {
 
 	public function filter_content( $content, $override = false ) {
 		$restrictcutartperc = apply_filters( 'sqw_msg_restrict_cut_art_perc', $this->msg_restrict_cut_art_perc() );
-		if ( $override !== false ) {
+		if ( false !== $override ) {
 			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $restrictcutartperc );
 		}
 		$restrictartbyday   = apply_filters( 'sqw_msg_restrict_art_by_day', $this->msg_restrict_art_by_day() );
