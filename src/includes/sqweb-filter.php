@@ -10,7 +10,7 @@ class SQweb_Filter_Articles {
 		add_filter( 'sqw_filter_articles_by_day', array( $this, 'filter_articles_by_day' ), 5, 3 );
 		add_filter( 'sqw_filter_date_art', array( $this, 'filter_date_art' ), 5, 3 );
 		add_filter( 'sqw_filter_archive_art', array( $this, 'filter_archive_art' ), 5, 3 );
-		add_filter( 'sqw_filter_content', array( $this, 'filter_content' ), 5, 1 );
+		add_filter( 'sqw_filter_content', array( $this, 'filter_content' ), 5, 2 );
 		if ( get_option( 'sqw_prior_paywall' ) || ! function_exists( 'pmpro_getOption' ) ) {
 			add_filter( 'sqw_limited', array( $this, 'limited_sqw' ), 5, 1 );
 		} else {
@@ -35,7 +35,7 @@ class SQweb_Filter_Articles {
 		$user_data = wp_get_current_user();
 		if ( 0 == $user_data->ID || 2 >= array_diff( $ok_roles, $user_data->roles ) ) {
 			if ( get_post_meta( $post->ID, 'sqw_limited', true ) ) {
-				return apply_filters( 'sqw_filter_content', $content );
+				return apply_filters( 'sqw_filter_content', $content, true );
 			} else {
 				if ( false !== get_option( 'sqw_filter_all' ) ) {
 					return apply_filters( 'sqw_filter_content', $content );
@@ -76,9 +76,11 @@ class SQweb_Filter_Articles {
 	 * @return text
 	 */
 
-	public function filter_content( $content ) {
-
+	public function filter_content( $content, $override = false ) {
 		$restrictcutartperc = apply_filters( 'sqw_msg_restrict_cut_art_perc', $this->msg_restrict_cut_art_perc() );
+		if ( $override !== false ) {
+			return apply_filters( 'sqw_filter_cut_articles_by_percent', $content, $restrictcutartperc );
+		}
 		$restrictartbyday   = apply_filters( 'sqw_msg_restrict_art_by_day', $this->msg_restrict_art_by_day() );
 		$restrictdateart    = apply_filters( 'sqw_msg_restrict_date_art', $this->msg_restrict_date_art() );
 		$restrictarchiveart = apply_filters( 'sqw_msg_restrict_archive_art', $this->msg_restrict_archive_art() );
@@ -170,7 +172,7 @@ class SQweb_Filter_Articles {
 
 	public function msg_restrict_archive_art() {
 		//V1 bouton
-		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _e( 'Archives are for subscribers only', 'sqweb' ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+		return '<div onclick="sqw.modal_first()" class="sqw-paywall-button-container"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . __( 'Archives are for subscribers only', 'sqweb' ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
 
 		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">

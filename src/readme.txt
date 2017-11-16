@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.8
-Stable tag: 2.7.6
+Stable tag: 2.7.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -153,6 +153,9 @@ Your earnings are based on the time SQwebers spend on your website, rather than 
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.7.7 =
+* Fixed a bug when trying to lock a specific article while he was not in archive day range
 
 = v2.7.6 =
 * Add a way to customize all Multipass buttons
