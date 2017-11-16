@@ -51,26 +51,40 @@ class SQweb_Admin {
 
 	private function sqw_reset() {
 		delete_option( 'wsid' );
-		delete_option( 'sqw_token' );
-		delete_option( 'sqw_analytics' );
-		delete_option( 'sqw_multipass' );
-		delete_option( 'sqw_filter_all' );
-		delete_option( 'archiveart' );
-		delete_option( 'cutartperc' );
-		delete_option( 'sqw_lang' );
-		delete_option( 'btheme' );
-		delete_option( 'flogout' );
-		delete_option( 'flogin' );
 		delete_option( 'fmes' );
+		delete_option( 'btheme' );
+		delete_option( 'flogin' );
+		delete_option( 'flogout' );
 		delete_option( 'dateart' );
+		delete_option( 'sqw_lang' );
 		delete_option( 'artbyday' );
 		delete_option( 'categorie' );
+		delete_option( 'sqw_popup' );
+		delete_option( 'sqw_token' );
+		delete_option( 'archiveart' );
+		delete_option( 'cutartperc' );
+		delete_option( 'sqw_analytics' );
+		delete_option( 'sqw_multipass' );
+		delete_option( 'sqw_btn_login' );
+		delete_option( 'sqw_btn_noads' );
+		delete_option( 'sqw_filter_all' );
+		delete_option( 'sqw_exept_role' );
+		delete_option( 'sqw_btn_support' );
+		delete_option( 'sqw_php_parsing' );
+		delete_option( 'sqw_prior_paywall' );
+		delete_option( 'sqw_btn_connected' );
+		delete_option( 'sqw_btn_unlimited' );
+		delete_option( 'sqw_btn_login_tiny' );
+		delete_option( 'sqw_display_support' );
+		delete_option( 'sqw_btn_connected_s' );
+		delete_option( 'sqw_btn_connected_tiny' );
+		delete_option( 'sqw_btn_connected_support' );
 		global $wpdb;
 		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sqw_limit" );
 		$content = '<?php
 
 return array(
-	\'wsid\' => ' . (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0) . ',
+	\'wsid\' => ' . ( get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0 ) . ',
 	\'filter.ads\' => \'YTowOnt9\',
 	\'filter.text\' => \'YTowOnt9\',
 );
@@ -80,8 +94,8 @@ return array(
 			wp_redirect( remove_query_arg( 'sqw-reset' ) );
 		} else {
 			$protocol = ( true === stripos( $_SERVER['SERVER_PROTOCOL'], 'https' ) ? 'https://' : 'http://' );
-			$url = $protocol . $_SERVER['HTTP_HOST'];
-			$url = $url . preg_replace( '/&sqw-reset=1/', '', $_SERVER['REQUEST_URI'] );
+			$url      = $protocol . $_SERVER['HTTP_HOST'];
+			$url      = $url . preg_replace( '/&sqw-reset=1/', '', $_SERVER['REQUEST_URI'] );
 			header( 'Location: ' . $url );
 		}
 	}
@@ -112,7 +126,7 @@ return array(
 		}
 		array_push( $messages,
 			array(
-				'type' => $type,
+				'type'    => $type,
 				'message' => $message,
 			)
 		);
@@ -124,10 +138,10 @@ return array(
 		global $post;
 
 		/* get the value current value of the custom field */
-		$check = false;
+		$check     = false;
 		$categorie = unserialize( get_option( 'categorie' ) );
 		$categorie = is_array( $categorie ) ? $categorie : array();
-		$category = get_the_category();
+		$category  = get_the_category();
 		foreach ( $category as $value ) {
 			foreach ( $categorie as $cat ) {
 				if ( $value->slug == $cat ) {
@@ -138,14 +152,14 @@ return array(
 		$value = get_post_meta( $post->ID, 'sqw_limited', true );
 		?>
 			<div class="misc-pub-section">
-				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null); ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' ); ?></label>
+				<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null ); ?> value="1" name="sqw_limited" /> <?php _e( 'Post restricted to Multipass users', 'sqweb' ); ?></label>
 			</div>
 		<?php
 		if ( $check ) {
 			$value = get_post_meta( $post->ID, 'sqw_unlimited', true );
 			?>
 				<div class="misc-pub-section">
-					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null); ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' ); ?></label>
+					<label><input type="checkbox"<?php echo ( ! empty( $value ) ? ' checked="checked"' : null ); ?> value="1" name="sqw_unlimited" /> <?php _e( 'Post available for every users', 'sqweb' ); ?></label>
 				</div>
 			<?php
 		}

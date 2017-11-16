@@ -3,7 +3,7 @@
 Plugin Name: SQweb
 Plugin URI: https://www.sqweb.com/
 Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
-Version: 2.7.5
+Version: 2.7.7
 Author: SQweb
 Author URI: https://www.sqweb.com
 Text Domain: sqweb
@@ -40,7 +40,7 @@ function sqw_install() {
 	$content = '<?php
 
 return array(
-	\'wsid\' => ' . (get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0) . ',
+	\'wsid\' => ' . ( get_option( 'wsid' ) != false ? get_option( 'wsid' ) : 0 ) . ',
 	\'filter.ads\' => \'YTowOnt9\',
 	\'filter.text\' => \'YTowOnt9\',
 );
@@ -150,12 +150,16 @@ require_once 'class/class-sqweb-ad-control.php';
 
 // Compatibility with Adrotate
 if ( function_exists( 'adrotate_ad' ) ) {
+	$return_register_widget = function() {
+		return register_widget( 'AdrotateWidgetsSqwCompatibility' );
+	};
 	require_once 'plugins/adrotate-widget.php';
 	require_once 'plugins/adrotate-shortcode.php';
 	remove_shortcode( 'adrotate', 'adrotate_shortcode' );
 	add_shortcode( 'adrotate', 'adrotate_shortcode_sqw_compatibility' );
-	add_action( 'widgets_init', create_function( '', 'return register_widget("AdrotateWidgetsSqwCompatibility");' ) );
+	add_action( 'widgets_init', $return_register_widget );
 }
+
 
 /*
 	Ignore class and variable name of other plugins.

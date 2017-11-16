@@ -131,6 +131,92 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	} else {
 		delete_option( 'fmes' );
 	}
+
+	/**
+	 * Below are 9 saves which are used to customize the Multipass buttons
+	 */
+
+	/**
+	 * Message on the tiny button when logged out
+	 */
+	if ( ! empty( $_POST['sqw_btn_login_tiny'] ) ) {
+		update_option( 'sqw_btn_login_tiny', $_POST['sqw_btn_login_tiny'] );
+	} else {
+		delete_option( 'sqw_btn_login_tiny' );
+	}
+
+	/**
+	 * Message on the tiny button when logged in
+	 */
+	if ( ! empty( $_POST['sqw_btn_connected_tiny'] ) ) {
+		update_option( 'sqw_btn_connected_tiny', $_POST['sqw_btn_connected_tiny'] );
+	} else {
+		delete_option( 'sqw_btn_connected_tiny' );
+	}
+
+	/**
+	 * Message on the regular button when logged out
+	 */
+	if ( ! empty( $_POST['sqw_btn_login'] ) ) {
+		update_option( 'sqw_btn_login', $_POST['sqw_btn_login'] );
+	} else {
+		delete_option( 'sqw_btn_login' );
+	}
+
+	/**
+	 * Message on the regular button when logged in
+	 */
+	if ( ! empty( $_POST['sqw_btn_connected'] ) ) {
+		update_option( 'sqw_btn_connected', $_POST['sqw_btn_connected'] );
+	} else {
+		delete_option( 'sqw_btn_connected' );
+	}
+
+	/**
+	 * Message on the support button when logged out
+	 */
+	if ( ! empty( $_POST['sqw_btn_support'] ) ) {
+		update_option( 'sqw_btn_support', $_POST['sqw_btn_support'] );
+	} else {
+		delete_option( 'sqw_btn_support' );
+	}
+
+	/**
+	 * Message on the support button when logged in
+	 */
+	if ( ! empty( $_POST['sqw_btn_connected_support'] ) ) {
+		update_option( 'sqw_btn_connected_support', $_POST['sqw_btn_connected_support'] );
+	} else {
+		delete_option( 'sqw_btn_connected_support' );
+	}
+
+	/**
+	 * First editable part on the large button when logged out
+	 */
+	if ( ! empty( $_POST['sqw_btn_unlimited'] ) ) {
+		update_option( 'sqw_btn_unlimited', $_POST['sqw_btn_unlimited'] );
+	} else {
+		delete_option( 'sqw_btn_unlimited' );
+	}
+
+	/**
+	 * Second editable part on the large button when logged out
+	 */
+	if ( ! empty( $_POST['sqw_btn_noads'] ) ) {
+		update_option( 'sqw_btn_noads', $_POST['sqw_btn_noads'] );
+	} else {
+		delete_option( 'sqw_btn_noads' );
+	}
+
+	/**
+	 * Message on large button when logged in
+	 */
+	if ( ! empty( $_POST['sqw_btn_connected_s'] ) ) {
+		update_option( 'sqw_btn_connected_s', $_POST['sqw_btn_connected_s'] );
+	} else {
+		delete_option( 'sqw_btn_connected_s' );
+	}
+
 	SQweb_Admin::add_notice_event( 'success', __( 'Your changes have been saved.', 'sqweb' ) );
 	wp_redirect( remove_query_arg( 'type' ) );
 	exit;

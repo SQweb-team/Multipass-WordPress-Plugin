@@ -10,12 +10,12 @@
 ------------------------------------------------------------------------------------ */
 
 /*-------------------------------------------------------------
- Name:      adrotate_shortcode
+Name:      adrotate_shortcode
 
- Purpose:   Prepare function requests for calls on shortcodes
- Receive:   $atts, $content
- Return:    Function()
- Since:     0.7
+Purpose:   Prepare function requests for calls on shortcodes
+Receive:   $atts, $content
+Return:    Function()
+Since:     0.7
 -------------------------------------------------------------*/
 function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 	global $adrotate_config;
@@ -38,7 +38,7 @@ function adrotate_shortcode_sqw_compatibility( $atts, $content = null ) {
 	if ( ! empty( $atts['site'] ) ) {
 		$site = 0;
 	}
-	if ( $banner_id > 0 and (0 == $group_ids or $group_ids > 0) ) { // Show one Ad
+	if ( $banner_id > 0 and ( 0 == $group_ids or $group_ids > 0 ) ) { // Show one Ad
 		SQweb_filter::get_instance()->add_ads( adrotate_ad( $banner_id, true, 0, 0 ) );
 	}
 	if ( 0 == $banner_id and $group_ids > 0 ) { // Show group

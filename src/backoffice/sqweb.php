@@ -83,7 +83,7 @@
 										$scategorie = array();
 									}
 										$categorie = get_categories();
-										$i = 0;
+										$i         = 0;
 									foreach ( $categorie as $value ) {
 										$i++;
 										echo '
@@ -130,7 +130,7 @@
 										<p><?php _e( 'Do not restrict content to the following user groups :', 'sqweb' ); ?></p>
 										<?php
 											$sexept_role = unserialize( get_option( 'sqw_exept_role' ) );
-											$exept_role = get_editable_roles();
+											$exept_role  = get_editable_roles();
 										if ( ! is_array( $sexept_role ) ) {
 											$sexept_role = array_keys( $exept_role );
 										}
@@ -156,13 +156,115 @@
 							<div class="sqw-support-button-preview <?php echo ( get_option( 'sqw_display_support' ) ? '' : 'sqw-hide' ); ?>">
 								<?php echo sqw_support_button_html(); ?>
 							</div>
-							<div class="sqw-support-button">
+							<!-- <div class="sqw-support-button">
 								<input class="sqw-checkbox-border" <?php echo ( get_option( 'sqw_php_parsing' ) ? 'checked' : '' ); ?> type="checkbox" name="sqw_php_parsing">
 								<h4><?php _e( 'Enable php parsing in text widgets (this might be needed to filter ads in your theme template)', 'sqweb' ); ?></h4>
-							</div>
+							</div> -->
 							<div class="sqw-config-button">
 								<p class="sqw-center sqw-title-multipass-color basic-font-12"><?php _e( 'Multipass users must browse without ads on your website', 'sqweb' ); ?></p>
 								<hr width='270px'></hr>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sqw-integer">
+				<div class="sqw-box sqw-right">
+					<div>
+						<div class="sqw-header">
+							<h3 class="sqw-title sqw-title-multipass sqw-title-multipass-color">
+								<?php _e( 'Customize the Multipass button', 'sqweb' ); ?>
+							</h3>
+						</div>
+						<div class="sqw-clear"></div>
+						<div class="sqw-body sqw-customize-btn-split-half">
+							<h4><?php _e( 'Tiny button', 'sqweb' ); ?></h4>
+							<div class="sqweb-button-support multipass-tiny sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<input name="sqw_btn_login_tiny" type="text" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-only sqw-input-customize-btn sqw-input-customize-btn-tiny" value="<?php echo get_option( 'sqw_btn_login_tiny' ) != '' ? get_option( 'sqw_btn_login_tiny' ) : _e( 'Premium', 'sqweb' ); ?>" maxlength="7">
+								</div>
+							</div>
+						</div>
+						<div class="sqw-body sqw-customize-btn-split-half">
+							<h4><?php _e( 'Tiny button when logged in', 'sqweb' ); ?></h4>
+							<div class="sqweb-button-support multipass-tiny sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<input name="sqw_btn_connected_tiny" type="text" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-only sqw-input-customize-btn sqw-input-customize-btn-tiny" value="<?php echo get_option( 'sqw_btn_connected_tiny' ) != '' ? get_option( 'sqw_btn_connected_tiny' ) : _e( 'Premium', 'sqweb' ); ?>" maxlength="7">
+									<a class="sqw-btn-mp-logout"></a>
+								</div>
+							</div>
+						</div>
+						<hr width='270px'></hr>
+						<div class="sqw-clear"></div>
+						<div class="sqw-body">
+							<h4><?php _e( 'Regular button', 'sqweb' ); ?></h4>
+							<div class="sqweb-button-support sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<span class="sqw-btn-mp-logo"></span>
+									<input name="sqw_btn_login" type="text" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none sqw-input-customize-btn sqw-input-customize-btn-regular sqw-input-customize-btn-regular-logged-out" value="<?php echo get_option( 'sqw_btn_login' ) != '' ? get_option( 'sqw_btn_login' ) : _e( 'Premium with Multipass', 'sqweb' ); ?>" maxlength="28">
+								</div>
+							</div>
+						</div>
+						<div class="sqw-body">
+							<h4><?php _e( 'Regular button when connected', 'sqweb' ); ?></h4>
+							<div class="sqweb-button-support sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<span class="sqw-btn-mp-logo"></span>
+									<input name="sqw_btn_connected" type="text" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none sqw-input-customize-btn sqw-input-customize-btn-regular" value="<?php echo get_option( 'sqw_btn_connected' ) != '' ? get_option( 'sqw_btn_connected' ) : _e( 'Logged in with Multipass', 'sqweb' ); ?>" maxlength="25">
+									<a class="sqw-btn-mp-logout"></a>
+								</div>
+							</div>
+						</div>
+						<hr width='270px'></hr>
+						<div class="sqw-clear"></div>
+						<div class="sqw-body">
+							<h4><?php _e( 'Support us button', 'sqweb' ); ?></h4>
+							<div class="sqweb-button-support sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<span class="sqw-btn-mp-logo"></span>
+									<input name="sqw_btn_support" type="text" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none sqw-input-customize-btn sqw-input-customize-btn-regular sqw-input-customize-btn-regular-logged-out" value="<?php echo get_option( 'sqw_btn_support' ) != '' ? get_option( 'sqw_btn_support' ) : _e( 'Support us with Multipass', 'sqweb' ); ?>" maxlength="28">
+								</div>
+							</div>
+						</div>
+						<div class="sqw-body">
+							<h4><?php _e( 'Support us button when connected', 'sqweb' ); ?></h4>
+							<div class="sqweb-button-support sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<span class="sqw-btn-mp-logo"></span>
+									<input name="sqw_btn_connected_support" type="text" class="sqw-btn-mp-link sqw-btn-mp-link-tiny-none sqw-input-customize-btn sqw-input-customize-btn-regular" value="<?php echo get_option( 'sqw_btn_connected_support' ) != '' ? get_option( 'sqw_btn_connected_support' ) : _e( 'Support us with Multipass', 'sqweb' ); ?>" maxlength="25">
+									<a class="sqw-btn-mp-logout"></a>
+								</div>
+							</div>
+						</div>
+						<hr width='270px'></hr>
+						<div class="sqw-clear"></div>
+						<div class="sqw-body">
+							<h4><?php _e( 'Large button', 'sqweb' ); ?></h4>
+							<div class="sqweb-button multipass-large sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<span class="sqw-btn-mp-logo"></span>
+									<span class="sqw-btn-mp-link sqw-btn-mp-link-large-only">
+										<b><?php echo ( get_option( 'blogname' ) ); ?> PREMIUM</b>
+										<br>
+										<input name="sqw_btn_unlimited" type="text" class="sqw-input-customize-btn sqw-input-customize-btn-large-before-dot" value="<?php echo get_option( 'sqw_btn_unlimited' ) != '' ? get_option( 'sqw_btn_unlimited' ) : _e( 'Unrestricted access', 'sqweb' ); ?>" maxlength="16">
+										<span style="margin-left: -2px;">•</span>
+										<input name="sqw_btn_noads" type="text" class="sqw-input-customize-btn sqw-input-customize-btn-large-after-dot" value="<?php echo get_option( 'sqw_btn_noads' ) != '' ? get_option( 'sqw_btn_noads' ) : _e( 'No ads', 'sqweb' ); ?>" maxlength="11">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="sqw-body">
+							<h4><?php _e( 'Large button when connected', 'sqweb' ); ?></h4>
+							<div class="sqweb-button multipass-large sqw-margin-top">
+								<div class="sqw-btn-mp">
+									<span class="sqw-btn-mp-logo"></span>
+									<span class="sqw-btn-mp-link sqw-btn-mp-link-large-only">
+										<b><?php echo ( get_option( 'blogname' ) ); ?> PREMIUM</b>
+										<br>
+										<input name="sqw_btn_connected_s" type="text" class="sqw-input-customize-btn sqw-input-customize-btn-large-logged-in" value="<?php echo get_option( 'sqw_btn_connected_s' ) != '' ? get_option( 'sqw_btn_connected_s' ) : _e( 'Logged in', 'sqweb' ); ?>" maxlength="25">
+									</span>
+									<a class="sqw-btn-mp-logout"></a>
+								</div>
 							</div>
 						</div>
 					</div>
