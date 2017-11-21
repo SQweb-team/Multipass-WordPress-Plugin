@@ -55,7 +55,7 @@ class BuildScript {
 		echo '
 			<script data-cfasync="false">
 				/**
-				 * SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.7.7' ) . '
+				 * SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.7.8' ) . '
 				 **/
 				var _sqw = {
 					id_site: ' . self::$_wsid . ',
