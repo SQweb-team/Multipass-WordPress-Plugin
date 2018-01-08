@@ -112,15 +112,15 @@ class SQweb_Filter_Articles {
 
 	public function msg_restrict_cut_art_perc() {
 		//V1 bouton
-		return '<div onclick="_mltpss.modal_first(event)" class="sqw-paywall-button-container"><h5>' . __( 'The rest of this article is for subscribers only', 'sqweb' ) . '</h5><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><span>' . __( 'Become a subscriber now', 'sqweb' ) . '</span></div>';
+		return '<div onclick="mltpss.modal_first(event)" class="sqw-paywall-button-container"><h5>' . __( 'The rest of this article is for subscribers only', 'sqweb' ) . '</h5><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><span>' . __( 'Become a subscriber now', 'sqweb' ) . '</span></div>';
 
 		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
-						<div onclick="_mltpss.modal_first(event)" class="footer__mp__button_header_title">' . __( 'The rest of this article is restricted', 'sqweb' ) . '</div>
-						<div onclick="_mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
+						<div onclick="mltpss.modal_first(event)" class="footer__mp__button_header_title">' . __( 'The rest of this article is restricted', 'sqweb' ) . '</div>
+						<div onclick="mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
 					</div>
-					<div onclick="_mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
+					<div onclick="mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
 						<a href="#" class="footer__mp__cta_fresh">' . __( 'Unlock this article, get your', 'sqweb' ) . '</a>
 					</div>
 					<div class="footer__mp__normalize footer__mp__button_footer">
@@ -132,15 +132,15 @@ class SQweb_Filter_Articles {
 
 	public function msg_restrict_art_by_day() {
 		// translators: this is to limit the number of article readable by day
-		return '<div onclick="_mltpss.modal_first(event)" class="sqw-paywall-button-container"><h5>' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</h5><span>' . __( 'Access immediately the premium content with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><p>' . __( 'Or come back tomorrow', 'sqweb' ) . '</p></div>';
+		return '<div onclick="mltpss.modal_first(event)" class="sqw-paywall-button-container"><h5>' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</h5><span>' . __( 'Access immediately the premium content with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div><p>' . __( 'Or come back tomorrow', 'sqweb' ) . '</p></div>';
 
 		// translators: this is the v2 of the above button
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . sprintf( _n( 'You have already read %d premium article for free today', 'You have already read %d premium articles for free today', get_option( 'artbyday' ), 'sqweb' ), get_option( 'artbyday' ) ) . '</div>
-						<div onclick="_mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span onclick="_mltpss.modal_first(event)" class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
+						<div onclick="mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span onclick="mltpss.modal_first(event)" class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
 					</div>
-					<div onclick="_mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
+					<div onclick="mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
 						<a href="#" class="footer__mp__cta_fresh">' . __( 'Unlock this article, get your', 'sqweb' ) . '</a>
 					</div>
 					<div class="footer__mp__normalize footer__mp__button_footer">
@@ -152,15 +152,15 @@ class SQweb_Filter_Articles {
 
 	public function msg_restrict_date_art() {
 		// translators: To lock content for X days
-		return '<div onclick="_mltpss.modal_first(event)" class="sqw-paywall-button-container sqw-paywall-ea"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _n( 'It will be available for free in %d day', 'It will be available for free in %d days', ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ), 'sqweb' ), ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+		return '<div onclick="mltpss.modal_first(event)" class="sqw-paywall-button-container sqw-paywall-ea"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . sprintf( _n( 'It will be available for free in %d day', 'It will be available for free in %d days', ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ), 'sqweb' ), ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ) ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
 
 		// translators: To lock content for X days, V2 button
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . sprintf( _n( 'This will be available for free in %d day', 'This will be available for free in %d days', ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ), 'sqweb' ), ceil( ( get_post_time( 'U', true ) - ( time() - get_option( 'dateart' ) * 86400 ) ) / 86400 ) ) . '</div>
-						<div onclick="_mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span onclick="_mltpss.modal_first(event)" class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
+						<div onclick="mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span onclick="mltpss.modal_first(event)" class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
 					</div>
-					<div onclick="_mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
+					<div onclick="mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
 						<a href="#" class="footer__mp__cta_fresh">' . __( 'Unlock this article, get your', 'sqweb' ) . '</a>
 					</div>
 					<div class="footer__mp__normalize footer__mp__button_footer">
@@ -172,15 +172,15 @@ class SQweb_Filter_Articles {
 
 	public function msg_restrict_archive_art() {
 		//V1 bouton
-		return '<div onclick="_mltpss.modal_first(event)" class="sqw-paywall-button-container sqw-paywall-archives"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . __( 'Archives are for subscribers only', 'sqweb' ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
+		return '<div onclick="mltpss.modal_first(event)" class="sqw-paywall-button-container sqw-paywall-archives"><h5>' . __( 'This premium content is for subscribers only', 'sqweb' ) . '</h5><p>' . __( 'Archives are for subscribers only', 'sqweb' ) . '</p><span>' . __( 'Become a subscriber now with Multipass', 'sqweb' ) . '</span><div><img src="' . plugin_dir_url( __FILE__ ) . '../resources/img/multipass_logo@2x.png' . '"></div></div>';
 
 		//V2 bouton
 		return '<div class="footer__mp__normalize footer__mp__button_container">
 					<div class="footer__mp__button_header">
 						<div class="footer__mp__button_header_title">' . __( 'This article is restricted.', 'sqweb' ) . '</div>
-						<div onclick="_mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span onclick="_mltpss.modal_first(event)" class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
+						<div onclick="mltpss.modal_first(event)" class="footer__mp__button_signin">' . __( 'Already premium? ', 'sqweb' ) . '<span onclick="mltpss.modal_first(event)" class="footer__mp__button_login footer__mp__button_strong">' . __( 'Sign in', 'sqweb' ) . '</span></div>
 					</div>
-					<div onclick="_mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
+					<div onclick="mltpss.modal_first(event)" class="footer__mp__normalize footer__mp__button_cta">
 						<a href="#" class="footer__mp__cta_fresh">' . __( 'Unlock this article, get your', 'sqweb' ) . '</a>
 					</div>
 					<div class="footer__mp__normalize footer__mp__button_footer">

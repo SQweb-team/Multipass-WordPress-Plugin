@@ -76,7 +76,7 @@ class BuildScript {
 		));
 
 		$output  = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
-		$output .= "<script>var _mltpss = new Multipass.default($settings);</script>";
+		$output .= "<script>var mltpss = new Multipass.default($settings);</script>";
 
 		echo $output;
 	}
