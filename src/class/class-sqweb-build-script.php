@@ -56,20 +56,20 @@ class BuildScript {
 		// Assembling
 		$settings = json_encode(array(
 			'wsid'           => self::$_wsid,
-			'sitename' 		 => self::$_blogname,
-			'debug' 		 => false,
+			'sitename'       => self::$_blogname,
+			'debug'          => false,
 			'adblock_modal'  => self::$_popup,
-			'targeting' 	 => self::$_targets,
+			'targeting'      => self::$_targets,
 			'locale'         => self::$_lang,
 			'login'          => self::$_login,
-			'connected' 	 => self::$_connected,
-			'support' 		 => self::$_support,
-			'btn_noads' 	 => self::$_btn_noads,
-			'login_tiny' 	 => self::$_login_tiny,
-			'connected_s' 	 => self::$_connected_s,
+			'connected'      => self::$_connected,
+			'support'        => self::$_support,
+			'btn_noads'      => self::$_btn_noads,
+			'login_tiny'     => self::$_login_tiny,
+			'connected_s'    => self::$_connected_s,
 			'btn_unlimited'  => self::$_btn_unlimited,
 			'connected_tiny' => self::$_connected_tiny,
-			'autologin' 	 => self::$_autologin,
+			'autologin'      => self::$_autologin,
 		));
 
 		$output = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
