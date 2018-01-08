@@ -61,21 +61,21 @@ class BuildScript {
 			'adblock_modal'  => self::$_popup,
 			'targeting'      => self::$_targets,
 			'locale'         => self::$_lang,
-            'autologin'      => self::$_autologin,
-            'user_strings'   => array(
-                'login'             => self::$_login,
-                'login_tiny'        => self::$_login_tiny,
-                'connected'         => self::$_connected,
-                'connected_tiny'    => self::$_connected_tiny,
-                'connected_s'       => self::$_connected_s,
-                'btn_unlimited'     => self::$_btn_unlimited,
-                'btn_noads'         => self::$_btn_noads,
-                'support'           => self::$_support,
-                'connected_support' => self::$_connected_support,
-            )
+			'autologin'      => self::$_autologin,
+			'user_strings'   => array(
+				'login'             => self::$_login,
+				'login_tiny'        => self::$_login_tiny,
+				'connected'         => self::$_connected,
+				'connected_tiny'    => self::$_connected_tiny,
+				'connected_s'       => self::$_connected_s,
+				'btn_unlimited'     => self::$_btn_unlimited,
+				'btn_noads'         => self::$_btn_noads,
+				'support'           => self::$_support,
+				'connected_support' => self::$_connected_support,
+			),
 		));
 
-		$output = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
+		$output  = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
 		$output .= "<script>var _mltpss = new Multipass.default($settings);</script>";
 
 		echo $output;
