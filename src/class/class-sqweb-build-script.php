@@ -39,7 +39,7 @@ class BuildScript {
 		self::$_support           = ( get_option( 'sqw_btn_support' ) != false ) ? get_option( 'sqw_btn_support' ) : '';
 		self::$_connected         = ( get_option( 'sqw_btn_connected' ) != false ) ? get_option( 'sqw_btn_connected' ) : '';
 		self::$_btn_noads         = ( get_option( 'sqw_btn_noads' ) != false ) ? get_option( 'sqw_btn_noads' ) : '';
-		self::$_autologin		  = ( get_option( 'sqw_autologin' ) != false ) ? false : true;
+		self::$_autologin         = ( get_option( 'sqw_autologin' ) != false ) ? false : true;
 		self::$_login_tiny        = ( get_option( 'sqw_btn_login_tiny' ) != false ) ? get_option( 'sqw_btn_login_tiny' ) : '';
 		self::$_connected_s       = ( get_option( 'sqw_btn_connected_s' ) != false ) ? get_option( 'sqw_btn_connected_s' ) : '';
 		self::$_btn_unlimited     = ( get_option( 'sqw_btn_unlimited' ) != false ) ? get_option( 'sqw_btn_unlimited' ) : '';
@@ -55,27 +55,27 @@ class BuildScript {
 
 		// Assembling
 		$settings = json_encode(array(
-            'wsid' => self::$_wsid,
-            'sitename' => self::$_blogname,
-            'debug' => false,
-            'adblock_modal' => self::$_popup,
-            'targeting' => self::$_targets,
-            'locale' => self::$_lang,
-            'login' => self::$_login,
-            'connected' => self::$_connected,
-            'support' => self::$_support,
-            'btn_noads' => self::$_btn_noads,
-            'login_tiny' => self::$_login_tiny,
-            'connected_s' => self::$_connected_s,
-            'btn_unlimited' => self::$_btn_unlimited,
-            'connected_tiny' => self::$_connected_tiny,
-            'autologin' => self::$_autologin,
-        ));
+			'wsid'           => self::$_wsid,
+			'sitename' 		 => self::$_blogname,
+			'debug' 		 => false,
+			'adblock_modal'  => self::$_popup,
+			'targeting' 	 => self::$_targets,
+			'locale'         => self::$_lang,
+			'login'          => self::$_login,
+			'connected' 	 => self::$_connected,
+			'support' 		 => self::$_support,
+			'btn_noads' 	 => self::$_btn_noads,
+			'login_tiny' 	 => self::$_login_tiny,
+			'connected_s' 	 => self::$_connected_s,
+			'btn_unlimited'  => self::$_btn_unlimited,
+			'connected_tiny' => self::$_connected_tiny,
+			'autologin' 	 => self::$_autologin,
+		));
 
-        $output = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
-        $output .= "<script>var _mltpss = new Multipass.default($settings);</script>";
+		$output = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
+		$output .= "<script>var _mltpss = new Multipass.default($settings);</script>";
 
-        echo $output;
+		echo $output;
 	}
 
 	/**
