@@ -61,15 +61,18 @@ class BuildScript {
 			'adblock_modal'  => self::$_popup,
 			'targeting'      => self::$_targets,
 			'locale'         => self::$_lang,
-			'login'          => self::$_login,
-			'connected'      => self::$_connected,
-			'support'        => self::$_support,
-			'btn_noads'      => self::$_btn_noads,
-			'login_tiny'     => self::$_login_tiny,
-			'connected_s'    => self::$_connected_s,
-			'btn_unlimited'  => self::$_btn_unlimited,
-			'connected_tiny' => self::$_connected_tiny,
-			'autologin'      => self::$_autologin,
+            'autologin'      => self::$_autologin,
+            'user_strings'   => array(
+                'login'             => self::$_login,
+                'login_tiny'        => self::$_login_tiny,
+                'connected'         => self::$_connected,
+                'connected_tiny'    => self::$_connected_tiny,
+                'connected_s'       => self::$_connected_s,
+                'btn_unlimited'     => self::$_btn_unlimited,
+                'btn_noads'         => self::$_btn_noads,
+                'support'           => self::$_support,
+                'connected_support' => self::$_connected_support,
+            )
 		));
 
 		$output = '<script src="http://test-js.networkl:8080/multipass.min.js" type="text/javascript"></script>' . PHP_EOL;
