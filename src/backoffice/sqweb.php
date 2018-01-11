@@ -57,11 +57,16 @@
 							<div class="sqw-select-lang">
 								<h4><?php _e( 'In which language should users see the plugin ?', 'sqweb' ); ?></h4>
 								<select class="sqw-select-lang-tag" name="sqw_lang">
-									<option value="fr" <?php echo ( get_option( 'sqw_lang' ) === 'fr' ? 'selected' : '' ); ?> ><?php _e( 'French', 'fr' ); ?></option>
-									<option value="en" <?php echo ( get_option( 'sqw_lang' ) === 'en' ? 'selected' : '' ); ?> ><?php _e( 'English', 'en' ); ?></option>
+									<option value="fr_FR" <?php echo ( get_option( 'sqw_lang' ) === 'fr_FR' ? 'selected' : '' ); ?> ><?php _e( 'French', 'fr' ); ?></option>
+									<option value="en_US" <?php echo ( get_option( 'sqw_lang' ) === 'en_US' ? 'selected' : '' ); ?> ><?php _e( 'English', 'en' ); ?></option>
 								</select>
 							</div>
-							<h4><?php _e( 'Do you want to restrict access to some content ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" id="sqw-paywall" name="sqw-paywall" data-color="green"><div></div></div>
+							<div style="margin-bottom: 20px" class="sqw-support-button">
+								<h4><?php _e( 'Do you want Multipass user to be logged in automatically ?', 'sqweb' ); ?></h4>
+								<div id="sqw_autologin_trigger" class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_autologin' ) == 0 ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw_autologin" data-color="green"><div></div></div>
+								<input type="hidden" id="sqw_autologin" name="sqw_autologin" value="<?php echo get_option( 'sqw_autologin' ); ?>">
+							</div>
+							<h4 class="sqw-margin-top"><?php _e( 'Do you want to restrict access to some content ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" id="sqw-paywall" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">
 								<div class="sqw-selector sqw-clear">
 									<div class="sqw-select">
@@ -310,6 +315,6 @@
 
 <script>
 
-var adb_default_message = '<?php _e( 'If you want a better experience on our website you can get <a href="#" onclick="sqw.modal_first()" class="sqw-btn-link" style="color:white !important;">your Multipass</a> to surf without ads and access premium content on all partner websites.', 'sqweb' ); ?>';
+var adb_default_message = '<?php _e( 'If you want a better experience on our website you can get <a href="#" onclick="mltpss.modal_first()" class="sqw-btn-link" style="color:white !important;">your Multipass</a> to surf without ads and access premium content on all partner websites.', 'sqweb' ); ?>';
 
 </script>
