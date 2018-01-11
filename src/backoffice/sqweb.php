@@ -315,6 +315,6 @@
 
 <script>
 
-var adb_default_message = '<?php _e( 'If you want a better experience on our website you can get <a href="#" onclick="sqw.modal_first()" class="sqw-btn-link" style="color:white !important;">your Multipass</a> to surf without ads and access premium content on all partner websites.', 'sqweb' ); ?>';
+var adb_default_message = '<?php _e( 'If you want a better experience on our website you can get <a href="#" onclick="mltpss.modal_first()" class="sqw-btn-link" style="color:white !important;">your Multipass</a> to surf without ads and access premium content on all partner websites.', 'sqweb' ); ?>';
 
 </script>
