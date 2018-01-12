@@ -70,7 +70,7 @@ function paywall_style() {
 }
 
 function end_of_article_support_button( $content ) {
-	if ( ! strstr( $content, 'mltpss.modal_first()' ) ) {
+	if ( ! strstr( $content, 'sqw.modal_first()' ) ) {
 		$content .= sqw_support_button_html();
 	}
 
