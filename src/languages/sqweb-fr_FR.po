@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2017-10-25 11:20+0200\n"
-"PO-Revision-Date: 2017-10-25 11:21+0200\n"
+"POT-Creation-Date: 2018-01-12 13:50+0100\n"
+"PO-Revision-Date: 2018-01-12 13:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
@@ -66,7 +66,7 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:55 backoffice/sqweb.php:326
+#: backoffice/sqweb.php:55 backoffice/sqweb.php:287
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -82,90 +82,94 @@ msgstr "Français"
 msgid "English"
 msgstr "Anglais"
 
-#: backoffice/sqweb.php:64
+#: backoffice/sqweb.php:65
+msgid "Do you want Multipass user to be logged in automatically ?"
+msgstr "Voulez vous connecter automatiquement les utilisateurs Multipass ?"
+
+#: backoffice/sqweb.php:69
 msgid "Do you want to restrict access to some content ?"
 msgstr "Voulez-vous restreindre certains contenus ?"
 
-#: backoffice/sqweb.php:69
+#: backoffice/sqweb.php:74
 msgid "What percentage of the articles do you want to show free users ?"
 msgstr "Quel % de l'article doit être montré aux utilisateurs gratuits ?"
 
-#: backoffice/sqweb.php:70
+#: backoffice/sqweb.php:75
 msgid "(Free users and search engines will see this)"
 msgstr "(Les utilisateurs gratuits et les moteurs de recherche verront ceci)"
 
-#: backoffice/sqweb.php:76
+#: backoffice/sqweb.php:81
 msgid "Restrict all posts of all categories"
 msgstr "Filtrer tous les contenus"
 
-#: backoffice/sqweb.php:79
+#: backoffice/sqweb.php:84
 msgid "Restrict specific categories :"
 msgstr "Filtrer seulement certaines catégories:"
 
-#: backoffice/sqweb.php:100
+#: backoffice/sqweb.php:105
 msgid "Prioritize Multipass over other paywalls"
 msgstr ""
 "Rendre Multipass prioritaire vis à vis des autres paywalls sur votre site"
 
-#: backoffice/sqweb.php:105
+#: backoffice/sqweb.php:110
 msgid "Start restricting content after a number of page views."
 msgstr ""
 "Démarrer la restriction de contenu après un certain nombre de pages vues."
 
-#: backoffice/sqweb.php:107
+#: backoffice/sqweb.php:112
 msgid ""
 "(How many posts can be read for free by a user before beeing asked to pay)"
 msgstr "(Combien d’articles peuvent être lus avant de bloquer l’utilisateur)"
 
-#: backoffice/sqweb.php:109
+#: backoffice/sqweb.php:114
 msgid "How many articles free users can see daily before being blocked ?"
 msgstr ""
 "Combien d’articles gratuit l’utilisateur peut voir par jours avant d’être "
 "bloquer ?"
 
-#: backoffice/sqweb.php:110
+#: backoffice/sqweb.php:115
 msgid "Articles per day"
 msgstr "Articles par jours"
 
-#: backoffice/sqweb.php:114
+#: backoffice/sqweb.php:119
 msgid ""
 "Do you want premium posts to be available to free users after some time ?"
 msgstr ""
 "Souhaitez-vous que les articles premium deviennent gratuits après un certain "
 "temps ?"
 
-#: backoffice/sqweb.php:117
+#: backoffice/sqweb.php:122
 msgid "How many days will the posts remain restricted after publication ?"
 msgstr "Combien de jours les articles restent bloqués ?"
 
-#: backoffice/sqweb.php:118
+#: backoffice/sqweb.php:123
 msgid "days before paywall unlock"
 msgstr "jours avant déverouillage"
 
-#: backoffice/sqweb.php:122
+#: backoffice/sqweb.php:127
 msgid "Do you want archives (old posts) to be restricted after some time ?"
 msgstr ""
 "Souahitez-vous que les articles deviennent des articles premium au bout d’un "
 "nombre de jours ?"
 
-#: backoffice/sqweb.php:125
+#: backoffice/sqweb.php:130
 msgid "How many days after publication will the posts remain free ?"
 msgstr "Combien de jours les articles restent gratuits ?"
 
-#: backoffice/sqweb.php:126
+#: backoffice/sqweb.php:131
 msgid "days before paywall lock"
 msgstr "jours avant déverrouillage"
 
-#: backoffice/sqweb.php:130
+#: backoffice/sqweb.php:135
 msgid "Do not restrict content to the following user groups :"
 msgstr "Ne pas restreindre de contenu aux groupes d’utilisateurs suivants :"
 
-#: backoffice/sqweb.php:152
+#: backoffice/sqweb.php:157
 msgid ""
 "Do you want to display a \"Support us\" message at the end of your posts ?"
 msgstr "Afficher un bouton “Supportez-nous” en pied d’article ?"
 
-#: backoffice/sqweb.php:161
+#: backoffice/sqweb.php:166
 msgid ""
 "Enable php parsing in text widgets (this might be needed to filter ads in "
 "your theme template)"
@@ -173,19 +177,19 @@ msgstr ""
 "Activer l’interprétation du PHP dans les widgets de text (Peut-être requis "
 "pour filtrer les pubs dans votre template de thème)"
 
-#: backoffice/sqweb.php:164
+#: backoffice/sqweb.php:169
 msgid "Multipass users must browse without ads on your website"
 msgstr "Les abonnés Multipass doivent naviguer sans publicité sur votre site"
 
-#: backoffice/sqweb.php:176
+#: backoffice/sqweb.php:181
 msgid "Customize the Multipass button"
 msgstr "Personnaliser les boutons Multipass"
 
-#: backoffice/sqweb.php:181
+#: backoffice/sqweb.php:186
 msgid "Tiny button"
 msgstr "Format très petit"
 
-#: backoffice/sqweb.php:187 backoffice/sqweb.php:200
+#: backoffice/sqweb.php:189 backoffice/sqweb.php:197
 msgid "Premium"
 msgstr "Premium"
 
@@ -193,87 +197,93 @@ msgstr "Premium"
 msgid "Tiny button when logged in"
 msgstr "Format très petit une fois connecté"
 
-#: backoffice/sqweb.php:210
+#: backoffice/sqweb.php:205
 msgid "Regular button"
 msgstr "Format normal"
 
-#: backoffice/sqweb.php:217
+#: backoffice/sqweb.php:209
 msgid "Premium with Multipass"
 msgstr "Premium avec Multipass"
 
-#: backoffice/sqweb.php:224
+#: backoffice/sqweb.php:214
 msgid "Regular button when connected"
 msgstr "Format normal une fois connecté"
 
-#: backoffice/sqweb.php:231
+#: backoffice/sqweb.php:218
 msgid "Logged in with Multipass"
 msgstr "Connecté avec Multipass"
 
-#: backoffice/sqweb.php:241
+#: backoffice/sqweb.php:226
 msgid "Support us button"
 msgstr "Bouton soutenez-nous"
 
-#: backoffice/sqweb.php:248 backoffice/sqweb.php:262
+#: backoffice/sqweb.php:230 backoffice/sqweb.php:239
 msgid "Support us with Multipass"
 msgstr "Soutenez-nous avec Multipass"
 
-#: backoffice/sqweb.php:255
+#: backoffice/sqweb.php:235
 msgid "Support us button when connected"
 msgstr "Bouton soutenez-nous une fois connecté"
 
-#: backoffice/sqweb.php:272
+#: backoffice/sqweb.php:247
 msgid "Large button"
 msgstr "Format large"
 
-#: backoffice/sqweb.php:282
+#: backoffice/sqweb.php:254
 msgid "Unrestricted access"
 msgstr "Lecture Illimitée"
 
-#: backoffice/sqweb.php:289
+#: backoffice/sqweb.php:256
 msgid "No ads"
 msgstr "Zéro Pub"
 
-#: backoffice/sqweb.php:296
+#: backoffice/sqweb.php:262
 msgid "Large button when connected"
 msgstr "Format ‘large’ une fois connecté"
 
-#: backoffice/sqweb.php:306
+#: backoffice/sqweb.php:269
 msgid "Logged in"
 msgstr "Connecté"
 
-#: backoffice/sqweb.php:322
+#: backoffice/sqweb.php:283
 msgid "Activate Adblockers Manager"
 msgstr "Activer l’Adblockers Manager"
 
-#: backoffice/sqweb.php:326
+#: backoffice/sqweb.php:287
 msgid "The Adblock Manager gives you tools to mitigate adblocking."
 msgstr ""
 "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
 
-#: backoffice/sqweb.php:329
+#: backoffice/sqweb.php:290
 msgid "Would you like to display a dynamic popup to your adblockers ?"
 msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:333
+#: backoffice/sqweb.php:294
 msgid "Would you like to display a message to your adblockers ?"
 msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
 
-#: backoffice/sqweb.php:336
+#: backoffice/sqweb.php:297
 msgid "Message shown to your adblockers"
 msgstr "Le message affiché à vos adblockers"
 
-#: backoffice/sqweb.php:338
+#: backoffice/sqweb.php:299
 msgid "The message will be shown in a banner at the bottom of the window."
 msgstr "Ce message apparaîtra dans une bannière en bas de page."
 
-#: backoffice/sqweb.php:346
+#: backoffice/sqweb.php:307
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backoffice/sqweb.php:357
+#: backoffice/sqweb.php:318
+#, fuzzy
+#| msgid ""
+#| "If you want a better experience on our website you can get <a href=\"#\" "
+#| "onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
+#| "important;\">your Multipass</a> to surf without ads and access premium "
+#| "content on all partner websites."
 msgid ""
 "If you want a better experience on our website you can get <a href=\"#\" "
-"onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
+"onclick=\"mltpss.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
 "important;\">your Multipass</a> to surf without ads and access premium "
 "content on all partner websites."
 msgstr ""
@@ -375,7 +385,7 @@ msgstr "Cliquez ici pour vous connecter"
 msgid "Edit settings"
 msgstr "Editez les paramètres"
 
-#: diagnostic.php:105
+#: diagnostic.php:106
 #, php-format
 msgid ""
 "Your diagnostic has been sent to our support team and you should soon "
@@ -390,7 +400,7 @@ msgstr[1] ""
 "Votre diagnostique a été envoyé à notre support technique et vous devriez "
 "recevoir un accusé de réception a l’adresse : %s"
 
-#: diagnostic.php:107
+#: diagnostic.php:108
 msgid ""
 "There was an error sending the diagnostic, please contact our support team "
 "to: hello@sqweb.com"
@@ -449,85 +459,85 @@ msgstr ""
 msgid "Support us with"
 msgstr "Soutenez-nous avec"
 
-#: includes/sqweb-filter.php:113
+#: includes/sqweb-filter.php:115
 msgid "The rest of this article is for subscribers only"
 msgstr "La suite de cette page est réservée aux abonnés"
 
-#: includes/sqweb-filter.php:113
+#: includes/sqweb-filter.php:115
 msgid "Become a subscriber now"
 msgstr "Débloquez ce contenu avec Multipass"
 
-#: includes/sqweb-filter.php:118
+#: includes/sqweb-filter.php:120
 msgid "The rest of this article is restricted"
 msgstr "Cet article est réservé aux abonnés"
 
-#: includes/sqweb-filter.php:119 includes/sqweb-filter.php:139
-#: includes/sqweb-filter.php:159 includes/sqweb-filter.php:179
+#: includes/sqweb-filter.php:121 includes/sqweb-filter.php:141
+#: includes/sqweb-filter.php:161 includes/sqweb-filter.php:181
 msgid "Already premium? "
 msgstr "Déjà abonné ? "
 
-#: includes/sqweb-filter.php:119 includes/sqweb-filter.php:139
-#: includes/sqweb-filter.php:159 includes/sqweb-filter.php:179
+#: includes/sqweb-filter.php:121 includes/sqweb-filter.php:141
+#: includes/sqweb-filter.php:161 includes/sqweb-filter.php:181
 msgid "Sign in"
 msgstr "Connexion"
 
-#: includes/sqweb-filter.php:122 includes/sqweb-filter.php:142
-#: includes/sqweb-filter.php:162 includes/sqweb-filter.php:182
+#: includes/sqweb-filter.php:124 includes/sqweb-filter.php:144
+#: includes/sqweb-filter.php:164 includes/sqweb-filter.php:184
 msgid "Unlock this article, get your"
 msgstr "Débloquez ce contenu avec"
 
-#: includes/sqweb-filter.php:125 includes/sqweb-filter.php:145
-#: includes/sqweb-filter.php:165 includes/sqweb-filter.php:185
+#: includes/sqweb-filter.php:127 includes/sqweb-filter.php:147
+#: includes/sqweb-filter.php:167 includes/sqweb-filter.php:187
 msgid "The multisite subscription, wihtout commitment."
 msgstr "L’abonnement multi-site sans engagement."
 
-#: includes/sqweb-filter.php:126 includes/sqweb-filter.php:146
-#: includes/sqweb-filter.php:166 includes/sqweb-filter.php:186
+#: includes/sqweb-filter.php:128 includes/sqweb-filter.php:148
+#: includes/sqweb-filter.php:168 includes/sqweb-filter.php:188
 msgid "Discover our partners"
 msgstr "Découvrir les partenaires"
 
-#: includes/sqweb-filter.php:133 includes/sqweb-filter.php:138
+#: includes/sqweb-filter.php:135 includes/sqweb-filter.php:140
 #, php-format
 msgid "You have already read %d premium article for free today"
 msgid_plural "You have already read %d premium articles for free today"
 msgstr[0] "Vous avez lu votre %d article premium quotidien offert"
 msgstr[1] "Vous avez lu vos %d articles premium quotidien offert"
 
-#: includes/sqweb-filter.php:133
+#: includes/sqweb-filter.php:135
 msgid "Access immediately the premium content with Multipass"
 msgstr "Accéder immédiatement aux contenus premium avec Multipass"
 
-#: includes/sqweb-filter.php:133
+#: includes/sqweb-filter.php:135
 msgid "Or come back tomorrow"
 msgstr "Ou revenez demain"
 
-#: includes/sqweb-filter.php:153 includes/sqweb-filter.php:173
+#: includes/sqweb-filter.php:155 includes/sqweb-filter.php:175
 msgid "This premium content is for subscribers only"
 msgstr "Ce contenu premium est limité aux abonnés uniquement"
 
-#: includes/sqweb-filter.php:153
+#: includes/sqweb-filter.php:155
 #, php-format
 msgid "It will be available for free in %d day"
 msgid_plural "It will be available for free in %d days"
 msgstr[0] "Cet article sera disponible dans %d jour"
 msgstr[1] "Cet article sera disponible dans %d jours"
 
-#: includes/sqweb-filter.php:153 includes/sqweb-filter.php:173
+#: includes/sqweb-filter.php:155 includes/sqweb-filter.php:175
 msgid "Become a subscriber now with Multipass"
 msgstr "Débloquez ce contenu avec Multipass"
 
-#: includes/sqweb-filter.php:158
+#: includes/sqweb-filter.php:160
 #, php-format
 msgid "This will be available for free in %d day"
 msgid_plural "This will be available for free in %d days"
 msgstr[0] "Il sera disponible dans %d jour"
 msgstr[1] "Il sera disponible dans %d jours"
 
-#: includes/sqweb-filter.php:173
+#: includes/sqweb-filter.php:175
 msgid "Archives are for subscribers only"
 msgstr "Ce contenu est actuellement réservé aux abonnés"
 
-#: includes/sqweb-filter.php:178
+#: includes/sqweb-filter.php:180
 msgid "This article is restricted."
 msgstr "Cet article est réservé."
 

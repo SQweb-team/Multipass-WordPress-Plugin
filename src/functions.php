@@ -404,7 +404,7 @@ function sqw_support_button_html() {
 						. __( 'You can support us with Multipass which enables you to pay for a bundle of websites: you can finance the work of journalists and content creators you love.', 'sqweb' )
 					. '</div>
 				</div>
-				<div onclick="sqw.modal_first()" class="sqw-article-footer-footer">
+				<div onclick="mltpss.modal_first()" class="sqw-article-footer-footer">
 					<div class="sqw-article-footer-footer-text">
 						<span class="sqw-article-footer-footer-bold">'
 							. __( 'Support us with', 'sqweb' )

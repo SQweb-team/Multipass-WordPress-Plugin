@@ -162,5 +162,13 @@ jQuery(function($) {
 				$('#sqw_display_support').val(1);
 			}
 		});
+
+		$('#sqw_autologin_trigger').click(function() {
+			if ($('#sqw_autologin').val() == 1) {
+				$('#sqw_autologin').val(0);
+			} else {
+				$('#sqw_autologin').val(1);
+			}
+		});
 	});
 });
