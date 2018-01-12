@@ -62,9 +62,9 @@
 								</select>
 							</div>
 							<div style="margin-bottom: 20px" class="sqw-support-button">
- 								<h4><?php _e( 'Do you want Multipass user to be logged in automatically ?', 'sqweb' ); ?></h4>
- 								<div id="sqw_autologin_trigger" class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_autologin' ) == 0 ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw_autologin" data-color="green"><div></div></div>
- 								<input type="hidden" id="sqw_autologin" name="sqw_autologin" value="<?php echo get_option( 'sqw_autologin' ); ?>">
+								<h4><?php _e( 'Do you want Multipass user to be logged in automatically ?', 'sqweb' ); ?></h4>
+								<div id="sqw_autologin_trigger" class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'sqw_autologin' ) == 0 ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" name="sqw_autologin" data-color="green"><div></div></div>
+								<input type="hidden" id="sqw_autologin" name="sqw_autologin" value="<?php echo get_option( 'sqw_autologin' ); ?>">
 							</div>
 							<h4 class="sqw-margin-top"><?php _e( 'Do you want to restrict access to some content ?', 'sqweb' ); ?></h4><div class="sqw-tack sqw-tack-basic <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? 'sqw-tack-basic-check sqw-green' : '' ); ?>" id="sqw-paywall" name="sqw-paywall" data-color="green"><div></div></div>
 							<div class="sqw-paywall <?php echo ( get_option( 'cutartperc' ) !== false || get_option( 'artbyday' ) !== false || get_option( 'dateart' ) !== false || get_option( 'sqw_filter_all' ) !== false || get_option( 'archiveart' ) !== false || unserialize( get_option( 'categorie' ) ) ? '' : 'sqw-hide' ); ?>">

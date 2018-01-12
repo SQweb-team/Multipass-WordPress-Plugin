@@ -73,12 +73,12 @@ class BuildScript {
 				'support'           => self::$_support,
 				'connected_support' => self::$_connected_support,
 			),
- 		));
+		));
 
- 		$output  = '<script src="https://cdn.multipass.net/mltpss.min.js" type="text/javascript"></script>' . PHP_EOL;
- 		$output .= "<script>/* SQweb v" . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.8.2' ) . " */ var mltpss = new Multipass.default($settings);</script>";
+		$output  = '<script src="https://cdn.multipass.net/mltpss.min.js" type="text/javascript"></script>' . PHP_EOL;
+		$output .= '<script>/* SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.8.2' ) . ' */ var mltpss = new Multipass.default($settings);</script>';
 
- 		echo $output;
+		echo $output;
 	}
 
 	/**
