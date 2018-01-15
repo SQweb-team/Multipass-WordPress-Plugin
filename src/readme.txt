@@ -1,4 +1,4 @@
-=== SQweb for WordPress ===
+=== Multipass for WordPress ===
 Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
@@ -11,17 +11,17 @@ The friendly alternative to adblock and paywalls. Set up a simple universal subs
 
 == Description ==
 
-**[SQweb]("https://www.sqweb.com") makes it easy to earn money from your readers, rather than ads.**
+**[Multipass]("https://www.multipass.net") makes it easy to earn money from your readers, rather than ads.**
 
-With SQweb you can:
+With Multipass you can:
 
 - **Find out how much revenue you're losing from adblocking**, with detailed analytics per browser and device ;
 - **Detect adblockers and show them the message of your choice**, to tell them that you're offering an alternative ;
 - **Set up a simple subscription system, and/or paywall**, so that your readers can access the ad-free version of your site, and premium content if you have any.
 
-Our plugin allows you to be fully set up within minutes. All SQweb users will then be able to enjoy the premium version of your website.
+Our plugin allows you to be fully set up within minutes. All Multipass users will then be able to enjoy the premium version of your website.
 
-SQweb-enabled websites need this plugin to manage the display of ads and premium content. Installing the plugin is also required for subscribers signin, signup and tracking.
+Multipass-enabled websites need this plugin to manage the display of ads and premium content. Installing the plugin is also required for subscribers signin, signup and tracking.
 
 Their monthly subscriptions are then shared between visited websites, on a time based ratio.
 
@@ -32,7 +32,7 @@ If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in 
 == Installation ==
 
 1. Upload the plugin to the '/wp-content/plugins/' directory, or download it through the official WordPress plugin repository.
-2. Activate the plugin via the 'Plugins' menu. You will be prompted to login on SQweb, with the option to create an account if you need to.
+2. Activate the plugin via the 'Plugins' menu. You will be prompted to login on Multipass, with the option to create an account if you need to.
 3. Add your website, and customize the preferences to your liking.
 4. Add the widget or shortcode on your site :
 
@@ -140,14 +140,14 @@ add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
 
 == Frequently asked questions ==
 
-= How much does SQweb cost ? =
-SQweb is completely free for publishers and website owners. We're currently offering a special early adopter price of 2€ for suscribers, instead of 9€.
+= How much does Multipass cost ? =
+Multipass is completely free for publishers and website owners. We're currently offering a special early adopter price of 2€ for suscribers, instead of 9€.
 
 = How do users register ? =
-Users can register on SQweb without ever leaving your website : when they click on the button, they will be shown a modal window to login or register. They can also register via SQweb.com, or any other SQweb-enabled website.
+Users can register on Multipass without ever leaving your website : when they click on the button, they will be shown a modal window to login or register. They can also register via multipass.net, or any other Multipass-enabled website.
 
 = How much will I earn ? =
-Your earnings are based on the time SQwebers spend on your website, rather than individual clicks or impressions. We expect your earnings per subscriber to be 2-3x greater than regular advertisement, because your SQwebers are highly engaged users.
+Your earnings are based on the time Multipass users spend on your website, rather than individual clicks or impressions. We expect your earnings per subscriber to be 2-3x greater than regular advertisement, because your Multipass users are highly engaged users.
 
 = Do I have to change my advertising solution ? =
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.

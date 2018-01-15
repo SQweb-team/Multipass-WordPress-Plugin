@@ -1,4 +1,4 @@
-SQweb WordPress Plugin
+Multipass WordPress Plugin
 ===
 [![Build Status](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin.svg?branch=master)](https://travis-ci.org/SQweb-team/SQweb-WordPress-Plugin)
 [![Code Climate](https://codeclimate.com/github/SQweb-team/SQweb-WordPress-Plugin/badges/gpa.svg)](https://codeclimate.com/github/SQweb-team/SQweb-WordPress-Plugin)
@@ -6,9 +6,9 @@ SQweb WordPress Plugin
 [![Dependency Status](https://www.versioneye.com/user/projects/568c03acdb4b700041000e09/badge.svg)](https://www.versioneye.com/user/projects/568c03acdb4b700041000e09)
 [![Known Vulnerabilities](https://snyk.io/test/github/sqweb-team/sqweb-wordpress-plugin/badge.svg)](https://snyk.io/test/github/sqweb-team/sqweb-wordpress-plugin)
 
-**This plugin enables you to easily install SQweb on your WordPress powered site.**
+**This plugin enables you to easily install Multipass on your WordPress powered site.**
 
-You can download the latest stable release from [here](https://github.com/SQweb-team/SQweb-WordPress-Plugin/releases).
+You can download the latest stable release from [here](https://github.com/SQweb-team/Multipass-WordPress-Plugin/releases).
 
 ## Contributing
 
@@ -34,7 +34,7 @@ Please see [Release.md](Release.md).
 
 If you encounter any bug or unexpected behavior, you can either report it on Github using the bug tracker, or via email at `hello@sqweb.com`. We will be in touch as soon as possible.
 
-If you discover a security vulnerability within SQweb or this plugin, please e-mail `security@sqweb.com`. Vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Multipass or this plugin, please e-mail `security@sqweb.com`. Vulnerabilities will be promptly addressed.
 
 ## License
 
