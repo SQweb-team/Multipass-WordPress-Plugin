@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics
 Requires at least: 3.6
 Tested up to: 4.8
-Stable tag: 2.8.3
+Stable tag: 2.8.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -153,6 +153,9 @@ Your earnings are based on the time Multipass users spend on your website, rathe
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.8.4 =
+* Renamed plugin from SQweb to Multipass.
 
 = v2.8.3 =
 * Improved the method injecting our script.
