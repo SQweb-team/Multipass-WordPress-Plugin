@@ -154,6 +154,9 @@ You can keep your current adverting setup. We're compatible with AdSense, Double
 
 == Changelog ==
 
+= v2.8.4 =
+* Renamed plugin from SQweb to Multipass.
+
 = v2.8.3 =
 * Improved the method injecting our script.
 
