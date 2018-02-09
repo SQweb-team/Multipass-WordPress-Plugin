@@ -421,7 +421,7 @@ function sqw_support_button_html() {
 				<tr>
 					<td class="sqw-table-footer-footer">
 						<span class="sqw-table-footer-footer-text">'
-						 .  __( 'Support us with', 'sqweb' )
+							. __( 'Support us with', 'sqweb' )
 						. '</span>
 						<div class="sqw-table-footer-footer-img"></div>
 					</td>
