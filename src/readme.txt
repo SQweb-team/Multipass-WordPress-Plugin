@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics, support
 Requires at least: 3.6
 Tested up to: 4.9.4
-Stable tag: 2.8.6
+Stable tag: 2.8.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -59,7 +59,7 @@ To manage your advertisement blocks, use the following function :
 
 `
 <?php
-	SQweb_filter::get_instance()->add_ads('YOUR ADVERTISEMENT CODE HERE');
+    SQweb_filter::get_instance()->add_ads('YOUR ADVERTISEMENT CODE HERE');
 ?>
 `
 
@@ -69,7 +69,7 @@ If you wish to show extra content to your subscribers, you can add a second para
 
 `
 <?php
-	SQweb_filter::get_instance()->add_ads('YOUR ADVERTISEMENT CODE HERE', 'YOUR SUBSCRIBER CONTENT HERE');
+    SQweb_filter::get_instance()->add_ads('YOUR ADVERTISEMENT CODE HERE', 'YOUR SUBSCRIBER CONTENT HERE');
 ?>
 `
 
@@ -105,7 +105,7 @@ You can add in your theme on function.php a filter to edit the box displayed by 
 Example to add content after box:
 `
 function box_sqweb( $content ) {
-	return $content . 'I add my content';
+    return $content . 'I add my content';
 }
 
 add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
@@ -113,7 +113,7 @@ add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
 
 `
 function box_sqweb( $content ) {
-	return $content . 'I add my content';
+    return $content . 'I add my content';
 }
 
 add_filter( 'sqw_msg_restrict_art_by_day', 'box_sqweb' );
@@ -121,7 +121,7 @@ add_filter( 'sqw_msg_restrict_art_by_day', 'box_sqweb' );
 
 `
 function box_sqweb( $content ) {
-	return $content . 'I add my content';
+    return $content . 'I add my content';
 }
 
 add_filter( 'sqw_msg_restrict_date_art', 'box_sqweb' );
@@ -132,7 +132,7 @@ You can also delete the box to create your customized box for your website.
 Example to create your own box :
 `
 function box_sqweb( $content ) {
-	return 'I don\'t need the box so I create a customized box';
+    return 'I don\'t need the box so I create a customized box';
 }
 
 add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
@@ -153,6 +153,9 @@ Your earnings are based on the time Multipass users spend on your website, rathe
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.8.7 =
+* Fixed iframe sometimes not appearing
 
 = v2.8.6 =
 * Improved the compatibility of the "Support us" display

@@ -76,7 +76,7 @@ class BuildScript {
 		));
 
 		$output  = '<script src="https://cdn.multipass.net/mltpss.min.js" type="text/javascript"></script>' . PHP_EOL;
-		$output .= '<script>/* SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.8.6' ) . ' */ var mltpss = new Multipass.default(' . $settings . ');</script>';
+		$output .= '<script>/* SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.8.7' ) . ' */ var mltpss = new Multipass.default(' . $settings . ');</script>';
 
 		echo $output;
 	}

@@ -419,7 +419,7 @@ function sqw_support_button_html() {
 					</td>
 				</tr>
 				<tr>
-					<td class="sqw-table-footer-footer">
+					<td onclick="mltpss.modal_first(event)" class="sqw-table-footer-footer">
 						<span class="sqw-table-footer-footer-text">'
 							. __( 'Support us with', 'sqweb' )
 						. '</span>
