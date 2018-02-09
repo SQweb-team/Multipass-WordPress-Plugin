@@ -420,7 +420,9 @@ function sqw_support_button_html() {
 				</tr>
 				<tr>
 					<td class="sqw-table-footer-footer">
-						<span class="sqw-table-footer-footer-text">Support us with</span>
+						<span class="sqw-table-footer-footer-text">'
+						 .  __( 'Support us with', 'sqweb' )
+						. '</span>
 						<div class="sqw-table-footer-footer-img"></div>
 					</td>
 				</tr>
