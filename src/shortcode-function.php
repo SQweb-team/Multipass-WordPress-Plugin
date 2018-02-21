@@ -29,6 +29,12 @@ function sqweb_add_filter_short_code( $atts = array(), $content = null, $tag = '
 	}
 }
 
+function sqweb_support_button_short_code( $atts = array(), $content = null, $tag = '' ) {
+	echo sqw_support_button_html();
+}
+
+add_shortcode( 'sqweb_support_us', 'sqweb_support_button_short_code' );
+
 add_shortcode( 'sqweb_button', 'sqweb_button_short_code' );
 
 add_shortcode( 'sqweb_add_filter', 'sqweb_add_filter_short_code' );

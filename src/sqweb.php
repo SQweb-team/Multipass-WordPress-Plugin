@@ -3,7 +3,7 @@
 Plugin Name: Multipass
 Plugin URI: https://www.multipass.net/
 Description: Earn money with user subscriptions instead of advertising. Set up a simple universal subscription on your site with just a few clicks. Includes adblock detection and targeting.
-Version: 2.8.7
+Version: 2.8.8
 Author: Multipass
 Author URI: https://www.multipass.net
 Text Domain: sqweb
