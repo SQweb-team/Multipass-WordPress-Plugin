@@ -9,11 +9,12 @@ class BuildScript {
 	private static $_wsid;
 	private static $_fmes;
 	private static $_lang;
+	private static $_login;
 	private static $_popup;
+	private static $_tunnel;
+	private static $_support;
 	private static $_targets;
 	private static $_blogname;
-	private static $_login;
-	private static $_support;
 	private static $_autologin;
 	private static $_connected;
 	private static $_btn_noads;
@@ -36,6 +37,7 @@ class BuildScript {
 		self::$_lang              = ( get_option( 'sqw_lang' ) != false ) ? get_option( 'sqw_lang' ) : 'en';
 		self::$_popup             = ( get_option( 'sqw_popup' ) != false ) ? get_option( 'sqw_popup' ) : 'false';
 		self::$_login             = ( get_option( 'sqw_btn_login' ) != false ) ? get_option( 'sqw_btn_login' ) : '';
+		self::$_tunnel			  = ( get_option( 'sqw_tunnel' ) != false ) ? get_option( 'sqw_tunnel' ) : 'support';
 		self::$_support           = ( get_option( 'sqw_btn_support' ) != false ) ? get_option( 'sqw_btn_support' ) : '';
 		self::$_connected         = ( get_option( 'sqw_btn_connected' ) != false ) ? get_option( 'sqw_btn_connected' ) : '';
 		self::$_btn_noads         = ( get_option( 'sqw_btn_noads' ) != false ) ? get_option( 'sqw_btn_noads' ) : '';
@@ -61,6 +63,7 @@ class BuildScript {
 			'adblock_modal' => self::$_popup,
 			'targeting'     => self::$_targets,
 			'locale'        => self::$_lang,
+			'tunnel'		=> self::$_tunnel,
 			'autologin'     => self::$_autologin,
 			'user_strings'  => array(
 				'login'             => self::$_login,

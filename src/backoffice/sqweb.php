@@ -54,6 +54,13 @@
 						<div class="sqw-clear"></div>
 						<p class="sqw-body basic-font-10"><?php _e( 'Multipass subscribers access the premium version of partner websites. The 9,90€ subscription will be shared between publishers based on the time spent on each website.', 'sqweb' ); ?> <a href="https://www.sqweb.com/publishers"><?php _e( 'More infos', 'sqweb' ); ?></a></p>
 						<div class="sqw-multipass-body sqw-body <?php echo ( get_option( 'sqw_multipass' ) ? '' : 'sqw-hide' ); ?>">
+							<div class="sqw-select-pipeline">
+								<h4><?php _e( 'Which pipeline do you wish to use?', 'sqweb' ); ?></h4>
+								<select class="sqw-select-pipeline-tag" name="sqw_tunnel">
+									<option value="premium" <?php echo ( get_option( 'sqw_tunnel' ) === 'premium' ? 'selected' : '' ); ?> ><?php _e( 'Premium', 'sqweb' ); ?></option>
+									<option value="support" <?php echo ( get_option( 'sqw_tunnel' ) === 'support' ? 'selected' : '' ); ?> ><?php _e( 'Support', 'sqweb' ); ?></option>
+								</select>
+							</div>
 							<div class="sqw-select-lang">
 								<h4><?php _e( 'In which language should users see the plugin ?', 'sqweb' ); ?></h4>
 								<select class="sqw-select-lang-tag" name="sqw_lang">

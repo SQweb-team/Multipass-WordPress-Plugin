@@ -227,11 +227,13 @@ input[type=password] {
     color: #f13564;
 }
 
-.sqw-select-lang {
+.sqw-select-lang,
+.sqw-select-pipeline {
     margin-bottom: 30px;
 }
 
-.sqw-select-lang-tag {
+.sqw-select-lang-tag,
+.sqw-select-pipeline-tag {
     float: right;
 }
 
