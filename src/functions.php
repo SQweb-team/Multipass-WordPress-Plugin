@@ -389,7 +389,7 @@ function sqw_send_data( $type ) {
 }
 
 function sqw_support_button_html() {
-	return '<table class="sqw-table-footer">
+	return '<table class="sqw-table-footer sqw-support-us-footer">
 				<tr class="sqw-table-footer-text-tr">
 					<td class="sqw-table-footer-title">
 						<span>'
