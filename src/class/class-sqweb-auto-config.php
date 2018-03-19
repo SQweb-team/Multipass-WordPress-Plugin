@@ -24,28 +24,28 @@ class Auto_Config {
 	}
 
 	private function config_wpsc( $auto_config ) {
-		global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite;
-		if ( ! $wp_cache_mod_rewrite ) {
-			if ( ! $wp_cache_mfunc_enabled ) {
-				$wp_cache_config_file   = WP_CONTENT_DIR . '/wp-cache-config.php';
-				$wp_cache_mfunc_enabled = 1;
-				if ( file_exists( $wp_cache_config_file ) ) {
-					$file = file_get_contents( $wp_cache_config_file );
-					$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Edited by SQweb', $file );
-					/** Automatic activate late init, deprecated since 2.1.1
-					$file = str_replace( '$wp_super_cache_late_init = 0; //Added by WP-Cache Manager', '$wp_super_cache_late_init = 1; //Edited by SQweb', $file );
-					*/
-					file_put_contents( $wp_cache_config_file, $file );
-				}
-			}
-		} else {
-			add_action( 'admin_notices', array( $this, 'notice_mod_rewrite' ) );
-		}
-		if ( ! file_exists( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php' ) ) {
-			/** Install plugins on WP Super Cache */
-			$file = file_get_contents( WP_PLUGIN_DIR . '/sqweb/plugins/wp-super-cache.php' );
-			file_put_contents( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php', $file );
-		}
+		// global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite;
+		// if ( ! $wp_cache_mod_rewrite ) {
+		// 	if ( ! $wp_cache_mfunc_enabled ) {
+		// 		$wp_cache_config_file   = WP_CONTENT_DIR . '/wp-cache-config.php';
+		// 		$wp_cache_mfunc_enabled = 1;
+		// 		if ( file_exists( $wp_cache_config_file ) ) {
+		// 			$file = file_get_contents( $wp_cache_config_file );
+		// 			$file = str_replace( '$wp_cache_mfunc_enabled = 0; //Added by WP-Cache Manager', '$wp_cache_mfunc_enabled = 1; //Edited by SQweb', $file );
+		// 			* Automatic activate late init, deprecated since 2.1.1
+		// 			$file = str_replace( '$wp_super_cache_late_init = 0; //Added by WP-Cache Manager', '$wp_super_cache_late_init = 1; //Edited by SQweb', $file );
+
+		// 			file_put_contents( $wp_cache_config_file, $file );
+		// 		}
+		// 	}
+		// } else {
+		// 	add_action( 'admin_notices', array( $this, 'notice_mod_rewrite' ) );
+		// }
+		// if ( ! file_exists( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php' ) ) {
+		// 	/** Install plugins on WP Super Cache */
+		// 	$file = file_get_contents( WP_PLUGIN_DIR . '/sqweb/plugins/wp-super-cache.php' );
+		// 	file_put_contents( WP_PLUGIN_DIR . '/wp-super-cache/plugins/sqweb.php', $file );
+		// }
 	}
 
 	private function config_w3tc( $auto_config ) {

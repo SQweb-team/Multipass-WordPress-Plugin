@@ -33,13 +33,13 @@ class SQweb_filter { // @codingStandardsIgnoreStart
 		if ( function_exists( 'add_action' ) ) {
 			add_action( 'sqweb_daily_event', array( $this, 'clean_data' ) );
 		}
-		if ( Auto_Config::is_wpsc_enabled() ) {
-			$this->_type_cache = 'wp_super_cache';
-			add_cacheaction( 'wpsc_cachedata_safety', function ( $safety ) { return 1; } );
-			add_cacheaction( 'wpsc_cachedata', array( $this, 'display_content_with_wpsc' ) );
-		} elseif ( Auto_Config::is_w3tc_enabled() ) {
-			$this->_type_cache = 'w3tc';
-		}
+		// if ( Auto_Config::is_wpsc_enabled() ) {
+		// 	$this->_type_cache = 'wp_super_cache';
+		// 	add_cacheaction( 'wpsc_cachedata_safety', function ( $safety ) { return 1; } );
+		// 	add_cacheaction( 'wpsc_cachedata', array( $this, 'display_content_with_wpsc' ) );
+		// } elseif ( Auto_Config::is_w3tc_enabled() ) {
+		// 	$this->_type_cache = 'w3tc';
+		// }
 	}
 
 	public static function get_instance() {

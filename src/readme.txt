@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, adblock, analytics, support
 Requires at least: 3.6
 Tested up to: 4.9.4
-Stable tag: 2.9.0
+Stable tag: 2.9.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -88,9 +88,9 @@ i.e:
 or
 `<?php do_shortcode('[sqweb_add_filter ads="YOUR ADVERTISEMENT CODE HERE" premium="SOMETHING TO REPLACE THE AD WITH"]') ?>`
 
-**If you're using WordPress Super Cache, you must enable "Dynamic Content" under "Advanced Settings".** Also, if you used 'mod_rewrite' with WordPress Super Cache, make sure to comment the rules in your '.htaccess' file.
+= Using this plugin with a cache plug-in =
 
-If it doesn't work, contact us at hello@sqweb.com and we'll be in touch as soon as possible.
+At the moment we are compatible with W3 Total Cache, to use it with Multipass, you need to go to W3 Total Cache settings under cookie groups panel. Then create a groupe with and write sqw_z in the Cookies textarea.
 
 = Using this plugin with a load-balancer or a reverse proxy =
 
@@ -153,6 +153,10 @@ Your earnings are based on the time Multipass users spend on your website, rathe
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.9.1 =
+* Fixed a crash occuring when Wordpress Super Cache was installed.
+* Updated the readme on how to install W3 Total Cache along with Multipass.
 
 = v2.9.0 =
 * Improved the way we log actions with the support button
