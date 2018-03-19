@@ -29,7 +29,7 @@ class BuildScript {
 	 */
 	public function generate() {
 
-        // phpcs:disable
+		// phpcs:disable
 
 		// Getting the options
 		self::$_targets           = 'false';
@@ -65,7 +65,7 @@ class BuildScript {
 			'locale'        => self::$_lang,
 			'autologin'     => self::$_autologin,
 			'user_strings'  => array(
-			    'login'             => self::$_login,
+				'login'             => self::$_login,
 				'login_tiny'        => self::$_login_tiny,
 				'connected'         => self::$_connected,
 				'connected_tiny'    => self::$_connected_tiny,
@@ -77,7 +77,7 @@ class BuildScript {
 			),
 		));
 
-        // phpcs:enable
+		// phpcs:enable
 
 		$output  = '<script src="https://cdn.multipass.net/mltpss.min.js" type="text/javascript"></script>' . PHP_EOL;
 		$output .= '<script>/* SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.9.1' ) . ' */ var mltpss = new Multipass.default(' . $settings . ');</script>';
