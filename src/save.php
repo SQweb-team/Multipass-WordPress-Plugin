@@ -13,12 +13,8 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
-	 * Save if user have selected Adblock manager
+	 * Save if user have selected autologin for Multipass users
 	 */
-	if ( isset( $_POST['sqw_analytics'] ) ) {
-		update_option( 'sqw_analytics', $_POST['sqw_analytics'] );
-	}
-
 	if ( isset( $_POST['sqw_autologin'] ) ) {
 		update_option( 'sqw_autologin', $_POST['sqw_autologin'] );
 	}
@@ -125,15 +121,6 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 		update_option( 'sqw_popup', 'true' );
 	} else {
 		delete_option( 'sqw_popup' );
-	}
-
-	/**
-	 * Save message display for adblockers.
-	 */
-	if ( ! empty( $_POST['fmes'] ) ) {
-		update_option( 'fmes', $_POST['fmes'] );
-	} else {
-		delete_option( 'fmes' );
 	}
 
 	/**

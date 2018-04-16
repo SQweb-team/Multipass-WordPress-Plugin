@@ -9,7 +9,6 @@ class BuildScript {
 	private static $_wsid;
 	private static $_fmes;
 	private static $_lang;
-	private static $_popup;
 	private static $_targets;
 	private static $_blogname;
 	private static $_login;
@@ -36,7 +35,6 @@ class BuildScript {
 		self::$_wsid              = ( get_option( 'wsid' ) != false ) ? get_option( 'wsid' ) : '0';
 		self::$_fmes              = ( get_option( 'fmes' ) != false ) ? get_option( 'fmes' ) : '';
 		self::$_lang              = ( get_option( 'sqw_lang' ) != false ) ? get_option( 'sqw_lang' ) : 'en';
-		self::$_popup             = ( get_option( 'sqw_popup' ) != false ) ? get_option( 'sqw_popup' ) : 'false';
 		self::$_login             = ( get_option( 'sqw_btn_login' ) != false ) ? get_option( 'sqw_btn_login' ) : '';
 		self::$_support           = ( get_option( 'sqw_btn_support' ) != false ) ? get_option( 'sqw_btn_support' ) : '';
 		self::$_connected         = ( get_option( 'sqw_btn_connected' ) != false ) ? get_option( 'sqw_btn_connected' ) : '';
@@ -60,7 +58,6 @@ class BuildScript {
 			'wsid'          => self::$_wsid,
 			'sitename'      => self::$_blogname,
 			'debug'         => false,
-			'adblock_modal' => self::$_popup,
 			'targeting'     => self::$_targets,
 			'locale'        => self::$_lang,
 			'autologin'     => self::$_autologin,
@@ -80,7 +77,7 @@ class BuildScript {
 		// phpcs:enable
 
 		$output  = '<script src="https://cdn.multipass.net/mltpss.min.js" type="text/javascript"></script>' . PHP_EOL;
-		$output .= '<script>/* SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.9.1' ) . ' */ var mltpss = new Multipass.default(' . $settings . ');</script>';
+		$output .= '<script>/* SQweb v' . ( defined( 'SQW_VERSION' ) ? SQW_VERSION : '2.9.2' ) . ' */ var mltpss = new Multipass.default(' . $settings . ');</script>';
 
 		echo $output;
 	}

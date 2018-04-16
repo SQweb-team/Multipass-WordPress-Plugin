@@ -1,13 +1,13 @@
 === Multipass for WordPress ===
 Contributors: plavaux, nverdonc, bastienbotella, matdarr
-Tags: paywall, subscription, adblock, analytics, support
+Tags: paywall, subscription, analytics, support
 Requires at least: 3.6
 Tested up to: 4.9.4
-Stable tag: 2.9.1
+Stable tag: 2.9.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
-The friendly alternative to adblock and paywalls. Set up a simple universal subscription on your site with just a few clicks.
+The friendly alternative to paywalls. Set up a simple universal subscription on your site with just a few clicks.
 
 == Description ==
 
@@ -15,8 +15,6 @@ The friendly alternative to adblock and paywalls. Set up a simple universal subs
 
 With Multipass you can:
 
-- **Find out how much revenue you're losing from adblocking**, with detailed analytics per browser and device ;
-- **Detect adblockers and show them the message of your choice**, to tell them that you're offering an alternative ;
 - **Set up a simple subscription system, and/or paywall**, so that your readers can access the ad-free version of your site, and premium content if you have any.
 
 Our plugin allows you to be fully set up within minutes. All Multipass users will then be able to enjoy the premium version of your website.
@@ -153,6 +151,9 @@ Your earnings are based on the time Multipass users spend on your website, rathe
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.9.2 =
+* Fixed some typo errors.
 
 = v2.9.1 =
 * Fixed a crash occuring when Wordpress Super Cache was installed.

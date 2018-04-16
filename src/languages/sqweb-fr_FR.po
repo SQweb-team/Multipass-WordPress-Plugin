@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sqweb\n"
-"POT-Creation-Date: 2018-01-12 13:50+0100\n"
-"PO-Revision-Date: 2018-01-12 13:51+0100\n"
+"POT-Creation-Date: 2018-04-16 12:24+0200\n"
+"PO-Revision-Date: 2018-04-16 12:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: SQweb Team <hello@sqweb.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2\n"
@@ -66,7 +66,7 @@ msgstr ""
 "partenaires. Les 9,90€ de leur abonnement seront partagés entre les sites "
 "visités au prorata du temps de surf."
 
-#: backoffice/sqweb.php:55 backoffice/sqweb.php:287
+#: backoffice/sqweb.php:55
 msgid "More infos"
 msgstr "Plus d’infos"
 
@@ -245,42 +245,11 @@ msgstr "Format ‘large’ une fois connecté"
 msgid "Logged in"
 msgstr "Connecté"
 
-#: backoffice/sqweb.php:283
-msgid "Activate Adblockers Manager"
-msgstr "Activer l’Adblockers Manager"
-
-#: backoffice/sqweb.php:287
-msgid "The Adblock Manager gives you tools to mitigate adblocking."
-msgstr ""
-"L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
-
-#: backoffice/sqweb.php:290
-msgid "Would you like to display a dynamic popup to your adblockers ?"
-msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
-
-#: backoffice/sqweb.php:294
-msgid "Would you like to display a message to your adblockers ?"
-msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
-
-#: backoffice/sqweb.php:297
-msgid "Message shown to your adblockers"
-msgstr "Le message affiché à vos adblockers"
-
-#: backoffice/sqweb.php:299
-msgid "The message will be shown in a banner at the bottom of the window."
-msgstr "Ce message apparaîtra dans une bannière en bas de page."
-
-#: backoffice/sqweb.php:307
+#: backoffice/sqweb.php:280
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backoffice/sqweb.php:318
-#, fuzzy
-#| msgid ""
-#| "If you want a better experience on our website you can get <a href=\"#\" "
-#| "onclick=\"sqw.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
-#| "important;\">your Multipass</a> to surf without ads and access premium "
-#| "content on all partner websites."
+#: backoffice/sqweb.php:291
 msgid ""
 "If you want a better experience on our website you can get <a href=\"#\" "
 "onclick=\"mltpss.modal_first()\" class=\"sqw-btn-link\" style=\"color:white !"
@@ -424,11 +393,11 @@ msgstr "Email non valide."
 msgid "Password invalid."
 msgstr "Mot de passe invalide."
 
-#: functions.php:395
+#: functions.php:396
 msgid "Continue reading..."
 msgstr "L’article est terminé …"
 
-#: functions.php:398
+#: functions.php:403
 msgid ""
 "...we need you to hear this: More people are reading our website than ever "
 "but advertising revenues across the media are falling fast."
@@ -436,7 +405,7 @@ msgstr ""
 "… mais nous avons besoin que vous lisiez ceci: nous avons de plus en plus de "
 "lecteurs chaque jour, mais de moins en moins de revenus publicitaires."
 
-#: functions.php:401
+#: functions.php:410
 msgid ""
 "We want to keep our content as open as we can. We are independent, and our "
 "quality work takes a lot of time, money and hard work to produce."
@@ -445,7 +414,7 @@ msgstr ""
 "indépendants et notre travail de qualité prend beaucoup de temps, d’argent "
 "et de dévotion."
 
-#: functions.php:404
+#: functions.php:417
 msgid ""
 "You can support us with Multipass which enables you to pay for a bundle of "
 "websites: you can finance the work of journalists and content creators you "
@@ -455,7 +424,7 @@ msgstr ""
 "de sites, et ainsi financer le travail des créateurs et journalistes que "
 "vous aimez."
 
-#: functions.php:410
+#: functions.php:424
 msgid "Support us with"
 msgstr "Soutenez-nous avec"
 
@@ -585,7 +554,7 @@ msgstr "ID :"
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Remplissez avec un ID du type que vous voulez affichez !"
 
-#: save.php:220
+#: save.php:211
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
@@ -620,12 +589,10 @@ msgstr "Paramètre SQweb"
 #: sqweb.php:30
 msgid ""
 "Earn money with user subscriptions instead of advertising. Set up a simple "
-"universal subscription on your site with just a few clicks. Includes adblock "
-"detection and targeting."
+"universal subscription on your site with just a few clicks."
 msgstr ""
 "Monétisez votre site en proposant un abonnement en alternative à la "
-"publicité. L'installation prend quelques clics seulement. Inclus un "
-"détecteur d'adblock, avec ciblage."
+"publicité. L'installation prend quelques clics seulement."
 
 #: sqweb.php:65
 msgid ""
@@ -656,6 +623,31 @@ msgstr ""
 #: sqweb.php:106
 msgid "Settings"
 msgstr "Configuration"
+
+#~ msgid "The Adblock Manager gives you tools to mitigate adblocking."
+#~ msgstr ""
+#~ "L’Adblocker Manager vous fournit des outils pour combattre l’adblocking."
+
+#~ msgid "Would you like to display a dynamic popup to your adblockers ?"
+#~ msgstr "Voulez-vous afficher un popup à vos ad-blockers ?"
+
+#~ msgid "Would you like to display a message to your adblockers ?"
+#~ msgstr "Voulez-vous afficher un message à vos ad-blockers ?"
+
+#~ msgid "Message shown to your adblockers"
+#~ msgstr "Le message affiché à vos adblockers"
+
+#~ msgid "The message will be shown in a banner at the bottom of the window."
+#~ msgstr "Ce message apparaîtra dans une bannière en bas de page."
+
+#~ msgid ""
+#~ "Earn money with user subscriptions instead of advertising. Set up a "
+#~ "simple universal subscription on your site with just a few clicks. "
+#~ "Includes adblock detection and targeting."
+#~ msgstr ""
+#~ "Monétisez votre site en proposant un abonnement en alternative à la "
+#~ "publicité. L'installation prend quelques clics seulement. Inclus un "
+#~ "détecteur d'adblock, avec ciblage."
 
 #~ msgid "Filter all content"
 #~ msgstr "Filtrer tous les articles"
@@ -710,15 +702,6 @@ msgstr "Configuration"
 
 #~ msgid "Sorry, an error occurred. Please try again."
 #~ msgstr "Une erreur est survenue. Veuillez re-essayer."
-
-#~ msgid ""
-#~ "Earn money with user subscriptions instead of advertising. Set up a "
-#~ "simple universal subscription on your site with just a few clicks. "
-#~ "Includes adblock detection and targeting"
-#~ msgstr ""
-#~ "Monétisez votre site en proposant un abonnement en alternative à la "
-#~ "publicité. L'installation prend quelques clics seulement. Inclus un "
-#~ "détecteur d'adblock, avec ciblage."
 
 #~ msgid ""
 #~ "This will be used for the iframe that visitors will use to register, "
