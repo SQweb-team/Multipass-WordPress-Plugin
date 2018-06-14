@@ -3,6 +3,9 @@
  * Shortcode Function
  */
 
+/**
+ * Shortcode to display a Multipass button
+ */
 function sqweb_button_short_code( $atts = array(), $content = null, $tag = '' ) {
 
 	$wporg_atts = shortcode_atts( array(
@@ -12,6 +15,9 @@ function sqweb_button_short_code( $atts = array(), $content = null, $tag = '' ) 
 	echo '<div class="sqweb-button' . ( 'normal' !== $wporg_atts['type'] ? ' multipass-' . $wporg_atts['type'] : '' ) . '"></div>';
 }
 
+/**
+ * Shortcode to filter an ad
+ */
 function sqweb_add_filter_short_code( $atts = array(), $content = null, $tag = '' ) {
 
 	$wporg_atts = shortcode_atts( array(
@@ -29,6 +35,9 @@ function sqweb_add_filter_short_code( $atts = array(), $content = null, $tag = '
 	}
 }
 
+/**
+ * Shortcode to display the support button
+ */
 function sqweb_support_button_short_code( $atts = array(), $content = null, $tag = '' ) {
 	if ( sqweb_check_credentials( get_option( 'wsid' ) ) === false ) {
 		echo sqw_support_button_html();

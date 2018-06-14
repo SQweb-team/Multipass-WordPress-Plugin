@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Send a curl request to the multipass API
+ *
+ * @param string $method
+ * @param string $protocol
+ * @return cURL
+ */
 function curl_api( $method, $protocol ) {
 	$curl = curl_init();
 	if ( 'get' === $method ) {

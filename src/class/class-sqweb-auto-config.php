@@ -6,6 +6,9 @@
 */
 class Auto_Config {
 
+	/**
+	 * Create a new Auto_Config instance
+	 */
 	public function __construct( $auto_config = false ) {
 		if ( is_admin() ) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );

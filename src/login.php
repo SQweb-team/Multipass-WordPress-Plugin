@@ -1,7 +1,7 @@
 <?php
 
 /**
- * signin
+ * The login HTML page used in Multipass administration panel
  */
 if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['sqw-emailc'] ) && ! empty( $_POST['sqw-passwordc'] ) ) {
 	if ( sqweb_sign_in( $_POST['sqw-emailc'], $_POST['sqw-passwordc'] ) ) {
@@ -37,7 +37,7 @@ if ( ! empty( $_GET['type'] ) && 'login' === $_GET['type'] && ! empty( $_POST['s
 }
 
 /**
- * signup
+ * The registration HTML page used in Multipass administration panel
  */
 
 if ( ! empty( $_GET['type'] ) && 'subscribe' === $_GET['type'] ) {

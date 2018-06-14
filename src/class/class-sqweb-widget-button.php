@@ -5,6 +5,9 @@
 
 class WidgetSqwebButton extends WP_Widget {
 
+	/**
+	 * Create a new WidgetSqwebButton instance
+	 */
 	function __construct() {
 
 		$widget_ops  = array(
@@ -36,6 +39,7 @@ class WidgetSqwebButton extends WP_Widget {
 
 	/**
 	 * Save button type
+	 * @return array
 	 */
 
 	function update( $new_instance, $old_instance ) {
@@ -46,6 +50,9 @@ class WidgetSqwebButton extends WP_Widget {
 		return $instance;
 	}
 
+	/**
+	 * Create button html widget
+	 */
 	function form( $instance ) {
 
 		$instance            = wp_parse_args( (array) $instance,

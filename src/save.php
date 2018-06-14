@@ -27,7 +27,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
-	 * Save the lang of button selected by webmaster
+	 * Save the lang of button selected by the webmaster
 	 */
 	if ( isset( $_POST['sqw_lang'] ) ) {
 		update_option( 'sqw_lang', $_POST['sqw_lang'] );
@@ -52,17 +52,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
-	 * Enable php parsing in text widgets
-	 */
-	if ( ! empty( $_POST['sqw_php_parsing'] ) ) {
-		update_option( 'sqw_php_parsing', true );
-	} else {
-		delete_option( 'sqw_php_parsing' );
-	}
-
-
-	/**
-	 * Save user role can see article behind paywall in all case
+	 * Save which user role can see through the paywall
 	 */
 	if ( ! empty( $_POST['exept_role'] ) ) {
 		update_option( 'sqw_exept_role', serialize( $_POST['exept_role'] ) );
@@ -80,7 +70,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
-	 * Save number of pourcent can be display of article when is blocked
+	 * Save how much of an article should be displayed before being blocked
 	 */
 	if ( ! empty( $_POST['perctart'] ) ) {
 		update_option( 'cutartperc', $_POST['perctart'] );
@@ -89,7 +79,7 @@ if ( ! empty( $_GET['type'] ) && 'save' == $_GET['type'] && ! empty( $_POST ) ) 
 	}
 
 	/**
-	 * Save number of article can be seen every day when is blocked
+	 * Number of article that can be seen freely per day
 	 */
 	if ( ! empty( $_POST['artbyday'] ) ) {
 		update_option( 'artbyday', $_POST['artbyday'] );

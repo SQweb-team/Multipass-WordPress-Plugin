@@ -5,11 +5,14 @@
 */
 class SQweb_Admin {
 
+	/**
+	 * Create an instance of SQweb_Admin
+	 */
 	function __construct() {
 		if ( is_admin() ) {
 			/**
 			 * Check if admin choose to use SQweb auto-config feature.
-			 **/
+			 */
 			if ( isset( $_GET['sqw-auto-config'] ) && true == $_GET['sqw-auto-config'] ) {
 				new Auto_Config( true );
 			} else {
@@ -20,35 +23,38 @@ class SQweb_Admin {
 			}
 			/**
 			 * Check if we are in the SQweb administration page.
-			 **/
+			 */
 			if ( isset( $_GET['page'] ) && 'SQwebAdmin' == $_GET['page'] ) {
 				add_action( 'admin_enqueue_scripts', array( $this, 'script' ) );
 				/**
-				 * Check if User if log in for show logout button.
-				 **/
+				 * Check if User is logged in to show logout button.
+				 */
 				if ( get_option( 'sqw_token' ) ) {
 					add_action( 'admin_footer', array( $this, 'sqw_logout' ), 1 );
 				}
 				/**
-				 * Check if error message need to be show and show it.
-				 **/
+				 * Check if error message needs to be shown, and show it.
+				 */
 				if ( unserialize( get_option( 'sqw_message' ) ) ) {
 					add_action( 'admin_notices', array( $this, 'notice_event' ) );
 				}
 			}
 			/**
 			 * Add SQweb tab on WP administration.
-			 **/
+			 */
 			add_action( 'admin_menu', array( $this, 'register_admin_menu' ) );
 			add_action( 'admin_menu', array( $this, 'register_admin_sub_menu' ), 20 );
 			/**
 			 * Add post capacity to paywall limit on single article.
-			 **/
+			 */
 			add_action( 'post_submitbox_misc_actions', array( $this, 'featured_post_field' ) );
 			add_action( 'save_post', array( $this, 'save_postdata' ) );
 		} // End if().
 	}
 
+	/**
+	 * Reset all SQweb settings
+	 */
 	private function sqw_reset() {
 		delete_option( 'wsid' );
 		delete_option( 'fmes' );
@@ -70,7 +76,6 @@ class SQweb_Admin {
 		delete_option( 'sqw_filter_all' );
 		delete_option( 'sqw_exept_role' );
 		delete_option( 'sqw_btn_support' );
-		delete_option( 'sqw_php_parsing' );
 		delete_option( 'sqw_prior_paywall' );
 		delete_option( 'sqw_btn_connected' );
 		delete_option( 'sqw_btn_unlimited' );
@@ -100,12 +105,18 @@ return array(
 		}
 	}
 
+	/**
+	 * Log out from your publisher account
+	 */
 	public function sqw_logout() {
 		echo '<a href=' . add_query_arg( 'type', 'diagnostic' ) . " style='position: absolute; bottom: 80px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Send diagnostic', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'sqw-reset', '1' ) . " style='position: absolute; bottom: 56px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Reset configuration of SQweb', 'sqweb' ) . '</p>';
 		echo '<a href=' . add_query_arg( 'logout', '1' ) . " style='position: absolute; bottom: 32px; right: 20px; text-decoration: none; height: 18px'>" . __( 'Logout from SQweb', 'sqweb' ) . '</p>';
 	}
 
+	/**
+	 * Create a notice to be displayed
+	 */
 	public static function notice_event() {
 		/* Display notif added previously */
 		$message = unserialize( get_option( 'sqw_message' ) );
@@ -119,6 +130,9 @@ return array(
 		delete_option( 'sqw_message' );
 	}
 
+	/**
+	 * Display notices
+	 */
 	public static function add_notice_event( $type, $message ) {
 		$messages = unserialize( get_option( 'sqw_message' ) );
 		if ( empty( $messages ) ) {
@@ -133,6 +147,9 @@ return array(
 		update_option( 'sqw_message', serialize( $messages ) );
 	}
 
+	/**
+	 * Set a post to multipass users only
+	 */
 	public function featured_post_field() {
 
 		global $post;

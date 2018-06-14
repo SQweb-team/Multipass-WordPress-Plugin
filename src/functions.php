@@ -1,22 +1,11 @@
 <?php
 
-// function sqw_php_execute( $html ) {
-// 	if ( strpos( $html, '<' . '?php' ) !== false ) {
-// 		ob_start();
-// 		eval( '?' . '>' . $html );
-// 		$html = ob_get_contents();
-// 		ob_end_clean();
-// 	}
-// 	return $html;
-// }
-
 /**
  * Send an http request to the api
  * returns true if logged, 0 if not
- * @param null $site_id
- * @return int
+ * @param integer $site_id
+ * @return boolean
  */
-
 function sqweb_check_credentials( $site_id = null ) {
 
 	static $credentials;
@@ -98,11 +87,13 @@ if ( function_exists( 'add_filter' ) ) {
 }
 
 /**
- * @param $first_name
- * @param $last_name
- * @param $email
- * @param $newpass
- * @return int
+ * Create a publisher account from wordpress multipass administration panel
+ *
+ * @param string $first_name
+ * @param string $last_name
+ * @param string $email
+ * @param string $newpass
+ * @return integer
  */
 
 function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
@@ -157,9 +148,11 @@ function sqweb_sign_up( $first_name, $last_name, $email, $newpass ) {
 }
 
 /**
- * @param $email
- * @param $password
- * @return int
+ * Login a publisher in the multipass administration panel
+ *
+ * @param string $email
+ * @param string $password
+ * @return integer
  */
 
 function sqweb_sign_in( $email, $password ) {
@@ -212,10 +205,11 @@ function sqweb_sign_in( $email, $password ) {
 }
 
 /**
- * @param $token
+ * Check if the user multipass token is valid
+ *
+ * @param string $token
  * @return int
  */
-
 function sqweb_check_token( $token ) {
 
 	if ( defined( 'SQW_ENDPOINT' ) ) {
@@ -260,8 +254,9 @@ function sqweb_check_token( $token ) {
 }
 
 /**
- * @param $id
- * @return int
+ * Get the publishers websites from our API
+ *
+ * @return mixed
  */
 
 function sqw_get_sites() {
@@ -305,9 +300,11 @@ function sqw_get_sites() {
 }
 
 /**
- * @param $data
- * @param $token
- * @return int
+ * Store the website url and name in the Multipass database
+ *
+ * @param array $data
+ * @param string $token
+ * @return mixed
  */
 
 function sqw_add_website( $data, $token ) {
@@ -388,6 +385,11 @@ function sqw_send_data( $type ) {
 	return ( 0 );
 }
 
+/**
+ * Get the html code to display the support button
+ *
+ * @return string
+ */
 function sqw_support_button_html() {
 	return '<table class="sqw-table-footer sqw-support-us-footer">
 				<tr class="sqw-table-footer-text-tr">

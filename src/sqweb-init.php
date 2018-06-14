@@ -87,7 +87,3 @@ if ( sqweb_check_credentials( get_option( 'wsid' ) ) === false && get_option( 's
 		add_filter( 'the_content', 'end_of_article_support_button' );
 	}
 }
-
-if ( get_option( 'sqw_php_parsing' ) !== false ) {
-	add_filter( 'widget_text', 'sqw_php_execute' );
-}
