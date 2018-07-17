@@ -5,7 +5,7 @@
   "private": true,
   "main": "gulpfile.js",
   "engines": {
-    "node": "v7.4.0"
+    "node": "v10.2.1"
   },
   "scripts": {
     "test": "snyk test"
