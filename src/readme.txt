@@ -3,7 +3,7 @@ Contributors: plavaux, nverdonc, bastienbotella, matdarr
 Tags: paywall, subscription, analytics, support
 Requires at least: 3.6
 Tested up to: 4.9.4
-Stable tag: 2.9.2
+Stable tag: 2.9.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -40,7 +40,7 @@ If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in 
 You can specify the button's type with :
 `[sqweb_button type="TYPE"]`
 
-TYPE can be : tiny, slim, normal, large.
+TYPE can be : tiny, slim, normal, large or free.
 
 = The Manual Way =
 
@@ -139,7 +139,7 @@ add_filter( 'sqw_msg_restrict_cut_art_perc', 'box_sqweb' );
 == Frequently asked questions ==
 
 = How much does Multipass cost ? =
-Multipass is completely free for publishers and website owners. We're currently offering a special early adopter price of 2€ for suscribers, instead of 9€.
+Multipass is completely free for publishers and website owners. We're currently offering a special early adopter price of 6,90€ for suscribers, instead of 9€.
 
 = How do users register ? =
 Users can register on Multipass without ever leaving your website : when they click on the button, they will be shown a modal window to login or register. They can also register via multipass.net, or any other Multipass-enabled website.
@@ -151,6 +151,9 @@ Your earnings are based on the time Multipass users spend on your website, rathe
 You can keep your current adverting setup. We're compatible with AdSense, DoubleClick and Criteo, to name a few.
 
 == Changelog ==
+
+= v2.9.3 =
+* Added the free version button
 
 = v2.9.2 =
 * Fixed some typo errors.

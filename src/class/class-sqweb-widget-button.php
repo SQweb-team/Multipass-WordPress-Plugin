@@ -5,6 +5,9 @@
 
 class WidgetSqwebButton extends WP_Widget {
 
+	/**
+	 * Create a new WidgetSqwebButton instance
+	 */
 	function __construct() {
 
 		$widget_ops  = array(
@@ -36,6 +39,7 @@ class WidgetSqwebButton extends WP_Widget {
 
 	/**
 	 * Save button type
+	 * @return array
 	 */
 
 	function update( $new_instance, $old_instance ) {
@@ -46,6 +50,11 @@ class WidgetSqwebButton extends WP_Widget {
 		return $instance;
 	}
 
+	/**
+	 * Create button html widget
+     *
+     * @param object $instance
+	 */
 	function form( $instance ) {
 
 		$instance            = wp_parse_args( (array) $instance,
@@ -64,6 +73,7 @@ class WidgetSqwebButton extends WP_Widget {
 	<option value="normal" <?php echo 'normal' === $button ? 'selected' : ''; ?>><?php _e( 'Normal', 'sqweb' ); ?></option>
 	<option value="support" <?php echo 'support' === $button ? 'selected' : ''; ?>><?php _e( 'Normal - Support us', 'sqweb' ); ?></option>
 	<option value="large" <?php echo 'large' === $button ? 'selected' : ''; ?>><?php _e( 'Large', 'sqweb' ); ?></option>
+	<option value="free" <?php echo 'free' === $button ? 'selected' : ''; ?>><?php _e( 'Free', 'sqweb' ); ?></option>
 </select></p>
 		<?php
 		if ( '' === $get_options['wsid'] ) {
