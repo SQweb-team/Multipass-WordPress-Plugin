@@ -55,13 +55,13 @@ class BuildScript {
 
 		// Assembling
 		$settings = json_encode(array(
-			'wsid'          => self::$_wsid,
-			'sitename'      => self::$_blogname,
-			'debug'         => false,
-			'targeting'     => self::$_targets,
-			'locale'        => self::$_lang,
-			'autologin'     => self::$_autologin,
-			'user_strings'  => array(
+			'wsid'         => self::$_wsid,
+			'sitename'     => self::$_blogname,
+			'debug'        => false,
+			'targeting'    => self::$_targets,
+			'locale'       => self::$_lang,
+			'autologin'    => self::$_autologin,
+			'user_strings' => array(
 				'login'             => self::$_login,
 				'login_tiny'        => self::$_login_tiny,
 				'connected'         => self::$_connected,
