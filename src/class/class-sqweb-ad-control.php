@@ -5,6 +5,9 @@
 
 class SqwebAdControl extends WP_Widget {
 
+    /**
+     * Creating a new instance of SqwebAdControl
+     */
 	public function __construct() {
 
 		$widget_ops  = array(

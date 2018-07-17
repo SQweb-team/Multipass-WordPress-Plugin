@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Check if balise argument is effectively a html tag so the opacity does not occur on an img tag for instance
+ *
+ * @param string $balise
+ * @param string $match
+ * @return string
+ */
 function sqw_balise( $balise, $match ) {
 	if ( preg_match( '/<(\w+)(?(?!.+\/>).*>|$)/', $match, $tmp ) ) {
 		if ( ! isset( $balise ) ) {
@@ -15,6 +22,13 @@ function sqw_balise( $balise, $match ) {
 	return $balise;
 }
 
+/**
+ * Blur a text according to the percent argument
+ *
+ * @param string $text
+ * @param integer $percent
+ * @return string
+ */
 function transparent( $text, $percent ) {
 	if ( 0 == $percent ) {
 		return '';

@@ -349,6 +349,7 @@ function sqw_add_website( $data, $token ) {
 }
 
 /**
+ * This function is depreciated
  * @param $type
  * @return int
  */

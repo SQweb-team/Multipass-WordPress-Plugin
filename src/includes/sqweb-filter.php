@@ -19,9 +19,9 @@ class SQweb_Filter_Articles {
 	}
 
 	/**
-	 * Limite articles with SQweb
-	 * @var text
-	 * @return text
+	 * Limit articles with SQweb
+	 * @param string $content
+	 * @return string
 	 */
 
 	public function limited_sqw( $content ) {
@@ -56,9 +56,9 @@ class SQweb_Filter_Articles {
 	}
 
 	/**
-	 * Limite articles with Paid membership pro
-	 * @var text
-	 * @return nothing
+	 * Limit articles with Paid membership pro
+	 * @param string $content
+	 * @return string
 	 */
 
 	public function limited_pmp( $content ) {
@@ -72,8 +72,9 @@ class SQweb_Filter_Articles {
 
 	/**
 	 * First part parsing content SQweb
-	 * @var text
-	 * @return text
+	 * @param string $content
+     * @param bool $override
+	 * @return string
 	 */
 
 	public function filter_content( $content, $override = false ) {

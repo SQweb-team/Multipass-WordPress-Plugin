@@ -1,14 +1,14 @@
 <?php
 /**
-* SQweb special filter
-*/
+ * SQweb special filter
+ */
 include_once( 'config.php' );
 include_once( 'functions.php' );
 include_once( 'class/class-sqweb-auto-config.php' );
 
-/*
-	Disabling PHPCS on this class name, following an update to WordPress' coding style.
-	Otherwise, we'd break backwards compatibility.
+/**
+ * Disabling PHPCS on this class name, following an update to WordPress' coding style.
+ * Otherwise, we'd break backwards compatibility.
  */
 class SQweb_filter { // @codingStandardsIgnoreStart
 

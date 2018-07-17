@@ -26,6 +26,10 @@ class Auto_Config {
 		}
 	}
 
+    /**
+     * This compatability method was not updated in the same time as wordpress super cache
+     * Hence it is not complete and may trigger bugs
+     */
 	private function config_wpsc( $auto_config ) {
 		// global $wp_cache_mfunc_enabled, $wp_cache_mod_rewrite;
 		// if ( ! $wp_cache_mod_rewrite ) {
@@ -116,6 +120,9 @@ class Auto_Config {
 		return 0;
 	}
 
+    /**
+     * Display a notice if mod_rewrite option is enabled
+     */
 	public function notice_mod_rewrite() {
 	?>
 	<div class="notice notice-error is-dismissible">
@@ -130,6 +137,9 @@ class Auto_Config {
 	<?php
 	}
 
+    /**
+     * Display a notice if browser cache from W3TC is enabled
+     */
 	public function notice_browser_cache() {
 	?>
 	<div class="notice notice-error is-dismissible">
@@ -144,6 +154,9 @@ class Auto_Config {
 	<?php
 	}
 
+    /**
+     * Display a notice if disk: enhanced mod is enabled
+     */
 	public function notice_engine() {
 	?>
 	<div class="notice notice-error is-dismissible">

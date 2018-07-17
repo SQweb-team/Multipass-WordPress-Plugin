@@ -1,6 +1,9 @@
 <?php
 /**
  * Compatibility Paid Membership Pro
+ *
+ * This method has not been updated since a long time, hence
+ * the compatibility may not be complete anymore
  */
 
 function sqw_pmp_access( $post_categorie ) {

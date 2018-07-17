@@ -161,8 +161,8 @@ if ( function_exists( 'adrotate_ad' ) ) {
 }
 
 
-/*
-	Ignore class and variable name of other plugins.
+/**
+ * Ignore class and variable name of other plugins.
  */
 function compatibility_easy_adsense() {
 	//Compatibility easy adsense
@@ -189,9 +189,9 @@ function compatibility_easy_adsense() {
 add_action( 'set_current_user', 'compatibility_easy_adsense' );
 add_action( 'init', 'compatibility_easy_adsense' );
 
-/*
-	Compatibility with Cache Enabler
-*/
+/**
+ * Compatibility with Cache Enabler
+ */
 
 function compatibility_cache_enabler() {
 	return ( apply_filters( 'sqw_check_credentials', get_option( 'wsid' ) ) );

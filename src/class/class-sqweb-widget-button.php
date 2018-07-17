@@ -52,6 +52,8 @@ class WidgetSqwebButton extends WP_Widget {
 
 	/**
 	 * Create button html widget
+     *
+     * @param object $instance
 	 */
 	function form( $instance ) {
 
