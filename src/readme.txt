@@ -25,6 +25,16 @@ Their monthly subscriptions are then shared between visited websites, on a time 
 
 If he wants it, the user can share his email with you, to retrieve it, check if the cookie named `mltpss_e` exists. Inside will be a base64 encoded string you need to retrieve and decode on your side.
 
+It can be done like this:
+
+<?php
+if ($_COOKIE['mltpss_e']) {
+    $email = base64_decode($_COOKIE['mltpss_e']);
+}
+?>
+
+This piece of code will store the email in the $email variable if the cookie is set.
+
 For more information, see the **Frequently Asked Questions**.
 
 If you'd like to talk to us, leave us a note at hello@sqweb.com and we'll be in touch!
